@@ -1,0 +1,405 @@
+{
+  "answer_markdown": "**11 countries in your scope, with monthly P&L from Jan 2022 to Oct 2026 (the last closed month).**\n\nCountries (11): Argentina; Brazil; Canada; Chile; Colombia; Ecuador; Mexico; Paraguay; Peru; United States; Uruguay.",
+  "table": [
+    {
+      "Country": "Argentina",
+      "Region": "Southern South America",
+      "Product lines": 3,
+      "Businesses": 4,
+      "BUs": 7
+    },
+    {
+      "Country": "Brazil",
+      "Region": "BPU",
+      "Product lines": 6,
+      "Businesses": 11,
+      "BUs": 29
+    },
+    {
+      "Country": "Canada",
+      "Region": "US & Canada",
+      "Product lines": 6,
+      "Businesses": 12,
+      "BUs": 15
+    },
+    {
+      "Country": "Chile",
+      "Region": "Southern South America",
+      "Product lines": 3,
+      "Businesses": 6,
+      "BUs": 11
+    },
+    {
+      "Country": "Colombia",
+      "Region": "Northern South America",
+      "Product lines": 3,
+      "Businesses": 3,
+      "BUs": 5
+    },
+    {
+      "Country": "Ecuador",
+      "Region": "Northern South America",
+      "Product lines": 2,
+      "Businesses": 3,
+      "BUs": 4
+    },
+    {
+      "Country": "Mexico",
+      "Region": "Mexico",
+      "Product lines": 6,
+      "Businesses": 9,
+      "BUs": 11
+    },
+    {
+      "Country": "Paraguay",
+      "Region": "BPU",
+      "Product lines": 2,
+      "Businesses": 2,
+      "BUs": 2
+    },
+    {
+      "Country": "Peru",
+      "Region": "Northern South America",
+      "Product lines": 3,
+      "Businesses": 3,
+      "BUs": 4
+    },
+    {
+      "Country": "United States",
+      "Region": "US & Canada",
+      "Product lines": 7,
+      "Businesses": 12,
+      "BUs": 16
+    },
+    {
+      "Country": "Uruguay",
+      "Region": "BPU",
+      "Product lines": 2,
+      "Businesses": 2,
+      "BUs": 2
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Country",
+      "Region",
+      "Product lines",
+      "Businesses",
+      "BUs"
+    ],
+    "rows": [
+      {
+        "Country": "Argentina",
+        "Region": "Southern South America",
+        "Product lines": 3,
+        "Businesses": 4,
+        "BUs": 7
+      },
+      {
+        "Country": "Brazil",
+        "Region": "BPU",
+        "Product lines": 6,
+        "Businesses": 11,
+        "BUs": 29
+      },
+      {
+        "Country": "Canada",
+        "Region": "US & Canada",
+        "Product lines": 6,
+        "Businesses": 12,
+        "BUs": 15
+      },
+      {
+        "Country": "Chile",
+        "Region": "Southern South America",
+        "Product lines": 3,
+        "Businesses": 6,
+        "BUs": 11
+      },
+      {
+        "Country": "Colombia",
+        "Region": "Northern South America",
+        "Product lines": 3,
+        "Businesses": 3,
+        "BUs": 5
+      },
+      {
+        "Country": "Ecuador",
+        "Region": "Northern South America",
+        "Product lines": 2,
+        "Businesses": 3,
+        "BUs": 4
+      },
+      {
+        "Country": "Mexico",
+        "Region": "Mexico",
+        "Product lines": 6,
+        "Businesses": 9,
+        "BUs": 11
+      },
+      {
+        "Country": "Paraguay",
+        "Region": "BPU",
+        "Product lines": 2,
+        "Businesses": 2,
+        "BUs": 2
+      },
+      {
+        "Country": "Peru",
+        "Region": "Northern South America",
+        "Product lines": 3,
+        "Businesses": 3,
+        "BUs": 4
+      },
+      {
+        "Country": "United States",
+        "Region": "US & Canada",
+        "Product lines": 7,
+        "Businesses": 12,
+        "BUs": 16
+      },
+      {
+        "Country": "Uruguay",
+        "Region": "BPU",
+        "Product lines": 2,
+        "Businesses": 2,
+        "BUs": 2
+      }
+    ],
+    "col_fmt": {
+      "Product lines": "int",
+      "Businesses": "int",
+      "BUs": "int"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      }
+    ],
+    "caption": "Countries in your scope (live from the database, row-level security applied). See the Data Catalog page for details.",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "hbar",
+    "title": "BUs by countrie",
+    "fmt": "count",
+    "x": "value",
+    "y": [
+      "label"
+    ],
+    "data": [
+      {
+        "label": "Argentina",
+        "value": 7,
+        "fav": null
+      },
+      {
+        "label": "Brazil",
+        "value": 29,
+        "fav": null
+      },
+      {
+        "label": "Canada",
+        "value": 15,
+        "fav": null
+      },
+      {
+        "label": "Chile",
+        "value": 11,
+        "fav": null
+      },
+      {
+        "label": "Colombia",
+        "value": 5,
+        "fav": null
+      },
+      {
+        "label": "Ecuador",
+        "value": 4,
+        "fav": null
+      },
+      {
+        "label": "Mexico",
+        "value": 11,
+        "fav": null
+      },
+      {
+        "label": "Paraguay",
+        "value": 2,
+        "fav": null
+      },
+      {
+        "label": "Peru",
+        "value": 4,
+        "fav": null
+      },
+      {
+        "label": "United States",
+        "value": 16,
+        "fav": null
+      },
+      {
+        "label": "Uruguay",
+        "value": 2,
+        "fav": null
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "your scope",
+    "period": "catalog",
+    "org_filter": {},
+    "as_of_date": "2026-11-16",
+    "currency": "USD",
+    "source": "data catalog (database + metrics.yaml)",
+    "applied": [
+      "Scope: your scope (default)"
+    ]
+  },
+  "sql_used": [],
+  "followups": [
+    "How is Argentina doing YTD vs budget?",
+    "Rank countries by operating margin on revenue YTD",
+    "What's the Nov landing for Argentina?"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "describe_catalog",
+        "arguments": {
+          "kind": "countries",
+          "parent_filter": ""
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "describe_catalog",
+      "arguments": {
+        "kind": "countries",
+        "parent_filter": ""
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.009,
+      "plan": 0.0,
+      "act": 0.018,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "(user default scope)",
+      "metric_or_ratio": "(not specified)",
+      "period": "(default: YTD)",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "rank",
+        "catalog"
+      ],
+      "rank_by_level": "l3_country"
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "11 countries in your scope, with monthly P&L from Jan 2022 to Oct 2026 (the last closed month).",
+      "Countries (11): Argentina; Brazil; Canada; Chile; Colombia; Ecuador; Mexico; Paraguay; Peru; United States; Uruguay.",
+      "The Data Catalog page has the full, live list with definitions."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.03
+  }
+}

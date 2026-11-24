@@ -1,0 +1,505 @@
+{
+  "answer_markdown": "**Landing for United States, Nov 2026 (open month; as of 2026-11-16, computed 2026-11-16): P50 is the expected month-end, P10-P90 the range.**\n\n- Billing: P50 USD 35.2M (P10-P90 USD 34.5M - USD 36.7M); USD 1.4M (4.1%) above Budget Nov 2026 (USD 33.8M), favourable; USD 1.2M (3.3%) below FC3 Nov 2026 (USD 36.4M), unfavourable; USD 4.5M (14.8%) above PY (Nov 2025) (USD 30.6M), favourable\n- Revenue: P50 USD 35.2M (P10-P90 USD 34.5M - USD 36.7M); USD 1.9M (5.7%) above Budget Nov 2026 (USD 33.3M), favourable; USD 662k (1.8%) below FC3 Nov 2026 (USD 35.8M), unfavourable; USD 4.9M (16.0%) above PY (Nov 2025) (USD 30.3M), favourable\n- Production: P50 USD 35.5M (P10-P90 USD 34.8M - USD 37.0M); USD 1.9M (5.8%) above Budget Nov 2026 (USD 33.5M), favourable; USD 656k (1.8%) below FC3 Nov 2026 (USD 36.1M), unfavourable; USD 4.9M (16.1%) above PY (Nov 2025) (USD 30.6M), favourable\n- Operating profit: P50 USD 6.3M (P10-P90 USD 5.7M - USD 7.4M); USD 1.5M (30.8%) above Budget Nov 2026 (USD 4.8M), favourable; USD 632k (9.2%) below FC3 Nov 2026 (USD 6.9M), unfavourable; USD 2.9M (87.6%) above PY (Nov 2025) (USD 3.3M), favourable\n- Operating margin on revenue: P50 17.8% (P10-P90 16.6% - 20.3%); 3.4 pp above Budget Nov 2026 (14.4%), favourable; 1.4 pp below FC3 Nov 2026 (19.2%), unfavourable; 6.8 pp above PY (Nov 2025) (11.0%), favourable\n- Operating margin on production: P50 17.6% (P10-P90 16.5% - 20.1%); 3.4 pp above Budget Nov 2026 (14.3%), favourable; 1.4 pp below FC3 Nov 2026 (19.1%), unfavourable; 6.7 pp above PY (Nov 2025) (10.9%), favourable\n\n_WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data. Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time._",
+  "table": [
+    {
+      "Measure": "Billing",
+      "Landing (P50)": 35167099.17999999,
+      "P10": 34465440.733224474,
+      "P90": 36674069.542101495,
+      "Budget": 33793194.09,
+      "vs Budget": 1373905.0899999887,
+      "_fav_vs Budget": true,
+      "FC3": 36385528.32,
+      "vs FC3": -1218429.140000008,
+      "_fav_vs FC3": false,
+      "PY": 30646311.75,
+      "vs PY": 4520787.429999992,
+      "_fav_vs PY": true,
+      "Actual Oct 2026": 35482539.78
+    },
+    {
+      "Measure": "Revenue",
+      "Landing (P50)": 35167099.17999999,
+      "P10": 34465440.733224474,
+      "P90": 36674069.542101495,
+      "Budget": 33277835.140000004,
+      "vs Budget": 1889264.039999988,
+      "_fav_vs Budget": true,
+      "FC3": 35829498.29,
+      "vs FC3": -662399.1100000069,
+      "_fav_vs FC3": false,
+      "PY": 30313773.17,
+      "vs PY": 4853326.00999999,
+      "_fav_vs PY": true,
+      "Actual Oct 2026": 35268551.04
+    },
+    {
+      "Measure": "Production",
+      "Landing (P50)": 35488640.52999999,
+      "P10": 34777435.97387649,
+      "P90": 37013753.01104591,
+      "Budget": 33546864.28,
+      "vs Budget": 1941776.249999985,
+      "_fav_vs Budget": true,
+      "FC3": 36144363.47,
+      "vs FC3": -655722.9400000125,
+      "_fav_vs FC3": false,
+      "PY": 30574630.86,
+      "vs PY": 4914009.669999987,
+      "_fav_vs PY": true,
+      "Actual Oct 2026": 35589571.29
+    },
+    {
+      "Measure": "Operating profit",
+      "Landing (P50)": 6259684.139999986,
+      "P10": 5729161.865482274,
+      "P90": 7437058.7143499255,
+      "Budget": 4785408.560000003,
+      "vs Budget": 1474275.5799999824,
+      "_fav_vs Budget": true,
+      "FC3": 6891901.860000001,
+      "vs FC3": -632217.7200000156,
+      "_fav_vs FC3": false,
+      "PY": 3336023.8199999956,
+      "vs PY": 2923660.31999999,
+      "_fav_vs PY": true,
+      "Actual Oct 2026": 6577329.23
+    },
+    {
+      "Measure": "Operating margin on revenue",
+      "Landing (P50)": 0.17799830767844377,
+      "P10": 0.16622805831567294,
+      "P90": 0.20290291970088384,
+      "Budget": 0.14380167880115302,
+      "vs Budget": 0.03419662887729075,
+      "_fav_vs Budget": true,
+      "FC3": 0.19235273137842204,
+      "vs FC3": -0.014354423699978275,
+      "_fav_vs FC3": false,
+      "PY": 0.11004977180806673,
+      "vs PY": 0.06794853587037704,
+      "_fav_vs PY": true,
+      "Actual Oct 2026": 0.18649275448090538
+    },
+    {
+      "Measure": "Operating margin on production",
+      "Landing (P50)": 0.17638557145372816,
+      "P10": 0.1647179293867861,
+      "P90": 0.20103266473813863,
+      "Budget": 0.14264846097263917,
+      "vs Budget": 0.03373711048108899,
+      "_fav_vs Budget": true,
+      "FC3": 0.19067708484395676,
+      "vs FC3": -0.014291513390228605,
+      "_fav_vs FC3": false,
+      "PY": 0.1091108453696633,
+      "vs PY": 0.06727472608406486,
+      "_fav_vs PY": true,
+      "Actual Oct 2026": 0.1848105776943738
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Measure",
+      "Landing (P50)",
+      "P10",
+      "P90",
+      "Budget",
+      "vs Budget",
+      "FC3",
+      "vs FC3",
+      "PY",
+      "vs PY",
+      "Actual Oct 2026"
+    ],
+    "rows": [
+      {
+        "Measure": "Billing",
+        "_key": "billing",
+        "_fmt": "eur",
+        "Landing (P50)": 35167099.17999999,
+        "P10": 34465440.733224474,
+        "P90": 36674069.542101495,
+        "Budget": 33793194.09,
+        "vs Budget": 1373905.0899999887,
+        "_fav_vs Budget": true,
+        "FC3": 36385528.32,
+        "vs FC3": -1218429.140000008,
+        "_fav_vs FC3": false,
+        "PY": 30646311.75,
+        "vs PY": 4520787.429999992,
+        "_fav_vs PY": true,
+        "Actual Oct 2026": 35482539.78
+      },
+      {
+        "Measure": "Revenue",
+        "_key": "revenue",
+        "_fmt": "eur",
+        "Landing (P50)": 35167099.17999999,
+        "P10": 34465440.733224474,
+        "P90": 36674069.542101495,
+        "Budget": 33277835.140000004,
+        "vs Budget": 1889264.039999988,
+        "_fav_vs Budget": true,
+        "FC3": 35829498.29,
+        "vs FC3": -662399.1100000069,
+        "_fav_vs FC3": false,
+        "PY": 30313773.17,
+        "vs PY": 4853326.00999999,
+        "_fav_vs PY": true,
+        "Actual Oct 2026": 35268551.04
+      },
+      {
+        "Measure": "Production",
+        "_key": "production",
+        "_fmt": "eur",
+        "Landing (P50)": 35488640.52999999,
+        "P10": 34777435.97387649,
+        "P90": 37013753.01104591,
+        "Budget": 33546864.28,
+        "vs Budget": 1941776.249999985,
+        "_fav_vs Budget": true,
+        "FC3": 36144363.47,
+        "vs FC3": -655722.9400000125,
+        "_fav_vs FC3": false,
+        "PY": 30574630.86,
+        "vs PY": 4914009.669999987,
+        "_fav_vs PY": true,
+        "Actual Oct 2026": 35589571.29
+      },
+      {
+        "Measure": "Operating profit",
+        "_key": "maop",
+        "_fmt": "eur",
+        "Landing (P50)": 6259684.139999986,
+        "P10": 5729161.865482274,
+        "P90": 7437058.7143499255,
+        "Budget": 4785408.560000003,
+        "vs Budget": 1474275.5799999824,
+        "_fav_vs Budget": true,
+        "FC3": 6891901.860000001,
+        "vs FC3": -632217.7200000156,
+        "_fav_vs FC3": false,
+        "PY": 3336023.8199999956,
+        "vs PY": 2923660.31999999,
+        "_fav_vs PY": true,
+        "Actual Oct 2026": 6577329.23
+      },
+      {
+        "Measure": "Operating margin on revenue",
+        "_key": "maop_margin_revenue",
+        "_fmt": "pct",
+        "Landing (P50)": 0.17799830767844377,
+        "P10": 0.16622805831567294,
+        "P90": 0.20290291970088384,
+        "Budget": 0.14380167880115302,
+        "vs Budget": 0.03419662887729075,
+        "_fav_vs Budget": true,
+        "FC3": 0.19235273137842204,
+        "vs FC3": -0.014354423699978275,
+        "_fav_vs FC3": false,
+        "PY": 0.11004977180806673,
+        "vs PY": 0.06794853587037704,
+        "_fav_vs PY": true,
+        "Actual Oct 2026": 0.18649275448090538
+      },
+      {
+        "Measure": "Operating margin on production",
+        "_key": "maop_margin_production",
+        "_fmt": "pct",
+        "Landing (P50)": 0.17638557145372816,
+        "P10": 0.1647179293867861,
+        "P90": 0.20103266473813863,
+        "Budget": 0.14264846097263917,
+        "vs Budget": 0.03373711048108899,
+        "_fav_vs Budget": true,
+        "FC3": 0.19067708484395676,
+        "vs FC3": -0.014291513390228605,
+        "_fav_vs FC3": false,
+        "PY": 0.1091108453696633,
+        "vs PY": 0.06727472608406486,
+        "_fav_vs PY": true,
+        "Actual Oct 2026": 0.1848105776943738
+      }
+    ],
+    "col_fmt": {
+      "Landing (P50)": "eur",
+      "P10": "eur",
+      "P90": "eur",
+      "Budget": "eur",
+      "vs Budget": "eur",
+      "FC3": "eur",
+      "vs FC3": "eur",
+      "PY": "eur",
+      "vs PY": "eur",
+      "Actual Oct 2026": "eur"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "vs Budget": true,
+          "vs FC3": false,
+          "vs PY": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "vs Budget": true,
+          "vs FC3": false,
+          "vs PY": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "vs Budget": true,
+          "vs FC3": false,
+          "vs PY": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "vs Budget": true,
+          "vs FC3": false,
+          "vs PY": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "vs Budget": true,
+          "vs FC3": false,
+          "vs PY": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "vs Budget": true,
+          "vs FC3": false,
+          "vs PY": true
+        }
+      }
+    ],
+    "caption": "Landing = expected month-end of Nov 2026. WIP is 0 in the landing month, so the revenue landing equals the billing landing. Margins in %, variances in pp. Green / red = favourable / unfavourable vs the comparison.",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "landing_trend",
+    "title": "Billing 2026: actuals, Nov 2026 landing (P10-P90), PY and Budget - United States",
+    "fmt": "eur",
+    "x": "Month",
+    "y": [
+      "Actual",
+      "Landing",
+      "PY",
+      "Budget"
+    ],
+    "data": [
+      {
+        "Month": "Jan 2026",
+        "PY": 29748001.46,
+        "Budget": 31631846.81,
+        "Actual": 30725421.13
+      },
+      {
+        "Month": "Feb 2026",
+        "PY": 28201933.18,
+        "Budget": 30905704.66,
+        "Actual": 30233743.810000002
+      },
+      {
+        "Month": "Mar 2026",
+        "PY": 37181504.52,
+        "Budget": 41957705.010000005,
+        "Actual": 42553201.49
+      },
+      {
+        "Month": "Apr 2026",
+        "PY": 28964903.34,
+        "Budget": 31865963.75,
+        "Actual": 31741028.82
+      },
+      {
+        "Month": "May 2026",
+        "PY": 29485805.38,
+        "Budget": 30739381.46,
+        "Actual": 30535968.48
+      },
+      {
+        "Month": "Jun 2026",
+        "PY": 37269132.28,
+        "Budget": 41227167.23,
+        "Actual": 42696343.2
+      },
+      {
+        "Month": "Jul 2026",
+        "PY": 29159405.58,
+        "Budget": 31648123.14,
+        "Actual": 33286247.6
+      },
+      {
+        "Month": "Aug 2026",
+        "PY": 24267829.4,
+        "Budget": 26125022.220000003,
+        "Actual": 26506259.92
+      },
+      {
+        "Month": "Sep 2026",
+        "PY": 39783355.379999995,
+        "Budget": 41249169.080000006,
+        "Actual": 42642665.46
+      },
+      {
+        "Month": "Oct 2026",
+        "PY": 34050076.46,
+        "Budget": 33567043.16,
+        "Actual": 35482539.78
+      },
+      {
+        "Month": "Nov 2026",
+        "PY": 30646311.75,
+        "Budget": 33793194.09,
+        "Landing": 35167099.17999999,
+        "P10": 34465440.733224474,
+        "P90": 36674069.542101495
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "United States",
+    "org_filter": {
+      "l3_country": [
+        "United States"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "Nov 2026",
+    "months": "Nov 2026 (landing, open month)",
+    "versions": [
+      "Landing (P50, P10-P90)"
+    ],
+    "landing_snapshot": "2026-11-16",
+    "landing_month": "Nov 2026",
+    "source": "landing engine (monthly history; WIP = 0)",
+    "sql": null,
+    "notes": [
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "applied": [
+      "Scope: United States (from your question)",
+      "Period: Nov 2026 (from your question)",
+      "Versions: Landing (from your question)"
+    ]
+  },
+  "sql_used": [],
+  "followups": [
+    "Which BUs in United States are expected to miss budget this month?",
+    "What will YTD operating margin be through Nov including the landing for United States?",
+    "Explain the landing for United States"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "get_landing",
+        "arguments": {
+          "org": "United States",
+          "measures": [],
+          "month": "2026-11"
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "get_landing",
+      "arguments": {
+        "org": "United States",
+        "measures": [],
+        "month": "2026-11"
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.009,
+      "plan": 0.0,
+      "act": 0.371,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "United States",
+      "metric_or_ratio": "(not specified)",
+      "period": "Nov 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "landing"
+      ]
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Landing for United States, Nov 2026 (open month; as of 2026-11-16, computed 2026-11-16): P50 is the expected month-end, P10-P90 the range.",
+      "Billing: P50 USD 35.2M (P10-P90 USD 34.5M - USD 36.7M); USD 1.4M (4.1%) above Budget Nov 2026 (USD 33.8M), favourable; USD 1.2M (3.3%) below FC3 Nov 2026 (USD 36.4M), unfavourable; USD 4.5M (14.8%) above PY (Nov 2025) (USD 30.6M), favourable.",
+      "Revenue: P50 USD 35.2M (P10-P90 USD 34.5M - USD 36.7M); USD 1.9M (5.7%) above Budget Nov 2026 (USD 33.3M), favourable; USD 662k (1.8%) below FC3 Nov 2026 (USD 35.8M), unfavourable; USD 4.9M (16.0%) above PY (Nov 2025) (USD 30.3M), favourable.",
+      "Production: P50 USD 35.5M (P10-P90 USD 34.8M - USD 37.0M); USD 1.9M (5.8%) above Budget Nov 2026 (USD 33.5M), favourable; USD 656k (1.8%) below FC3 Nov 2026 (USD 36.1M), unfavourable; USD 4.9M (16.1%) above PY (Nov 2025) (USD 30.6M), favourable.",
+      "Operating profit: P50 USD 6.3M (P10-P90 USD 5.7M - USD 7.4M); USD 1.5M (30.8%) above Budget Nov 2026 (USD 4.8M), favourable; USD 632k (9.2%) below FC3 Nov 2026 (USD 6.9M), unfavourable; USD 2.9M (87.6%) above PY (Nov 2025) (USD 3.3M), favourable.",
+      "Operating margin on revenue: P50 17.8% (P10-P90 16.6% - 20.3%); 3.4 pp above Budget Nov 2026 (14.4%), favourable; 1.4 pp below FC3 Nov 2026 (19.2%), unfavourable; 6.8 pp above PY (Nov 2025) (11.0%), favourable.",
+      "Operating margin on production: P50 17.6% (P10-P90 16.5% - 20.1%); 3.4 pp above Budget Nov 2026 (14.3%), favourable; 1.4 pp below FC3 Nov 2026 (19.1%), unfavourable; 6.7 pp above PY (Nov 2025) (10.9%), favourable.",
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing.",
+      "The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.38
+  }
+}

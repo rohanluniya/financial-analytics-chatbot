@@ -1,0 +1,677 @@
+{
+  "answer_markdown": "**Attrition rate (annualised): 11.6%; 8.4 pp below PY (19.9%), favourable.**\n\n- By role, highest attrition (annualised) first: Lab analyst 35.8% (PY 14.1%); Lab technician 7.8% (PY 9.4%); 5 other roles 0.0%\n- Average headcount: 31.1; 1.0 (3.3%) above PY (30.1)\n- Leavers: 3; 2 fewer than PY (5); of these 3 voluntary and 0 restructuring (PY 3 voluntary and 2 restructuring)\n- Hires: 4; 2 fewer than PY (6)\n- Month with the most leavers: Feb 2026 (1)",
+  "table": [
+    {
+      "Role": "Total",
+      "_kind": "subtotal",
+      "Avg headcount": 31.1,
+      "Headcount PY": 30.1,
+      "Avg FTE": 29.360000000000003,
+      "Hires": 4.0,
+      "Leavers": 3.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.1157556270096463,
+      "Attrition PY": 0.19933554817275748,
+      "Utilization": 0.7071394032039182,
+      "Utilization PY": 0.7073580817948614,
+      "Overtime ratio": 0.05177120217130199,
+      "_fte_py": 28.029999999999994,
+      "_hires_py": 6.0,
+      "_leavers_py": 5.0,
+      "_restructuring_py": 2.0,
+      "_voluntary_attrition_py": 0.11960132890365448,
+      "Voluntary attrition": 0.1157556270096463,
+      "_overtime_py": 0.05182622911599346,
+      "_fav_Attrition": true,
+      "_fav_Utilization": false
+    },
+    {
+      "Role": "Lab analyst",
+      "_kind": "line",
+      "Avg headcount": 6.7,
+      "Headcount PY": 8.5,
+      "Avg FTE": 6.34,
+      "Hires": 1.0,
+      "Leavers": 2.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.3582089552238806,
+      "Attrition PY": 0.1411764705882353,
+      "Utilization": 0.7111137068343031,
+      "Utilization PY": 0.7063824300511454,
+      "Overtime ratio": 0.04556556088858684,
+      "_fte_py": 7.85,
+      "_hires_py": 0.0,
+      "_leavers_py": 1.0,
+      "_restructuring_py": 1.0,
+      "_voluntary_attrition_py": 0.0,
+      "Voluntary attrition": 0.3582089552238806,
+      "_overtime_py": 0.05443761550694116,
+      "_fav_Attrition": false,
+      "_fav_Utilization": true
+    },
+    {
+      "Role": "Lab technician",
+      "_kind": "line",
+      "Avg headcount": 15.4,
+      "Headcount PY": 12.7,
+      "Avg FTE": 14.219999999999999,
+      "Hires": 3.0,
+      "Leavers": 1.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.07792207792207792,
+      "Attrition PY": 0.09448818897637795,
+      "Utilization": 0.7011864856163476,
+      "Utilization PY": 0.703449984953888,
+      "Overtime ratio": 0.05148855178683029,
+      "_fte_py": 11.48,
+      "_hires_py": 3.0,
+      "_leavers_py": 1.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.09448818897637795,
+      "Voluntary attrition": 0.07792207792207792,
+      "_overtime_py": 0.04644823252438355,
+      "_fav_Attrition": true,
+      "_fav_Utilization": false
+    },
+    {
+      "Role": "Administration",
+      "_kind": "line",
+      "Avg headcount": 1.0,
+      "Headcount PY": 0.9,
+      "Avg FTE": 1.0,
+      "Hires": 0.0,
+      "Leavers": 0.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.0,
+      "Attrition PY": 1.3333333333333333,
+      "Utilization": null,
+      "Utilization PY": null,
+      "Overtime ratio": null,
+      "_fte_py": 0.9,
+      "_hires_py": 2.0,
+      "_leavers_py": 1.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 1.3333333333333333,
+      "Voluntary attrition": 0.0,
+      "_overtime_py": null,
+      "_fav_Attrition": true,
+      "_fav_Utilization": null
+    },
+    {
+      "Role": "Chemist",
+      "_kind": "line",
+      "Avg headcount": 1.0,
+      "Headcount PY": 1.0,
+      "Avg FTE": 1.0,
+      "Hires": 0.0,
+      "Leavers": 0.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.0,
+      "Attrition PY": 0.0,
+      "Utilization": 0.765384869071961,
+      "Utilization PY": 0.7586229681511827,
+      "Overtime ratio": 0.09425499637227097,
+      "_fte_py": 1.0,
+      "_hires_py": 0.0,
+      "_leavers_py": 0.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.0,
+      "Voluntary attrition": 0.0,
+      "_overtime_py": 0.0919783269459495,
+      "_fav_Attrition": null,
+      "_fav_Utilization": true
+    },
+    {
+      "Role": "Manager",
+      "_kind": "line",
+      "Avg headcount": 1.0,
+      "Headcount PY": 1.0,
+      "Avg FTE": 0.8,
+      "Hires": 0.0,
+      "Leavers": 0.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.0,
+      "Attrition PY": 0.0,
+      "Utilization": null,
+      "Utilization PY": null,
+      "Overtime ratio": null,
+      "_fte_py": 0.8,
+      "_hires_py": 0.0,
+      "_leavers_py": 0.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.0,
+      "Voluntary attrition": 0.0,
+      "_overtime_py": null,
+      "_fav_Attrition": null,
+      "_fav_Utilization": null
+    },
+    {
+      "Role": "Quality",
+      "_kind": "line",
+      "Avg headcount": 1.0,
+      "Headcount PY": 1.4,
+      "Avg FTE": 1.0,
+      "Hires": 0.0,
+      "Leavers": 0.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.0,
+      "Attrition PY": 0.8571428571428572,
+      "Utilization": null,
+      "Utilization PY": null,
+      "Overtime ratio": null,
+      "_fte_py": 1.4,
+      "_hires_py": 0.0,
+      "_leavers_py": 1.0,
+      "_restructuring_py": 1.0,
+      "_voluntary_attrition_py": 0.0,
+      "Voluntary attrition": 0.0,
+      "_overtime_py": null,
+      "_fav_Attrition": true,
+      "_fav_Utilization": null
+    },
+    {
+      "Role": "Sample reception",
+      "_kind": "line",
+      "Avg headcount": 5.0,
+      "Headcount PY": 4.6,
+      "Avg FTE": 5.0,
+      "Hires": 0.0,
+      "Leavers": 0.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.0,
+      "Attrition PY": 0.2608695652173913,
+      "Utilization": null,
+      "Utilization PY": null,
+      "Overtime ratio": null,
+      "_fte_py": 4.6,
+      "_hires_py": 1.0,
+      "_leavers_py": 1.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.2608695652173913,
+      "Voluntary attrition": 0.0,
+      "_overtime_py": null,
+      "_fav_Attrition": true,
+      "_fav_Utilization": null
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Role",
+      "Avg headcount",
+      "Headcount PY",
+      "Hires",
+      "Leavers",
+      "of which restructuring",
+      "Attrition",
+      "Attrition PY",
+      "Utilization",
+      "Utilization PY",
+      "Overtime ratio"
+    ],
+    "rows": [
+      {
+        "Role": "Total",
+        "_kind": "subtotal",
+        "Avg headcount": 31.1,
+        "Headcount PY": 30.1,
+        "Avg FTE": 29.360000000000003,
+        "Hires": 4.0,
+        "Leavers": 3.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.1157556270096463,
+        "Attrition PY": 0.19933554817275748,
+        "Utilization": 0.7071394032039182,
+        "Utilization PY": 0.7073580817948614,
+        "Overtime ratio": 0.05177120217130199,
+        "_fte_py": 28.029999999999994,
+        "_hires_py": 6.0,
+        "_leavers_py": 5.0,
+        "_restructuring_py": 2.0,
+        "_voluntary_attrition_py": 0.11960132890365448,
+        "Voluntary attrition": 0.1157556270096463,
+        "_overtime_py": 0.05182622911599346,
+        "_fav_Attrition": true,
+        "_fav_Utilization": false
+      },
+      {
+        "Role": "Lab analyst",
+        "_kind": "line",
+        "Avg headcount": 6.7,
+        "Headcount PY": 8.5,
+        "Avg FTE": 6.34,
+        "Hires": 1.0,
+        "Leavers": 2.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.3582089552238806,
+        "Attrition PY": 0.1411764705882353,
+        "Utilization": 0.7111137068343031,
+        "Utilization PY": 0.7063824300511454,
+        "Overtime ratio": 0.04556556088858684,
+        "_fte_py": 7.85,
+        "_hires_py": 0.0,
+        "_leavers_py": 1.0,
+        "_restructuring_py": 1.0,
+        "_voluntary_attrition_py": 0.0,
+        "Voluntary attrition": 0.3582089552238806,
+        "_overtime_py": 0.05443761550694116,
+        "_fav_Attrition": false,
+        "_fav_Utilization": true
+      },
+      {
+        "Role": "Lab technician",
+        "_kind": "line",
+        "Avg headcount": 15.4,
+        "Headcount PY": 12.7,
+        "Avg FTE": 14.219999999999999,
+        "Hires": 3.0,
+        "Leavers": 1.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.07792207792207792,
+        "Attrition PY": 0.09448818897637795,
+        "Utilization": 0.7011864856163476,
+        "Utilization PY": 0.703449984953888,
+        "Overtime ratio": 0.05148855178683029,
+        "_fte_py": 11.48,
+        "_hires_py": 3.0,
+        "_leavers_py": 1.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.09448818897637795,
+        "Voluntary attrition": 0.07792207792207792,
+        "_overtime_py": 0.04644823252438355,
+        "_fav_Attrition": true,
+        "_fav_Utilization": false
+      },
+      {
+        "Role": "Administration",
+        "_kind": "line",
+        "Avg headcount": 1.0,
+        "Headcount PY": 0.9,
+        "Avg FTE": 1.0,
+        "Hires": 0.0,
+        "Leavers": 0.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.0,
+        "Attrition PY": 1.3333333333333333,
+        "Utilization": null,
+        "Utilization PY": null,
+        "Overtime ratio": null,
+        "_fte_py": 0.9,
+        "_hires_py": 2.0,
+        "_leavers_py": 1.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 1.3333333333333333,
+        "Voluntary attrition": 0.0,
+        "_overtime_py": null,
+        "_fav_Attrition": true,
+        "_fav_Utilization": null
+      },
+      {
+        "Role": "Chemist",
+        "_kind": "line",
+        "Avg headcount": 1.0,
+        "Headcount PY": 1.0,
+        "Avg FTE": 1.0,
+        "Hires": 0.0,
+        "Leavers": 0.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.0,
+        "Attrition PY": 0.0,
+        "Utilization": 0.765384869071961,
+        "Utilization PY": 0.7586229681511827,
+        "Overtime ratio": 0.09425499637227097,
+        "_fte_py": 1.0,
+        "_hires_py": 0.0,
+        "_leavers_py": 0.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.0,
+        "Voluntary attrition": 0.0,
+        "_overtime_py": 0.0919783269459495,
+        "_fav_Attrition": null,
+        "_fav_Utilization": true
+      },
+      {
+        "Role": "Manager",
+        "_kind": "line",
+        "Avg headcount": 1.0,
+        "Headcount PY": 1.0,
+        "Avg FTE": 0.8,
+        "Hires": 0.0,
+        "Leavers": 0.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.0,
+        "Attrition PY": 0.0,
+        "Utilization": null,
+        "Utilization PY": null,
+        "Overtime ratio": null,
+        "_fte_py": 0.8,
+        "_hires_py": 0.0,
+        "_leavers_py": 0.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.0,
+        "Voluntary attrition": 0.0,
+        "_overtime_py": null,
+        "_fav_Attrition": null,
+        "_fav_Utilization": null
+      },
+      {
+        "Role": "Quality",
+        "_kind": "line",
+        "Avg headcount": 1.0,
+        "Headcount PY": 1.4,
+        "Avg FTE": 1.0,
+        "Hires": 0.0,
+        "Leavers": 0.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.0,
+        "Attrition PY": 0.8571428571428572,
+        "Utilization": null,
+        "Utilization PY": null,
+        "Overtime ratio": null,
+        "_fte_py": 1.4,
+        "_hires_py": 0.0,
+        "_leavers_py": 1.0,
+        "_restructuring_py": 1.0,
+        "_voluntary_attrition_py": 0.0,
+        "Voluntary attrition": 0.0,
+        "_overtime_py": null,
+        "_fav_Attrition": true,
+        "_fav_Utilization": null
+      },
+      {
+        "Role": "Sample reception",
+        "_kind": "line",
+        "Avg headcount": 5.0,
+        "Headcount PY": 4.6,
+        "Avg FTE": 5.0,
+        "Hires": 0.0,
+        "Leavers": 0.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.0,
+        "Attrition PY": 0.2608695652173913,
+        "Utilization": null,
+        "Utilization PY": null,
+        "Overtime ratio": null,
+        "_fte_py": 4.6,
+        "_hires_py": 1.0,
+        "_leavers_py": 1.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.2608695652173913,
+        "Voluntary attrition": 0.0,
+        "_overtime_py": null,
+        "_fav_Attrition": true,
+        "_fav_Utilization": null
+      }
+    ],
+    "col_fmt": {
+      "Avg headcount": "num",
+      "Headcount PY": "num",
+      "Avg FTE": "num",
+      "Hires": "int",
+      "Leavers": "int",
+      "of which restructuring": "int",
+      "Attrition": "pct",
+      "Attrition PY": "pct",
+      "Utilization": "pct",
+      "Utilization PY": "pct",
+      "Overtime ratio": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": true,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": true,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": true,
+          "Utilization": null
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": null,
+          "Utilization": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": null,
+          "Utilization": null
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": true,
+          "Utilization": null
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": true,
+          "Utilization": null
+        }
+      }
+    ],
+    "caption": "Fictional employee records, closed months. Headcount and FTE are monthly averages; attrition = leavers x 12 / months / average headcount; utilization and overtime use direct staff hours. Green / red = better / worse than PY.",
+    "extra_tables": [],
+    "table_class": "wf"
+  },
+  "chart_spec": {
+    "type": "hbar",
+    "title": "Attrition (annualised) by role - United States \u00b7 Environmental Lab Testing (YTD Oct 2026)",
+    "fmt": "pct",
+    "x": "value",
+    "y": [
+      "label"
+    ],
+    "data": [
+      {
+        "label": "Lab analyst",
+        "value": 0.3582089552238806,
+        "fav": null
+      },
+      {
+        "label": "Lab technician",
+        "value": 0.07792207792207792,
+        "fav": null
+      },
+      {
+        "label": "Administration",
+        "value": 0.0,
+        "fav": null
+      },
+      {
+        "label": "Chemist",
+        "value": 0.0,
+        "fav": null
+      },
+      {
+        "label": "Manager",
+        "value": 0.0,
+        "fav": null
+      },
+      {
+        "label": "Quality",
+        "value": 0.0,
+        "fav": null
+      },
+      {
+        "label": "Sample reception",
+        "value": 0.0,
+        "fav": null
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "United States \u00b7 Environmental Lab Testing",
+    "org_filter": {
+      "l3_country": [
+        "United States"
+      ],
+      "l4_product_line": [
+        "Environmental Lab Testing"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (YTD Oct 2026)",
+      "PY (Jan 2025 - Oct 2025)"
+    ],
+    "source": "fictional employee records (closed months)",
+    "applied": [
+      "Scope: United States \u00b7 Environmental Lab Testing (from your question)",
+      "Period: YTD Oct 2026 (carried over from the conversation)",
+      "Versions: Actual, PY (carried over from the conversation)"
+    ],
+    "carried_over": [
+      "Attrition rate (annualised)",
+      "YTD Oct 2026",
+      "vs PY"
+    ]
+  },
+  "sql_used": [
+    "SELECT dim_employee.role, fact_employee_month.month_key, count(*) AS headcount, sum(fact_employee_month.fte) AS fte, sum(fact_employee_month.available_hours) AS available_hours, sum(fact_employee_month.billable_hours) AS billable_hours, sum(fact_employee_month.overtime_hours) AS overtime_hours, sum(CAST(fact_employee_month.is_hire AS INTEGER)) AS hires, sum(CAST(fact_employee_month.is_leaver AS INTEGER)) AS leavers, sum(CASE WHEN (dim_employee.leave_reason = N'Restructuring') THEN CAST(fact_employee_month.is_leaver AS INTEGER) ELSE 0 END) AS restructuring_leavers \nFROM fact_employee_month JOIN dim_employee ON fact_employee_month.employee_id = dim_employee.employee_id JOIN dim_org ON fact_employee_month.bu_id = dim_org.bu_id \nWHERE fact_employee_month.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'United States') AND dim_org.l4_product_line IN (N'Environmental Lab Testing') GROUP BY dim_employee.role, fact_employee_month.month_key",
+    "SELECT dim_employee.role, fact_employee_month.month_key, count(*) AS headcount, sum(fact_employee_month.fte) AS fte, sum(fact_employee_month.available_hours) AS available_hours, sum(fact_employee_month.billable_hours) AS billable_hours, sum(fact_employee_month.overtime_hours) AS overtime_hours, sum(CAST(fact_employee_month.is_hire AS INTEGER)) AS hires, sum(CAST(fact_employee_month.is_leaver AS INTEGER)) AS leavers, sum(CASE WHEN (dim_employee.leave_reason = N'Restructuring') THEN CAST(fact_employee_month.is_leaver AS INTEGER) ELSE 0 END) AS restructuring_leavers \nFROM fact_employee_month JOIN dim_employee ON fact_employee_month.employee_id = dim_employee.employee_id JOIN dim_org ON fact_employee_month.bu_id = dim_org.bu_id \nWHERE fact_employee_month.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'United States') AND dim_org.l4_product_line IN (N'Environmental Lab Testing') GROUP BY dim_employee.role, fact_employee_month.month_key"
+  ],
+  "followups": [
+    "Show utilization by grade for United States \u00b7 Environmental Lab Testing this year",
+    "Show headcount, hires and leavers by month for United States \u00b7 Environmental Lab Testing this year",
+    "Which BUs in United States \u00b7 Environmental Lab Testing have the highest attrition this year?"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "get_workforce",
+        "arguments": {
+          "org": "United States \u00b7 Environmental Lab Testing",
+          "period": "YTD Oct 2026",
+          "group_by": "",
+          "metric": "",
+          "top_n": 0
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "get_workforce",
+      "arguments": {
+        "org": "United States \u00b7 Environmental Lab Testing",
+        "period": "YTD Oct 2026",
+        "group_by": "",
+        "metric": "",
+        "top_n": 0
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.008,
+      "plan": 0.0,
+      "act": 0.066,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "United States \u00b7 Environmental Lab Testing",
+      "metric_or_ratio": "(not specified)",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [
+        "PY"
+      ],
+      "intents": [
+        "workforce"
+      ]
+    },
+    "followup": true,
+    "options": [],
+    "facts": [
+      "Scope United States \u00b7 Environmental Lab Testing, YTD Oct 2026: workforce from fictional employee records (Actual), compared with the same months of the prior year (PY).",
+      "Attrition rate (annualised): 11.6%; 8.4 pp below PY (19.9%), favourable.",
+      "Average headcount: 31.1; 1.0 (3.3%) above PY (30.1).",
+      "Leavers: 3; 2 fewer than PY (5); of these 3 voluntary and 0 restructuring (PY 3 voluntary and 2 restructuring).",
+      "Hires: 4; 2 fewer than PY (6).",
+      "Utilization rate (direct staff, billable / available hours): 70.7%; in line with PY (70.7%).",
+      "Overtime ratio (direct staff, overtime / available hours): 5.2%; in line with PY (5.2%).",
+      "Voluntary attrition rate (annualised): 11.6%; 0.4 pp below PY (12.0%), favourable.",
+      "Average FTE: 29.4; 1.3 (4.7%) above PY (28.0).",
+      "Restructuring leavers: 0; 2 fewer than PY (2).",
+      "Voluntary leavers: 3; in line with PY (3).",
+      "By role, highest attrition (annualised) first: Lab analyst 35.8% (PY 14.1%); Lab technician 7.8% (PY 9.4%); 5 other roles 0.0%.",
+      "Month with the most leavers: Feb 2026 (1)."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.08
+  }
+}

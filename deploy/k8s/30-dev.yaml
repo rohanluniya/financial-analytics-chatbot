@@ -1,0 +1,137 @@
+# Dev workspace pod: a Python 3.11 "VM-like" container where make targets run (code is synced
+# into the /workspace PVC), plus an `app` container that serves Streamlit from the same workspace.
+# Access the UI only through `kubectl port-forward` (authenticated, nothing exposed publicly).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ${PREFIX}-bootstrap
+  namespace: ${NAMESPACE}
+data:
+  bootstrap.sh: |
+    #!/usr/bin/env bash
+    # Idempotent system setup for python:3.11-slim-bookworm: ODBC Driver 18 + uv + build tools.
+    set -euo pipefail
+    if [ -f /tmp/.bootstrapped ]; then exit 0; fi
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update -qq
+    apt-get install -y -qq --no-install-recommends curl gnupg2 ca-certificates make git procps unixodbc >/dev/null
+    if ! dpkg -s msodbcsql18 >/dev/null 2>&1; then
+      curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+      curl -fsSL https://packages.microsoft.com/config/debian/12/prod.list -o /etc/apt/sources.list.d/mssql-release.list
+      apt-get update -qq
+      ACCEPT_EULA=Y apt-get install -y -qq --no-install-recommends msodbcsql18 >/dev/null
+    fi
+    pip install -q --no-cache-dir uv
+    touch /tmp/.bootstrapped
+    echo "bootstrap complete"
+  run-app.sh: |
+    #!/usr/bin/env bash
+    # Wait until the workspace has been synced + `make setup` has created the venv, then serve.
+    set -uo pipefail
+    cd ${WS} 2>/dev/null || true
+    while [ ! -x ${WS}/.venv/bin/streamlit ] || [ ! -f ${WS}/.app-ready ]; do
+      echo "waiting for workspace (.venv + .app-ready)"; sleep 15
+    done
+    cd ${WS}
+    exec .venv/bin/streamlit run app/ui/streamlit_app.py \
+      --server.port 8501 --server.address 0.0.0.0 --server.headless true \
+      --browser.gatherUsageStats false
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${PREFIX}-app
+  namespace: ${NAMESPACE}
+spec:
+  type: ClusterIP
+  selector:
+    app: ${PREFIX}-dev
+  ports:
+    - name: http
+      port: 8501
+      targetPort: 8501
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ${PREFIX}-dev
+  namespace: ${NAMESPACE}
+spec:
+  serviceName: ${PREFIX}-app
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${PREFIX}-dev
+  template:
+    metadata:
+      labels:
+        app: ${PREFIX}-dev
+    spec:
+      serviceAccountName: ${PREFIX}-dev
+      nodeSelector:
+        cloud.google.com/gke-nodepool: ${NODE_POOL}
+      volumes:
+        - name: bootstrap
+          configMap:
+            name: ${PREFIX}-bootstrap
+            defaultMode: 0755
+      containers:
+        - name: dev
+          image: python:3.11-slim-bookworm
+          command: ["bash", "-c", "bash /bootstrap/bootstrap.sh && sleep infinity"]
+          workingDir: /workspace
+          env:
+            - name: UV_LINK_MODE
+              value: copy
+            - name: MSSQL_SA_PASSWORD
+              valueFrom:
+                secretKeyRef: {name: "${PREFIX}-secrets", key: MSSQL_SA_PASSWORD}
+            - name: MSSQL_APP_PASSWORD
+              valueFrom:
+                secretKeyRef: {name: "${PREFIX}-secrets", key: MSSQL_APP_PASSWORD}
+          resources:
+            requests:
+              cpu: 200m
+              memory: 1Gi
+            limits:
+              cpu: "16"
+              memory: 16Gi
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+            - name: bootstrap
+              mountPath: /bootstrap
+        - name: app
+          image: python:3.11-slim-bookworm
+          command: ["bash", "-c", "bash /bootstrap/bootstrap.sh && bash /bootstrap/run-app.sh"]
+          ports:
+            - containerPort: 8501
+          env:
+            - name: MSSQL_APP_PASSWORD
+              valueFrom:
+                secretKeyRef: {name: "${PREFIX}-secrets", key: MSSQL_APP_PASSWORD}
+            # Demo sign-in code (created by `make k8s-secrets`); optional so the .env value still works.
+            - name: APP_ACCESS_CODE
+              valueFrom:
+                secretKeyRef: {name: "${PREFIX}-secrets", key: APP_ACCESS_CODE, optional: true}
+          resources:
+            requests:
+              cpu: 100m
+              memory: 512Mi
+            limits:
+              cpu: "4"
+              memory: 4Gi
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+            - name: bootstrap
+              mountPath: /bootstrap
+  volumeClaimTemplates:
+    - metadata:
+        name: workspace
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: standard-rwo
+        resources:
+          requests:
+            storage: 20Gi

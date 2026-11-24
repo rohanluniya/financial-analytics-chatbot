@@ -1,0 +1,1789 @@
+{
+  "answer_markdown": "**Operating margin on revenue monthly trend for Canada \u00b7 Power & Utilities, Jan 2022 - Oct 2026 (series: Actual, Actual R12M, Budget), USD.**\n\n- Actual by calendar year: 2022 9.6% (full year), 2023 9.9% (full year), 2024 13.0% (full year), 2025 13.5% (full year), 2026 15.1% (Jan-Oct)\n- Latest month Oct 2026: Actual 21.6%, Budget 19.4%\n- Rolling 12-month Operating margin on revenue: Dec 2022 9.6% -> Oct 2026 15.1% (up 5.5 pp)",
+  "table": [
+    {
+      "month_key": 202201,
+      "Month": "Jan 2022",
+      "Actual": 0.04259714782328401,
+      "Actual R12M": null,
+      "Budget": 0.06379822347472609
+    },
+    {
+      "month_key": 202202,
+      "Month": "Feb 2022",
+      "Actual": 0.13788697100251118,
+      "Actual R12M": null,
+      "Budget": 0.14739178070479547
+    },
+    {
+      "month_key": 202203,
+      "Month": "Mar 2022",
+      "Actual": 0.21339313624463402,
+      "Actual R12M": null,
+      "Budget": 0.2578845308767774
+    },
+    {
+      "month_key": 202204,
+      "Month": "Apr 2022",
+      "Actual": 0.11587719097557161,
+      "Actual R12M": null,
+      "Budget": 0.09964930375037694
+    },
+    {
+      "month_key": 202205,
+      "Month": "May 2022",
+      "Actual": 0.104676271300205,
+      "Actual R12M": null,
+      "Budget": 0.1214374228843597
+    },
+    {
+      "month_key": 202206,
+      "Month": "Jun 2022",
+      "Actual": 0.11947183474091312,
+      "Actual R12M": null,
+      "Budget": 0.13811416496363632
+    },
+    {
+      "month_key": 202207,
+      "Month": "Jul 2022",
+      "Actual": -0.047878321816852164,
+      "Actual R12M": null,
+      "Budget": 0.006656678708997386
+    },
+    {
+      "month_key": 202208,
+      "Month": "Aug 2022",
+      "Actual": -0.19174950776843114,
+      "Actual R12M": null,
+      "Budget": -0.21305712679273162
+    },
+    {
+      "month_key": 202209,
+      "Month": "Sep 2022",
+      "Actual": 0.16196410206033257,
+      "Actual R12M": null,
+      "Budget": 0.1349966047285146
+    },
+    {
+      "month_key": 202210,
+      "Month": "Oct 2022",
+      "Actual": 0.1370505775791929,
+      "Actual R12M": null,
+      "Budget": 0.11604520453386771
+    },
+    {
+      "month_key": 202211,
+      "Month": "Nov 2022",
+      "Actual": 0.14897799959094873,
+      "Actual R12M": null,
+      "Budget": 0.14463659106231133
+    },
+    {
+      "month_key": 202212,
+      "Month": "Dec 2022",
+      "Actual": 0.0469793057211859,
+      "Actual R12M": 0.09648050275012497,
+      "Budget": 0.07641792913507521
+    },
+    {
+      "month_key": 202301,
+      "Month": "Jan 2023",
+      "Actual": 0.07088361152438498,
+      "Actual R12M": 0.09847388650119653,
+      "Budget": 0.11089385790961559
+    },
+    {
+      "month_key": 202302,
+      "Month": "Feb 2023",
+      "Actual": 0.14433029071770145,
+      "Actual R12M": 0.0992568298116766,
+      "Budget": 0.16994975319944863
+    },
+    {
+      "month_key": 202303,
+      "Month": "Mar 2023",
+      "Actual": 0.22556382254095636,
+      "Actual R12M": 0.10126180757876824,
+      "Budget": 0.2778879273979863
+    },
+    {
+      "month_key": 202304,
+      "Month": "Apr 2023",
+      "Actual": 0.0362216152651433,
+      "Actual R12M": 0.09489272110867032,
+      "Budget": 0.09867916751339448
+    },
+    {
+      "month_key": 202305,
+      "Month": "May 2023",
+      "Actual": 0.13049367819837035,
+      "Actual R12M": 0.09729791094380215,
+      "Budget": 0.16290093581378637
+    },
+    {
+      "month_key": 202306,
+      "Month": "Jun 2023",
+      "Actual": 0.1008606690082574,
+      "Actual R12M": 0.09573091485204259,
+      "Budget": 0.1597011218121083
+    },
+    {
+      "month_key": 202307,
+      "Month": "Jul 2023",
+      "Actual": 0.06969062118850981,
+      "Actual R12M": 0.10324209601401171,
+      "Budget": 0.0552487041560656
+    },
+    {
+      "month_key": 202308,
+      "Month": "Aug 2023",
+      "Actual": -0.23314256668523042,
+      "Actual R12M": 0.10072670233981088,
+      "Budget": -0.19123080260164585
+    },
+    {
+      "month_key": 202309,
+      "Month": "Sep 2023",
+      "Actual": 0.1255120467219276,
+      "Actual R12M": 0.09734485347778943,
+      "Budget": 0.13522742350959763
+    },
+    {
+      "month_key": 202310,
+      "Month": "Oct 2023",
+      "Actual": 0.125649280123483,
+      "Actual R12M": 0.09649753604407259,
+      "Budget": 0.158738705512636
+    },
+    {
+      "month_key": 202311,
+      "Month": "Nov 2023",
+      "Actual": 0.1524304659789527,
+      "Actual R12M": 0.09700493142583642,
+      "Budget": 0.16600775189273503
+    },
+    {
+      "month_key": 202312,
+      "Month": "Dec 2023",
+      "Actual": 0.0753008718468406,
+      "Actual R12M": 0.09898058798525491,
+      "Budget": 0.07661874726247102
+    },
+    {
+      "month_key": 202401,
+      "Month": "Jan 2024",
+      "Actual": 0.12464222488862182,
+      "Actual R12M": 0.10333570496483627,
+      "Budget": 0.13338342288345892
+    },
+    {
+      "month_key": 202402,
+      "Month": "Feb 2024",
+      "Actual": 0.1796754651793738,
+      "Actual R12M": 0.10726407923598273,
+      "Budget": 0.19292551427359592
+    },
+    {
+      "month_key": 202403,
+      "Month": "Mar 2024",
+      "Actual": 0.2133151403443392,
+      "Actual R12M": 0.10652870702602532,
+      "Budget": 0.2310541193938959
+    },
+    {
+      "month_key": 202404,
+      "Month": "Apr 2024",
+      "Actual": 0.15135145421432425,
+      "Actual R12M": 0.11571192747011481,
+      "Budget": 0.16593119315310592
+    },
+    {
+      "month_key": 202405,
+      "Month": "May 2024",
+      "Actual": 0.1997211327970301,
+      "Actual R12M": 0.12260789803444531,
+      "Budget": 0.1642477005059511
+    },
+    {
+      "month_key": 202406,
+      "Month": "Jun 2024",
+      "Actual": 0.0842557521805376,
+      "Actual R12M": 0.12122682116071258,
+      "Budget": 0.1184731294182445
+    },
+    {
+      "month_key": 202407,
+      "Month": "Jul 2024",
+      "Actual": 0.10072761506746637,
+      "Actual R12M": 0.12338773707869956,
+      "Budget": 0.077122942793855
+    },
+    {
+      "month_key": 202408,
+      "Month": "Aug 2024",
+      "Actual": -0.25243343914499317,
+      "Actual R12M": 0.1217818285396476,
+      "Budget": -0.23388999309087166
+    },
+    {
+      "month_key": 202409,
+      "Month": "Sep 2024",
+      "Actual": 0.1660244347376959,
+      "Actual R12M": 0.12530283665041514,
+      "Budget": 0.13647180007078064
+    },
+    {
+      "month_key": 202410,
+      "Month": "Oct 2024",
+      "Actual": 0.173868121111323,
+      "Actual R12M": 0.12979062324127247,
+      "Budget": 0.1790002054765992
+    },
+    {
+      "month_key": 202411,
+      "Month": "Nov 2024",
+      "Actual": 0.1529775252465464,
+      "Actual R12M": 0.12992581031160408,
+      "Budget": 0.14715562662112983
+    },
+    {
+      "month_key": 202412,
+      "Month": "Dec 2024",
+      "Actual": 0.07981220792385718,
+      "Actual R12M": 0.1300709969285271,
+      "Budget": 0.10116006171386344
+    },
+    {
+      "month_key": 202501,
+      "Month": "Jan 2025",
+      "Actual": 0.13219084572405648,
+      "Actual R12M": 0.13068031176463532,
+      "Budget": 0.16423766578198798
+    },
+    {
+      "month_key": 202502,
+      "Month": "Feb 2025",
+      "Actual": 0.15846406616368652,
+      "Actual R12M": 0.12878750645881465,
+      "Budget": 0.20284954605062933
+    },
+    {
+      "month_key": 202503,
+      "Month": "Mar 2025",
+      "Actual": 0.24067303443714133,
+      "Actual R12M": 0.13254534175522878,
+      "Budget": 0.27727418994676306
+    },
+    {
+      "month_key": 202504,
+      "Month": "Apr 2025",
+      "Actual": 0.16180392776173794,
+      "Actual R12M": 0.1335146603875404,
+      "Budget": 0.1759579470479737
+    },
+    {
+      "month_key": 202505,
+      "Month": "May 2025",
+      "Actual": 0.15869313949919014,
+      "Actual R12M": 0.1297148338989017,
+      "Budget": 0.17517406303242758
+    },
+    {
+      "month_key": 202506,
+      "Month": "Jun 2025",
+      "Actual": 0.14851034799272314,
+      "Actual R12M": 0.13486029003721073,
+      "Budget": 0.1711351507951752
+    },
+    {
+      "month_key": 202507,
+      "Month": "Jul 2025",
+      "Actual": 0.049213206133876426,
+      "Actual R12M": 0.1309070103032273,
+      "Budget": 0.10847454811863365
+    },
+    {
+      "month_key": 202508,
+      "Month": "Aug 2025",
+      "Actual": -0.2542771210278263,
+      "Actual R12M": 0.12979178152298118,
+      "Budget": -0.23013067361468234
+    },
+    {
+      "month_key": 202509,
+      "Month": "Sep 2025",
+      "Actual": 0.1448303643408865,
+      "Actual R12M": 0.1281375591766056,
+      "Budget": 0.187723301352082
+    },
+    {
+      "month_key": 202510,
+      "Month": "Oct 2025",
+      "Actual": 0.17848305423664634,
+      "Actual R12M": 0.12873602704795542,
+      "Budget": 0.20774023870825575
+    },
+    {
+      "month_key": 202511,
+      "Month": "Nov 2025",
+      "Actual": 0.14525753722056817,
+      "Actual R12M": 0.12813468105105313,
+      "Budget": 0.1564715166117461
+    },
+    {
+      "month_key": 202512,
+      "Month": "Dec 2025",
+      "Actual": 0.16041708604881072,
+      "Actual R12M": 0.1345951507728919,
+      "Budget": 0.15418683680874698
+    },
+    {
+      "month_key": 202601,
+      "Month": "Jan 2026",
+      "Actual": 0.11452077378017145,
+      "Actual R12M": 0.13313081330390406,
+      "Budget": 0.14782074072925705
+    },
+    {
+      "month_key": 202602,
+      "Month": "Feb 2026",
+      "Actual": 0.2155480572482742,
+      "Actual R12M": 0.13887527603125674,
+      "Budget": 0.20797351055830318
+    },
+    {
+      "month_key": 202603,
+      "Month": "Mar 2026",
+      "Actual": 0.24343306942172033,
+      "Actual R12M": 0.1395786881822664,
+      "Budget": 0.29952557203929053
+    },
+    {
+      "month_key": 202604,
+      "Month": "Apr 2026",
+      "Actual": 0.16711165106409964,
+      "Actual R12M": 0.14014482566431533,
+      "Budget": 0.1798803021452693
+    },
+    {
+      "month_key": 202605,
+      "Month": "May 2026",
+      "Actual": 0.1569795054074672,
+      "Actual R12M": 0.14001854051115553,
+      "Budget": 0.15911661061158575
+    },
+    {
+      "month_key": 202606,
+      "Month": "Jun 2026",
+      "Actual": 0.1648413513625417,
+      "Actual R12M": 0.1415908681052014,
+      "Budget": 0.19452776171729888
+    },
+    {
+      "month_key": 202607,
+      "Month": "Jul 2026",
+      "Actual": 0.10361699697839831,
+      "Actual R12M": 0.14510975117870165,
+      "Budget": 0.11028884331589311
+    },
+    {
+      "month_key": 202608,
+      "Month": "Aug 2026",
+      "Actual": -0.21805022929686968,
+      "Actual R12M": 0.14534681991563753,
+      "Budget": -0.23859350735416632
+    },
+    {
+      "month_key": 202609,
+      "Month": "Sep 2026",
+      "Actual": 0.1683766826219489,
+      "Actual R12M": 0.14734739843891131,
+      "Budget": 0.1916430149198137
+    },
+    {
+      "month_key": 202610,
+      "Month": "Oct 2026",
+      "Actual": 0.2160222755213708,
+      "Actual R12M": 0.1511842691250526,
+      "Budget": 0.19360677637923956
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Month",
+      "Actual",
+      "Actual R12M",
+      "Budget"
+    ],
+    "rows": [
+      {
+        "month_key": 202201,
+        "Month": "Jan 2022",
+        "Actual": 0.04259714782328401,
+        "Actual R12M": null,
+        "Budget": 0.06379822347472609
+      },
+      {
+        "month_key": 202202,
+        "Month": "Feb 2022",
+        "Actual": 0.13788697100251118,
+        "Actual R12M": null,
+        "Budget": 0.14739178070479547
+      },
+      {
+        "month_key": 202203,
+        "Month": "Mar 2022",
+        "Actual": 0.21339313624463402,
+        "Actual R12M": null,
+        "Budget": 0.2578845308767774
+      },
+      {
+        "month_key": 202204,
+        "Month": "Apr 2022",
+        "Actual": 0.11587719097557161,
+        "Actual R12M": null,
+        "Budget": 0.09964930375037694
+      },
+      {
+        "month_key": 202205,
+        "Month": "May 2022",
+        "Actual": 0.104676271300205,
+        "Actual R12M": null,
+        "Budget": 0.1214374228843597
+      },
+      {
+        "month_key": 202206,
+        "Month": "Jun 2022",
+        "Actual": 0.11947183474091312,
+        "Actual R12M": null,
+        "Budget": 0.13811416496363632
+      },
+      {
+        "month_key": 202207,
+        "Month": "Jul 2022",
+        "Actual": -0.047878321816852164,
+        "Actual R12M": null,
+        "Budget": 0.006656678708997386
+      },
+      {
+        "month_key": 202208,
+        "Month": "Aug 2022",
+        "Actual": -0.19174950776843114,
+        "Actual R12M": null,
+        "Budget": -0.21305712679273162
+      },
+      {
+        "month_key": 202209,
+        "Month": "Sep 2022",
+        "Actual": 0.16196410206033257,
+        "Actual R12M": null,
+        "Budget": 0.1349966047285146
+      },
+      {
+        "month_key": 202210,
+        "Month": "Oct 2022",
+        "Actual": 0.1370505775791929,
+        "Actual R12M": null,
+        "Budget": 0.11604520453386771
+      },
+      {
+        "month_key": 202211,
+        "Month": "Nov 2022",
+        "Actual": 0.14897799959094873,
+        "Actual R12M": null,
+        "Budget": 0.14463659106231133
+      },
+      {
+        "month_key": 202212,
+        "Month": "Dec 2022",
+        "Actual": 0.0469793057211859,
+        "Actual R12M": 0.09648050275012497,
+        "Budget": 0.07641792913507521
+      },
+      {
+        "month_key": 202301,
+        "Month": "Jan 2023",
+        "Actual": 0.07088361152438498,
+        "Actual R12M": 0.09847388650119653,
+        "Budget": 0.11089385790961559
+      },
+      {
+        "month_key": 202302,
+        "Month": "Feb 2023",
+        "Actual": 0.14433029071770145,
+        "Actual R12M": 0.0992568298116766,
+        "Budget": 0.16994975319944863
+      },
+      {
+        "month_key": 202303,
+        "Month": "Mar 2023",
+        "Actual": 0.22556382254095636,
+        "Actual R12M": 0.10126180757876824,
+        "Budget": 0.2778879273979863
+      },
+      {
+        "month_key": 202304,
+        "Month": "Apr 2023",
+        "Actual": 0.0362216152651433,
+        "Actual R12M": 0.09489272110867032,
+        "Budget": 0.09867916751339448
+      },
+      {
+        "month_key": 202305,
+        "Month": "May 2023",
+        "Actual": 0.13049367819837035,
+        "Actual R12M": 0.09729791094380215,
+        "Budget": 0.16290093581378637
+      },
+      {
+        "month_key": 202306,
+        "Month": "Jun 2023",
+        "Actual": 0.1008606690082574,
+        "Actual R12M": 0.09573091485204259,
+        "Budget": 0.1597011218121083
+      },
+      {
+        "month_key": 202307,
+        "Month": "Jul 2023",
+        "Actual": 0.06969062118850981,
+        "Actual R12M": 0.10324209601401171,
+        "Budget": 0.0552487041560656
+      },
+      {
+        "month_key": 202308,
+        "Month": "Aug 2023",
+        "Actual": -0.23314256668523042,
+        "Actual R12M": 0.10072670233981088,
+        "Budget": -0.19123080260164585
+      },
+      {
+        "month_key": 202309,
+        "Month": "Sep 2023",
+        "Actual": 0.1255120467219276,
+        "Actual R12M": 0.09734485347778943,
+        "Budget": 0.13522742350959763
+      },
+      {
+        "month_key": 202310,
+        "Month": "Oct 2023",
+        "Actual": 0.125649280123483,
+        "Actual R12M": 0.09649753604407259,
+        "Budget": 0.158738705512636
+      },
+      {
+        "month_key": 202311,
+        "Month": "Nov 2023",
+        "Actual": 0.1524304659789527,
+        "Actual R12M": 0.09700493142583642,
+        "Budget": 0.16600775189273503
+      },
+      {
+        "month_key": 202312,
+        "Month": "Dec 2023",
+        "Actual": 0.0753008718468406,
+        "Actual R12M": 0.09898058798525491,
+        "Budget": 0.07661874726247102
+      },
+      {
+        "month_key": 202401,
+        "Month": "Jan 2024",
+        "Actual": 0.12464222488862182,
+        "Actual R12M": 0.10333570496483627,
+        "Budget": 0.13338342288345892
+      },
+      {
+        "month_key": 202402,
+        "Month": "Feb 2024",
+        "Actual": 0.1796754651793738,
+        "Actual R12M": 0.10726407923598273,
+        "Budget": 0.19292551427359592
+      },
+      {
+        "month_key": 202403,
+        "Month": "Mar 2024",
+        "Actual": 0.2133151403443392,
+        "Actual R12M": 0.10652870702602532,
+        "Budget": 0.2310541193938959
+      },
+      {
+        "month_key": 202404,
+        "Month": "Apr 2024",
+        "Actual": 0.15135145421432425,
+        "Actual R12M": 0.11571192747011481,
+        "Budget": 0.16593119315310592
+      },
+      {
+        "month_key": 202405,
+        "Month": "May 2024",
+        "Actual": 0.1997211327970301,
+        "Actual R12M": 0.12260789803444531,
+        "Budget": 0.1642477005059511
+      },
+      {
+        "month_key": 202406,
+        "Month": "Jun 2024",
+        "Actual": 0.0842557521805376,
+        "Actual R12M": 0.12122682116071258,
+        "Budget": 0.1184731294182445
+      },
+      {
+        "month_key": 202407,
+        "Month": "Jul 2024",
+        "Actual": 0.10072761506746637,
+        "Actual R12M": 0.12338773707869956,
+        "Budget": 0.077122942793855
+      },
+      {
+        "month_key": 202408,
+        "Month": "Aug 2024",
+        "Actual": -0.25243343914499317,
+        "Actual R12M": 0.1217818285396476,
+        "Budget": -0.23388999309087166
+      },
+      {
+        "month_key": 202409,
+        "Month": "Sep 2024",
+        "Actual": 0.1660244347376959,
+        "Actual R12M": 0.12530283665041514,
+        "Budget": 0.13647180007078064
+      },
+      {
+        "month_key": 202410,
+        "Month": "Oct 2024",
+        "Actual": 0.173868121111323,
+        "Actual R12M": 0.12979062324127247,
+        "Budget": 0.1790002054765992
+      },
+      {
+        "month_key": 202411,
+        "Month": "Nov 2024",
+        "Actual": 0.1529775252465464,
+        "Actual R12M": 0.12992581031160408,
+        "Budget": 0.14715562662112983
+      },
+      {
+        "month_key": 202412,
+        "Month": "Dec 2024",
+        "Actual": 0.07981220792385718,
+        "Actual R12M": 0.1300709969285271,
+        "Budget": 0.10116006171386344
+      },
+      {
+        "month_key": 202501,
+        "Month": "Jan 2025",
+        "Actual": 0.13219084572405648,
+        "Actual R12M": 0.13068031176463532,
+        "Budget": 0.16423766578198798
+      },
+      {
+        "month_key": 202502,
+        "Month": "Feb 2025",
+        "Actual": 0.15846406616368652,
+        "Actual R12M": 0.12878750645881465,
+        "Budget": 0.20284954605062933
+      },
+      {
+        "month_key": 202503,
+        "Month": "Mar 2025",
+        "Actual": 0.24067303443714133,
+        "Actual R12M": 0.13254534175522878,
+        "Budget": 0.27727418994676306
+      },
+      {
+        "month_key": 202504,
+        "Month": "Apr 2025",
+        "Actual": 0.16180392776173794,
+        "Actual R12M": 0.1335146603875404,
+        "Budget": 0.1759579470479737
+      },
+      {
+        "month_key": 202505,
+        "Month": "May 2025",
+        "Actual": 0.15869313949919014,
+        "Actual R12M": 0.1297148338989017,
+        "Budget": 0.17517406303242758
+      },
+      {
+        "month_key": 202506,
+        "Month": "Jun 2025",
+        "Actual": 0.14851034799272314,
+        "Actual R12M": 0.13486029003721073,
+        "Budget": 0.1711351507951752
+      },
+      {
+        "month_key": 202507,
+        "Month": "Jul 2025",
+        "Actual": 0.049213206133876426,
+        "Actual R12M": 0.1309070103032273,
+        "Budget": 0.10847454811863365
+      },
+      {
+        "month_key": 202508,
+        "Month": "Aug 2025",
+        "Actual": -0.2542771210278263,
+        "Actual R12M": 0.12979178152298118,
+        "Budget": -0.23013067361468234
+      },
+      {
+        "month_key": 202509,
+        "Month": "Sep 2025",
+        "Actual": 0.1448303643408865,
+        "Actual R12M": 0.1281375591766056,
+        "Budget": 0.187723301352082
+      },
+      {
+        "month_key": 202510,
+        "Month": "Oct 2025",
+        "Actual": 0.17848305423664634,
+        "Actual R12M": 0.12873602704795542,
+        "Budget": 0.20774023870825575
+      },
+      {
+        "month_key": 202511,
+        "Month": "Nov 2025",
+        "Actual": 0.14525753722056817,
+        "Actual R12M": 0.12813468105105313,
+        "Budget": 0.1564715166117461
+      },
+      {
+        "month_key": 202512,
+        "Month": "Dec 2025",
+        "Actual": 0.16041708604881072,
+        "Actual R12M": 0.1345951507728919,
+        "Budget": 0.15418683680874698
+      },
+      {
+        "month_key": 202601,
+        "Month": "Jan 2026",
+        "Actual": 0.11452077378017145,
+        "Actual R12M": 0.13313081330390406,
+        "Budget": 0.14782074072925705
+      },
+      {
+        "month_key": 202602,
+        "Month": "Feb 2026",
+        "Actual": 0.2155480572482742,
+        "Actual R12M": 0.13887527603125674,
+        "Budget": 0.20797351055830318
+      },
+      {
+        "month_key": 202603,
+        "Month": "Mar 2026",
+        "Actual": 0.24343306942172033,
+        "Actual R12M": 0.1395786881822664,
+        "Budget": 0.29952557203929053
+      },
+      {
+        "month_key": 202604,
+        "Month": "Apr 2026",
+        "Actual": 0.16711165106409964,
+        "Actual R12M": 0.14014482566431533,
+        "Budget": 0.1798803021452693
+      },
+      {
+        "month_key": 202605,
+        "Month": "May 2026",
+        "Actual": 0.1569795054074672,
+        "Actual R12M": 0.14001854051115553,
+        "Budget": 0.15911661061158575
+      },
+      {
+        "month_key": 202606,
+        "Month": "Jun 2026",
+        "Actual": 0.1648413513625417,
+        "Actual R12M": 0.1415908681052014,
+        "Budget": 0.19452776171729888
+      },
+      {
+        "month_key": 202607,
+        "Month": "Jul 2026",
+        "Actual": 0.10361699697839831,
+        "Actual R12M": 0.14510975117870165,
+        "Budget": 0.11028884331589311
+      },
+      {
+        "month_key": 202608,
+        "Month": "Aug 2026",
+        "Actual": -0.21805022929686968,
+        "Actual R12M": 0.14534681991563753,
+        "Budget": -0.23859350735416632
+      },
+      {
+        "month_key": 202609,
+        "Month": "Sep 2026",
+        "Actual": 0.1683766826219489,
+        "Actual R12M": 0.14734739843891131,
+        "Budget": 0.1916430149198137
+      },
+      {
+        "month_key": 202610,
+        "Month": "Oct 2026",
+        "Actual": 0.2160222755213708,
+        "Actual R12M": 0.1511842691250526,
+        "Budget": 0.19360677637923956
+      }
+    ],
+    "col_fmt": {
+      "Actual": "pct",
+      "Actual R12M": "pct",
+      "Budget": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      }
+    ],
+    "caption": "",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "line",
+    "title": "Operating margin on revenue - Canada \u00b7 Power & Utilities (Jan 2022 - Oct 2026)",
+    "fmt": "pct",
+    "x": "Month",
+    "y": [
+      "Actual",
+      "Actual R12M",
+      "Budget"
+    ],
+    "data": [
+      {
+        "month_key": 202201,
+        "Month": "Jan 2022",
+        "Actual": 0.04259714782328401,
+        "Actual R12M": null,
+        "Budget": 0.06379822347472609
+      },
+      {
+        "month_key": 202202,
+        "Month": "Feb 2022",
+        "Actual": 0.13788697100251118,
+        "Actual R12M": null,
+        "Budget": 0.14739178070479547
+      },
+      {
+        "month_key": 202203,
+        "Month": "Mar 2022",
+        "Actual": 0.21339313624463402,
+        "Actual R12M": null,
+        "Budget": 0.2578845308767774
+      },
+      {
+        "month_key": 202204,
+        "Month": "Apr 2022",
+        "Actual": 0.11587719097557161,
+        "Actual R12M": null,
+        "Budget": 0.09964930375037694
+      },
+      {
+        "month_key": 202205,
+        "Month": "May 2022",
+        "Actual": 0.104676271300205,
+        "Actual R12M": null,
+        "Budget": 0.1214374228843597
+      },
+      {
+        "month_key": 202206,
+        "Month": "Jun 2022",
+        "Actual": 0.11947183474091312,
+        "Actual R12M": null,
+        "Budget": 0.13811416496363632
+      },
+      {
+        "month_key": 202207,
+        "Month": "Jul 2022",
+        "Actual": -0.047878321816852164,
+        "Actual R12M": null,
+        "Budget": 0.006656678708997386
+      },
+      {
+        "month_key": 202208,
+        "Month": "Aug 2022",
+        "Actual": -0.19174950776843114,
+        "Actual R12M": null,
+        "Budget": -0.21305712679273162
+      },
+      {
+        "month_key": 202209,
+        "Month": "Sep 2022",
+        "Actual": 0.16196410206033257,
+        "Actual R12M": null,
+        "Budget": 0.1349966047285146
+      },
+      {
+        "month_key": 202210,
+        "Month": "Oct 2022",
+        "Actual": 0.1370505775791929,
+        "Actual R12M": null,
+        "Budget": 0.11604520453386771
+      },
+      {
+        "month_key": 202211,
+        "Month": "Nov 2022",
+        "Actual": 0.14897799959094873,
+        "Actual R12M": null,
+        "Budget": 0.14463659106231133
+      },
+      {
+        "month_key": 202212,
+        "Month": "Dec 2022",
+        "Actual": 0.0469793057211859,
+        "Actual R12M": 0.09648050275012497,
+        "Budget": 0.07641792913507521
+      },
+      {
+        "month_key": 202301,
+        "Month": "Jan 2023",
+        "Actual": 0.07088361152438498,
+        "Actual R12M": 0.09847388650119653,
+        "Budget": 0.11089385790961559
+      },
+      {
+        "month_key": 202302,
+        "Month": "Feb 2023",
+        "Actual": 0.14433029071770145,
+        "Actual R12M": 0.0992568298116766,
+        "Budget": 0.16994975319944863
+      },
+      {
+        "month_key": 202303,
+        "Month": "Mar 2023",
+        "Actual": 0.22556382254095636,
+        "Actual R12M": 0.10126180757876824,
+        "Budget": 0.2778879273979863
+      },
+      {
+        "month_key": 202304,
+        "Month": "Apr 2023",
+        "Actual": 0.0362216152651433,
+        "Actual R12M": 0.09489272110867032,
+        "Budget": 0.09867916751339448
+      },
+      {
+        "month_key": 202305,
+        "Month": "May 2023",
+        "Actual": 0.13049367819837035,
+        "Actual R12M": 0.09729791094380215,
+        "Budget": 0.16290093581378637
+      },
+      {
+        "month_key": 202306,
+        "Month": "Jun 2023",
+        "Actual": 0.1008606690082574,
+        "Actual R12M": 0.09573091485204259,
+        "Budget": 0.1597011218121083
+      },
+      {
+        "month_key": 202307,
+        "Month": "Jul 2023",
+        "Actual": 0.06969062118850981,
+        "Actual R12M": 0.10324209601401171,
+        "Budget": 0.0552487041560656
+      },
+      {
+        "month_key": 202308,
+        "Month": "Aug 2023",
+        "Actual": -0.23314256668523042,
+        "Actual R12M": 0.10072670233981088,
+        "Budget": -0.19123080260164585
+      },
+      {
+        "month_key": 202309,
+        "Month": "Sep 2023",
+        "Actual": 0.1255120467219276,
+        "Actual R12M": 0.09734485347778943,
+        "Budget": 0.13522742350959763
+      },
+      {
+        "month_key": 202310,
+        "Month": "Oct 2023",
+        "Actual": 0.125649280123483,
+        "Actual R12M": 0.09649753604407259,
+        "Budget": 0.158738705512636
+      },
+      {
+        "month_key": 202311,
+        "Month": "Nov 2023",
+        "Actual": 0.1524304659789527,
+        "Actual R12M": 0.09700493142583642,
+        "Budget": 0.16600775189273503
+      },
+      {
+        "month_key": 202312,
+        "Month": "Dec 2023",
+        "Actual": 0.0753008718468406,
+        "Actual R12M": 0.09898058798525491,
+        "Budget": 0.07661874726247102
+      },
+      {
+        "month_key": 202401,
+        "Month": "Jan 2024",
+        "Actual": 0.12464222488862182,
+        "Actual R12M": 0.10333570496483627,
+        "Budget": 0.13338342288345892
+      },
+      {
+        "month_key": 202402,
+        "Month": "Feb 2024",
+        "Actual": 0.1796754651793738,
+        "Actual R12M": 0.10726407923598273,
+        "Budget": 0.19292551427359592
+      },
+      {
+        "month_key": 202403,
+        "Month": "Mar 2024",
+        "Actual": 0.2133151403443392,
+        "Actual R12M": 0.10652870702602532,
+        "Budget": 0.2310541193938959
+      },
+      {
+        "month_key": 202404,
+        "Month": "Apr 2024",
+        "Actual": 0.15135145421432425,
+        "Actual R12M": 0.11571192747011481,
+        "Budget": 0.16593119315310592
+      },
+      {
+        "month_key": 202405,
+        "Month": "May 2024",
+        "Actual": 0.1997211327970301,
+        "Actual R12M": 0.12260789803444531,
+        "Budget": 0.1642477005059511
+      },
+      {
+        "month_key": 202406,
+        "Month": "Jun 2024",
+        "Actual": 0.0842557521805376,
+        "Actual R12M": 0.12122682116071258,
+        "Budget": 0.1184731294182445
+      },
+      {
+        "month_key": 202407,
+        "Month": "Jul 2024",
+        "Actual": 0.10072761506746637,
+        "Actual R12M": 0.12338773707869956,
+        "Budget": 0.077122942793855
+      },
+      {
+        "month_key": 202408,
+        "Month": "Aug 2024",
+        "Actual": -0.25243343914499317,
+        "Actual R12M": 0.1217818285396476,
+        "Budget": -0.23388999309087166
+      },
+      {
+        "month_key": 202409,
+        "Month": "Sep 2024",
+        "Actual": 0.1660244347376959,
+        "Actual R12M": 0.12530283665041514,
+        "Budget": 0.13647180007078064
+      },
+      {
+        "month_key": 202410,
+        "Month": "Oct 2024",
+        "Actual": 0.173868121111323,
+        "Actual R12M": 0.12979062324127247,
+        "Budget": 0.1790002054765992
+      },
+      {
+        "month_key": 202411,
+        "Month": "Nov 2024",
+        "Actual": 0.1529775252465464,
+        "Actual R12M": 0.12992581031160408,
+        "Budget": 0.14715562662112983
+      },
+      {
+        "month_key": 202412,
+        "Month": "Dec 2024",
+        "Actual": 0.07981220792385718,
+        "Actual R12M": 0.1300709969285271,
+        "Budget": 0.10116006171386344
+      },
+      {
+        "month_key": 202501,
+        "Month": "Jan 2025",
+        "Actual": 0.13219084572405648,
+        "Actual R12M": 0.13068031176463532,
+        "Budget": 0.16423766578198798
+      },
+      {
+        "month_key": 202502,
+        "Month": "Feb 2025",
+        "Actual": 0.15846406616368652,
+        "Actual R12M": 0.12878750645881465,
+        "Budget": 0.20284954605062933
+      },
+      {
+        "month_key": 202503,
+        "Month": "Mar 2025",
+        "Actual": 0.24067303443714133,
+        "Actual R12M": 0.13254534175522878,
+        "Budget": 0.27727418994676306
+      },
+      {
+        "month_key": 202504,
+        "Month": "Apr 2025",
+        "Actual": 0.16180392776173794,
+        "Actual R12M": 0.1335146603875404,
+        "Budget": 0.1759579470479737
+      },
+      {
+        "month_key": 202505,
+        "Month": "May 2025",
+        "Actual": 0.15869313949919014,
+        "Actual R12M": 0.1297148338989017,
+        "Budget": 0.17517406303242758
+      },
+      {
+        "month_key": 202506,
+        "Month": "Jun 2025",
+        "Actual": 0.14851034799272314,
+        "Actual R12M": 0.13486029003721073,
+        "Budget": 0.1711351507951752
+      },
+      {
+        "month_key": 202507,
+        "Month": "Jul 2025",
+        "Actual": 0.049213206133876426,
+        "Actual R12M": 0.1309070103032273,
+        "Budget": 0.10847454811863365
+      },
+      {
+        "month_key": 202508,
+        "Month": "Aug 2025",
+        "Actual": -0.2542771210278263,
+        "Actual R12M": 0.12979178152298118,
+        "Budget": -0.23013067361468234
+      },
+      {
+        "month_key": 202509,
+        "Month": "Sep 2025",
+        "Actual": 0.1448303643408865,
+        "Actual R12M": 0.1281375591766056,
+        "Budget": 0.187723301352082
+      },
+      {
+        "month_key": 202510,
+        "Month": "Oct 2025",
+        "Actual": 0.17848305423664634,
+        "Actual R12M": 0.12873602704795542,
+        "Budget": 0.20774023870825575
+      },
+      {
+        "month_key": 202511,
+        "Month": "Nov 2025",
+        "Actual": 0.14525753722056817,
+        "Actual R12M": 0.12813468105105313,
+        "Budget": 0.1564715166117461
+      },
+      {
+        "month_key": 202512,
+        "Month": "Dec 2025",
+        "Actual": 0.16041708604881072,
+        "Actual R12M": 0.1345951507728919,
+        "Budget": 0.15418683680874698
+      },
+      {
+        "month_key": 202601,
+        "Month": "Jan 2026",
+        "Actual": 0.11452077378017145,
+        "Actual R12M": 0.13313081330390406,
+        "Budget": 0.14782074072925705
+      },
+      {
+        "month_key": 202602,
+        "Month": "Feb 2026",
+        "Actual": 0.2155480572482742,
+        "Actual R12M": 0.13887527603125674,
+        "Budget": 0.20797351055830318
+      },
+      {
+        "month_key": 202603,
+        "Month": "Mar 2026",
+        "Actual": 0.24343306942172033,
+        "Actual R12M": 0.1395786881822664,
+        "Budget": 0.29952557203929053
+      },
+      {
+        "month_key": 202604,
+        "Month": "Apr 2026",
+        "Actual": 0.16711165106409964,
+        "Actual R12M": 0.14014482566431533,
+        "Budget": 0.1798803021452693
+      },
+      {
+        "month_key": 202605,
+        "Month": "May 2026",
+        "Actual": 0.1569795054074672,
+        "Actual R12M": 0.14001854051115553,
+        "Budget": 0.15911661061158575
+      },
+      {
+        "month_key": 202606,
+        "Month": "Jun 2026",
+        "Actual": 0.1648413513625417,
+        "Actual R12M": 0.1415908681052014,
+        "Budget": 0.19452776171729888
+      },
+      {
+        "month_key": 202607,
+        "Month": "Jul 2026",
+        "Actual": 0.10361699697839831,
+        "Actual R12M": 0.14510975117870165,
+        "Budget": 0.11028884331589311
+      },
+      {
+        "month_key": 202608,
+        "Month": "Aug 2026",
+        "Actual": -0.21805022929686968,
+        "Actual R12M": 0.14534681991563753,
+        "Budget": -0.23859350735416632
+      },
+      {
+        "month_key": 202609,
+        "Month": "Sep 2026",
+        "Actual": 0.1683766826219489,
+        "Actual R12M": 0.14734739843891131,
+        "Budget": 0.1916430149198137
+      },
+      {
+        "month_key": 202610,
+        "Month": "Oct 2026",
+        "Actual": 0.2160222755213708,
+        "Actual R12M": 0.1511842691250526,
+        "Budget": 0.19360677637923956
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "Canada \u00b7 Power & Utilities",
+    "org_filter": {
+      "l3_country": [
+        "Canada"
+      ],
+      "l4_product_line": [
+        "Power & Utilities"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "Jan 2022 - Oct 2026",
+    "months": "Jan 2022 - Oct 2026",
+    "versions": [
+      "Actual",
+      "Actual R12M",
+      "Budget"
+    ],
+    "applied": [
+      "Scope: Canada \u00b7 Power & Utilities (from your question)",
+      "Period: Jan 2022 - Oct 2026 (from your question)",
+      "Versions: Actual, Actual R12M, Budget (default)"
+    ]
+  },
+  "sql_used": [
+    "SELECT fact_pnl.month_key, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202201 AND 202610 AND dim_org.l3_country IN (N'Canada') AND dim_org.l4_product_line IN (N'Power & Utilities') GROUP BY fact_pnl.month_key, fact_pnl.account_id",
+    "SELECT fact_pnl.month_key, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_pnl.month_key BETWEEN 202201 AND 202610 AND dim_org.l3_country IN (N'Canada') AND dim_org.l4_product_line IN (N'Power & Utilities') GROUP BY fact_pnl.month_key, fact_pnl.account_id"
+  ],
+  "followups": [
+    "Why did Operating margin on revenue change vs last year for Canada \u00b7 Power & Utilities?",
+    "Rank BUs in Canada \u00b7 Power & Utilities by Operating margin on revenue this year",
+    "Compare Budget vs FC3 vs Actual for Canada \u00b7 Power & Utilities"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "get_trend",
+        "arguments": {
+          "metric_or_ratio": "maop_margin_revenue",
+          "org": "Canada \u00b7 Power & Utilities",
+          "start": "2022-01",
+          "end": "",
+          "versions": [
+            "Actual",
+            "PY",
+            "Budget"
+          ]
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "get_trend",
+      "arguments": {
+        "metric_or_ratio": "maop_margin_revenue",
+        "org": "Canada \u00b7 Power & Utilities",
+        "start": "2022-01",
+        "end": "",
+        "versions": [
+          "Actual",
+          "PY",
+          "Budget"
+        ]
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.007,
+      "plan": 0.0,
+      "act": 0.124,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "Canada \u00b7 Power & Utilities",
+      "metric_or_ratio": "maop_margin_revenue",
+      "period": "Jan 2022 - Oct 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "trend"
+      ]
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Operating margin on revenue monthly trend for Canada \u00b7 Power & Utilities, Jan 2022 - Oct 2026 (series: Actual, Actual R12M, Budget), USD.",
+      "Actual by calendar year: 2022 9.6% (full year), 2023 9.9% (full year), 2024 13.0% (full year), 2025 13.5% (full year), 2026 15.1% (Jan-Oct)",
+      "Budget by calendar year: 2022 10.6% (full year), 2023 13.0% (full year), 2024 13.2% (full year), 2025 16.2% (full year), 2026 16.6% (Jan-Oct)",
+      "Latest month Oct 2026: Actual 21.6%, Budget 19.4%",
+      "Highest Actual month: Mar 2026 24.3%; lowest: Aug 2025 -25.4%",
+      "Rolling 12-month Operating margin on revenue: Dec 2022 9.6% -> Oct 2026 15.1% (up 5.5 pp)"
+    ],
+    "evidence": {
+      "extra": {
+        "yearly": {
+          "Actual": {
+            "2022": {
+              "value": 0.09648050275012497,
+              "months": 12,
+              "last": 202212
+            },
+            "2023": {
+              "value": 0.09898058798525489,
+              "months": 12,
+              "last": 202312
+            },
+            "2024": {
+              "value": 0.13007099692852714,
+              "months": 12,
+              "last": 202412
+            },
+            "2025": {
+              "value": 0.1345951507728919,
+              "months": 12,
+              "last": 202512
+            },
+            "2026": {
+              "value": 0.15084099969221282,
+              "months": 10,
+              "last": 202610
+            }
+          },
+          "Budget": {
+            "2022": {
+              "value": 0.10559103221812709,
+              "months": 12,
+              "last": 202212
+            },
+            "2023": {
+              "value": 0.12956340230009153,
+              "months": 12,
+              "last": 202312
+            },
+            "2024": {
+              "value": 0.13193931407942625,
+              "months": 12,
+              "last": 202412
+            },
+            "2025": {
+              "value": 0.16190188032940156,
+              "months": 12,
+              "last": 202512
+            },
+            "2026": {
+              "value": 0.16553510357689485,
+              "months": 10,
+              "last": 202610
+            }
+          }
+        }
+      },
+      "totals": {}
+    },
+    "latency_s": 0.14
+  }
+}

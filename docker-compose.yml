@@ -1,0 +1,59 @@
+# Local / on-prem stack with the same engine as production: SQL Server 2022 + the app
+# (+ an optional local LLM). Every port is bound to 127.0.0.1 only.
+#
+#   cp .env.example .env                              # set the two SQL passwords and LLM_MODEL
+#   docker compose up -d mssql                        # SQL Server 2022 (Developer edition)
+#   docker compose --profile setup run --rm loader    # generate + load + reconcile the synthetic data
+#   docker compose up -d --build app                  # UI on http://localhost:8501
+#   docker compose --profile ollama up -d ollama      # optional: local LLM, then
+#   docker compose exec ollama ollama pull qwen2.5-coder:14b
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?set MSSQL_SA_PASSWORD in .env}
+      MSSQL_MEMORY_LIMIT_MB: "6144"
+    ports: ["127.0.0.1:1433:1433"]
+    volumes: [mssql-data:/var/opt/mssql]
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q 'SELECT 1' -b -o /dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  loader:
+    build: .
+    profiles: ["setup"]
+    env_file: .env
+    environment:
+      DB_HOST: mssql
+      DB_UP_MODE: external
+    command: ["sh", "-c", "python scripts/wait_for_db.py && python scripts/generate_data.py && python scripts/load_mssql.py && python scripts/export_duckdb.py && python scripts/reconcile.py"]
+    depends_on:
+      mssql: {condition: service_healthy}
+
+  app:
+    build: .
+    env_file: .env
+    environment:
+      DB_HOST: mssql
+      OLLAMA_API_BASE: http://ollama:11434
+    ports: ["127.0.0.1:8501:8501"]
+    depends_on:
+      mssql: {condition: service_healthy}
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["ollama"]
+    environment:
+      OLLAMA_KEEP_ALIVE: "-1"
+      OLLAMA_CONTEXT_LENGTH: "8192"
+      OLLAMA_NUM_PARALLEL: "2"
+    ports: ["127.0.0.1:11434:11434"]
+    volumes: [ollama-models:/root/.ollama]
+
+volumes:
+  mssql-data:
+  ollama-models:

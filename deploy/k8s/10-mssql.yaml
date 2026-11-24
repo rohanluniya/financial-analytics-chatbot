@@ -1,0 +1,79 @@
+# SQL Server 2022 Developer Edition (free for dev/test) as a single-replica StatefulSet.
+# Internal ClusterIP service only - never exposed outside the cluster.
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${PREFIX}-mssql
+  namespace: ${NAMESPACE}
+spec:
+  type: ClusterIP
+  selector:
+    app: ${PREFIX}-mssql
+  ports:
+    - name: tds
+      port: 1433
+      targetPort: 1433
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ${PREFIX}-mssql
+  namespace: ${NAMESPACE}
+spec:
+  serviceName: ${PREFIX}-mssql
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${PREFIX}-mssql
+  template:
+    metadata:
+      labels:
+        app: ${PREFIX}-mssql
+    spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: ${NODE_POOL}
+      securityContext:
+        fsGroup: 10001          # mssql user in the 2022 image
+      terminationGracePeriodSeconds: 60
+      containers:
+        - name: mssql
+          image: mcr.microsoft.com/mssql/server:2022-latest
+          ports:
+            - containerPort: 1433
+          env:
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: MSSQL_PID
+              value: "Developer"
+            - name: MSSQL_MEMORY_LIMIT_MB
+              value: "6144"
+            - name: MSSQL_SA_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ${PREFIX}-secrets
+                  key: MSSQL_SA_PASSWORD
+          # Small requests so we only borrow idle capacity on the shared CPU pool.
+          resources:
+            requests:
+              cpu: 200m
+              memory: 2Gi
+            limits:
+              cpu: "8"
+              memory: 8Gi
+          readinessProbe:
+            tcpSocket:
+              port: 1433
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          volumeMounts:
+            - name: data
+              mountPath: /var/opt/mssql
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: standard-rwo
+        resources:
+          requests:
+            storage: 20Gi

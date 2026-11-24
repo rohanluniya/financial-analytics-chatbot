@@ -1,0 +1,1001 @@
+# Golden questions for the evaluation (tests/run_eval.py).
+#
+# Expected values are NOT hard-coded: each `expect` item is a small spec that tests/eval_dsl.py
+# compiles to raw SQL over the base tables (independent of the semantic layer). As-of date is the
+# data as-of date in config/settings.yaml (2026-11-16): "this year" / "YTD" = Jan-Oct 2026, "last month" =
+# Oct 2026, and the open (landing) month is Nov 2026.
+#
+# Fields:
+#   id, category, q (last turn), turns (optional earlier turns of the same conversation),
+#   persona (default group_cfo), tools (accepted primary tools), status (default ok),
+#   expect: list of DSL specs; the first one is checked in the answer TEXT unless `text: false`,
+#           the others only in the tool output unless `text: true`. All must be in the tool output.
+#   text_mode: all (default) | any  - how text-checked items combine
+#   rls: true  - counted in the row-level-security pass rate
+#   absent: [names]  - must not appear in the answer text or table (e.g. units outside the persona's access)
+#   ui_filters: {...} - sidebar filters passed with every turn (org_filter / version / period)
+#   resume: true  - the earlier turns are stored and reloaded (conversation history) before the last turn
+
+# ------------------------------------------------------------------------------- P&L
+- id: pnl_us_op
+  category: pnl
+  q: How is operating profit YTD vs last year and budget for the United States?
+  tools: [get_pnl]
+  expect:
+    - {m: maop, org: {l3_country: United States}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: United States}, p: YTD-2026-10, v: PY}
+    - {m: maop, org: {l3_country: United States}, p: YTD-2026-10, v: Budget}
+- id: pnl_mx_net_income
+  category: pnl
+  q: What is the net income of Mexico this year?
+  tools: [get_pnl, get_trend]
+  expect:
+    - {m: net_income, org: {l3_country: Mexico}, p: YTD-2026-10}
+- id: pnl_ca_q3
+  category: pnl
+  q: Show me the P&L of Canada for Q3 2025
+  tools: [get_pnl]
+  expect:
+    - {m: maop, org: {l3_country: Canada}, p: Q-2025-3}
+    - {m: production, org: {l3_country: Canada}, p: Q-2025-3}
+- id: pnl_bpu_fy2025
+  category: pnl
+  q: How did BPU perform in FY 2025?
+  tools: [get_pnl]
+  expect:
+    - {m: maop, org: {l2_region: BPU}, p: FY-2025}
+    - {m: production, org: {l2_region: BPU}, p: FY-2025}
+- id: pnl_br_production_last_month
+  category: pnl
+  q: What was production in Brazil last month?
+  tools: [get_pnl, get_trend]
+  expect:
+    - {m: production, org: {l3_country: Brazil}, p: M-2026-10}
+- id: pnl_cl_industry_gp
+  category: pnl
+  q: Gross profit for Industry & Energy in Chile YTD vs budget
+  tools: [get_pnl, variance_drivers, compare_versions]
+  expect:
+    - {m: gross_profit, org: {l3_country: Chile, l4_product_line: Industry & Energy}, p: YTD-2026-10}
+    - {m: gross_profit, org: {l3_country: Chile, l4_product_line: Industry & Energy}, p: YTD-2026-10, v: Budget}
+- id: pnl_group_ytd
+  category: pnl
+  q: How is the whole group doing this year?
+  tools: [get_pnl]
+  expect:
+    - {m: maop, p: YTD-2026-10}
+    - {m: production, p: YTD-2026-10}
+- id: pnl_consumer_2025
+  category: pnl
+  q: Revenue and operating profit for Consumer Products in 2025
+  tools: [get_pnl]
+  text_mode: any
+  expect:
+    - {m: maop, org: {l4_product_line: Consumer Products}, p: FY-2025}
+    - {m: revenue, org: {l4_product_line: Consumer Products}, p: FY-2025, text: true}
+- id: pnl_ssa_ebit
+  category: pnl
+  q: EBIT of Southern South America year to date
+  tools: [get_pnl, get_trend]
+  expect:
+    - {m: management_op, org: {l2_region: Southern South America}, p: YTD-2026-10}
+- id: pnl_co_vs_budget
+  category: pnl
+  q: How is Colombia doing vs budget?
+  tools: [get_pnl, variance_drivers, compare_versions]
+  expect:
+    - {m: maop, org: {l3_country: Colombia}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Colombia}, p: YTD-2026-10, v: Budget}
+
+# ------------------------------------------------------------------------------- trends
+- id: trend_env_personnel_revenue
+  category: trend
+  q: Show personnel cost as % of revenue trend for Environmental Lab Testing since 2023
+  tools: [get_trend]
+  text_mode: any
+  expect:
+    - {r: [personnel, revenue], org: {l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {r: [personnel, revenue], org: {l4_product_line: Environmental Lab Testing}, p: FY-2025, text: true}
+    - {r: [personnel, revenue], org: {l4_product_line: Environmental Lab Testing}, p: FY-2023, text: true}
+- id: trend_mx_bi_wip
+  category: trend
+  q: What happened to WIP in Mexico Buildings & Infrastructure this year?
+  tools: [get_trend]
+  expect:
+    - {m: wip, org: {l3_country: Mexico, l4_product_line: Buildings & Infrastructure}, p: YTD-2026-10}
+- id: trend_ar_op_2026
+  category: trend
+  q: Monthly operating profit trend for Argentina in 2026
+  tools: [get_trend]
+  expect:
+    - {m: maop, org: {l3_country: Argentina}, p: YTD-2026-10}
+- id: trend_ca_power_margin
+  category: trend
+  q: How has the operating margin of Canada Power & Utilities developed since 2022?
+  tools: [get_trend]
+  text_mode: any
+  expect:
+    - {r: [maop, revenue], org: {l3_country: Canada, l4_product_line: Power & Utilities}, p: FY-2025}
+    - {r: [maop, revenue], org: {l3_country: Canada, l4_product_line: Power & Utilities}, p: FY-2022, text: true}
+    - {r: [maop, revenue], org: {l3_country: Canada, l4_product_line: Power & Utilities}, p: YTD-2026-10, text: true}
+- id: trend_us_utilization_r12m
+  category: trend
+  q: Trend of utilization rate for the United States over the last 12 months
+  tools: [get_trend]
+  text_mode: any
+  expect:
+    - {r: [billable_hours, available_hours], org: {l3_country: United States}, p: M-2026-10}
+    - {r: [billable_hours, available_hours], org: {l3_country: United States}, p: YTD-2026-10, text: true}
+- id: trend_pe_production
+  category: trend
+  q: Show the production trend for Peru since January 2025
+  tools: [get_trend]
+  text_mode: any
+  expect:
+    - {m: production, org: {l3_country: Peru}, p: "R-2025-01:2026-10"}
+    - {m: production, org: {l3_country: Peru}, p: FY-2025, text: true}
+    - {m: production, org: {l3_country: Peru}, p: M-2026-10, text: true}
+- id: trend_cl_mm_subcontracting
+  category: trend
+  q: How did subcontracting costs develop in Chile Metals & Minerals over 2026?
+  tools: [get_trend, variance_drivers]
+  expect:
+    - {m: subcontracting, org: {l3_country: Chile, l4_product_line: Metals & Minerals}, p: YTD-2026-10}
+- id: trend_usca_direct_margin
+  category: trend
+  q: Show direct margin trend for US & Canada this year vs budget
+  tools: [get_trend]
+  text_mode: any
+  expect:
+    - {r: [direct_margin, production], org: {l2_region: US & Canada}, p: M-2026-10}
+    - {r: [direct_margin, production], org: {l2_region: US & Canada}, p: YTD-2026-10, text: true}
+
+# ------------------------------------------------------------------------------- ratios
+- id: ratio_mx_utilization
+  category: ratio
+  q: What is the utilization rate in Mexico vs budget?
+  tools: [get_ratio]
+  expect:
+    - {r: [billable_hours, available_hours], org: {l3_country: Mexico}, p: YTD-2026-10}
+    - {r: [billable_hours, available_hours], org: {l3_country: Mexico}, p: YTD-2026-10, v: Budget}
+- id: ratio_br_personnel_production
+  category: ratio
+  q: Personnel cost as % of production for Brazil YTD
+  tools: [get_ratio, get_trend]
+  expect:
+    - {r: [personnel, production], org: {l3_country: Brazil}, p: YTD-2026-10}
+- id: ratio_ca_direct_margin
+  category: ratio
+  q: What is the direct margin of Canada this year?
+  tools: [get_ratio, get_kpi_cockpit]
+  expect:
+    - {r: [direct_margin, production], org: {l3_country: Canada}, p: YTD-2026-10}
+- id: ratio_us_production_per_fte
+  category: ratio
+  q: Production per FTE in the United States in 2025
+  tools: [get_ratio]
+  expect:
+    - {r: [production, fte], annualize: true, org: {l3_country: United States}, p: FY-2025}
+- id: ratio_ar_overtime
+  category: ratio
+  q: Overtime ratio for Argentina YTD vs last year
+  tools: [get_ratio]
+  expect:
+    - {r: [overtime_hours, available_hours], org: {l3_country: Argentina}, p: YTD-2026-10}
+    - {r: [overtime_hours, available_hours], org: {l3_country: Argentina}, p: YTD-2026-10, v: PY}
+- id: ratio_paraguay_margin
+  category: ratio
+  q: What is the MAOP margin of Paraguay this year?
+  tools: [get_ratio]
+  expect:
+    - {r: [maop, revenue], org: {l3_country: Paraguay}, p: YTD-2026-10}
+- id: ratio_bi_subcontracting
+  category: ratio
+  q: Subcontracting as % of production in Buildings & Infrastructure YTD
+  tools: [get_ratio]
+  expect:
+    - {r: [subcontracting, production], org: {l4_product_line: Buildings & Infrastructure}, p: YTD-2026-10}
+- id: ratio_pe_production_per_hour
+  category: ratio
+  q: What is the production per billable hour in Peru?
+  tools: [get_ratio]
+  expect:
+    - {r: [production, billable_hours], org: {l3_country: Peru}, p: YTD-2026-10}
+- id: ratio_uy_gross_margin_q2
+  category: ratio
+  q: Gross margin for Uruguay in Q2 2026
+  tools: [get_ratio]
+  expect:
+    - {r: [gross_profit, production], org: {l3_country: Uruguay}, p: Q-2026-2}
+- id: ratio_ca_personnel_billing
+  category: ratio
+  q: Personnel/billing for Canada last month
+  tools: [get_ratio]
+  expect:
+    - {r: [personnel, billing], org: {l3_country: Canada}, p: M-2026-10}
+- id: ratio_group_net_margin_2025
+  category: ratio
+  q: Net income margin of the group in FY 2025
+  tools: [get_ratio]
+  expect:
+    - {r: [net_income, revenue], p: FY-2025}
+
+# ------------------------------------------------------------------------------- variance drivers
+- id: drv_ca_env_margin
+  category: drivers
+  q: Why did Canada Environmental Lab Testing margin drop in 2026?
+  tools: [variance_drivers]
+  expect:
+    - {r: [maop, revenue], org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {r: [maop, revenue], org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10, v: PY, text: true}
+- id: drv_us_epv_direct_staff_march
+  category: drivers
+  q: Break down direct staff costs for US Elevators & Pressure Vessels in March 2025
+  tools: [variance_drivers, get_pnl]
+  expect:
+    - {m: 7a, org: {l3_country: United States, l4_product_line: Elevators & Pressure Vessels}, p: M-2025-03}
+    - {m: bonus_7a2, org: {l3_country: United States, l4_product_line: Elevators & Pressure Vessels}, p: M-2025-03, text: true}
+- id: drv_mx_op_budget
+  category: drivers
+  q: What drove the change in operating profit for Mexico vs budget this year?
+  tools: [variance_drivers]
+  expect:
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10, v: Budget}
+- id: drv_cl_mm_subcontracting_budget
+  category: drivers
+  q: Why is Chile Metals & Minerals subcontracting above budget?
+  tools: [variance_drivers]
+  expect:
+    - {m: subcontracting, org: {l3_country: Chile, l4_product_line: Metals & Minerals}, p: YTD-2026-10}
+    - {m: subcontracting, org: {l3_country: Chile, l4_product_line: Metals & Minerals}, p: YTD-2026-10, v: Budget}
+- id: drv_ca_op_py
+  category: drivers
+  q: Explain the operating profit variance vs last year for Canada
+  tools: [variance_drivers]
+  expect:
+    - {m: maop, org: {l3_country: Canada}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Canada}, p: YTD-2026-10, v: PY}
+- id: drv_co_personnel_split
+  category: drivers
+  q: Split personnel costs for Colombia into direct and indirect
+  tools: [variance_drivers, get_pnl]
+  text_mode: any
+  expect:
+    - {m: personnel, org: {l3_country: Colombia}, p: YTD-2026-10}
+    - {m: 7a, org: {l3_country: Colombia}, p: YTD-2026-10, text: true}
+    - {m: 7b, org: {l3_country: Colombia}, p: YTD-2026-10, text: true}
+- id: drv_nsa_production_py
+  category: drivers
+  q: What are the drivers of the production change in Northern South America vs PY?
+  tools: [variance_drivers]
+  expect:
+    - {m: production, org: {l2_region: Northern South America}, p: YTD-2026-10}
+    - {m: production, org: {l2_region: Northern South America}, p: YTD-2026-10, v: PY}
+- id: drv_usca_net_income_py
+  category: drivers
+  q: Why did US & Canada net income change vs last year?
+  tools: [variance_drivers]
+  expect:
+    - {m: net_income, org: {l2_region: US & Canada}, p: YTD-2026-10}
+    - {m: net_income, org: {l2_region: US & Canada}, p: YTD-2026-10, v: PY}
+
+# ------------------------------------------------------------------------------- rankings
+- id: rank_usca_bu_margin
+  category: ranking
+  q: Top 5 BUs by operating margin in US & Canada this year
+  tools: [rank_entities]
+  expect:
+    - {rank: {r: [maop, revenue]}, level: l6_bu, within: {l2_region: US & Canada}, p: YTD-2026-10, n: 1}
+- id: rank_pl_subcontracting
+  category: ranking
+  q: Subcontracting cost by product line YTD vs PY
+  tools: [rank_entities]
+  expect:
+    - {rank: {m: subcontracting}, level: l4_product_line, p: YTD-2026-10, n: 1}
+- id: rank_country_lowest_margin
+  category: ranking
+  q: Which countries have the lowest operating margin this year?
+  tools: [rank_entities]
+  expect:
+    - {rank: {r: [maop, revenue]}, level: l3_country, p: YTD-2026-10, asc: true, n: 1}
+- id: rank_region_production_2025
+  category: ranking
+  q: Rank regions by production in 2025
+  tools: [rank_entities]
+  expect:
+    - {rank: {m: production}, level: l2_region, p: FY-2025, n: 1}
+- id: rank_br_bottom_businesses
+  category: ranking
+  q: Bottom 3 businesses by operating profit in Brazil YTD
+  tools: [rank_entities]
+  expect:
+    - {rank: {m: maop}, level: l5_business, within: {l3_country: Brazil}, p: YTD-2026-10, asc: true, n: 1}
+- id: rank_pl_utilization
+  category: ranking
+  q: Which product lines have the highest utilization rate this year?
+  tools: [rank_entities]
+  expect:
+    - {rank: {r: [billable_hours, available_hours]}, level: l4_product_line, p: YTD-2026-10, n: 1}
+- id: rank_mx_bu_direct_margin
+  category: ranking
+  q: Best 5 BUs by direct margin in Mexico
+  tools: [rank_entities]
+  expect:
+    - {rank: {r: [direct_margin, production]}, level: l6_bu, within: {l3_country: Mexico}, p: YTD-2026-10, n: 1}
+- id: rank_country_net_income
+  category: ranking
+  q: Countries ranked by net income YTD
+  tools: [rank_entities]
+  expect:
+    - {rank: {m: net_income}, level: l3_country, p: YTD-2026-10, n: 1}
+
+# ------------------------------------------------------------------------------- versions
+- id: ver_cl_mm
+  category: versions
+  q: Compare Budget vs FC2 vs Actual for Chile Metals & Minerals
+  tools: [compare_versions]
+  text_mode: any
+  expect:
+    - {m: maop, org: {l3_country: Chile, l4_product_line: Metals & Minerals}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Chile, l4_product_line: Metals & Minerals}, p: YTD-2026-10, v: Budget, text: true}
+    - {m: maop, org: {l3_country: Chile, l4_product_line: Metals & Minerals}, p: YTD-2026-10, v: FC2}
+- id: ver_group_latest_fy2026
+  category: versions
+  q: What does the latest forecast say for the full year 2026 for the group?
+  tools: [compare_versions, get_pnl]
+  expect:
+    - {m: maop, p: FY-2026, v: FC3}
+- id: ver_mx_fc1_fc3
+  category: versions
+  q: Budget vs FC1 vs FC3 for Mexico this year
+  tools: [compare_versions]
+  text_mode: any
+  expect:
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10, v: Budget}
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10, v: FC1, text: true}
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10, v: FC3, text: true}
+- id: ver_ca_fc3_full_year
+  category: versions
+  q: How does FC3 compare with budget for Canada for the full year 2026?
+  tools: [compare_versions]
+  text_mode: any
+  expect:
+    - {m: maop, org: {l3_country: Canada}, p: FY-2026, v: FC3}
+    - {m: maop, org: {l3_country: Canada}, p: FY-2026, v: Budget, text: true}
+- id: ver_ar_actual_budget
+  category: versions
+  q: Compare Actual and Budget operating profit by version for Argentina YTD
+  tools: [compare_versions, get_pnl]
+  expect:
+    - {m: maop, org: {l3_country: Argentina}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Argentina}, p: YTD-2026-10, v: Budget}
+
+# ------------------------------------------------------------------------------- KPI cockpit
+- id: ck_canada
+  category: cockpit
+  q: Show the operational profitability cockpit for Canada
+  tools: [get_kpi_cockpit]
+  text_mode: any
+  expect:
+    - {r: [direct_margin, production], org: {l3_country: Canada}, p: YTD-2026-10}
+    - {r: [direct_margin, production], org: {l3_country: Canada}, p: M-2026-10, text: true}
+- id: ck_us_dashboard
+  category: cockpit
+  q: KPI dashboard for the United States
+  tools: [get_kpi_cockpit]
+  text_mode: any
+  expect:
+    - {r: [direct_margin, production], org: {l3_country: United States}, p: YTD-2026-10}
+    - {r: [direct_margin, production], org: {l3_country: United States}, p: M-2026-10, text: true}
+    - {r: [billable_hours, available_hours], org: {l3_country: United States}, p: YTD-2026-10, text: true}
+- id: ck_brazil_march
+  category: cockpit
+  q: Show the performance cockpit for Brazil for March 2026
+  tools: [get_kpi_cockpit]
+  text_mode: any
+  expect:
+    - {r: [direct_margin, production], org: {l3_country: Brazil}, p: M-2026-03}
+    - {r: [direct_margin, production], org: {l3_country: Brazil}, p: YTD-2026-03, text: true}
+- id: ck_env_kpis
+  category: cockpit
+  q: Operational KPIs for Environmental Lab Testing
+  tools: [get_kpi_cockpit]
+  text_mode: any
+  expect:
+    - {r: [direct_margin, production], org: {l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {r: [direct_margin, production], org: {l4_product_line: Environmental Lab Testing}, p: M-2026-10, text: true}
+
+# ------------------------------------------------------------------------------- follow-ups (memory)
+- id: fu_now_for_canada
+  category: followup
+  turns: ["How is operating profit YTD vs last year and budget for the United States?"]
+  q: now for Canada
+  tools: [get_pnl]
+  expect:
+    - {m: maop, org: {l3_country: Canada}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Canada}, p: YTD-2026-10, v: PY}
+    - {m: maop, org: {l3_country: Canada}, p: YTD-2026-10, v: Budget}
+- id: fu_same_for_brazil
+  category: followup
+  turns: ["Show the operating profit trend for Mexico this year"]
+  q: same for Brazil
+  tools: [get_trend]
+  expect:
+    - {m: maop, org: {l3_country: Brazil}, p: YTD-2026-10}
+- id: fu_first_one
+  category: followup
+  turns: ["Which countries have the lowest operating margin this year?"]
+  q: why is the first one so low?
+  tools: [variance_drivers]
+  expect:
+    - {r: [maop, revenue], p: YTD-2026-10,
+       org_from_rank: {rank: {r: [maop, revenue]}, level: l3_country, p: YTD-2026-10, asc: true, n: 1}}
+    - {r: [maop, revenue], p: YTD-2026-10, v: PY,
+       org_from_rank: {rank: {r: [maop, revenue]}, level: l3_country, p: YTD-2026-10, asc: true, n: 1}}
+- id: fu_and_for_colombia
+  category: followup
+  turns: ["What is the utilization rate in Mexico vs budget?"]
+  q: and for Colombia?
+  tools: [get_ratio]
+  expect:
+    - {r: [billable_hours, available_hours], org: {l3_country: Colombia}, p: YTD-2026-10}
+    - {r: [billable_hours, available_hours], org: {l3_country: Colombia}, p: YTD-2026-10, v: Budget}
+- id: fu_same_vs_fc2
+  category: followup
+  turns: ["How is operating profit YTD vs last year and budget for the United States?"]
+  q: same vs FC2
+  tools: [get_pnl, compare_versions]
+  expect:
+    - {m: maop, org: {l3_country: United States}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: United States}, p: YTD-2026-10, v: FC2}
+
+# ------------------------------------------------------------------------------- conversations (corrections, references, pushback)
+- id: conv_not_ytd_full_year
+  category: conversation
+  turns: ["How is operating profit YTD vs last year and budget for Mexico?"]
+  q: not YTD, full year 2025
+  tools: [get_pnl]
+  expect:
+    - {m: maop, org: {l3_country: Mexico}, p: FY-2025}
+    - {m: maop, org: {l3_country: Mexico}, p: FY-2025, v: PY}
+- id: conv_not_operating_profit
+  category: conversation
+  turns: ["How is operating profit YTD for Mexico?"]
+  q: No, not operating profit, net income
+  tools: [get_pnl]
+  expect:
+    - {m: net_income, org: {l3_country: Mexico}, p: YTD-2026-10}
+- id: conv_line_kept_new_country
+  category: conversation
+  turns: ["What is the net income of Mexico this year?"]
+  q: now for Canada
+  tools: [get_pnl]
+  expect:
+    - {m: net_income, org: {l3_country: Canada}, p: YTD-2026-10}
+- id: conv_line_kept_cost
+  category: conversation
+  turns: ["What are personnel costs for Brazil this year?"]
+  q: and for Chile?
+  tools: [get_pnl, variance_drivers]
+  expect:
+    - {m: personnel, org: {l3_country: Chile}, p: YTD-2026-10}
+- id: conv_compare_with_last_year
+  category: conversation
+  turns: ["What is the operating margin of Peru this year?"]
+  q: how does that compare with last year?
+  tools: [get_ratio, variance_drivers, get_trend]
+  expect:
+    - {r: [maop, revenue], org: {l3_country: Peru}, p: YTD-2026-10}
+    - {r: [maop, revenue], org: {l3_country: Peru}, p: YTD-2026-10, v: PY}
+- id: conv_that_vs_budget
+  category: conversation
+  turns: ["How is operating profit YTD for Colombia?"]
+  q: Can you show me how that compares with the budget?
+  tools: [get_pnl, compare_versions]
+  expect:
+    - {m: maop, org: {l3_country: Colombia}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Colombia}, p: YTD-2026-10, v: Budget}
+- id: conv_same_business_leavers
+  category: conversation
+  turns: ["Attrition by role for Canada Environmental Lab Testing this year vs last year", "now for the United States"]
+  q: Can you show me the monthly leavers for the same business?
+  tools: [get_workforce]
+  expect:
+    - {w: leavers, org: {l3_country: United States, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+- id: conv_meant_other_country
+  category: conversation
+  turns: ["How is revenue YTD vs budget for Argentina?"]
+  q: No, I meant Uruguay
+  tools: [get_pnl, variance_drivers, compare_versions]
+  expect:
+    - {m: revenue, org: {l3_country: Uruguay}, p: YTD-2026-10}
+    - {m: revenue, org: {l3_country: Uruguay}, p: YTD-2026-10, v: Budget}
+- id: conv_quarter_rather_than_ytd
+  category: conversation
+  turns: ["What is the utilization rate in the United States this year?"]
+  q: use Q3 2026 rather than YTD
+  tools: [get_ratio, get_trend, get_workforce]
+  expect:
+    - {r: [billable_hours, available_hours], org: {l3_country: United States}, p: Q-2026-3}
+- id: conv_pushback_not_right
+  category: conversation
+  turns: ["What is the net income of Mexico this year?"]
+  q: That's not right
+  status: clarification
+  options_min: 4
+- id: conv_pushback_are_you_sure
+  category: conversation
+  turns: ["Attrition by role for Canada Environmental Lab Testing this year vs last year"]
+  q: are you sure?
+  status: clarification
+  options_min: 3
+- id: conv_pushback_then_budget_only
+  category: conversation
+  turns: ["What is the net income of Mexico this year?", "That's not right"]
+  q: Compare with Budget only
+  tools: [get_pnl]
+  expect:
+    - {m: net_income, org: {l3_country: Mexico}, p: YTD-2026-10}
+    - {m: net_income, org: {l3_country: Mexico}, p: YTD-2026-10, v: Budget}
+
+# ------------------------------------------------------------------------------- row-level security
+- id: rls_us_head_brazil_refused
+  category: rls
+  rls: true
+  persona: us_country_head
+  q: How is operating profit YTD for Brazil?
+  status: refusal
+- id: rls_us_head_group_narrowed
+  category: rls
+  rls: true
+  persona: us_country_head
+  q: How is the whole group doing this year vs budget?
+  tools: [get_pnl]
+  expect:
+    - {m: maop, org: {l3_country: United States}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: United States}, p: YTD-2026-10, v: Budget}
+- id: rls_env_leader_mx_bi_refused
+  category: rls
+  rls: true
+  persona: env_pl_leader
+  q: Show the P&L for Mexico Buildings & Infrastructure
+  status: refusal
+- id: rls_env_leader_rank_countries
+  category: rls
+  rls: true
+  persona: env_pl_leader
+  q: Rank countries by operating margin this year
+  tools: [rank_entities]
+  expect:
+    - {rank: {r: [maop, revenue]}, level: l3_country, within: {l4_product_line: Environmental Lab Testing}, p: YTD-2026-10, n: 1}
+- id: rls_us_head_usca_bus
+  category: rls
+  rls: true
+  persona: us_country_head
+  q: Top 5 BUs by operating profit in US & Canada
+  tools: [rank_entities]
+  expect:
+    - {rank: {m: maop}, level: l6_bu, within: {l3_country: United States}, p: YTD-2026-10, n: 1}
+
+# ------------------------------------------------------------------------------- clarification
+- id: clar_rio
+  category: clarification
+  q: How is the Rio de Janeiro business doing?
+  status: clarification
+- id: clar_curitiba
+  category: clarification
+  q: MAOP for Curitiba last month
+  status: clarification
+
+# ------------------------------------------------------------------------------- robustness (typos, leaf accounts)
+- id: typo_canada_env_lab
+  category: robustness
+  q: MAOP for Canda env lab last month
+  tools: [get_pnl, get_trend]
+  expect:
+    - {m: maop, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: M-2026-10}
+- id: typo_mexico_utilisation
+  category: robustness
+  q: utilisation in Mexcio YTD
+  tools: [get_ratio, get_trend]
+  expect:
+    - {r: [billable_hours, available_hours], org: {l3_country: Mexico}, p: YTD-2026-10}
+- id: wip_ratio_h1
+  category: robustness
+  q: What is WIP as % of revenue in Mexico Buildings & Infrastructure in H1 2026?
+  tools: [get_ratio, get_trend]
+  expect:
+    - {r: [wip, revenue], org: {l3_country: Mexico, l4_product_line: Buildings & Infrastructure}, p: H1-2026}
+- id: bonus_march_vs_py
+  category: robustness
+  q: How much direct staff bonus did US Elevators & Pressure Vessels book in March 2025 vs March 2024?
+  tools: [get_trend, variance_drivers, get_pnl]
+  expect:
+    - {m: bonus_7a2, org: {l3_country: United States, l4_product_line: Elevators & Pressure Vessels}, p: M-2025-03}
+    - {m: bonus_7a2, org: {l3_country: United States, l4_product_line: Elevators & Pressure Vessels}, p: M-2025-03, v: PY}
+- id: restructuring_ca_env
+  category: robustness
+  q: What restructuring costs did Canada Environmental Lab Testing book this year?
+  tools: [get_trend, get_pnl, variance_drivers]
+  expect:
+    - {m: restructuring, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+
+# ------------------------------------------------------------------------------- workforce (employee records)
+- id: wf_ca_env_attrition_role
+  category: workforce
+  q: Attrition by role for Canada Environmental Lab Testing this year vs last year
+  tools: [get_workforce]
+  expect:
+    - {w: attrition, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {w: attrition, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10, v: PY}
+    - {w: attrition, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, emp: {role: Lab technician}, p: YTD-2026-10}
+- id: wf_ca_env_monthly
+  category: workforce
+  q: Headcount, hires and leavers by month for Canada Environmental Lab Testing this year
+  tools: [get_workforce]
+  expect:
+    - {w: headcount, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {w: hires, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {w: leavers, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: M-2026-04}
+- id: wf_ca_env_restructuring
+  category: workforce
+  q: How many restructuring leavers did Canada Environmental Lab Testing have this year?
+  tools: [get_workforce]
+  expect:
+    - {w: restructuring_leavers, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {w: leavers, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+- id: wf_us_utilization_grade
+  category: workforce
+  q: Utilization rate by grade in the United States this year
+  tools: [get_workforce]
+  expect:
+    - {w: utilization, org: {l3_country: United States}, p: YTD-2026-10}
+    - {w: utilization, org: {l3_country: United States}, emp: {grade: G1}, p: YTD-2026-10}
+- id: wf_bu_highest_attrition
+  category: workforce
+  q: Which BUs have the highest attrition this year?
+  tools: [get_workforce]
+  expect:
+    - {rank: {w: attrition}, level: l6_bu, p: YTD-2026-10, n: 1}
+- id: wf_mx_leavers_2025
+  category: workforce
+  q: How many employees left Mexico in 2025?
+  tools: [get_workforce]
+  expect:
+    - {w: leavers, org: {l3_country: Mexico}, p: FY-2025}
+    - {w: restructuring_leavers, org: {l3_country: Mexico}, p: FY-2025}
+- id: wf_group_direct_indirect
+  category: workforce
+  q: Headcount of direct vs indirect staff for the group this year
+  tools: [get_workforce]
+  expect:
+    - {w: headcount, p: YTD-2026-10}
+    - {w: headcount, emp: {staff_type: Direct}, p: YTD-2026-10}
+- id: wf_ca_voluntary_attrition
+  category: workforce
+  q: What is the voluntary attrition rate in Canada this year?
+  tools: [get_workforce]
+  expect:
+    - {w: voluntary_attrition, org: {l3_country: Canada}, p: YTD-2026-10}
+- id: wf_fu_now_for_us
+  category: followup
+  turns: ["Attrition by role for Canada Environmental Lab Testing this year"]
+  q: now for the United States
+  tools: [get_workforce]
+  expect:
+    - {w: attrition, org: {l3_country: United States, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+- id: wf_rls_us_head_brazil_refused
+  category: rls
+  rls: true
+  persona: us_country_head
+  q: What is the attrition rate in Brazil this year?
+  status: refusal
+- id: wf_rls_env_leader_countries
+  category: rls
+  rls: true
+  persona: env_pl_leader
+  q: Attrition by country this year
+  tools: [get_workforce]
+  expect:
+    - {w: attrition, org: {l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+    - {w: attrition, org: {l3_country: Canada, l4_product_line: Environmental Lab Testing}, p: YTD-2026-10}
+
+# ------------------------------------------------------------------------------- catalog / discovery (describe_catalog, never SQL)
+- id: cat_regions
+  category: catalog
+  q: What regions are in scope?
+  tools: [describe_catalog]
+  expect:
+    - {c: regions}
+- id: cat_countries_us_head
+  category: catalog
+  persona: us_country_head
+  q: Which countries are in scope?
+  tools: [describe_catalog]
+  rls: true
+  absent: [Mexico, Brazil, Chile, Argentina]
+  expect:
+    - {c: countries, persona: us_country_head}
+- id: cat_countries_env_leader
+  category: catalog
+  persona: env_pl_leader
+  q: Which countries are in scope?
+  tools: [describe_catalog]
+  rls: true
+  absent: [Mexico, Brazil, Chile]
+  expect:
+    - {c: countries, persona: env_pl_leader}
+- id: cat_businesses
+  category: catalog
+  q: Which businesses can I ask about?
+  tools: [describe_catalog]
+  expect:
+    - {c: businesses}
+- id: cat_bus_in_mexico
+  category: catalog
+  q: Which business units are in Mexico?
+  tools: [describe_catalog]
+  expect:
+    - {c: business_units, within: {l3_country: Mexico}}
+- id: cat_product_lines
+  category: catalog
+  q: Which product lines can I ask about?
+  tools: [describe_catalog]
+  expect:
+    - {c: product_lines}
+- id: cat_ratios
+  category: catalog
+  q: What ratios do you support?
+  tools: [describe_catalog]
+  expect:
+    - {names_from_yaml: ratios, text: false}
+- id: cat_metrics
+  category: catalog
+  q: list all metrics
+  tools: [describe_catalog]
+- id: cat_data
+  category: catalog
+  q: What data do you use?
+  tools: [describe_catalog]
+- id: cat_help
+  category: catalog
+  q: help
+  tools: [describe_catalog]
+
+# ------------------------------------------------------------------------------- margins (both margins when no base is given)
+- id: mar_profit_pct_both
+  category: margin
+  q: What is our profit % YTD?
+  tools: [get_ratio]
+  expect:
+    - {r: [maop, revenue], p: YTD-2026-10}
+    - {r: [maop, production], p: YTD-2026-10, text: true}
+- id: mar_mop_pct_us_vs_budget
+  category: margin
+  q: What is the MOP % of the United States vs budget this year?
+  tools: [get_ratio]
+  expect:
+    - {r: [maop, revenue], org: {l3_country: United States}, p: YTD-2026-10}
+    - {r: [maop, production], org: {l3_country: United States}, p: YTD-2026-10, text: true}
+    - {r: [maop, revenue], org: {l3_country: United States}, p: YTD-2026-10, v: Budget}
+- id: mar_revenue_only_mexico
+  category: margin
+  q: What is the operating margin on revenue for Mexico YTD?
+  tools: [get_ratio]
+  absent: [on production]
+  expect:
+    - {r: [maop, revenue], org: {l3_country: Mexico}, p: YTD-2026-10}
+- id: mar_production_only_canada
+  category: margin
+  q: MAOP/production for Canada in 2025
+  tools: [get_ratio, get_trend]
+  absent: [on revenue]
+  expect:
+    - {r: [maop, production], org: {l3_country: Canada}, p: FY-2025}
+- id: mar_ebit_like_brazil_last_month
+  category: margin
+  q: EBIT-like margin for Brazil last month
+  tools: [get_ratio]
+  expect:
+    - {r: [maop, revenue], org: {l3_country: Brazil}, p: M-2026-10}
+    - {r: [maop, production], org: {l3_country: Brazil}, p: M-2026-10, text: true}
+- id: mar_margin_on_revenue_trend
+  category: margin
+  q: Show the operating margin on revenue trend by month for US & Canada since January 2025
+  tools: [get_trend]
+  expect:
+    - {r: [maop, revenue], org: {l2_region: US & Canada}, p: M-2026-10, text: false}
+    - {r: [maop, revenue], org: {l2_region: US & Canada}, p: M-2025-01, text: false}
+
+# ------------------------------------------------------------------------------- sidebar filters (default context; the question wins)
+- id: sb_country_default
+  category: sidebar
+  ui_filters: {org_filter: {l3_country: [Mexico]}}
+  q: How is operating profit YTD vs budget?
+  tools: [get_pnl, compare_versions, variance_drivers]
+  expect:
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10, v: Budget}
+- id: sb_question_wins
+  category: sidebar
+  ui_filters: {org_filter: {l3_country: [Mexico]}}
+  q: How is operating profit YTD vs budget for Canada?
+  tools: [get_pnl, compare_versions, variance_drivers]
+  absent: [Mexico]
+  expect:
+    - {m: maop, org: {l3_country: Canada}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Canada}, p: YTD-2026-10, v: Budget}
+- id: sb_two_countries
+  category: sidebar
+  ui_filters: {org_filter: {l3_country: [Chile, Peru]}}
+  q: Revenue YTD vs last year
+  tools: [get_pnl]
+  expect:
+    - {m: revenue, org: {l3_country: [Chile, Peru]}, p: YTD-2026-10}
+    - {m: revenue, org: {l3_country: [Chile, Peru]}, p: YTD-2026-10, v: PY}
+- id: sb_period_month
+  category: sidebar
+  ui_filters: {period: {type: MONTH, label: Sep 2026, start: 202609, end: 202609}}
+  q: What was production in Brazil?
+  tools: [get_pnl, get_trend]
+  expect:
+    - {m: production, org: {l3_country: Brazil}, p: M-2026-09}
+- id: sb_version_landing
+  category: sidebar
+  ui_filters: {org_filter: {l3_country: [United States]}, version: Landing,
+               period: {type: MONTH, label: Nov 2026, start: 202611, end: 202611}}
+  q: What will billing be?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l3_country: United States}, v: LANDING, p: M-2026-11}
+
+# ------------------------------------------------------------------------------- resumed conversations (history reloaded, context restored)
+- id: res_vs_last_year
+  category: resume
+  resume: true
+  turns: ["How is operating profit YTD vs budget for Mexico?"]
+  q: and vs last year?
+  tools: [get_pnl, variance_drivers]
+  expect:
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10}
+    - {m: maop, org: {l3_country: Mexico}, p: YTD-2026-10, v: PY}
+- id: res_now_for_chile
+  category: resume
+  resume: true
+  turns: ["What is the revenue of Canada this year?"]
+  q: now for Chile
+  tools: [get_pnl]
+  expect:
+    - {m: revenue, org: {l3_country: Chile}, p: YTD-2026-10}
+- id: res_same_business_q3
+  category: resume
+  resume: true
+  turns: ["Show me the P&L of Brazil for Q2 2026"]
+  q: what about Q3 2026?
+  tools: [get_pnl]
+  expect:
+    - {m: maop, org: {l3_country: Brazil}, p: Q-2026-3}
+- id: res_margins_us
+  category: resume
+  resume: true
+  turns: ["What is our profit % YTD?"]
+  q: now for the United States
+  tools: [get_ratio]
+  expect:
+    - {r: [maop, revenue], org: {l3_country: United States}, p: YTD-2026-10}
+    - {r: [maop, production], org: {l3_country: United States}, p: YTD-2026-10, text: true}
+- id: res_landing_canada
+  category: resume
+  resume: true
+  turns: ["What's the November landing for the United States?"]
+  q: and for Canada?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l3_country: Canada}, v: LANDING, p: M-2026-11}
+
+# ------------------------------------------------------------------------------- current-month landing (open month Nov 2026)
+- id: land_us_november
+  category: landing
+  q: What's the November landing for the United States?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l3_country: United States}, v: LANDING, p: M-2026-11}
+    - {m: maop, org: {l3_country: United States}, v: LANDING, p: M-2026-11}
+    - {r: [maop, revenue], org: {l3_country: United States}, v: LANDING, p: M-2026-11}
+- id: land_group_revenue
+  category: landing
+  q: Where will revenue land this month?
+  tools: [get_landing]
+  expect:
+    - {m: revenue, v: LANDING, p: M-2026-11}
+- id: land_bu
+  category: landing
+  q: What is the landing for US-BNI-HOU-01 this month?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l6_bu: US-BNI-HOU-01}, v: LANDING, p: M-2026-11}
+- id: land_business
+  category: landing
+  q: What's the November landing for Certification Houston?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l5_business: Certification Houston}, v: LANDING, p: M-2026-11}
+- id: land_profit_pct
+  category: landing
+  q: What's our profit % landing?
+  tools: [get_landing]
+  expect:
+    - {r: [maop, revenue], v: LANDING, p: M-2026-11}
+    - {r: [maop, production], v: LANDING, p: M-2026-11, text: true}
+- id: land_ytd_margin_fixture
+  category: landing
+  q: What will YTD MAOP margin be through November including the landing?
+  tools: [get_ytd_with_landing]
+  expect:
+    - {r: [maop, revenue], v: YTDL, p: YTD-2026-11}
+    - {r: [maop, production], v: YTDL, p: YTD-2026-11, text: true}
+    - {r: [maop, revenue], v: PY, p: YTD-2026-11}
+    - {r: [maop, revenue], v: Budget, p: YTD-2026-11}
+    - {r: [maop, revenue], v: FC3, p: YTD-2026-11}
+    - {r: [maop, production], v: PY, p: YTD-2026-11}
+- id: land_ytd_revenue_vs_budget
+  category: landing
+  q: Revenue YTD till November with landing vs budget
+  tools: [get_ytd_with_landing]
+  expect:
+    - {m: revenue, v: YTDL, p: YTD-2026-11}
+    - {m: revenue, v: Budget, p: YTD-2026-11}
+- id: land_bus_miss_budget
+  category: landing
+  q: Which BUs are expected to miss budget this month?
+  tools: [rank_landing]
+  expect:
+    - {rank: {d: [{m: billing, v: LANDING, p: M-2026-11}, {m: billing, v: Budget, p: M-2026-11}]}, level: l6_bu, asc: true, n: 1}
+- id: land_mexico_vs_forecast
+  category: landing
+  q: What's the landing for Mexico this month vs the latest forecast?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l3_country: Mexico}, v: LANDING, p: M-2026-11}
+    - {m: billing, org: {l3_country: Mexico}, v: FC3, p: M-2026-11}
+- id: land_brazil_vs_py
+  category: landing
+  q: How does the November landing for Brazil compare with last year?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l3_country: Brazil}, v: LANDING, p: M-2026-11}
+    - {m: billing, org: {l3_country: Brazil}, v: PY, p: M-2026-11}
+- id: land_closed_month
+  category: landing
+  q: What's the October landing for Canada?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l3_country: Canada}, p: M-2026-10}
+- id: land_future_month
+  category: landing
+  q: What's the December landing for Canada?
+  tools: [get_landing]
+  expect:
+    - {m: billing, org: {l3_country: Canada}, v: FC3, p: M-2026-12}
+- id: land_rls_refusal
+  category: landing
+  persona: us_country_head
+  q: What's the November landing for Canada?
+  status: refusal
+  rls: true
+- id: land_rls_scoped
+  category: landing
+  persona: us_country_head
+  q: What's the November landing?
+  tools: [get_landing]
+  rls: true
+  absent: [Canada, Mexico]
+  expect:
+    - {m: billing, org: {l3_country: United States}, v: LANDING, p: M-2026-11}
+- id: land_explain_bu
+  category: landing
+  q: Explain the landing for US-BNI-HOU-01
+  tools: [explain_landing]
+  expect:
+    - {m: billing, org: {l6_bu: US-BNI-HOU-01}, v: LANDING, p: M-2026-11}

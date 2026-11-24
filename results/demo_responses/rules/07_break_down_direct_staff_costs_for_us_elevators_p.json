@@ -1,0 +1,446 @@
+{
+  "answer_markdown": "**Direct staff costs for United States \u00b7 Elevators & Pressure Vessels, Mar 2025: Actual USD 1.6M, USD 354k (28.2%) higher than PY (USD 1.3M), unfavourable.**\n\nAccount drivers (largest first): Direct staff bonus: USD 469k vs USD 152k, impact +USD 318k (unfavourable, 89.8% of the change); Direct staff salaries: USD 794k vs USD 772k, impact +USD 22k (unfavourable, 6.3% of the change); Direct staff social security: USD 183k vs USD 177k, impact +USD 6k (unfavourable, 1.7% of the change); Direct staff overtime: USD 75k vs USD 71k, impact +USD 4k (unfavourable, 1.1% of the change); Direct staff pension: USD 62k vs USD 59k, impact +USD 3k (unfavourable, 0.8% of the change).\n\n- BU with the largest change: US-EPV-NYC-01 USD 788k vs USD 608k (change +USD 180k, unfavourable)",
+  "table": [
+    {
+      "Driver": "Direct staff bonus",
+      "_code": "acct:7A2",
+      "Actual": 469303.89,
+      "PY": 151505.85,
+      "Impact": 317798.04000000004,
+      "_fav": false,
+      "Share of variance": 0.8976500348808957
+    },
+    {
+      "Driver": "Direct staff salaries",
+      "_code": "acct:7A1",
+      "Actual": 794394.6,
+      "PY": 772228.69,
+      "Impact": 22165.910000000033,
+      "_fav": false,
+      "Share of variance": 0.06260966834366512
+    },
+    {
+      "Driver": "Direct staff social security",
+      "_code": "acct:7A4",
+      "Actual": 183197.09,
+      "PY": 177225.91,
+      "Impact": 5971.179999999993,
+      "_fav": false,
+      "Share of variance": 0.0168661516454919
+    },
+    {
+      "Driver": "Direct staff overtime",
+      "_code": "acct:7A3",
+      "Actual": 75281.6,
+      "PY": 71376.67,
+      "Impact": 3904.9300000000076,
+      "_fav": false,
+      "Share of variance": 0.011029836907450602
+    },
+    {
+      "Driver": "Direct staff pension",
+      "_code": "acct:7A5",
+      "Actual": 61736.7,
+      "PY": 59063.85,
+      "Impact": 2672.8499999999985,
+      "_fav": false,
+      "Share of variance": 0.007549712690900801
+    },
+    {
+      "Driver": "Direct staff other costs",
+      "_code": "acct:7A6",
+      "Actual": 26240.55,
+      "PY": 24720.12,
+      "Impact": 1520.4300000000003,
+      "_fav": false,
+      "Share of variance": 0.00429459553159598
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Driver",
+      "PY",
+      "Actual",
+      "Impact",
+      "Share of variance"
+    ],
+    "rows": [
+      {
+        "Driver": "Direct staff bonus",
+        "_code": "acct:7A2",
+        "Actual": 469303.89,
+        "PY": 151505.85,
+        "Impact": 317798.04000000004,
+        "_fav": false,
+        "Share of variance": 0.8976500348808957
+      },
+      {
+        "Driver": "Direct staff salaries",
+        "_code": "acct:7A1",
+        "Actual": 794394.6,
+        "PY": 772228.69,
+        "Impact": 22165.910000000033,
+        "_fav": false,
+        "Share of variance": 0.06260966834366512
+      },
+      {
+        "Driver": "Direct staff social security",
+        "_code": "acct:7A4",
+        "Actual": 183197.09,
+        "PY": 177225.91,
+        "Impact": 5971.179999999993,
+        "_fav": false,
+        "Share of variance": 0.0168661516454919
+      },
+      {
+        "Driver": "Direct staff overtime",
+        "_code": "acct:7A3",
+        "Actual": 75281.6,
+        "PY": 71376.67,
+        "Impact": 3904.9300000000076,
+        "_fav": false,
+        "Share of variance": 0.011029836907450602
+      },
+      {
+        "Driver": "Direct staff pension",
+        "_code": "acct:7A5",
+        "Actual": 61736.7,
+        "PY": 59063.85,
+        "Impact": 2672.8499999999985,
+        "_fav": false,
+        "Share of variance": 0.007549712690900801
+      },
+      {
+        "Driver": "Direct staff other costs",
+        "_code": "acct:7A6",
+        "Actual": 26240.55,
+        "PY": 24720.12,
+        "Impact": 1520.4300000000003,
+        "_fav": false,
+        "Share of variance": 0.00429459553159598
+      }
+    ],
+    "col_fmt": {
+      "PY": "eur",
+      "Actual": "eur",
+      "Impact": "eur",
+      "Share of variance": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      }
+    ],
+    "caption": "Impact = contribution to the change in Direct staff costs (USD; positive = higher cost)",
+    "extra_tables": [
+      {
+        "columns": [
+          "BU",
+          "PY",
+          "Actual",
+          "Impact"
+        ],
+        "rows": [
+          {
+            "BU": "US-EPV-NYC-01",
+            "Actual": 787602.67,
+            "PY": 607684.2500000001,
+            "Impact": 179918.41999999993,
+            "_fav": false
+          },
+          {
+            "BU": "US-EPV-NYC-02",
+            "Actual": 822551.76,
+            "PY": 648436.8400000001,
+            "Impact": 174114.91999999993,
+            "_fav": false
+          }
+        ],
+        "col_fmt": {
+          "PY": "eur",
+          "Actual": "eur",
+          "Impact": "eur"
+        },
+        "row_meta": [
+          {
+            "kind": "line",
+            "level": 0,
+            "fmt": null,
+            "fav": {
+              "Impact": false
+            }
+          },
+          {
+            "kind": "line",
+            "level": 0,
+            "fmt": null,
+            "fav": {
+              "Impact": false
+            }
+          }
+        ],
+        "caption": "By bu"
+      }
+    ]
+  },
+  "chart_spec": {
+    "type": "stacked_bar",
+    "title": "Direct staff costs mix: PY vs Actual - United States \u00b7 Elevators & Pressure Vessels (Mar 2025)",
+    "fmt": "eur",
+    "x": "category",
+    "y": [
+      "Direct staff bonus",
+      "Direct staff salaries",
+      "Direct staff social security",
+      "Direct staff overtime",
+      "Direct staff pension",
+      "Direct staff other costs"
+    ],
+    "data": [
+      {
+        "category": "PY",
+        "series": "Direct staff bonus",
+        "value": 151505.85
+      },
+      {
+        "category": "Actual",
+        "series": "Direct staff bonus",
+        "value": 469303.89
+      },
+      {
+        "category": "PY",
+        "series": "Direct staff salaries",
+        "value": 772228.69
+      },
+      {
+        "category": "Actual",
+        "series": "Direct staff salaries",
+        "value": 794394.6
+      },
+      {
+        "category": "PY",
+        "series": "Direct staff social security",
+        "value": 177225.91
+      },
+      {
+        "category": "Actual",
+        "series": "Direct staff social security",
+        "value": 183197.09
+      },
+      {
+        "category": "PY",
+        "series": "Direct staff overtime",
+        "value": 71376.67
+      },
+      {
+        "category": "Actual",
+        "series": "Direct staff overtime",
+        "value": 75281.6
+      },
+      {
+        "category": "PY",
+        "series": "Direct staff pension",
+        "value": 59063.85
+      },
+      {
+        "category": "Actual",
+        "series": "Direct staff pension",
+        "value": 61736.7
+      },
+      {
+        "category": "PY",
+        "series": "Direct staff other costs",
+        "value": 24720.12
+      },
+      {
+        "category": "Actual",
+        "series": "Direct staff other costs",
+        "value": 26240.55
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "United States \u00b7 Elevators & Pressure Vessels",
+    "org_filter": {
+      "l3_country": [
+        "United States"
+      ],
+      "l4_product_line": [
+        "Elevators & Pressure Vessels"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "Mar 2025",
+    "months": "Mar 2025 - Mar 2025",
+    "versions": [
+      "Actual (Actual, Mar 2025)",
+      "PY (Actual, Mar 2024)"
+    ],
+    "applied": [
+      "Scope: United States \u00b7 Elevators & Pressure Vessels (from your question)",
+      "Period: Mar 2025 (from your question)",
+      "Versions: Actual, PY (default)"
+    ]
+  },
+  "sql_used": [
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202503 AND 202503 AND dim_org.l3_country IN (N'United States') AND dim_org.l4_product_line IN (N'Elevators & Pressure Vessels') GROUP BY fact_pnl.account_id",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202403 AND 202403 AND dim_org.l3_country IN (N'United States') AND dim_org.l4_product_line IN (N'Elevators & Pressure Vessels') GROUP BY fact_pnl.account_id",
+    "SELECT dim_org.l6_bu, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202503 AND 202503 AND dim_org.l3_country IN (N'United States') AND dim_org.l4_product_line IN (N'Elevators & Pressure Vessels') GROUP BY dim_org.l6_bu, fact_pnl.account_id",
+    "SELECT dim_org.l6_bu, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202403 AND 202403 AND dim_org.l3_country IN (N'United States') AND dim_org.l4_product_line IN (N'Elevators & Pressure Vessels') GROUP BY dim_org.l6_bu, fact_pnl.account_id"
+  ],
+  "followups": [
+    "Show the monthly trend of Direct staff costs for United States \u00b7 Elevators & Pressure Vessels since 2025",
+    "Show the Direct staff bonus trend for United States \u00b7 Elevators & Pressure Vessels vs budget",
+    "Compare Budget vs FC3 vs Actual for United States \u00b7 Elevators & Pressure Vessels"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "variance_drivers",
+        "arguments": {
+          "metric": "personnel_7a",
+          "org": "United States \u00b7 Elevators & Pressure Vessels",
+          "period": "2025-03",
+          "comparison": "PY",
+          "depth": 2
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "variance_drivers",
+      "arguments": {
+        "metric": "personnel_7a",
+        "org": "United States \u00b7 Elevators & Pressure Vessels",
+        "period": "2025-03",
+        "comparison": "PY",
+        "depth": 2
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.324,
+      "plan": 0.0,
+      "act": 0.126,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "United States \u00b7 Elevators & Pressure Vessels",
+      "metric_or_ratio": "personnel_7a",
+      "period": "Mar 2025",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "breakdown"
+      ]
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Direct staff costs for United States \u00b7 Elevators & Pressure Vessels, Mar 2025: Actual USD 1.6M, USD 354k (28.2%) higher than PY (USD 1.3M), unfavourable.",
+      "Account drivers (largest first): Direct staff bonus: USD 469k vs USD 152k, impact +USD 318k (unfavourable, 89.8% of the change); Direct staff salaries: USD 794k vs USD 772k, impact +USD 22k (unfavourable, 6.3% of the change); Direct staff social security: USD 183k vs USD 177k, impact +USD 6k (unfavourable, 1.7% of the change); Direct staff overtime: USD 75k vs USD 71k, impact +USD 4k (unfavourable, 1.1% of the change); Direct staff pension: USD 62k vs USD 59k, impact +USD 3k (unfavourable, 0.8% of the change)",
+      "By BU (largest change first): US-EPV-NYC-01 USD 788k vs USD 608k (change +USD 180k, unfavourable); US-EPV-NYC-02 USD 823k vs USD 648k (change +USD 174k, unfavourable)"
+    ],
+    "evidence": {
+      "extra": {
+        "org": [
+          {
+            "BU": "US-EPV-NYC-01",
+            "Actual": 787602.67,
+            "PY": 607684.2500000001,
+            "Impact": 179918.41999999993,
+            "_fav": false
+          },
+          {
+            "BU": "US-EPV-NYC-02",
+            "Actual": 822551.76,
+            "PY": 648436.8400000001,
+            "Impact": 174114.91999999993,
+            "_fav": false
+          }
+        ]
+      },
+      "totals": {
+        "total_current": 1610154.4300000002,
+        "total_comparison": 1256121.09
+      }
+    },
+    "latency_s": 0.46
+  }
+}

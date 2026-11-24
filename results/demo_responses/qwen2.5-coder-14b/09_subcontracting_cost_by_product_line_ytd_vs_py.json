@@ -1,0 +1,425 @@
+{
+  "answer_markdown": "USD 108.2M, USD 4.4M (4.2%) higher than PY (USD 103.9M), unfavourable. The increase is driven by higher subcontracting costs in Buildings & Infrastructure (+USD 1.8M, +4.2%), Industry & Energy (+USD 1.0M, +3.8%), Power & Utilities (+USD 445k, +3.7%), Certification & Sustainability (+USD 464k, +7.3%), Metals & Minerals (+USD 245k, +6.3%), Elevators & Pressure Vessels (+USD 170k, +4.6%), and Consumer Products (+USD 119k, +4.8%).\n\n- Rank 1: Buildings & Infrastructure USD 43.5M (PY USD 41.8M, +USD 1.8M, +4.2%)\n- Rank 2: Industry & Energy USD 28.6M (PY USD 27.6M, +USD 1.0M, +3.8%)\n- Rank 3: Power & Utilities USD 12.3M (PY USD 11.9M, +USD 445k, +3.7%)",
+  "table": [
+    {
+      "Rank": 1,
+      "Product line": "Buildings & Infrastructure",
+      "Actual": 43537569.44,
+      "PY": 41771991.41,
+      "Var": 1765578.0300000012,
+      "Var %": 0.04226703038096793,
+      "_fav": false
+    },
+    {
+      "Rank": 2,
+      "Product line": "Industry & Energy",
+      "Actual": 28608403.770000003,
+      "PY": 27563266.6,
+      "Var": 1045137.1700000018,
+      "Var %": 0.03791775427662851,
+      "_fav": false
+    },
+    {
+      "Rank": 3,
+      "Product line": "Power & Utilities",
+      "Actual": 12329889.08,
+      "PY": 11884964.55,
+      "Var": 444924.52999999933,
+      "Var %": 0.037435915616593006,
+      "_fav": false
+    },
+    {
+      "Rank": 4,
+      "Product line": "Certification & Sustainability",
+      "Actual": 6783744.28,
+      "PY": 6319447.48,
+      "Var": 464296.7999999998,
+      "Var %": 0.07347110668605474,
+      "_fav": false
+    },
+    {
+      "Rank": 5,
+      "Product line": "Environmental Lab Testing",
+      "Actual": 6379631.69,
+      "PY": 6280816.1,
+      "Var": 98815.59000000078,
+      "Var %": 0.0157329220322182,
+      "_fav": false
+    },
+    {
+      "Rank": 6,
+      "Product line": "Metals & Minerals",
+      "Actual": 4152974.76,
+      "PY": 3908429.76,
+      "Var": 244545.0,
+      "Var %": 0.06256860555682597,
+      "_fav": false
+    },
+    {
+      "Rank": 7,
+      "Product line": "Elevators & Pressure Vessels",
+      "Actual": 3874272.74,
+      "PY": 3704191.0100000002,
+      "Var": 170081.72999999998,
+      "Var %": 0.04591602580451162,
+      "_fav": false
+    },
+    {
+      "Rank": 8,
+      "Product line": "Consumer Products",
+      "Actual": 2582419.39,
+      "PY": 2463711.2800000003,
+      "Var": 118708.10999999987,
+      "Var %": 0.04818263851111639,
+      "_fav": false
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Rank",
+      "Product line",
+      "Actual",
+      "PY",
+      "Var",
+      "Var %"
+    ],
+    "rows": [
+      {
+        "Rank": 1,
+        "Product line": "Buildings & Infrastructure",
+        "Actual": 43537569.44,
+        "PY": 41771991.41,
+        "Var": 1765578.0300000012,
+        "Var %": 0.04226703038096793,
+        "_fav": false
+      },
+      {
+        "Rank": 2,
+        "Product line": "Industry & Energy",
+        "Actual": 28608403.770000003,
+        "PY": 27563266.6,
+        "Var": 1045137.1700000018,
+        "Var %": 0.03791775427662851,
+        "_fav": false
+      },
+      {
+        "Rank": 3,
+        "Product line": "Power & Utilities",
+        "Actual": 12329889.08,
+        "PY": 11884964.55,
+        "Var": 444924.52999999933,
+        "Var %": 0.037435915616593006,
+        "_fav": false
+      },
+      {
+        "Rank": 4,
+        "Product line": "Certification & Sustainability",
+        "Actual": 6783744.28,
+        "PY": 6319447.48,
+        "Var": 464296.7999999998,
+        "Var %": 0.07347110668605474,
+        "_fav": false
+      },
+      {
+        "Rank": 5,
+        "Product line": "Environmental Lab Testing",
+        "Actual": 6379631.69,
+        "PY": 6280816.1,
+        "Var": 98815.59000000078,
+        "Var %": 0.0157329220322182,
+        "_fav": false
+      },
+      {
+        "Rank": 6,
+        "Product line": "Metals & Minerals",
+        "Actual": 4152974.76,
+        "PY": 3908429.76,
+        "Var": 244545.0,
+        "Var %": 0.06256860555682597,
+        "_fav": false
+      },
+      {
+        "Rank": 7,
+        "Product line": "Elevators & Pressure Vessels",
+        "Actual": 3874272.74,
+        "PY": 3704191.0100000002,
+        "Var": 170081.72999999998,
+        "Var %": 0.04591602580451162,
+        "_fav": false
+      },
+      {
+        "Rank": 8,
+        "Product line": "Consumer Products",
+        "Actual": 2582419.39,
+        "PY": 2463711.2800000003,
+        "Var": 118708.10999999987,
+        "Var %": 0.04818263851111639,
+        "_fav": false
+      }
+    ],
+    "col_fmt": {
+      "Rank": "int",
+      "Actual": "eur",
+      "PY": "eur",
+      "Var": "eur",
+      "Var %": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      }
+    ],
+    "caption": "",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "hbar",
+    "title": "External subcontracting by Product line - RL Group (YTD Oct 2026)",
+    "fmt": "eur",
+    "x": "value",
+    "y": [
+      "label"
+    ],
+    "data": [
+      {
+        "label": "Buildings & Infrastructure",
+        "value": 43537569.44,
+        "fav": false
+      },
+      {
+        "label": "Industry & Energy",
+        "value": 28608403.770000003,
+        "fav": false
+      },
+      {
+        "label": "Power & Utilities",
+        "value": 12329889.08,
+        "fav": false
+      },
+      {
+        "label": "Certification & Sustainability",
+        "value": 6783744.28,
+        "fav": false
+      },
+      {
+        "label": "Environmental Lab Testing",
+        "value": 6379631.69,
+        "fav": false
+      },
+      {
+        "label": "Metals & Minerals",
+        "value": 4152974.76,
+        "fav": false
+      },
+      {
+        "label": "Elevators & Pressure Vessels",
+        "value": 3874272.74,
+        "fav": false
+      },
+      {
+        "label": "Consumer Products",
+        "value": 2582419.39,
+        "fav": false
+      }
+    ],
+    "meta": {
+      "ascending": false
+    }
+  },
+  "filters_used": {
+    "org": "RL Group",
+    "org_filter": {},
+    "currency": "USD",
+    "fx_rate": "B26 (constant budget rate)",
+    "as_of_date": "2026-11-12",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (Actual, YTD Oct 2026)",
+      "PY (Actual, YTD Oct 2025)"
+    ],
+    "ranking_level": "Product line"
+  },
+  "sql_used": [
+    "SELECT dim_org.l4_product_line, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 GROUP BY dim_org.l4_product_line, fact_pnl.account_id",
+    "SELECT dim_org.l4_product_line, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 GROUP BY dim_org.l4_product_line, fact_pnl.account_id"
+  ],
+  "followups": [
+    "Why is Buildings & Infrastructure where it is on External subcontracting?",
+    "Show the External subcontracting trend for Buildings & Infrastructure since 2025",
+    "Show the bottom 5 Product lines by External subcontracting in RL Group instead"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "rank_entities",
+        "arguments": {
+          "metric_or_ratio": "subcontracting",
+          "org_level": "l4_product_line",
+          "parent_filter": "(user default scope)",
+          "period": "YTD Oct 2026",
+          "top_n": 0
+        }
+      }
+    ],
+    "tool_choice_source": "llm_text",
+    "suggested": {
+      "name": "rank_entities",
+      "arguments": {
+        "metric_or_ratio": "subcontracting",
+        "org_level": "l4_product_line",
+        "parent_filter": "",
+        "period": "YTD Oct 2026",
+        "top_n": 0,
+        "ascending": false
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": false,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "unsupported": [],
+          "checked": 18
+        }
+      ],
+      "unsupported": []
+    },
+    "llm_calls": [
+      {
+        "step": "plan",
+        "latency": 9.05,
+        "usage": {
+          "prompt_tokens": 2735,
+          "completion_tokens": 72
+        },
+        "native_tool_call": false,
+        "raw_calls": [
+          {
+            "name": "rank_entities",
+            "arguments": {
+              "metric_or_ratio": "subcontracting",
+              "org_level": "l4_product_line",
+              "parent_filter": "(user default scope)",
+              "period": "YTD Oct 2026",
+              "top_n": 0
+            }
+          }
+        ]
+      },
+      {
+        "step": "write#1",
+        "latency": 19.05,
+        "usage": {
+          "prompt_tokens": 763,
+          "completion_tokens": 164
+        }
+      }
+    ],
+    "errors": [],
+    "model": "ollama/qwen2.5-coder:14b",
+    "timings": {
+      "preprocess": 0.006,
+      "plan": 9.051,
+      "act": 0.307,
+      "write#1": 19.051
+    },
+    "resolved": {
+      "org": "(user default scope)",
+      "metric_or_ratio": "subcontracting",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [
+        "PY"
+      ],
+      "intents": [],
+      "rank_by_level": "l4_product_line"
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Ranking of Product lines by External subcontracting within RL Group, YTD Oct 2026 (highest first); 8 Product lines in scope, showing 8.",
+      "1. Buildings & Infrastructure USD 43.5M (PY USD 41.8M, +USD 1.8M, +4.2%); 2. Industry & Energy USD 28.6M (PY USD 27.6M, +USD 1.0M, +3.8%); 3. Power & Utilities USD 12.3M (PY USD 11.9M, +USD 445k, +3.7%); 4. Certification & Sustainability USD 6.8M (PY USD 6.3M, +USD 464k, +7.3%); 5. Environmental Lab Testing USD 6.4M (PY USD 6.3M, +USD 99k, +1.6%); 6. Metals & Minerals USD 4.2M (PY USD 3.9M, +USD 245k, +6.3%); 7. Elevators & Pressure Vessels USD 3.9M (PY USD 3.7M, +USD 170k, +4.6%); 8. Consumer Products USD 2.6M (PY USD 2.5M, +USD 119k, +4.8%)",
+      "Total of the listed Product lines: USD 108.2M; USD 4.4M (4.2%) higher than PY (USD 103.9M), unfavourable"
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 28.42
+  }
+}

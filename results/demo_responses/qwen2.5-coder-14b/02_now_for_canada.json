@@ -1,0 +1,1277 @@
+{
+  "answer_markdown": "MAOP: Actual USD 26.1M; USD 1.1M (4.5%) above PY (USD 25.0M), favourable; USD 1.7M (6.2%) below Budget (USD 27.8M), unfavourable. The increase compared to PY is driven by Production (USD 8.0M higher, favourable) and Functional neutralization (USD 234k higher, favourable), partly offset by Personnel charges (USD 3.9M higher, unfavourable) and Other costs (USD 1.6M higher, unfavourable). The decrease compared to Budget is driven by Production (USD 5.1M lower, unfavourable) and Functional neutralization (USD 63k lower, unfavourable), partly offset by Personnel charges (USD 2.0M lower, favourable) and Other costs (USD 924k lower, favourable).\n\n- Production: Actual USD 178.3M; USD 8.0M (4.7%) above PY (USD 170.3M), favourable; USD 5.1M (2.8%) below Budget (USD 183.4M), unfavourable\n- Personnel charges: Actual USD 87.3M; USD 3.9M (4.7%) higher than PY (USD 83.3M), unfavourable; USD 2.0M (2.2%) lower than Budget (USD 89.3M), favourable\n- Other costs: Actual USD 38.9M; USD 1.6M (4.4%) higher than PY (USD 37.3M), unfavourable; USD 924k (2.3%) lower than Budget (USD 39.9M), favourable\n- MAOP margin (on revenue): Actual 14.7%; 0.0 pp below PY (14.7%), unfavourable; 0.5 pp below Budget (15.2%), unfavourable",
+  "table": [
+    {
+      "Line": "1 Billing",
+      "_code": "1",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 174490590.20999998,
+      "PY": 166282202.59,
+      "Budget": 179314452.68,
+      "Var vs PY": 8208387.619999975,
+      "Var % vs PY": 0.04936419828548516,
+      "_fav_PY": true,
+      "Var vs Budget": -4823862.470000029,
+      "Var % vs Budget": -0.02690169363318734,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "2 WIP & UI",
+      "_code": "2",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 3157208.04,
+      "PY": 3362929.48,
+      "Budget": 3381053.3699999996,
+      "Var vs PY": -205721.43999999994,
+      "Var % vs PY": -0.06117328395479763,
+      "_fav_PY": false,
+      "Var vs Budget": -223845.3299999996,
+      "Var % vs Budget": -0.06620579609484237,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "3 REVENUE",
+      "_code": "3",
+      "_kind": "subtotal",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 177647798.24999997,
+      "PY": 169645132.07,
+      "Budget": 182695506.05,
+      "Var vs PY": 8002666.179999977,
+      "Var % vs PY": 0.047172978572104673,
+      "_fav_PY": true,
+      "Var vs Budget": -5047707.800000042,
+      "Var % vs Budget": -0.02762907478752426,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "4 Intragroup revenue",
+      "_code": "4",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 7998667.41,
+      "PY": 7684698.24,
+      "Budget": 8257129.8,
+      "Var vs PY": 313969.1699999999,
+      "Var % vs PY": 0.040856408435889335,
+      "_fav_PY": true,
+      "Var vs Budget": -258462.38999999966,
+      "Var % vs Budget": -0.03130172302729208,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "5 Intragroup subcontracting",
+      "_code": "5",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -7358889.83,
+      "PY": -7041140.1,
+      "Budget": -7572744.57,
+      "Var vs PY": -317749.73000000045,
+      "Var % vs PY": -0.04512759659476176,
+      "_fav_PY": false,
+      "Var vs Budget": 213854.74000000022,
+      "Var % vs Budget": 0.028240057224061397,
+      "_fav_Budget": true
+    },
+    {
+      "Line": "6 PRODUCTION",
+      "_code": "6",
+      "_kind": "subtotal",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 178287575.82999995,
+      "PY": 170288690.21,
+      "Budget": 183379891.28000003,
+      "Var vs PY": 7998885.619999945,
+      "Var % vs PY": 0.04697250069946348,
+      "_fav_PY": true,
+      "Var vs Budget": -5092315.4500000775,
+      "Var % vs Budget": -0.027769214031350343,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "7 Personnel charges",
+      "_code": "7",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -87264550.04,
+      "PY": -83335305.36999999,
+      "Budget": -89260826.46000001,
+      "Var vs PY": -3929244.6700000167,
+      "Var % vs PY": -0.04714982026590751,
+      "_fav_PY": false,
+      "Var vs Budget": 1996276.4200000018,
+      "Var % vs Budget": 0.02236452987464308,
+      "_fav_Budget": true
+    },
+    {
+      "Line": "8 External subcontracting",
+      "_code": "8",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -11571347.9,
+      "PY": -10983039.42,
+      "Budget": -11792742.120000001,
+      "Var vs PY": -588308.4800000004,
+      "Var % vs PY": -0.05356517968320289,
+      "_fav_PY": false,
+      "Var vs Budget": 221394.22000000067,
+      "Var % vs Budget": 0.01877376930209686,
+      "_fav_Budget": true
+    },
+    {
+      "Line": "9 Other costs",
+      "_code": "9",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -38933261.02,
+      "PY": -37289069.72,
+      "Budget": -39857018.370000005,
+      "Var vs PY": -1644191.3000000045,
+      "Var % vs PY": -0.0440931166249541,
+      "_fav_PY": false,
+      "Var vs Budget": 923757.3500000015,
+      "Var % vs Budget": 0.023176780094903055,
+      "_fav_Budget": true
+    },
+    {
+      "Line": "10 Functional neutralization",
+      "_code": "10",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 4472617.23,
+      "PY": 4238169.23,
+      "Budget": 4535821.7,
+      "Var vs PY": 234448.0,
+      "Var % vs PY": 0.05531822522339439,
+      "_fav_PY": true,
+      "Var vs Budget": -63204.46999999974,
+      "Var % vs Budget": -0.013934513783908158,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "11 GROSS PROFIT",
+      "_code": "11",
+      "_kind": "subtotal",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 44991034.099999934,
+      "PY": 42919444.93000002,
+      "Budget": 47005126.030000016,
+      "Var vs PY": 2071589.1699999124,
+      "Var % vs PY": 0.04826691429440887,
+      "_fav_PY": true,
+      "Var vs Budget": -2014091.9300000817,
+      "Var % vs Budget": -0.042848346555110405,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "12 Total functional costs",
+      "_code": "12",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -18897618.92,
+      "PY": -17949732.38,
+      "Budget": -19184485.3,
+      "Var vs PY": -947886.5400000028,
+      "Var % vs PY": -0.05280783690436296,
+      "_fav_PY": false,
+      "Var vs Budget": 286866.37999999896,
+      "Var % vs Budget": 0.014953040204836714,
+      "_fav_Budget": true
+    },
+    {
+      "Line": "13 MAOP",
+      "_code": "13",
+      "_kind": "subtotal",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 26093415.179999933,
+      "PY": 24969712.550000023,
+      "Budget": 27820640.730000015,
+      "Var vs PY": 1123702.6299999095,
+      "Var % vs PY": 0.04500262579113705,
+      "_fav_PY": true,
+      "Var vs Budget": -1727225.5500000827,
+      "Var % vs Budget": -0.06208431957994239,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "17 Other operating expenses",
+      "_code": "17",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -1294239.9100000001,
+      "PY": -1246297.47,
+      "Budget": -1244128.5,
+      "Var vs PY": -47942.44000000018,
+      "Var % vs PY": -0.03846789482770929,
+      "_fav_PY": false,
+      "Var vs Budget": -50111.41000000015,
+      "Var % vs Budget": -0.04027832334039462,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "18 MANAGEMENT OP",
+      "_code": "18",
+      "_kind": "subtotal",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 24799175.269999932,
+      "PY": 23723415.080000024,
+      "Budget": 26576512.230000015,
+      "Var vs PY": 1075760.1899999082,
+      "Var % vs PY": 0.04534592453793997,
+      "_fav_PY": true,
+      "Var vs Budget": -1777336.9600000829,
+      "Var % vs Budget": -0.06687623058355245,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "19 Financial result",
+      "_code": "19",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -1088620.42,
+      "PY": -1008809.02,
+      "Budget": -1082497.8,
+      "Var vs PY": -79811.3999999999,
+      "Var % vs PY": -0.07911447897244209,
+      "_fav_PY": false,
+      "Var vs Budget": -6122.619999999879,
+      "Var % vs Budget": -0.005656011494896229,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "20 Corporate taxes",
+      "_code": "20",
+      "_kind": "line",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": -6283297.04,
+      "PY": -6019370.63,
+      "Budget": -6755913.84,
+      "Var vs PY": -263926.41000000015,
+      "Var % vs PY": -0.04384618031071467,
+      "_fav_PY": false,
+      "Var vs Budget": 472616.7999999998,
+      "Var % vs Budget": 0.06995601353021397,
+      "_fav_Budget": true
+    },
+    {
+      "Line": "21 NET INCOME",
+      "_code": "21",
+      "_kind": "subtotal",
+      "_level": 0,
+      "_fmt": "eur",
+      "Actual": 17427257.809999935,
+      "PY": 16695235.430000026,
+      "Budget": 18738100.590000015,
+      "Var vs PY": 732022.3799999095,
+      "Var % vs PY": 0.0438461849231861,
+      "_fav_PY": true,
+      "Var vs Budget": -1310842.7800000794,
+      "Var % vs Budget": -0.06995601148067475,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "MAOP margin (on revenue)",
+      "_code": "maop_margin_revenue",
+      "_kind": "ratio",
+      "_level": 0,
+      "_fmt": "pct",
+      "Actual": 0.14688285155822323,
+      "PY": 0.1471879107011268,
+      "Budget": 0.15227873597715139,
+      "Var vs PY": -0.0003050591429035743,
+      "Var % vs PY": null,
+      "_fav_PY": false,
+      "Var vs Budget": -0.00539588441892816,
+      "Var % vs Budget": null,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "Gross margin",
+      "_code": "gross_margin",
+      "_kind": "ratio",
+      "_level": 0,
+      "_fmt": "pct",
+      "Actual": 0.2523509217652923,
+      "PY": 0.2520393155709388,
+      "Budget": 0.2563265017876392,
+      "Var vs PY": 0.00031160619435349757,
+      "Var % vs PY": null,
+      "_fav_PY": true,
+      "Var vs Budget": -0.003975580022346936,
+      "Var % vs Budget": null,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "Direct margin",
+      "_code": "direct_margin",
+      "_kind": "ratio",
+      "_level": 0,
+      "_fmt": "pct",
+      "Actual": 0.626775430703886,
+      "PY": 0.6266697330773956,
+      "Budget": 0.6287853990705017,
+      "Var vs PY": 0.00010569762649037528,
+      "Var % vs PY": null,
+      "_fav_PY": true,
+      "Var vs Budget": -0.002009968366615711,
+      "Var % vs Budget": null,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "Personnel charges / Production",
+      "_code": "personnel_to_production",
+      "_kind": "ratio",
+      "_level": 0,
+      "_fmt": "pct",
+      "Actual": 0.48945951300166957,
+      "PY": 0.4893766301639345,
+      "Budget": 0.4867536229679021,
+      "Var vs PY": 8.288283773505434e-05,
+      "Var % vs PY": null,
+      "_fav_PY": false,
+      "Var vs Budget": 0.0027058900337674774,
+      "Var % vs Budget": null,
+      "_fav_Budget": false
+    },
+    {
+      "Line": "Total FTE (average)",
+      "_code": "fte",
+      "_kind": "stat",
+      "_level": 0,
+      "_fmt": "num",
+      "Actual": 1061.867,
+      "PY": 1043.603,
+      "Budget": 1074.48,
+      "Var vs PY": 18.263999999999896,
+      "Var % vs PY": 0.017500907912299885,
+      "_fav_PY": null,
+      "Var vs Budget": -12.613000000000056,
+      "Var % vs Budget": -0.011738701511428836,
+      "_fav_Budget": null
+    },
+    {
+      "Line": "Total headcount (average)",
+      "_code": "headcount",
+      "_kind": "stat",
+      "_level": 0,
+      "_fmt": "num",
+      "Actual": 1128.549,
+      "PY": 1109.016,
+      "Budget": 1141.83,
+      "Var vs PY": 19.5329999999999,
+      "Var % vs PY": 0.017612910904802007,
+      "_fav_PY": null,
+      "Var vs Budget": -13.280999999999949,
+      "Var % vs Budget": -0.011631328656630103,
+      "_fav_Budget": null
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Line",
+      "Actual",
+      "PY",
+      "Budget",
+      "Var vs PY",
+      "Var % vs PY",
+      "Var vs Budget",
+      "Var % vs Budget"
+    ],
+    "rows": [
+      {
+        "Line": "1 Billing",
+        "_code": "1",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 174490590.20999998,
+        "PY": 166282202.59,
+        "Budget": 179314452.68,
+        "Var vs PY": 8208387.619999975,
+        "Var % vs PY": 0.04936419828548516,
+        "_fav_PY": true,
+        "Var vs Budget": -4823862.470000029,
+        "Var % vs Budget": -0.02690169363318734,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "2 WIP & UI",
+        "_code": "2",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 3157208.04,
+        "PY": 3362929.48,
+        "Budget": 3381053.3699999996,
+        "Var vs PY": -205721.43999999994,
+        "Var % vs PY": -0.06117328395479763,
+        "_fav_PY": false,
+        "Var vs Budget": -223845.3299999996,
+        "Var % vs Budget": -0.06620579609484237,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "3 REVENUE",
+        "_code": "3",
+        "_kind": "subtotal",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 177647798.24999997,
+        "PY": 169645132.07,
+        "Budget": 182695506.05,
+        "Var vs PY": 8002666.179999977,
+        "Var % vs PY": 0.047172978572104673,
+        "_fav_PY": true,
+        "Var vs Budget": -5047707.800000042,
+        "Var % vs Budget": -0.02762907478752426,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "4 Intragroup revenue",
+        "_code": "4",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 7998667.41,
+        "PY": 7684698.24,
+        "Budget": 8257129.8,
+        "Var vs PY": 313969.1699999999,
+        "Var % vs PY": 0.040856408435889335,
+        "_fav_PY": true,
+        "Var vs Budget": -258462.38999999966,
+        "Var % vs Budget": -0.03130172302729208,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "5 Intragroup subcontracting",
+        "_code": "5",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -7358889.83,
+        "PY": -7041140.1,
+        "Budget": -7572744.57,
+        "Var vs PY": -317749.73000000045,
+        "Var % vs PY": -0.04512759659476176,
+        "_fav_PY": false,
+        "Var vs Budget": 213854.74000000022,
+        "Var % vs Budget": 0.028240057224061397,
+        "_fav_Budget": true
+      },
+      {
+        "Line": "6 PRODUCTION",
+        "_code": "6",
+        "_kind": "subtotal",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 178287575.82999995,
+        "PY": 170288690.21,
+        "Budget": 183379891.28000003,
+        "Var vs PY": 7998885.619999945,
+        "Var % vs PY": 0.04697250069946348,
+        "_fav_PY": true,
+        "Var vs Budget": -5092315.4500000775,
+        "Var % vs Budget": -0.027769214031350343,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "7 Personnel charges",
+        "_code": "7",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -87264550.04,
+        "PY": -83335305.36999999,
+        "Budget": -89260826.46000001,
+        "Var vs PY": -3929244.6700000167,
+        "Var % vs PY": -0.04714982026590751,
+        "_fav_PY": false,
+        "Var vs Budget": 1996276.4200000018,
+        "Var % vs Budget": 0.02236452987464308,
+        "_fav_Budget": true
+      },
+      {
+        "Line": "8 External subcontracting",
+        "_code": "8",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -11571347.9,
+        "PY": -10983039.42,
+        "Budget": -11792742.120000001,
+        "Var vs PY": -588308.4800000004,
+        "Var % vs PY": -0.05356517968320289,
+        "_fav_PY": false,
+        "Var vs Budget": 221394.22000000067,
+        "Var % vs Budget": 0.01877376930209686,
+        "_fav_Budget": true
+      },
+      {
+        "Line": "9 Other costs",
+        "_code": "9",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -38933261.02,
+        "PY": -37289069.72,
+        "Budget": -39857018.370000005,
+        "Var vs PY": -1644191.3000000045,
+        "Var % vs PY": -0.0440931166249541,
+        "_fav_PY": false,
+        "Var vs Budget": 923757.3500000015,
+        "Var % vs Budget": 0.023176780094903055,
+        "_fav_Budget": true
+      },
+      {
+        "Line": "10 Functional neutralization",
+        "_code": "10",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 4472617.23,
+        "PY": 4238169.23,
+        "Budget": 4535821.7,
+        "Var vs PY": 234448.0,
+        "Var % vs PY": 0.05531822522339439,
+        "_fav_PY": true,
+        "Var vs Budget": -63204.46999999974,
+        "Var % vs Budget": -0.013934513783908158,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "11 GROSS PROFIT",
+        "_code": "11",
+        "_kind": "subtotal",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 44991034.099999934,
+        "PY": 42919444.93000002,
+        "Budget": 47005126.030000016,
+        "Var vs PY": 2071589.1699999124,
+        "Var % vs PY": 0.04826691429440887,
+        "_fav_PY": true,
+        "Var vs Budget": -2014091.9300000817,
+        "Var % vs Budget": -0.042848346555110405,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "12 Total functional costs",
+        "_code": "12",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -18897618.92,
+        "PY": -17949732.38,
+        "Budget": -19184485.3,
+        "Var vs PY": -947886.5400000028,
+        "Var % vs PY": -0.05280783690436296,
+        "_fav_PY": false,
+        "Var vs Budget": 286866.37999999896,
+        "Var % vs Budget": 0.014953040204836714,
+        "_fav_Budget": true
+      },
+      {
+        "Line": "13 MAOP",
+        "_code": "13",
+        "_kind": "subtotal",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 26093415.179999933,
+        "PY": 24969712.550000023,
+        "Budget": 27820640.730000015,
+        "Var vs PY": 1123702.6299999095,
+        "Var % vs PY": 0.04500262579113705,
+        "_fav_PY": true,
+        "Var vs Budget": -1727225.5500000827,
+        "Var % vs Budget": -0.06208431957994239,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "17 Other operating expenses",
+        "_code": "17",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -1294239.9100000001,
+        "PY": -1246297.47,
+        "Budget": -1244128.5,
+        "Var vs PY": -47942.44000000018,
+        "Var % vs PY": -0.03846789482770929,
+        "_fav_PY": false,
+        "Var vs Budget": -50111.41000000015,
+        "Var % vs Budget": -0.04027832334039462,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "18 MANAGEMENT OP",
+        "_code": "18",
+        "_kind": "subtotal",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 24799175.269999932,
+        "PY": 23723415.080000024,
+        "Budget": 26576512.230000015,
+        "Var vs PY": 1075760.1899999082,
+        "Var % vs PY": 0.04534592453793997,
+        "_fav_PY": true,
+        "Var vs Budget": -1777336.9600000829,
+        "Var % vs Budget": -0.06687623058355245,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "19 Financial result",
+        "_code": "19",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -1088620.42,
+        "PY": -1008809.02,
+        "Budget": -1082497.8,
+        "Var vs PY": -79811.3999999999,
+        "Var % vs PY": -0.07911447897244209,
+        "_fav_PY": false,
+        "Var vs Budget": -6122.619999999879,
+        "Var % vs Budget": -0.005656011494896229,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "20 Corporate taxes",
+        "_code": "20",
+        "_kind": "line",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": -6283297.04,
+        "PY": -6019370.63,
+        "Budget": -6755913.84,
+        "Var vs PY": -263926.41000000015,
+        "Var % vs PY": -0.04384618031071467,
+        "_fav_PY": false,
+        "Var vs Budget": 472616.7999999998,
+        "Var % vs Budget": 0.06995601353021397,
+        "_fav_Budget": true
+      },
+      {
+        "Line": "21 NET INCOME",
+        "_code": "21",
+        "_kind": "subtotal",
+        "_level": 0,
+        "_fmt": "eur",
+        "Actual": 17427257.809999935,
+        "PY": 16695235.430000026,
+        "Budget": 18738100.590000015,
+        "Var vs PY": 732022.3799999095,
+        "Var % vs PY": 0.0438461849231861,
+        "_fav_PY": true,
+        "Var vs Budget": -1310842.7800000794,
+        "Var % vs Budget": -0.06995601148067475,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "MAOP margin (on revenue)",
+        "_code": "maop_margin_revenue",
+        "_kind": "ratio",
+        "_level": 0,
+        "_fmt": "pct",
+        "Actual": 0.14688285155822323,
+        "PY": 0.1471879107011268,
+        "Budget": 0.15227873597715139,
+        "Var vs PY": -0.0003050591429035743,
+        "Var % vs PY": null,
+        "_fav_PY": false,
+        "Var vs Budget": -0.00539588441892816,
+        "Var % vs Budget": null,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "Gross margin",
+        "_code": "gross_margin",
+        "_kind": "ratio",
+        "_level": 0,
+        "_fmt": "pct",
+        "Actual": 0.2523509217652923,
+        "PY": 0.2520393155709388,
+        "Budget": 0.2563265017876392,
+        "Var vs PY": 0.00031160619435349757,
+        "Var % vs PY": null,
+        "_fav_PY": true,
+        "Var vs Budget": -0.003975580022346936,
+        "Var % vs Budget": null,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "Direct margin",
+        "_code": "direct_margin",
+        "_kind": "ratio",
+        "_level": 0,
+        "_fmt": "pct",
+        "Actual": 0.626775430703886,
+        "PY": 0.6266697330773956,
+        "Budget": 0.6287853990705017,
+        "Var vs PY": 0.00010569762649037528,
+        "Var % vs PY": null,
+        "_fav_PY": true,
+        "Var vs Budget": -0.002009968366615711,
+        "Var % vs Budget": null,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "Personnel charges / Production",
+        "_code": "personnel_to_production",
+        "_kind": "ratio",
+        "_level": 0,
+        "_fmt": "pct",
+        "Actual": 0.48945951300166957,
+        "PY": 0.4893766301639345,
+        "Budget": 0.4867536229679021,
+        "Var vs PY": 8.288283773505434e-05,
+        "Var % vs PY": null,
+        "_fav_PY": false,
+        "Var vs Budget": 0.0027058900337674774,
+        "Var % vs Budget": null,
+        "_fav_Budget": false
+      },
+      {
+        "Line": "Total FTE (average)",
+        "_code": "fte",
+        "_kind": "stat",
+        "_level": 0,
+        "_fmt": "num",
+        "Actual": 1061.867,
+        "PY": 1043.603,
+        "Budget": 1074.48,
+        "Var vs PY": 18.263999999999896,
+        "Var % vs PY": 0.017500907912299885,
+        "_fav_PY": null,
+        "Var vs Budget": -12.613000000000056,
+        "Var % vs Budget": -0.011738701511428836,
+        "_fav_Budget": null
+      },
+      {
+        "Line": "Total headcount (average)",
+        "_code": "headcount",
+        "_kind": "stat",
+        "_level": 0,
+        "_fmt": "num",
+        "Actual": 1128.549,
+        "PY": 1109.016,
+        "Budget": 1141.83,
+        "Var vs PY": 19.5329999999999,
+        "Var % vs PY": 0.017612910904802007,
+        "_fav_PY": null,
+        "Var vs Budget": -13.280999999999949,
+        "Var % vs Budget": -0.011631328656630103,
+        "_fav_Budget": null
+      }
+    ],
+    "col_fmt": {
+      "Actual": "eur",
+      "PY": "eur",
+      "Budget": "eur",
+      "Var vs PY": "eur",
+      "Var % vs PY": "pct",
+      "Var vs Budget": "eur",
+      "Var % vs Budget": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": true,
+          "Var % vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": true,
+          "Var % vs Budget": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": true,
+          "Var % vs Budget": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": true,
+          "Var % vs Budget": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": true,
+          "Var % vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": true,
+          "Var % vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Var vs PY": true,
+          "Var % vs PY": true,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Var vs PY": false,
+          "Var % vs PY": false,
+          "Var vs Budget": false,
+          "Var % vs Budget": false
+        }
+      },
+      {
+        "kind": "stat",
+        "level": 0,
+        "fmt": "num",
+        "fav": {
+          "Var vs PY": null,
+          "Var % vs PY": null,
+          "Var vs Budget": null,
+          "Var % vs Budget": null
+        }
+      },
+      {
+        "kind": "stat",
+        "level": 0,
+        "fmt": "num",
+        "fav": {
+          "Var vs PY": null,
+          "Var % vs PY": null,
+          "Var vs Budget": null,
+          "Var % vs Budget": null
+        }
+      }
+    ],
+    "caption": "Signed values: costs negative. Variances are profit impact (positive = favourable).",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "waterfall",
+    "title": "MAOP bridge PY to Actual - Canada (YTD Oct 2026)",
+    "fmt": "eur",
+    "x": "label",
+    "y": [
+      "value"
+    ],
+    "data": [
+      {
+        "label": "MAOP PY",
+        "value": 24969712.550000023,
+        "measure": "absolute"
+      },
+      {
+        "label": "Production",
+        "value": 7998885.619999945,
+        "measure": "relative"
+      },
+      {
+        "label": "Personnel",
+        "value": -3929244.6700000167,
+        "measure": "relative"
+      },
+      {
+        "label": "Ext. subcontracting",
+        "value": -588308.4800000004,
+        "measure": "relative"
+      },
+      {
+        "label": "Other costs",
+        "value": -1644191.3000000045,
+        "measure": "relative"
+      },
+      {
+        "label": "Functional neutr.",
+        "value": 234448.0,
+        "measure": "relative"
+      },
+      {
+        "label": "Functional costs",
+        "value": -947886.5400000028,
+        "measure": "relative"
+      },
+      {
+        "label": "MAOP Actual",
+        "value": 26093415.179999933,
+        "measure": "total"
+      }
+    ],
+    "meta": {
+      "favorable": "up"
+    }
+  },
+  "filters_used": {
+    "org": "Canada",
+    "org_filter": {
+      "l3_country": [
+        "Canada"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "B26 (constant budget rate)",
+    "as_of_date": "2026-11-12",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (Actual, YTD Oct 2026)",
+      "PY (Actual, YTD Oct 2025)",
+      "Budget (Budget, YTD Oct 2026)"
+    ]
+  },
+  "sql_used": [
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_stats.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_stats.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_stats.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada')"
+  ],
+  "followups": [
+    "What are the main drivers of the MAOP variance vs budget for Canada?",
+    "Show the monthly MAOP trend for Canada vs last year",
+    "Which product lines in Canada have the lowest MAOP margin this year?"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "get_pnl",
+        "arguments": {
+          "org": "Canada",
+          "period": "YTD Oct 2026",
+          "versions": [
+            "Actual",
+            "PY",
+            "Budget"
+          ]
+        }
+      }
+    ],
+    "tool_choice_source": "llm_text",
+    "suggested": {
+      "name": "get_pnl",
+      "arguments": {
+        "org": "Canada",
+        "period": "YTD Oct 2026",
+        "versions": [
+          "Actual",
+          "PY",
+          "Budget"
+        ]
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": false,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "unsupported": [],
+          "checked": 15
+        }
+      ],
+      "unsupported": []
+    },
+    "llm_calls": [
+      {
+        "step": "plan",
+        "latency": 7.23,
+        "usage": {
+          "prompt_tokens": 2736,
+          "completion_tokens": 53
+        },
+        "native_tool_call": false,
+        "raw_calls": [
+          {
+            "name": "get_pnl",
+            "arguments": {
+              "org": "Canada",
+              "period": "YTD Oct 2026",
+              "versions": [
+                "Actual",
+                "PY",
+                "Budget"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "step": "write#1",
+        "latency": 30.02,
+        "usage": {
+          "prompt_tokens": 1620,
+          "completion_tokens": 200
+        }
+      }
+    ],
+    "errors": [],
+    "model": "ollama/qwen2.5-coder:14b",
+    "timings": {
+      "preprocess": 0.005,
+      "plan": 7.237,
+      "act": 0.215,
+      "write#1": 30.017
+    },
+    "resolved": {
+      "org": "Canada",
+      "metric_or_ratio": "maop",
+      "period": "YTD Oct 2026",
+      "versions": [
+        "Budget"
+      ],
+      "comparisons": [
+        "PY"
+      ],
+      "intents": []
+    },
+    "followup": true,
+    "options": [],
+    "facts": [
+      "Scope Canada, YTD Oct 2026, main version Actual, amounts in USD.",
+      "MAOP: Actual USD 26.1M; USD 1.1M (4.5%) above PY (USD 25.0M), favourable; USD 1.7M (6.2%) below Budget (USD 27.8M), unfavourable.",
+      "MAOP vs PY: increase of USD 1.1M driven by Production (USD 8.0M higher, favourable) and Functional neutralization (USD 234k higher, favourable), partly offset by Personnel charges (USD 3.9M higher, unfavourable) and Other costs (USD 1.6M higher, unfavourable).",
+      "MAOP vs Budget: decrease of USD 1.7M driven by Production (USD 5.1M lower, unfavourable) and Functional neutralization (USD 63k lower, unfavourable), partly offset by Personnel charges (USD 2.0M lower, favourable) and Other costs (USD 924k lower, favourable).",
+      "Production: Actual USD 178.3M; USD 8.0M (4.7%) above PY (USD 170.3M), favourable; USD 5.1M (2.8%) below Budget (USD 183.4M), unfavourable.",
+      "Revenue: Actual USD 177.6M; USD 8.0M (4.7%) above PY (USD 169.6M), favourable; USD 5.0M (2.8%) below Budget (USD 182.7M), unfavourable.",
+      "Gross profit: Actual USD 45.0M; USD 2.1M (4.8%) above PY (USD 42.9M), favourable; USD 2.0M (4.3%) below Budget (USD 47.0M), unfavourable.",
+      "Personnel charges: Actual USD 87.3M; USD 3.9M (4.7%) higher than PY (USD 83.3M), unfavourable; USD 2.0M (2.2%) lower than Budget (USD 89.3M), favourable.",
+      "External subcontracting: Actual USD 11.6M; USD 588k (5.4%) higher than PY (USD 11.0M), unfavourable; USD 221k (1.9%) lower than Budget (USD 11.8M), favourable.",
+      "Other costs: Actual USD 38.9M; USD 1.6M (4.4%) higher than PY (USD 37.3M), unfavourable; USD 924k (2.3%) lower than Budget (USD 39.9M), favourable.",
+      "Total functional costs: Actual USD 18.9M; USD 948k (5.3%) higher than PY (USD 17.9M), unfavourable; USD 287k (1.5%) lower than Budget (USD 19.2M), favourable.",
+      "Management OP: Actual USD 24.8M; USD 1.1M (4.5%) above PY (USD 23.7M), favourable; USD 1.8M (6.7%) below Budget (USD 26.6M), unfavourable.",
+      "Net income: Actual USD 17.4M; USD 732k (4.4%) above PY (USD 16.7M), favourable; USD 1.3M (7.0%) below Budget (USD 18.7M), unfavourable.",
+      "Billing: Actual USD 174.5M; USD 8.2M (4.9%) above PY (USD 166.3M), favourable; USD 4.8M (2.7%) below Budget (USD 179.3M), unfavourable.",
+      "WIP & UI: Actual USD 3.2M; USD 206k (6.1%) below PY (USD 3.4M), unfavourable; USD 224k (6.6%) below Budget (USD 3.4M), unfavourable.",
+      "MAOP margin (on revenue): Actual 14.7%; 0.0 pp below PY (14.7%), unfavourable; 0.5 pp below Budget (15.2%), unfavourable.",
+      "Gross margin: Actual 25.2%; 0.0 pp above PY (25.2%), favourable; 0.4 pp below Budget (25.6%), unfavourable.",
+      "Direct margin: Actual 62.7%; 0.0 pp above PY (62.7%), favourable; 0.2 pp below Budget (62.9%), unfavourable.",
+      "Personnel charges / Production: Actual 48.9%; 0.0 pp above PY (48.9%), unfavourable; 0.3 pp above Budget (48.7%), unfavourable.",
+      "Total FTE (average): Actual 1,062; 18.3 (1.8%) above PY (1,044); 12.6 (1.2%) below Budget (1,074).",
+      "Total headcount (average): Actual 1,129; 19.5 (1.8%) above PY (1,109); 13.3 (1.2%) below Budget (1,142)."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 37.48
+  }
+}

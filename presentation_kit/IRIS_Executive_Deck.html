@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IRIS — Scaling Enterprise BI Through Data Engineering &amp; Semantic Architecture</title>
+<style>
+  :root {
+    --navy: #0B1F3A;
+    --navy-2: #122B4F;
+    --teal: #0F766E;
+    --teal-light: #E6F4F1;
+    --indigo: #3730A3;
+    --indigo-light: #EEF0FB;
+    --amber: #B45309;
+    --amber-light: #FEF3C7;
+    --bronze: #92400E;
+    --bronze-bg: #FEF3C7;
+    --silver: #334155;
+    --silver-bg: #F1F5F9;
+    --gold: #B45309;
+    --gold-bg: #FEF9C3;
+    --slate: #475569;
+    --border: #E2E8F0;
+    --bg: #F8FAFC;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%; height: 100%; overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    background: #071324; color: var(--navy);
+  }
+  .deck-shell {
+    position: relative; width: 100vw; height: 100vh;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+  }
+  .slide-viewport {
+    position: relative;
+    width: min(96vw, calc((100vh - 64px) * 16 / 9));
+    aspect-ratio: 16 / 9;
+    background: var(--bg);
+    border-radius: 16px;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+  }
+  .slide {
+    position: absolute; inset: 0;
+    display: none; flex-direction: column;
+    padding: 36px 48px 28px;
+    background: var(--bg);
+    opacity: 0; transition: opacity 0.24s ease;
+  }
+  .slide.active { display: flex; opacity: 1; }
+  .slide.hero {
+    background: linear-gradient(135deg, #081A33 0%, #0F766E 58%, #3730A3 100%);
+    color: #FFFFFF;
+  }
+
+  /* Slide Header */
+  .s-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 18px; border-bottom: 2px solid var(--border); padding-bottom: 12px;
+    flex-shrink: 0;
+  }
+  .kicker {
+    font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--teal); margin-bottom: 4px;
+  }
+  .s-title {
+    font-size: clamp(1.35rem, 2.05vw, 1.95rem); font-weight: 800; color: var(--navy); line-height: 1.18;
+  }
+  .s-badge {
+    background: var(--indigo-light); color: var(--indigo);
+    font-size: 0.76rem; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+    white-space: nowrap; margin-left: 16px;
+  }
+
+  /* Layouts */
+  .body-fill { flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-height: 0; gap: 14px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; flex: 1; min-height: 0; }
+  .grid-video { display: grid; grid-template-columns: 1.52fr 1fr; gap: 22px; flex: 1; min-height: 0; align-items: center; }
+  .grid-video > .card { height: 100%; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px 18px; box-shadow: 0 2px 10px rgba(11, 31, 58, 0.04);
+    display: flex; flex-direction: column; gap: 8px; min-height: 0;
+  }
+  .card.accent-teal { border-top: 4px solid var(--teal); }
+  .card.accent-indigo { border-top: 4px solid var(--indigo); }
+  .card.accent-navy { border-top: 4px solid var(--navy); }
+  .card.accent-red { border-top: 4px solid #DC2626; background: #FFFDFD; }
+  .card h3 { font-size: 1.02rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+  .card p, .card li { font-size: 0.86rem; line-height: 1.45; color: var(--slate); }
+  .card ul { padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+  .card li strong { color: var(--navy); }
+
+  code {
+    background: #EEF2FF; color: #3730A3; padding: 1px 6px; border-radius: 5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em; font-weight: 600;
+  }
+  .callout {
+    background: linear-gradient(90deg, var(--teal-light) 0%, var(--indigo-light) 100%);
+    border-left: 5px solid var(--teal); border-radius: 10px;
+    padding: 11px 16px; font-size: 0.88rem; color: var(--navy); font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  /* Video container */
+  .vid-frame {
+    background: #0B1628; border-radius: 12px; overflow: hidden;
+    border: 2px solid #CBD5E1; display: flex; flex-direction: column;
+    box-shadow: 0 10px 28px rgba(11, 31, 58, 0.16); min-height: 0;
+  }
+  .vid-bar {
+    background: #0F172A; color: #E2E8F0; font-size: 0.75rem; font-weight: 600;
+    padding: 6px 12px; display: flex; justify-content: space-between; align-items: center;
+  }
+  .vid-bar span.live-dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: #10B981; margin-right: 6px;
+  }
+  .vid-frame video {
+    width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #0F172A; display: block;
+  }
+  .thumb-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: auto;
+  }
+  .thumb-row img {
+    width: 100%; height: 84px; object-fit: cover; object-position: top;
+    border-radius: 8px; border: 1px solid var(--border); cursor: zoom-in;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .thumb-row img:hover { transform: scale(1.02); border-color: var(--teal); }
+
+  /* Medallion columns */
+  .medallion-flow {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; flex: 1; min-height: 0;
+  }
+  .m-stage {
+    background: #FFFFFF; border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 13px; display: flex; flex-direction: column; gap: 7px; position: relative;
+  }
+  .m-pill {
+    display: inline-block; font-size: 0.72rem; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.06em; padding: 4px 9px; border-radius: 6px; width: fit-content;
+  }
+  .m-stage h4 { font-size: 0.92rem; color: var(--navy); line-height: 1.25; }
+  .m-stage ul { padding-left: 15px; display: flex; flex-direction: column; gap: 5px; }
+  .m-stage li { font-size: 0.77rem; line-height: 1.35; color: var(--slate); }
+  .m-stage .m-foot {
+    margin-top: auto; padding-top: 7px; border-top: 1px dashed var(--border);
+    font-size: 0.73rem; font-weight: 700; color: var(--navy);
+  }
+
+  /* Metric strip */
+  .kpi-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; flex-shrink: 0; }
+  .kpi-box {
+    background: #FFFFFF; border: 1px solid var(--border); border-radius: 10px;
+    padding: 10px 14px; text-align: center;
+  }
+  .kpi-box .v { font-size: 1.45rem; font-weight: 800; color: var(--teal); }
+  .kpi-box .l { font-size: 0.76rem; color: var(--slate); margin-top: 2px; font-weight: 600; }
+
+  /* Table */
+  table.exec-tbl { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+  table.exec-tbl th {
+    background: var(--navy); color: #FFFFFF; text-align: left; padding: 8px 10px; font-weight: 700;
+  }
+  table.exec-tbl td {
+    padding: 7px 10px; border-bottom: 1px solid var(--border); color: var(--slate); vertical-align: top;
+  }
+  table.exec-tbl tr:nth-child(even) td { background: #F8FAFC; }
+  table.exec-tbl td strong { color: var(--navy); }
+
+  /* Controls bar */
+  .deck-nav {
+    height: 48px; width: min(96vw, calc((100vh - 64px) * 16 / 9));
+    display: flex; justify-content: space-between; align-items: center;
+    color: #CBD5E1; font-size: 0.82rem; padding: 0 8px;
+  }
+  .nav-btns { display: flex; gap: 8px; align-items: center; }
+  .nav-btn {
+    background: rgba(255, 255, 255, 0.1); color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+  }
+  .nav-btn:hover { background: rgba(15, 118, 110, 0.75); border-color: #14B8A6; }
+  .progress-dots { display: flex; gap: 6px; }
+  .dot {
+    width: 9px; height: 9px; border-radius: 50%; background: rgba(255, 255, 255, 0.24); cursor: pointer;
+  }
+  .dot.active { background: #14B8A6; transform: scale(1.25); }
+
+  /* Speaker notes drawer */
+  .notes-drawer {
+    position: fixed; bottom: 56px; right: 24px; width: min(500px, 90vw);
+    background: rgba(11, 31, 58, 0.96); color: #F1F5F9; border: 1px solid #334155;
+    border-radius: 12px; padding: 16px 18px; box-shadow: 0 18px 42px rgba(0,0,0,0.5);
+    display: none; z-index: 50; font-size: 0.84rem; line-height: 1.5;
+  }
+  .notes-drawer.open { display: block; }
+  .notes-drawer h4 { color: #5EEAD4; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+
+  /* Lightbox */
+  dialog#imgModal {
+    border: none; border-radius: 12px; padding: 0; max-width: 92vw; max-height: 92vh;
+    background: transparent; margin: auto;
+  }
+  dialog#imgModal::backdrop { background: rgba(7, 19, 36, 0.85); }
+  dialog#imgModal img { max-width: 92vw; max-height: 90vh; border-radius: 10px; display: block; }
+
+  @media print {
+    html, body { height: auto; overflow: visible; background: #FFFFFF; }
+    .deck-shell { height: auto; display: block; }
+    .slide-viewport { width: 100%; box-shadow: none; border-radius: 0; }
+    .slide { position: relative; display: flex !important; opacity: 1 !important; page-break-after: always; height: 100vh; }
+    .deck-nav, .notes-drawer { display: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="deck-shell">
+  <div class="slide-viewport" id="viewport">
+
+    <!-- ==================== SLIDE 1: HERO / STRATEGIC THESIS ==================== -->
+    <section class="slide hero active" data-notes="Open by framing why this milestone matters: Our organization already has sophisticated Data Engineering and BI reporting in Power BI, Tableau, and Excel—but zero conversational AI. IRIS is our first-of-its-kind AI Readiness & Enablement prototype, proving how iterative Medallion + Semantic Data Engineering unlocks trusted, interactive AI.">
+      <div style="display:grid; grid-template-columns: 1.18fr 0.82fr; gap: 32px; height: 100%; align-items: center;">
+        <div style="display:flex; flex-direction:column; gap: 16px;">
+          <div style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.16); padding:6px 14px; border-radius:999px; width:fit-content; font-size:0.78rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">
+            First-of-its-Kind AI Enablement &amp; Readiness Initiative
+          </div>
+          <h1 style="font-size:clamp(1.85rem, 2.75vw, 2.65rem); font-weight:800; line-height:1.14;">
+            From AI-Ready Data Engineering to Conversational BI
+          </h1>
+          <p style="font-size:1.04rem; line-height:1.48; color:rgba(255,255,255,0.92);">
+            <strong>Introducing IRIS</strong> — our organization's first interactive AI analytics prototype, showing how iterative investment in <strong>Medallion Data Engineering (Bronze → Silver → Gold)</strong> and a <strong>Governed BI Semantic Layer</strong> extends our Power BI, Tableau &amp; Excel ecosystem into trusted, self-service conversational intelligence.
+          </p>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 4px;">
+            <div style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.22); border-radius:10px; padding:12px;">
+              <div style="font-size:1.25rem; font-weight:800; color:#5EEAD4;">1st AI Milestone</div>
+              <div style="font-size:0.77rem; opacity:0.9; margin-top:3px;">Pioneering interactive AI alongside Power BI, Tableau &amp; Excel</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.22); border-radius:10px; padding:12px;">
+              <div style="font-size:1.25rem; font-weight:800; color:#5EEAD4;">AI-Ready Data</div>
+              <div style="font-size:0.77rem; opacity:0.9; margin-top:3px;">Iterative CDC, SCD2, Gold Facts/Dims &amp; Semantic Layer</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.22); border-radius:10px; padding:12px;">
+              <div style="font-size:1.25rem; font-weight:800; color:#5EEAD4;">Zero Hallucination</div>
+              <div style="font-size:0.77rem; opacity:0.9; margin-top:3px;">300/300 P&amp;L reconciliations &amp; 100% RLS security</div>
+            </div>
+          </div>
+          <div style="font-size:0.8rem; opacity:0.8; margin-top:4px;">
+            Use <strong>← / →</strong> keys to navigate · Click any video to play inline · Press <strong>N</strong> for Speaker Notes · <strong>F</strong> for Fullscreen
+          </div>
+        </div>
+
+        <!-- Iceberg SVG -->
+        <div style="background:rgba(255,255,255,0.96); border-radius:16px; padding:20px; color:var(--navy); box-shadow:0 20px 50px rgba(0,0,0,0.35);">
+          <div style="font-size:0.76rem; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); margin-bottom:8px; text-align:center;">
+            The AI Readiness &amp; Data Engineering Iceberg
+          </div>
+          <svg viewBox="0 0 420 360" style="width:100%; height:auto;">
+            <!-- Above water -->
+            <rect x="10" y="8" width="400" height="98" rx="10" fill="#EEF0FB" stroke="#C7D2FE"/>
+            <text x="24" y="28" font-size="10.5" font-weight="800" fill="#3730A3">NEW AI CAPABILITY + EXISTING BI CONSUMPTION (10%)</text>
+            <rect x="24" y="38" width="182" height="54" rx="8" fill="#3730A3"/>
+            <text x="115" y="59" text-anchor="middle" font-size="11.5" font-weight="800" fill="#FFF">NEW: IRIS Conversational AI</text>
+            <text x="115" y="76" text-anchor="middle" font-size="9.8" fill="#E0E7FF">1st interactive AI &amp; Landing agent</text>
+            <rect x="216" y="38" width="180" height="54" rx="8" fill="#FFFFFF" stroke="#6366F1"/>
+            <text x="306" y="60" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1E1B4B">Power BI · Tableau · Excel</text>
+            <text x="306" y="77" text-anchor="middle" font-size="10" fill="#475569">Established BI dashboards</text>
+
+            <!-- Waterline -->
+            <line x1="10" y1="115" x2="410" y2="115" stroke="#0F766E" stroke-width="2.5" stroke-dasharray="6,4"/>
+            <text x="210" y="128" text-anchor="middle" font-size="10" font-weight="800" fill="#0F766E">ITERATIVE DATA ENGINEERING FOUNDATION (90%)</text>
+
+            <!-- Below water layers -->
+            <rect x="24" y="138" width="372" height="48" rx="8" fill="#E6F4F1" stroke="#0F766E" stroke-width="1.5"/>
+            <text x="210" y="158" text-anchor="middle" font-size="12" font-weight="800" fill="#0F766E">BI Semantic Layer (Star + Snowflake Schemas)</text>
+            <text x="210" y="174" text-anchor="middle" font-size="10" fill="#115E59">Governed KPIs · Global Names · Synonyms · RLS Security</text>
+
+            <rect x="38" y="194" width="344" height="46" rx="8" fill="#FEF9C3" stroke="#CA8A04"/>
+            <text x="210" y="213" text-anchor="middle" font-size="11.5" font-weight="800" fill="#854D0E">Gold Layer — Curated Facts &amp; Conformed Dimensions</text>
+            <text x="210" y="229" text-anchor="middle" font-size="10" fill="#713F12">Leaf-level P&amp;L, Workforce, Operational Stats &amp; Landing</text>
+
+            <rect x="54" y="248" width="312" height="46" rx="8" fill="#F1F5F9" stroke="#64748B"/>
+            <text x="210" y="267" text-anchor="middle" font-size="11.5" font-weight="800" fill="#1E293B">Silver Layer — Business Rules, SCD2 &amp; Reconciliation</text>
+            <text x="210" y="283" text-anchor="middle" font-size="10" fill="#475569">Constant FX · Sign Rules · Holiday Calendars · 300 QA Checks</text>
+
+            <rect x="72" y="302" width="276" height="44" rx="8" fill="#FEF3C7" stroke="#B45309"/>
+            <text x="210" y="320" text-anchor="middle" font-size="11.5" font-weight="800" fill="#92400E">Bronze Layer &amp; CDC Ingestion</text>
+            <text x="210" y="335" text-anchor="middle" font-size="10" fill="#78350F">Change Data Capture · Raw Audit History · Schema Contracts</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 2: AI READINESS & SCALING BI ADOPTION ==================== -->
+    <section class="slide" data-notes="Acknowledge our strength first: We already run strong Data Engineering and established BI across Power BI, Tableau, and Excel—yet we have had zero conversational AI until now. Explain how IRIS acts as our first-of-its-kind AI Readiness & Enablement milestone, complementing dashboards with interactive self-exploration.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">1 · AI Readiness &amp; Enablement Milestone</div>
+          <h2 class="s-title">Evolving From Established BI Dashboards to Interactive Conversational AI</h2>
+        </div>
+        <span class="s-badge">First-of-its-Kind AI</span>
+      </div>
+      <div class="body-fill">
+        <div class="grid-2">
+          <div class="card accent-navy">
+            <h3>📊 Where We Are Today: Strong BI, Zero AI</h3>
+            <ul>
+              <li><strong>Mature Traditional BI Stack:</strong> Teams rely heavily on <strong>Power BI, Tableau, and Excel</strong> backed by solid data engineering—delivering structured, recurring reporting.</li>
+              <li><strong>The Static Storyline Ceiling:</strong> Dashboards answer pre-anticipated questions well, but force every leader down a fixed path—even when each executive analyses differently.</li>
+              <li><strong>Ad-Hoc Follow-Up Friction:</strong> Whenever a leader asks <em>"Why did margin move?"</em> or needs a custom cut for a presentation, it requires new dashboard views or manual Excel slicing.</li>
+              <li><strong>Untapped AI Opportunity:</strong> Our structured data assets were not yet exposed through an interactive, conversational AI interface.</li>
+            </ul>
+          </div>
+          <div class="card accent-teal">
+            <h3>🚀 What IRIS Unlocks: First-of-its-Kind AI Enablement</h3>
+            <ul>
+              <li><strong>Our First Conversational BI Prototype:</strong> Adds an interactive AI layer alongside Power BI, Tableau, and Excel—without replacing what already works.</li>
+              <li><strong>Users Author Their Own Storylines:</strong> Leaders converse naturally, test hypotheses, drill across regions/BUs, and generate presentation-ready charts in seconds.</li>
+              <li><strong>Proves AI Readiness = Data Engineering:</strong> Demonstrates that iterative investment in clean Gold facts/dims and a Semantic Layer is what makes enterprise AI trustworthy.</li>
+              <li><strong>Scales BI Team Impact:</strong> Shifts BI engineering time from repetitive view requests toward high-leverage semantic &amp; AI enablement.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout">
+          Why This Matters Now: <strong>IRIS is our blueprint for AI Readiness</strong>—proving that because of iterative Data Engineering discipline, we can move seamlessly from static BI reporting into trusted, interactive AI.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 3: MEET IRIS + VIDEO 1 (LEFT PANEL & RLS) ==================== -->
+    <section class="slide" data-notes="Play Video 1 (46s) to walk executives through the IRIS interface: Left panel Settings, login identity, Persona selector demonstrating real-time Row-Level Security (switching Group CFO to US Country Head restricts scope immediately), As-of date time travel, Model selector, USD k/M toggle, cascading Region->Country->BU filters, and persistent conversation threads.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">2 · Product Tour — Governance &amp; User Experience</div>
+          <h2 class="s-title">Inside IRIS: Scope, Personas, Row-Level Security &amp; Context</h2>
+        </div>
+        <span class="s-badge">Live Video · 46s</span>
+      </div>
+      <div class="grid-video">
+        <div class="vid-frame">
+          <div class="vid-bar">
+            <div><span class="live-dot"></span>Snippet 01 — Left Panel, Persona RLS, Dates, Model &amp; Cascading Scope</div>
+            <div>1080p MP4 · 0:46</div>
+          </div>
+          <video controls preload="metadata" poster="screenshots/02_home_and_left_panel.png">
+            <source src="videos/01_left_panel_settings_and_scope.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="card accent-indigo">
+          <h3>What the Left Panel Controls</h3>
+          <ul>
+            <li><strong>Identity &amp; Multi-Thread Memory:</strong> Sign-in binds saved conversations (last 10 + pinned threads) to each user so context resumes anytime.</li>
+            <li><strong>Persona &amp; Row-Level Security:</strong> Enforced in both SQL Server (<code>SESSION_CONTEXT</code>) and the Semantic Layer—a <em>US Country Head</em> only sees US orgs and rows.</li>
+            <li><strong>Point-in-Time As-of Date:</strong> Shifts closed months vs. open landing month and forecast availability (<code>FC1/FC2/FC3</code>) automatically.</li>
+            <li><strong>Cascading Hierarchy Filters:</strong> <code>Region → Country → Product Line → Business → BU</code>, <code>Version</code>, and <code>Period</code>—words in a question intelligently override sidebar defaults.</li>
+          </ul>
+          <div class="thumb-row">
+            <img src="screenshots/03_left_panel_personas.png" alt="Persona selector" onclick="zoomImg(this.src)" />
+            <img src="screenshots/04_rls_us_country_head_scope.png" alt="RLS US scope" onclick="zoomImg(this.src)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 4: WHY DATA ENGINEERING IS THE HERO ==================== -->
+    <section class="slide" data-notes="Pause here to hammer home the main message: Why can't you just point an LLM at raw ERP tables? Because raw tables have cryptic codes, mixed currencies, unclosed journal entries, and non-additive ratios. IRIS works ONLY because we engineered clean facts, clean dimensions, and explicit finance domain rules underneath.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">3 · The Engineering Imperative</div>
+          <h2 class="s-title">Why Conversational AI Succeeds Only When Data Engineering Leads</h2>
+        </div>
+        <span class="s-badge">Core Message</span>
+      </div>
+      <div class="body-fill">
+        <div class="grid-2">
+          <div class="card accent-red">
+            <h3>What Happens Without Clean Data Engineering</h3>
+            <ul>
+              <li><strong>Cryptic Source Schemas:</strong> Raw GL tables store codes like <code>5A1</code> or regional cost-center IDs—LLMs guess wrong joins and invent meanings.</li>
+              <li><strong>Broken Financial Math:</strong> Averaging monthly margin percentages instead of computing <code>SUM(Operating Profit) / SUM(Revenue)</code>, or flipping debit/credit variance signs.</li>
+              <li><strong>Period Contamination:</strong> Mixing open-month partial postings with closed YTD actuals, breaking like-for-like Prior Year comparisons.</li>
+              <li><strong>Zero Executive Trust:</strong> A single unverified or irreconcilable number destroys leadership confidence in the entire platform.</li>
+            </ul>
+          </div>
+          <div class="card accent-teal">
+            <h3>What Our Data Engineering Built for IRIS</h3>
+            <ul>
+              <li><strong>Clean Atomic Facts &amp; Conformed Dims:</strong> Every P&amp;L line reconciles strictly from 37 leaf accounts—zero redundant or conflicting subtotal storage.</li>
+              <li><strong>Deep Finance Domain Rules Encoded Once:</strong> Natural signs, favourable variance directions, constant-budget FX, and annualised FTE/attrition math.</li>
+              <li><strong>Deterministic Query Execution:</strong> The LLM <em>never</em> does arithmetic—it routes intent to governed Semantic Layer queries, backed by a numeric guardrail.</li>
+              <li><strong>Dual-Enforced Security &amp; Audit SQL:</strong> Database-level RLS policies + full compiled SQL exposed under <em>"How I got this"</em> on every answer.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="kpi-strip">
+          <div class="kpi-box"><div class="v">1.17M+</div><div class="l">Curated Gold P&amp;L Fact Rows</div></div>
+          <div class="kpi-box"><div class="v">937k+</div><div class="l">Monthly Workforce Grain Rows</div></div>
+          <div class="kpi-box"><div class="v">300 / 300</div><div class="l">Automated Subtotal QA Checks Passed</div></div>
+          <div class="kpi-box"><div class="v">100%</div><div class="l">Row-Level Security Enforcement</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 5: MEDALLION ARCHITECTURE ==================== -->
+    <section class="slide" data-notes="Walk left-to-right across our 5-layer architecture: 1) Source systems captured via CDC, 2) Bronze immutable raw landing, 3) Silver business cleaning, currency/sign standardization, working-day calendars, and SCD Type 2 history, 4) Gold enterprise Fact & Dimension tables, and 5) the BI Semantic Layer above Gold serving IRIS, Tableau, Power BI, and Excel.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">4 · Enterprise Data Architecture</div>
+          <h2 class="s-title">Medallion Pipeline + BI Semantic Layer: From Raw Sources to Trusted Insights</h2>
+        </div>
+        <span class="s-badge">Bronze → Silver → Gold → Semantic</span>
+      </div>
+      <div class="body-fill">
+        <div class="medallion-flow">
+          <div class="m-stage" style="border-top:4px solid #64748B;">
+            <span class="m-pill" style="background:#E2E8F0; color:#1E293B;">1 · Ingestion</span>
+            <h4>Source Systems &amp; CDC</h4>
+            <ul>
+              <li>ERP General Ledger &amp; Billing feeds</li>
+              <li>Time, Utilization &amp; Ops systems</li>
+              <li>HRIS roster &amp; payroll events</li>
+              <li>Budget &amp; FC1–FC3 submissions</li>
+              <li><strong>Change Data Capture (CDC)</strong> for low-latency incremental syncs</li>
+            </ul>
+            <div class="m-foot">Schema &amp; arrival contracts</div>
+          </div>
+
+          <div class="m-stage" style="border-top:4px solid var(--bronze);">
+            <span class="m-pill" style="background:var(--bronze-bg); color:var(--bronze);">2 · Bronze Layer</span>
+            <h4>Raw Immutable Landing</h4>
+            <ul>
+              <li>Exact source-system fidelity (append-only)</li>
+              <li>CDC operation flags (<code>I / U / D</code>), batch IDs &amp; load timestamps</li>
+              <li>Zero destructive transformations</li>
+              <li>Full point-in-time replayability &amp; audit lineage</li>
+            </ul>
+            <div class="m-foot">100% source traceability</div>
+          </div>
+
+          <div class="m-stage" style="border-top:4px solid var(--silver);">
+            <span class="m-pill" style="background:var(--silver-bg); color:var(--silver);">3 · Silver Layer</span>
+            <h4>Cleaned, Conformed &amp; SCD2</h4>
+            <ul>
+              <li>Deduplication, null handling &amp; CoA mapping</li>
+              <li>Constant-budget FX &amp; signed amounts (<code>+</code> rev / <code>−</code> cost)</li>
+              <li><strong>SCD Type 2</strong> org &amp; employee historization</li>
+              <li>Country public-holiday working-day calendars</li>
+              <li>Automated reconciliation gates</li>
+            </ul>
+            <div class="m-foot">Validated business entities</div>
+          </div>
+
+          <div class="m-stage" style="border-top:4px solid var(--gold);">
+            <span class="m-pill" style="background:var(--gold-bg); color:var(--gold);">4 · Gold Layer</span>
+            <h4>Curated Facts &amp; Dims</h4>
+            <ul>
+              <li><strong>Gold Dims:</strong> <code>dim_org</code> (106 BUs), <code>dim_account</code> (57), <code>dim_period</code>, <code>dim_version</code>, <code>dim_employee</code></li>
+              <li><strong>Gold Facts:</strong> <code>fact_pnl</code> (leaf-only), <code>fact_stats</code>, <code>fact_employee_month</code>, <code>fact_landing</code></li>
+              <li>Globally standardized business labels</li>
+            </ul>
+            <div class="m-foot">Consumption-ready warehouse</div>
+          </div>
+
+          <div class="m-stage" style="border-top:4px solid var(--teal); background:#F0FDFA;">
+            <span class="m-pill" style="background:#CCFBF1; color:var(--teal);">5 · BI Semantic Layer</span>
+            <h4>Star/Snowflake &amp; KPIs</h4>
+            <ul>
+              <li>Reporting views (<code>v_pnl</code>, <code>v_org</code>, <code>v_stats</code>, <code>v_employee</code>)</li>
+              <li>Governed <code>metrics.yaml</code> (21 ratios, P&amp;L trees, synonyms)</li>
+              <li>Native RLS security policies</li>
+              <li><strong>Serves:</strong> IRIS Chatbot, Power BI, Tableau &amp; Excel</li>
+            </ul>
+            <div class="m-foot">Build Once · Consume Everywhere</div>
+          </div>
+        </div>
+        <div class="callout">
+          Every layer has a strict contract: <strong>Bronze</strong> preserves history, <strong>Silver</strong> enforces data quality &amp; SCD2 history, <strong>Gold</strong> publishes clean atomic facts/dims, and the <strong>Semantic Layer</strong> unifies every downstream tool.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 6: DATA ENGINEERING DEEP DIVE ==================== -->
+    <section class="slide" data-notes="Highlight the concrete engineering discipline behind the database: CDC incremental pipelines, SCD Type 2 for org restructures so historical comparisons stay accurate, global standardized naming (eliminating cryptic local codes while mapping synonyms like MAOP), and automated reconciliation gates.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">5 · Data Engineering Craftsmanship</div>
+          <h2 class="s-title">What Went Into Engineering a Clean, Self-Documenting Database</h2>
+        </div>
+        <span class="s-badge">CDC · SCD2 · Global Naming</span>
+      </div>
+      <div class="body-fill">
+        <div class="grid-2" style="grid-template-rows: 1fr 1fr; gap: 14px;">
+          <div class="card accent-navy">
+            <h3>1. Change Data Capture (CDC) &amp; Fiscal Cutoffs</h3>
+            <p>Incremental CDC captures GL journal postings, HR roster events, and forecast locks without heavy full-table reloads. Strict close-calendar logic (5th of following month; <code>FC1 = 4+8</code>, <code>FC2 = 8+4</code>, <code>FC3 = 9+3</code>) ensures Actuals never bleed into unclosed periods.</p>
+          </div>
+          <div class="card accent-teal">
+            <h3>2. Slowly Changing Dimensions (SCD Type 2)</h3>
+            <p><code>dim_org</code> carries SCD2 validity windows across 6 hierarchy levels (<code>Group → Region → Country → Product Line → Business → BU</code>), and employee records track monthly BU assignments, hires, and voluntary vs. restructuring exits—preserving true like-for-like history.</p>
+          </div>
+          <div class="card accent-indigo">
+            <h3>3. Global Standardized Naming &amp; Synonym Mapping</h3>
+            <p>Cryptic ERP codes and inconsistent regional labels are cleaned in Gold/Semantic into <strong>globally standardized names</strong> (e.g., <em>Operating margin on revenue</em>, <em>Operating margin on production</em>), while business synonyms (<em>MAOP</em>, <em>MOP</em>, <em>payroll</em>) resolve seamlessly.</p>
+          </div>
+          <div class="card accent-teal">
+            <h3>4. Leaf-Only Storage &amp; Automated Reconciliation</h3>
+            <p>Gold <code>fact_pnl</code> stores strictly <strong>leaf accounts</strong> in signed constant-budget USD. Every subtotal, bridge, and ratio is aggregated dynamically from leaves and verified by <code>reconcile.py</code> across <strong>300 automated cross-table checks (0 mismatches)</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 7: STAR VS SNOWFLAKE IN BI SEMANTIC LAYER ==================== -->
+    <section class="slide" data-notes="Explain our deliberate schema strategy above Gold: Across BI we default to Star Schemas so Excel, Power BI, and Tableau users get simple 1-hop joins and intuitive usability. However, for a conversational AI agent, selective Snowflake/bridge relationships in the BI Semantic Layer (like multi-level RLS access bridges, recursive account rollups, and country holiday calendars) give the agent machine-readable hierarchy intelligence!">
+      <div class="s-top">
+        <div>
+          <div class="kicker">6 · BI Semantic Layer Design</div>
+          <h2 class="s-title">Above Gold: Why We Pair Star Schema Simplicity with Targeted Snowflake Bridges</h2>
+        </div>
+        <span class="s-badge">Schema Strategy</span>
+      </div>
+      <div class="body-fill">
+        <div class="grid-2">
+          <div class="card accent-teal">
+            <h3>⭐ Primary Pattern: Star Schema for Universal BI Usability</h3>
+            <ul>
+              <li><strong>Denormalized Conformed Dimensions:</strong> <code>dim_org</code> flattens <code>L1 Group → L6 BU</code> in one table; <code>dim_account</code> flattens P&amp;L groups and sign flags around <code>fact_pnl</code> and <code>fact_stats</code>.</li>
+              <li><strong>Why We Prioritized Star First:</strong> Minimal join hops, predictable query plans, and effortless drag-and-drop self-service in <strong>Excel PivotTables, Power BI, and Tableau</strong>.</li>
+              <li><strong>Additive Grain Discipline:</strong> Stock metrics (Headcount, FTE) average across months then sum across BUs; Ratios strictly compute <code>SUM(num) / SUM(den)</code>.</li>
+            </ul>
+            <svg viewBox="0 0 380 125" style="width:100%; margin-top:auto; background:#F8FAFC; border-radius:8px; border:1px solid #E2E8F0;">
+              <rect x="135" y="42" width="110" height="42" rx="7" fill="#0F766E"/>
+              <text x="190" y="67" text-anchor="middle" font-size="11" font-weight="800" fill="#FFF">fact_pnl / stats</text>
+              <rect x="14" y="12" width="92" height="30" rx="6" fill="#E6F4F1" stroke="#0F766E"/>
+              <text x="60" y="31" text-anchor="middle" font-size="10" font-weight="700" fill="#0B1F3A">dim_org (L1–L6)</text>
+              <rect x="14" y="82" width="92" height="30" rx="6" fill="#E6F4F1" stroke="#0F766E"/>
+              <text x="60" y="101" text-anchor="middle" font-size="10" font-weight="700" fill="#0B1F3A">dim_account</text>
+              <rect x="274" y="12" width="92" height="30" rx="6" fill="#E6F4F1" stroke="#0F766E"/>
+              <text x="320" y="31" text-anchor="middle" font-size="10" font-weight="700" fill="#0B1F3A">dim_period</text>
+              <rect x="274" y="82" width="92" height="30" rx="6" fill="#E6F4F1" stroke="#0F766E"/>
+              <text x="320" y="101" text-anchor="middle" font-size="10" font-weight="700" fill="#0B1F3A">dim_version</text>
+              <line x1="106" y1="27" x2="135" y2="55" stroke="#0F766E" stroke-width="1.8"/>
+              <line x1="106" y1="97" x2="135" y2="72" stroke="#0F766E" stroke-width="1.8"/>
+              <line x1="274" y1="27" x2="245" y2="55" stroke="#0F766E" stroke-width="1.8"/>
+              <line x1="274" y1="97" x2="245" y2="72" stroke="#0F766E" stroke-width="1.8"/>
+            </svg>
+          </div>
+
+          <div class="card accent-indigo">
+            <h3>❄️ Where Snowflake / Bridge Schemas Shine for Conversational AI</h3>
+            <ul>
+              <li><strong>Machine-Traversable Hierarchies:</strong> Unlike human drag-and-drop users, a conversational AI agent benefits from normalized lookup &amp; bridge relationships without fan-out traps:</li>
+              <li><strong>Entitlement Bridges:</strong> <code>app_user → user_org_access → dim_org</code> resolves arbitrary multi-level RLS grants cleanly.</li>
+              <li><strong>Subtotal &amp; Calendar Snowflakes:</strong> <code>v_pnl</code> leaf-to-subtotal rollup mappings, <code>dim_calendar → working_days → dim_period</code> country calendars, and <code>fact_landing → landing_bu_profile</code> ensemble metadata.</li>
+            </ul>
+            <svg viewBox="0 0 380 125" style="width:100%; margin-top:auto; background:#F8FAFC; border-radius:8px; border:1px solid #E2E8F0;">
+              <rect x="145" y="45" width="95" height="36" rx="7" fill="#3730A3"/>
+              <text x="192" y="67" text-anchor="middle" font-size="10.5" font-weight="800" fill="#FFF">Semantic Views</text>
+              <rect x="12" y="12" width="105" height="28" rx="6" fill="#EEF0FB" stroke="#3730A3"/>
+              <text x="64" y="30" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1E1B4B">user_org_access</text>
+              <rect x="12" y="84" width="105" height="28" rx="6" fill="#EEF0FB" stroke="#3730A3"/>
+              <text x="64" y="102" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1E1B4B">working_days / cal</text>
+              <rect x="264" y="12" width="104" height="28" rx="6" fill="#EEF0FB" stroke="#3730A3"/>
+              <text x="316" y="30" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1E1B4B">Subtotal Bridges</text>
+              <rect x="264" y="84" width="104" height="28" rx="6" fill="#EEF0FB" stroke="#3730A3"/>
+              <text x="316" y="102" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1E1B4B">metrics.yaml</text>
+              <line x1="117" y1="26" x2="145" y2="55" stroke="#3730A3" stroke-width="1.8"/>
+              <line x1="117" y1="98" x2="145" y2="70" stroke="#3730A3" stroke-width="1.8"/>
+              <line x1="264" y1="26" x2="240" y2="55" stroke="#3730A3" stroke-width="1.8"/>
+              <line x1="264" y1="98" x2="240" y2="70" stroke="#3730A3" stroke-width="1.8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="callout">
+          Architectural Flexibility: Keep <strong>Star Schemas</strong> as the clean backbone for human BI usability—and layer <strong>Snowflake bridges + YAML semantics</strong> where hierarchical AI reasoning, security, and multi-grain calendars demand it.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 8: VIDEO 2 — DATA CATALOG & USER GUIDE ==================== -->
+    <section class="slide" data-notes="Play Video 2 (29s): Show how a well-organized, standardized Gold + Semantic database turns metadata into a living product! Nothing in the Data Catalog is hardcoded—counts, dates, heatmaps, P&L lines, and ratio formulas render live according to the user's RLS access, with one-click 'Ask IRIS' buttons.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">7 · Self-Documenting Metadata in Action</div>
+          <h2 class="s-title">Live Data Catalog, Standardized Definitions &amp; User Guide</h2>
+        </div>
+        <span class="s-badge">Live Video · 29s</span>
+      </div>
+      <div class="grid-video">
+        <div class="vid-frame">
+          <div class="vid-bar">
+            <div><span class="live-dot"></span>Snippet 02 — Data Catalog, Revenue Heatmap, Metrics/Ratios &amp; Architecture</div>
+            <div>1080p MP4 · 0:29</div>
+          </div>
+          <video controls preload="metadata" poster="screenshots/08_data_catalog_revenue_heatmap.png">
+            <source src="videos/02_data_catalog_and_user_guide.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="card accent-teal">
+          <h3>Metadata Driven Directly from Gold + Semantic</h3>
+          <ul>
+            <li><strong>Zero Hardcoded Counts:</strong> 5 Regions, 11 Countries, 8 Product Lines, 67 Businesses, 106 BUs, and 37 Leaf Accounts query live per persona scope.</li>
+            <li><strong>Interactive Coverage Heatmap:</strong> Toggles instantly between Business Unit count and <code>Revenue YTD Oct 2026 (USD M)</code>.</li>
+            <li><strong>Transparent Formulas:</strong> Every P&amp;L line and all 21 governed ratios expose exact formulas and launch directly into Chat via <code>Ask IRIS</code>.</li>
+            <li><strong>Single-Source User Guide &amp; Architecture:</strong> Built-in prompt gallery and visual trust diagram onboard new executives in 60 seconds.</li>
+          </ul>
+          <div class="thumb-row">
+            <img src="screenshots/08_data_catalog_revenue_heatmap.png" alt="Data Catalog Heatmap" onclick="zoomImg(this.src)" />
+            <img src="screenshots/12_about_architecture.png" alt="About Architecture" onclick="zoomImg(this.src)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 9: VIDEO 3 — GLOBAL OVERVIEW & CONTEXT ==================== -->
+    <section class="slide" data-notes="Play Video 3 (45s): Show how an executive builds their own storyline! Starts with 'How is the whole group doing this year vs budget?' (USD 180.1M vs 191.9M Budget + Waterfall Bridge + opening 'How I got this' to prove read-only SQL transparency), pivots to Regional bar ranking, and asks 'now for Canada' showing seamless context memory.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">8 · Working Proof — Self-Service Storylines</div>
+          <h2 class="s-title">Global P&amp;L Bridges, Regional Rankings &amp; Multi-Turn Memory</h2>
+        </div>
+        <span class="s-badge">Live Video · 45s</span>
+      </div>
+      <div class="grid-video">
+        <div class="vid-frame">
+          <div class="vid-bar">
+            <div><span class="live-dot"></span>Snippet 03 — Group P&amp;L Waterfall, SQL Audit, Regional Ranking &amp; Follow-Up</div>
+            <div>1080p MP4 · 0:45</div>
+          </div>
+          <video controls preload="metadata" poster="screenshots/13_global_pnl_bridge_chart.png">
+            <source src="videos/03_global_pnl_and_context.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="card accent-indigo">
+          <h3>Executive Self-Exploration Flow</h3>
+          <ul>
+            <li><strong>Group Overview:</strong> <em>"How is the whole group doing this year vs budget?"</em> → <code>USD 180.1M</code> Actual vs <code>USD 191.9M</code> Budget with an automated <strong>Waterfall Bridge</strong>.</li>
+            <li><strong>Full SQL Lineage:</strong> Opening <em>"How I got this"</em> reveals exact filters, tool calls, numeric guardrail verification, and read-only SQL.</li>
+            <li><strong>Regional Drilldown:</strong> Ranks all 5 Regions (<code>US &amp; Canada USD 89.5M</code>, <code>BPU USD 41.6M</code>...) with a horizontal bar chart.</li>
+            <li><strong>Conversational Memory:</strong> Typing <em>"now for Canada"</em> carries metric, YTD period, and comparisons forward automatically.</li>
+          </ul>
+          <div class="thumb-row">
+            <img src="screenshots/13_global_pnl_bridge_chart.png" alt="Global P&L Bridge" onclick="zoomImg(this.src)" />
+            <img src="screenshots/13_global_pnl_bridge_audit_sql.png" alt="Audit SQL" onclick="zoomImg(this.src)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 10: VIDEO 4 — US MARGIN RATIO & PERSONNEL COST ==================== -->
+    <section class="slide" data-notes="Play Video 4 (31s): Show the two specific analytical queries: 1) US MAOP / Revenue ratio across the year—notice the user types 'MAOP margin' and our Semantic Layer maps it cleanly to standardized 'Operating margin on revenue' across Jan–Oct 2026! 2) Global Personnel Costs Actual vs Budget across the year (USD 621.9M vs 633.7M, 1.9% favourable).">
+      <div class="s-top">
+        <div>
+          <div class="kicker">9 · Working Proof — Standardized Ratios &amp; Cost Control</div>
+          <h2 class="s-title">US Operating Margin Ratio &amp; Personnel Costs vs. Budget Across the Year</h2>
+        </div>
+        <span class="s-badge">Live Video · 31s</span>
+      </div>
+      <div class="grid-video">
+        <div class="vid-frame">
+          <div class="vid-bar">
+            <div><span class="live-dot"></span>Snippet 04 — US MAOP/Revenue Trend &amp; Global Personnel Costs vs. Budget</div>
+            <div>1080p MP4 · 0:31</div>
+          </div>
+          <video controls preload="metadata" poster="screenshots/16_us_operating_margin_trend_chart.png">
+            <source src="videos/04_us_margin_and_personnel_cost.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="card accent-teal">
+          <h3>Semantic Standardization in Practice</h3>
+          <ul>
+            <li><strong>Synonym-to-Standard Ratio Resolution:</strong> Asking for <em>"MAOP margin on revenue trend for the United States"</em> resolves cleanly to governed <strong>Operating margin on revenue</strong> (<code>SUM(OP) / SUM(Revenue)</code>).</li>
+            <li><strong>4-Series Ratio Chart:</strong> Plots <code>Actual</code> (<code>18.6%</code> Oct), <code>Actual R12M</code> (<code>19.9%</code>), <code>PY</code> (<code>17.9%</code>), and <code>Budget</code> (<code>14.6%</code>) across Jan–Oct 2026.</li>
+            <li><strong>Global Cost Discipline:</strong> <em>"Show personnel costs actual vs budget trend by month in 2026"</em> compares <code>USD 621.9M</code> Actual vs <code>USD 633.7M</code> Budget (<code>USD 11.9M</code> / <code>1.9%</code> favourable) with instant CSV/Excel export.</li>
+          </ul>
+          <div class="thumb-row">
+            <img src="screenshots/16_us_operating_margin_trend_chart.png" alt="US Margin Trend" onclick="zoomImg(this.src)" />
+            <img src="screenshots/17_personnel_cost_actual_vs_budget_chart.png" alt="Personnel Cost vs Budget" onclick="zoomImg(this.src)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 11: VIDEO 5 — OPEN-MONTH LANDING ==================== -->
+    <section class="slide" data-notes="Play Video 5 (26s): Show what becomes possible when historical Gold facts and working-day calendars are clean—forward-looking open-month Landing! Separate from the LLM, our tested statistical engine forecasts November month-end (P50 USD 35.2M, P10-P90 range) and identifies the 7 of 16 US BUs expected to miss budget.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">10 · Working Proof — Forward-Looking Intelligence</div>
+          <h2 class="s-title">Current-Month Landing Forecast (P10–P90) &amp; At-Risk BU Drilldown</h2>
+        </div>
+        <span class="s-badge">Live Video · 26s</span>
+      </div>
+      <div class="grid-video">
+        <div class="vid-frame">
+          <div class="vid-bar">
+            <div><span class="live-dot"></span>Snippet 05 — US November Landing (P10–P90) &amp; BU Budget-Miss Follow-Up</div>
+            <div>1080p MP4 · 0:26</div>
+          </div>
+          <video controls preload="metadata" poster="screenshots/18_us_november_landing_chart.png">
+            <source src="videos/05_current_month_landing.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="card accent-indigo">
+          <h3>Predictive Analytics Powered by Clean Gold Data</h3>
+          <ul>
+            <li><strong>Dedicated Statistical Engine:</strong> Computed outside the LLM from clean historical billing profiles, seasonality, and country working-day calendars.</li>
+            <li><strong>US November 2026 Landing:</strong> Billing/Revenue <code>P50</code> expected finish at <code>USD 35.2M</code> (<code>P10–P90</code> band <code>USD 34.5M–36.7M</code>) vs <code>USD 33.8M</code> Budget (<code>+USD 1.4M</code> favourable).</li>
+            <li><strong>Contextual Exception Management:</strong> Follow-up <em>"Which BUs are expected to miss budget this month?"</em> retains US scope and pinpoints <code>7 of 16 BUs</code> before month-end close.</li>
+          </ul>
+          <div class="thumb-row">
+            <img src="screenshots/18_us_november_landing_chart.png" alt="US November Landing" onclick="zoomImg(this.src)" />
+            <img src="screenshots/19_us_bus_missing_budget_chart.png" alt="BUs Missing Budget" onclick="zoomImg(this.src)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 12: CONSUMPTION ECOSYSTEM & ROADMAP ==================== -->
+    <section class="slide" data-notes="Close with the strategic executive ask and roadmap: Because we invested in the Medallion pipeline (CDC -> Bronze -> Silver -> Gold) and the BI Semantic Layer (Star + Snowflake + governed YAML), we don't lock the business into one tool. Excel, Power BI, Tableau, and IRIS all read one truth—scaling BI adoption enterprise-wide.">
+      <div class="s-top">
+        <div>
+          <div class="kicker">11 · Strategic Roadmap &amp; Executive Summary</div>
+          <h2 class="s-title">One Engineered Foundation — Unlimited Consumption Across the Enterprise</h2>
+        </div>
+        <span class="s-badge">Path to Production</span>
+      </div>
+      <div class="body-fill">
+        <table class="exec-tbl">
+          <thead>
+            <tr>
+              <th>Consumption Channel</th>
+              <th>How It Uses Our Gold + BI Semantic Layer</th>
+              <th>User Value Unlocked</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>IRIS Conversational AI</strong></td>
+              <td>Reads Star/Snowflake semantic views + <code>metrics.yaml</code> + RLS policies; numeric guardrail verifies output</td>
+              <td>Executives &amp; managers ask ad-hoc questions, drill into drivers, and build presentation stories in seconds</td>
+            </tr>
+            <tr>
+              <td><strong>Power BI / Tableau</strong></td>
+              <td>Connects directly to Gold Star Schema (<code>fact_pnl</code>, <code>dim_org</code>, <code>dim_account</code>, <code>dim_period</code>)</td>
+              <td>Zero duplicated DAX/calculated-field drift; standardized global KPI names match IRIS 100%</td>
+            </tr>
+            <tr>
+              <td><strong>Excel / Connected Sheets</strong></td>
+              <td>Queries flattened reporting views (<code>v_pnl</code>, <code>v_stats</code>) under database row-level security</td>
+              <td>Controllers run pivot analyses on live governed numbers instead of offline CSV snapshots</td>
+            </tr>
+            <tr>
+              <td><strong>Automated Landing Engine</strong></td>
+              <td>Scheduled batch over Silver/Gold history + country working-day calendars writes <code>fact_landing</code></td>
+              <td>Proactive mid-month P10–P90 landing visibility across all 106 Business Units</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="grid-3">
+          <div class="card accent-teal">
+            <h3>1. Validated Today</h3>
+            <p><strong>135</strong> golden finance &amp; multi-turn evaluation tests, <strong>230+</strong> automated unit/UI tests, <strong>300/300</strong> P&amp;L reconciliations, and <strong>100%</strong> RLS enforcement.</p>
+          </div>
+          <div class="card accent-indigo">
+            <h3>2. Production Lift</h3>
+            <p>Plug CDC Bronze/Silver/Gold pipelines into enterprise ERP &amp; HRIS, map SSO entitlements to <code>user_org_access</code>, and connect enterprise OpenAI / Copilot endpoint.</p>
+          </div>
+          <div class="card accent-navy">
+            <h3>3. Domain Expansion</h3>
+            <p>Extend the exact same Medallion + BI Semantic pattern beyond Finance P&amp;L to Commercial Pipeline, Customer Quality, and Working Capital.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          Final Message: <strong>IRIS is the proof; Data Engineering is the engine.</strong> When we invest in clean Medallion pipelines and a governed BI Semantic Layer, self-service analytics and AI scale naturally across every team.
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <div class="deck-nav">
+    <div style="font-weight:700;">IRIS · Data Engineering &amp; Conversational BI Executive Deck</div>
+    <div class="progress-dots" id="dots"></div>
+    <div class="nav-btns">
+      <span id="counter" style="margin-right:8px; font-variant-numeric:tabular-nums;">1 / 12</span>
+      <button class="nav-btn" onclick="prevSlide()">← Prev</button>
+      <button class="nav-btn" onclick="nextSlide()">Next →</button>
+      <button class="nav-btn" onclick="toggleNotes()">Speaker Notes (N)</button>
+      <button class="nav-btn" onclick="toggleFull()">Fullscreen (F)</button>
+    </div>
+  </div>
+</div>
+
+<div class="notes-drawer" id="notesDrawer">
+  <h4>Speaker Notes</h4>
+  <div id="notesText"></div>
+</div>
+
+<dialog id="imgModal" onclick="this.close()">
+  <img id="modalImg" src="" alt="Zoomed screenshot" />
+</dialog>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dotsWrap = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const notesDrawer = document.getElementById('notesDrawer');
+  const notesText = document.getElementById('notesText');
+  let idx = 0;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => showSlide(i);
+    dotsWrap.appendChild(d);
+  });
+
+  function pauseAllVideos() {
+    document.querySelectorAll('video').forEach(v => v.pause());
+  }
+
+  function showSlide(n) {
+    pauseAllVideos();
+    idx = (n + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === idx));
+    counter.textContent = `${idx + 1} / ${slides.length}`;
+    notesText.textContent = slides[idx].dataset.notes || '';
+  }
+
+  function nextSlide() { showSlide(idx + 1); }
+  function prevSlide() { showSlide(idx - 1); }
+  function toggleNotes() { notesDrawer.classList.toggle('open'); }
+  function toggleFull() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  }
+  function zoomImg(src) {
+    const m = document.getElementById('imgModal');
+    document.getElementById('modalImg').src = src;
+    m.showModal();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'VIDEO') return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') nextSlide();
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevSlide();
+    else if (e.key === 'n' || e.key === 'N') toggleNotes();
+    else if (e.key === 'f' || e.key === 'F') toggleFull();
+  });
+
+  showSlide(0);
+</script>
+</body>
+</html>

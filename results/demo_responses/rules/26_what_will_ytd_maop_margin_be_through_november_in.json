@@ -1,0 +1,338 @@
+{
+  "answer_markdown": "**YTD Nov 2026 incl. landing for RL Group: closed months Jan 2026 to Oct 2026 are actuals, Nov 2026 is the landing (P50, computed 2026-11-16).**\n\n- Operating margin on revenue YTD Nov 2026 incl. landing: 14.8% (P10-P90 14.7% - 14.9%); 0.8 pp above PY (YTD Nov 2025) (14.0%), favourable; 0.5 pp below Budget (same months) (15.3%), unfavourable; in line with FC3 (same months) (14.8%)\n- Operating margin on production YTD Nov 2026 incl. landing: 14.7% (P10-P90 14.6% - 14.9%); 0.8 pp above PY (YTD Nov 2025) (13.9%), favourable; 0.5 pp below Budget (same months) (15.2%), unfavourable; in line with FC3 (same months) (14.7%)\n\n_WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data. Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time._",
+  "table": [
+    {
+      "Measure": "Operating margin on revenue",
+      "YTD Nov 2026 incl. landing": 0.14767543967027652,
+      "P10": 0.14691439121158925,
+      "P90": 0.14937331442558832,
+      "YTD to Oct 2026 (Actual)": 0.14871235188155005,
+      "Nov 2026 landing (P50)": 0.13724956662738275,
+      "PY": 0.13972079016773858,
+      "vs PY": 0.007954649502537936,
+      "_fav_vs PY": true,
+      "Budget": 0.1526357601404183,
+      "vs Budget": -0.004960320470141777,
+      "_fav_vs Budget": false,
+      "FC3": 0.14783237710831154,
+      "vs FC3": -0.0001569374380350208,
+      "_fav_vs FC3": false
+    },
+    {
+      "Measure": "Operating margin on production",
+      "YTD Nov 2026 incl. landing": 0.1471960234554635,
+      "P10": 0.1464371939997328,
+      "P90": 0.14888690900054227,
+      "YTD to Oct 2026 (Actual)": 0.14822786819060438,
+      "Nov 2026 landing (P50)": 0.13681978603778758,
+      "PY": 0.13929941194850592,
+      "vs PY": 0.007896611506957585,
+      "_fav_vs PY": true,
+      "Budget": 0.15218415870876228,
+      "vs Budget": -0.0049881352532987755,
+      "_fav_vs Budget": false,
+      "FC3": 0.1473507412826672,
+      "vs FC3": -0.0001547178272036931,
+      "_fav_vs FC3": false
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Measure",
+      "YTD Nov 2026 incl. landing",
+      "P10",
+      "P90",
+      "YTD to Oct 2026 (Actual)",
+      "Nov 2026 landing (P50)",
+      "PY",
+      "vs PY",
+      "Budget",
+      "vs Budget",
+      "FC3",
+      "vs FC3"
+    ],
+    "rows": [
+      {
+        "Measure": "Operating margin on revenue",
+        "_key": "maop_margin_revenue",
+        "_fmt": "pct",
+        "YTD Nov 2026 incl. landing": 0.14767543967027652,
+        "P10": 0.14691439121158925,
+        "P90": 0.14937331442558832,
+        "YTD to Oct 2026 (Actual)": 0.14871235188155005,
+        "Nov 2026 landing (P50)": 0.13724956662738275,
+        "PY": 0.13972079016773858,
+        "vs PY": 0.007954649502537936,
+        "_fav_vs PY": true,
+        "Budget": 0.1526357601404183,
+        "vs Budget": -0.004960320470141777,
+        "_fav_vs Budget": false,
+        "FC3": 0.14783237710831154,
+        "vs FC3": -0.0001569374380350208,
+        "_fav_vs FC3": false
+      },
+      {
+        "Measure": "Operating margin on production",
+        "_key": "maop_margin_production",
+        "_fmt": "pct",
+        "YTD Nov 2026 incl. landing": 0.1471960234554635,
+        "P10": 0.1464371939997328,
+        "P90": 0.14888690900054227,
+        "YTD to Oct 2026 (Actual)": 0.14822786819060438,
+        "Nov 2026 landing (P50)": 0.13681978603778758,
+        "PY": 0.13929941194850592,
+        "vs PY": 0.007896611506957585,
+        "_fav_vs PY": true,
+        "Budget": 0.15218415870876228,
+        "vs Budget": -0.0049881352532987755,
+        "_fav_vs Budget": false,
+        "FC3": 0.1473507412826672,
+        "vs FC3": -0.0001547178272036931,
+        "_fav_vs FC3": false
+      }
+    ],
+    "col_fmt": {
+      "YTD Nov 2026 incl. landing": "eur",
+      "P10": "eur",
+      "P90": "eur",
+      "YTD to Oct 2026 (Actual)": "eur",
+      "Nov 2026 landing (P50)": "eur",
+      "PY": "eur",
+      "vs PY": "eur",
+      "Budget": "eur",
+      "vs Budget": "eur",
+      "FC3": "eur",
+      "vs FC3": "eur"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "vs PY": true,
+          "vs Budget": false,
+          "vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "vs PY": true,
+          "vs Budget": false,
+          "vs FC3": false
+        }
+      }
+    ],
+    "caption": "YTD Nov 2026 incl. landing: closed-month actuals plus the Nov 2026 landing (P50, P10-P90). WIP is 0 in the landing month, so the revenue landing equals the billing landing. Margins in %, variances in pp.",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "ytd_bars",
+    "title": "Operating margin on revenue by month: YTD Nov 2026 incl. landing - RL Group",
+    "fmt": "pct",
+    "x": "Month",
+    "y": [
+      "value"
+    ],
+    "data": [
+      {
+        "Month": "Jan 2026",
+        "value": 0.07686498438312052,
+        "kind": "actual",
+        "Budget": 0.07192499739783997
+      },
+      {
+        "Month": "Feb 2026",
+        "value": 0.08716783852991984,
+        "kind": "actual",
+        "Budget": 0.0927392739607306
+      },
+      {
+        "Month": "Mar 2026",
+        "value": 0.23115705846623763,
+        "kind": "actual",
+        "Budget": 0.26324025160869113
+      },
+      {
+        "Month": "Apr 2026",
+        "value": 0.11517226964991878,
+        "kind": "actual",
+        "Budget": 0.1312167439172951
+      },
+      {
+        "Month": "May 2026",
+        "value": 0.082977029724771,
+        "kind": "actual",
+        "Budget": 0.09846254134830607
+      },
+      {
+        "Month": "Jun 2026",
+        "value": 0.25220165497362085,
+        "kind": "actual",
+        "Budget": 0.25460377719193544
+      },
+      {
+        "Month": "Jul 2026",
+        "value": 0.11447970541267037,
+        "kind": "actual",
+        "Budget": 0.11308844757438143
+      },
+      {
+        "Month": "Aug 2026",
+        "value": 0.038950478468180484,
+        "kind": "actual",
+        "Budget": 0.04214615153868508
+      },
+      {
+        "Month": "Sep 2026",
+        "value": 0.25787852539739725,
+        "kind": "actual",
+        "Budget": 0.2506727447198667
+      },
+      {
+        "Month": "Oct 2026",
+        "value": 0.13036312977383374,
+        "kind": "actual",
+        "Budget": 0.13356219217539297
+      },
+      {
+        "Month": "Nov 2026",
+        "value": 0.13724956662738275,
+        "kind": "landing",
+        "lo": 0.1285700268378481,
+        "hi": 0.15580373258256186,
+        "Budget": 0.12945934272504603
+      }
+    ],
+    "meta": {
+      "forecast": "FC3"
+    }
+  },
+  "filters_used": {
+    "org": "RL Group",
+    "org_filter": {},
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Nov 2026 incl. landing",
+    "months": "Jan 2026 - Nov 2026",
+    "versions": [
+      "Landing (P50, P10-P90)"
+    ],
+    "landing_snapshot": "2026-11-16",
+    "landing_month": "Nov 2026",
+    "source": "landing engine (monthly history; WIP = 0)",
+    "sql": null,
+    "notes": [
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "applied": [
+      "Scope: RL Group (default)",
+      "Period: YTD Nov 2026 incl. landing (from your question)",
+      "Versions: Landing (from your question)"
+    ]
+  },
+  "sql_used": [],
+  "followups": [
+    "What's the Nov landing for RL Group?",
+    "Which BUs in RL Group are expected to miss budget this month?",
+    "What is the full-year outlook for RL Group?"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "get_ytd_with_landing",
+        "arguments": {
+          "metric_or_ratio": "operating_margins",
+          "org": "",
+          "through_month": "",
+          "period_type": "YTD",
+          "comparisons": [
+            "PY",
+            "Budget",
+            "LatestFC"
+          ]
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "get_ytd_with_landing",
+      "arguments": {
+        "metric_or_ratio": "operating_margins",
+        "org": "",
+        "through_month": "",
+        "period_type": "YTD",
+        "comparisons": [
+          "PY",
+          "Budget",
+          "LatestFC"
+        ]
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.006,
+      "plan": 0.0,
+      "act": 0.322,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "(user default scope)",
+      "metric_or_ratio": "maop_margin_revenue",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "landing"
+      ]
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "YTD Nov 2026 incl. landing for RL Group: closed months Jan 2026 to Oct 2026 are actuals, Nov 2026 is the landing (P50, computed 2026-11-16).",
+      "Operating margin on revenue YTD Nov 2026 incl. landing: 14.8% (P10-P90 14.7% - 14.9%); 0.8 pp above PY (YTD Nov 2025) (14.0%), favourable; 0.5 pp below Budget (same months) (15.3%), unfavourable; in line with FC3 (same months) (14.8%).",
+      "Operating margin on production YTD Nov 2026 incl. landing: 14.7% (P10-P90 14.6% - 14.9%); 0.8 pp above PY (YTD Nov 2025) (13.9%), favourable; 0.5 pp below Budget (same months) (15.2%), unfavourable; in line with FC3 (same months) (14.7%).",
+      "No margin base was named, so both operating margins are shown: on revenue and on production. Aggregates are ratios of sums.",
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.33
+  }
+}

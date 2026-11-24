@@ -1,0 +1,851 @@
+{
+  "answer_markdown": "**Attrition rate (annualised): 13.7%; 0.4 pp below PY (14.1%), favourable.**\n\n- By BU, highest attrition (annualised) first: CA-ENV-CAL-01 42.6% (PY 14.5%); CA-ENV-CAL-02 32.8% (PY 10.7%); CA-ENV-MTL-01 31.1% (PY 15.0%)\n- Average headcount: 16,698; 254 (1.5%) above PY (16,444)\n- Leavers: 1,911; 22 (1.1%) fewer than PY (1,933); of these 1,766 voluntary and 145 restructuring (PY 1,833 voluntary and 100 restructuring)\n- Hires: 2,109; 34 (1.6%) fewer than PY (2,143)\n- Month with the most leavers: Apr 2026 (254, of which 70 restructuring)",
+  "table": [
+    {
+      "BU": "Total",
+      "_kind": "subtotal",
+      "Avg headcount": 16697.6,
+      "Headcount PY": 16443.8,
+      "Avg FTE": 15678.91,
+      "Hires": 2109.0,
+      "Leavers": 1911.0,
+      "of which restructuring": 145.0,
+      "Attrition": 0.13733710233806057,
+      "Attrition PY": 0.14106228487332612,
+      "Utilization": 0.7474146125250152,
+      "Utilization PY": 0.7440807304288479,
+      "Overtime ratio": 0.0625902592668543,
+      "_fte_py": 15436.65,
+      "_hires_py": 2143.0,
+      "_leavers_py": 1933.0,
+      "_restructuring_py": 100.0,
+      "_voluntary_attrition_py": 0.1337647015896569,
+      "Voluntary attrition": 0.12691644308164046,
+      "_overtime_py": 0.06205704059350461,
+      "_fav_Attrition": true,
+      "_fav_Utilization": true
+    },
+    {
+      "BU": "CA-ENV-CAL-01",
+      "_kind": "line",
+      "Avg headcount": 45.1,
+      "Headcount PY": 49.7,
+      "Avg FTE": 42.410000000000004,
+      "Hires": 11.0,
+      "Leavers": 16.0,
+      "of which restructuring": 7.0,
+      "Attrition": 0.425720620842572,
+      "Attrition PY": 0.1448692152917505,
+      "Utilization": 0.64915872455583,
+      "Utilization PY": 0.7089762782128052,
+      "Overtime ratio": 0.050298965653713265,
+      "_fte_py": 47.22,
+      "_hires_py": 7.0,
+      "_leavers_py": 6.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.1448692152917505,
+      "Voluntary attrition": 0.2394678492239468,
+      "_overtime_py": 0.06833832335329341,
+      "_fav_Attrition": false,
+      "_fav_Utilization": false
+    },
+    {
+      "BU": "CA-ENV-CAL-02",
+      "_kind": "line",
+      "Avg headcount": 84.1,
+      "Headcount PY": 89.7,
+      "Avg FTE": 80.96000000000001,
+      "Hires": 12.0,
+      "Leavers": 23.0,
+      "of which restructuring": 14.0,
+      "Attrition": 0.32818073721759816,
+      "Attrition PY": 0.10702341137123746,
+      "Utilization": 0.696375128435258,
+      "Utilization PY": 0.7812751610305957,
+      "Overtime ratio": 0.04645070495129825,
+      "_fte_py": 86.0,
+      "_hires_py": 10.0,
+      "_leavers_py": 8.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.10702341137123746,
+      "Voluntary attrition": 0.12841854934601665,
+      "_overtime_py": 0.06573109567901235,
+      "_fav_Attrition": false,
+      "_fav_Utilization": false
+    },
+    {
+      "BU": "CA-ENV-MTL-01",
+      "_kind": "line",
+      "Avg headcount": 73.4,
+      "Headcount PY": 80.1,
+      "Avg FTE": 68.02000000000001,
+      "Hires": 7.0,
+      "Leavers": 19.0,
+      "of which restructuring": 14.0,
+      "Attrition": 0.3106267029972752,
+      "Attrition PY": 0.149812734082397,
+      "Utilization": 0.686960900847832,
+      "Utilization PY": 0.7535746634451082,
+      "Overtime ratio": 0.040335135590011145,
+      "_fte_py": 75.06,
+      "_hires_py": 12.0,
+      "_leavers_py": 10.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.149812734082397,
+      "Voluntary attrition": 0.08174386920980926,
+      "_overtime_py": 0.055175166275921235,
+      "_fav_Attrition": false,
+      "_fav_Utilization": false
+    },
+    {
+      "BU": "CA-ENV-TOR-01",
+      "_kind": "line",
+      "Avg headcount": 62.7,
+      "Headcount PY": 67.3,
+      "Avg FTE": 59.2,
+      "Hires": 10.0,
+      "Leavers": 15.0,
+      "of which restructuring": 11.0,
+      "Attrition": 0.28708133971291866,
+      "Attrition PY": 0.08915304606240713,
+      "Utilization": 0.6766556321670905,
+      "Utilization PY": 0.7233759543274103,
+      "Overtime ratio": 0.039459004700331035,
+      "_fte_py": 64.2,
+      "_hires_py": 9.0,
+      "_leavers_py": 5.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.08915304606240713,
+      "Voluntary attrition": 0.07655502392344497,
+      "_overtime_py": 0.05183349098033917,
+      "_fav_Attrition": false,
+      "_fav_Utilization": false
+    },
+    {
+      "BU": "CA-ENV-VAN-01",
+      "_kind": "line",
+      "Avg headcount": 87.3,
+      "Headcount PY": 94.9,
+      "Avg FTE": 83.66,
+      "Hires": 7.0,
+      "Leavers": 20.0,
+      "of which restructuring": 15.0,
+      "Attrition": 0.27491408934707906,
+      "Attrition PY": 0.08851422550052687,
+      "Utilization": 0.6537325797642356,
+      "Utilization PY": 0.7049486192095967,
+      "Overtime ratio": 0.049116150562934904,
+      "_fte_py": 90.92,
+      "_hires_py": 9.0,
+      "_leavers_py": 7.0,
+      "_restructuring_py": 2.0,
+      "_voluntary_attrition_py": 0.06322444678609061,
+      "Voluntary attrition": 0.06872852233676977,
+      "_overtime_py": 0.06556244520475776,
+      "_fav_Attrition": false,
+      "_fav_Utilization": false
+    },
+    {
+      "BU": "BR-MMI-BHZ-01",
+      "_kind": "line",
+      "Avg headcount": 126.9,
+      "Headcount PY": 123.1,
+      "Avg FTE": 116.28,
+      "Hires": 28.0,
+      "Leavers": 25.0,
+      "of which restructuring": 1.0,
+      "Attrition": 0.23640661938534277,
+      "Attrition PY": 0.17546709991876525,
+      "Utilization": 0.7180890973679732,
+      "Utilization PY": 0.7292211978595836,
+      "Overtime ratio": 0.044757232761601304,
+      "_fte_py": 112.84,
+      "_hires_py": 19.0,
+      "_leavers_py": 18.0,
+      "_restructuring_py": 1.0,
+      "_voluntary_attrition_py": 0.16571892770105603,
+      "Voluntary attrition": 0.22695035460992907,
+      "_overtime_py": 0.04659918767326413,
+      "_fav_Attrition": false,
+      "_fav_Utilization": false
+    },
+    {
+      "BU": "MX-BNI-QRO-01",
+      "_kind": "line",
+      "Avg headcount": 62.4,
+      "Headcount PY": 62.4,
+      "Avg FTE": 60.25,
+      "Hires": 12.0,
+      "Leavers": 12.0,
+      "of which restructuring": 2.0,
+      "Attrition": 0.23076923076923078,
+      "Attrition PY": 0.13461538461538464,
+      "Utilization": 0.7841757467518873,
+      "Utilization PY": 0.7693895929887759,
+      "Overtime ratio": 0.05858225062912105,
+      "_fte_py": 59.64,
+      "_hires_py": 5.0,
+      "_leavers_py": 7.0,
+      "_restructuring_py": 2.0,
+      "_voluntary_attrition_py": 0.09615384615384616,
+      "Voluntary attrition": 0.19230769230769232,
+      "_overtime_py": 0.0548861115382081,
+      "_fav_Attrition": false,
+      "_fav_Utilization": true
+    },
+    {
+      "BU": "CA-MMI-TOR-03",
+      "_kind": "line",
+      "Avg headcount": 32.3,
+      "Headcount PY": 31.9,
+      "Avg FTE": 30.2,
+      "Hires": 7.0,
+      "Leavers": 6.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.22291021671826627,
+      "Attrition PY": 0.03761755485893417,
+      "Utilization": 0.7636866636596001,
+      "Utilization PY": 0.7516927091384652,
+      "Overtime ratio": 0.06740339798526537,
+      "_fte_py": 29.7,
+      "_hires_py": 2.0,
+      "_leavers_py": 1.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.03761755485893417,
+      "Voluntary attrition": 0.22291021671826627,
+      "_overtime_py": 0.06606357784607014,
+      "_fav_Attrition": false,
+      "_fav_Utilization": true
+    },
+    {
+      "BU": "MX-EPV-MEX-01",
+      "_kind": "line",
+      "Avg headcount": 186.5,
+      "Headcount PY": 185.9,
+      "Avg FTE": 173.99,
+      "Hires": 32.0,
+      "Leavers": 34.0,
+      "of which restructuring": 0.0,
+      "Attrition": 0.21876675603217158,
+      "Attrition PY": 0.09682625067240451,
+      "Utilization": 0.7738566395318142,
+      "Utilization PY": 0.7704040153156455,
+      "Overtime ratio": 0.04063993703493373,
+      "_fte_py": 172.32,
+      "_hires_py": 16.0,
+      "_leavers_py": 15.0,
+      "_restructuring_py": 1.0,
+      "_voluntary_attrition_py": 0.09037116729424421,
+      "Voluntary attrition": 0.21876675603217158,
+      "_overtime_py": 0.04047432268599238,
+      "_fav_Attrition": false,
+      "_fav_Utilization": true
+    },
+    {
+      "BU": "BR-CER-BHZ-01",
+      "_kind": "line",
+      "Avg headcount": 65.5,
+      "Headcount PY": 63.0,
+      "Avg FTE": 59.879999999999995,
+      "Hires": 13.0,
+      "Leavers": 10.0,
+      "of which restructuring": 1.0,
+      "Attrition": 0.183206106870229,
+      "Attrition PY": 0.13333333333333333,
+      "Utilization": 0.7053808580649743,
+      "Utilization PY": 0.6972731781532543,
+      "Overtime ratio": 0.053612884389277735,
+      "_fte_py": 57.379999999999995,
+      "_hires_py": 10.0,
+      "_leavers_py": 7.0,
+      "_restructuring_py": 0.0,
+      "_voluntary_attrition_py": 0.13333333333333333,
+      "Voluntary attrition": 0.1648854961832061,
+      "_overtime_py": 0.05180693417692674,
+      "_fav_Attrition": false,
+      "_fav_Utilization": true
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "BU",
+      "Avg headcount",
+      "Headcount PY",
+      "Hires",
+      "Leavers",
+      "of which restructuring",
+      "Attrition",
+      "Attrition PY",
+      "Utilization",
+      "Utilization PY",
+      "Overtime ratio"
+    ],
+    "rows": [
+      {
+        "BU": "Total",
+        "_kind": "subtotal",
+        "Avg headcount": 16697.6,
+        "Headcount PY": 16443.8,
+        "Avg FTE": 15678.91,
+        "Hires": 2109.0,
+        "Leavers": 1911.0,
+        "of which restructuring": 145.0,
+        "Attrition": 0.13733710233806057,
+        "Attrition PY": 0.14106228487332612,
+        "Utilization": 0.7474146125250152,
+        "Utilization PY": 0.7440807304288479,
+        "Overtime ratio": 0.0625902592668543,
+        "_fte_py": 15436.65,
+        "_hires_py": 2143.0,
+        "_leavers_py": 1933.0,
+        "_restructuring_py": 100.0,
+        "_voluntary_attrition_py": 0.1337647015896569,
+        "Voluntary attrition": 0.12691644308164046,
+        "_overtime_py": 0.06205704059350461,
+        "_fav_Attrition": true,
+        "_fav_Utilization": true
+      },
+      {
+        "BU": "CA-ENV-CAL-01",
+        "_kind": "line",
+        "Avg headcount": 45.1,
+        "Headcount PY": 49.7,
+        "Avg FTE": 42.410000000000004,
+        "Hires": 11.0,
+        "Leavers": 16.0,
+        "of which restructuring": 7.0,
+        "Attrition": 0.425720620842572,
+        "Attrition PY": 0.1448692152917505,
+        "Utilization": 0.64915872455583,
+        "Utilization PY": 0.7089762782128052,
+        "Overtime ratio": 0.050298965653713265,
+        "_fte_py": 47.22,
+        "_hires_py": 7.0,
+        "_leavers_py": 6.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.1448692152917505,
+        "Voluntary attrition": 0.2394678492239468,
+        "_overtime_py": 0.06833832335329341,
+        "_fav_Attrition": false,
+        "_fav_Utilization": false
+      },
+      {
+        "BU": "CA-ENV-CAL-02",
+        "_kind": "line",
+        "Avg headcount": 84.1,
+        "Headcount PY": 89.7,
+        "Avg FTE": 80.96000000000001,
+        "Hires": 12.0,
+        "Leavers": 23.0,
+        "of which restructuring": 14.0,
+        "Attrition": 0.32818073721759816,
+        "Attrition PY": 0.10702341137123746,
+        "Utilization": 0.696375128435258,
+        "Utilization PY": 0.7812751610305957,
+        "Overtime ratio": 0.04645070495129825,
+        "_fte_py": 86.0,
+        "_hires_py": 10.0,
+        "_leavers_py": 8.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.10702341137123746,
+        "Voluntary attrition": 0.12841854934601665,
+        "_overtime_py": 0.06573109567901235,
+        "_fav_Attrition": false,
+        "_fav_Utilization": false
+      },
+      {
+        "BU": "CA-ENV-MTL-01",
+        "_kind": "line",
+        "Avg headcount": 73.4,
+        "Headcount PY": 80.1,
+        "Avg FTE": 68.02000000000001,
+        "Hires": 7.0,
+        "Leavers": 19.0,
+        "of which restructuring": 14.0,
+        "Attrition": 0.3106267029972752,
+        "Attrition PY": 0.149812734082397,
+        "Utilization": 0.686960900847832,
+        "Utilization PY": 0.7535746634451082,
+        "Overtime ratio": 0.040335135590011145,
+        "_fte_py": 75.06,
+        "_hires_py": 12.0,
+        "_leavers_py": 10.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.149812734082397,
+        "Voluntary attrition": 0.08174386920980926,
+        "_overtime_py": 0.055175166275921235,
+        "_fav_Attrition": false,
+        "_fav_Utilization": false
+      },
+      {
+        "BU": "CA-ENV-TOR-01",
+        "_kind": "line",
+        "Avg headcount": 62.7,
+        "Headcount PY": 67.3,
+        "Avg FTE": 59.2,
+        "Hires": 10.0,
+        "Leavers": 15.0,
+        "of which restructuring": 11.0,
+        "Attrition": 0.28708133971291866,
+        "Attrition PY": 0.08915304606240713,
+        "Utilization": 0.6766556321670905,
+        "Utilization PY": 0.7233759543274103,
+        "Overtime ratio": 0.039459004700331035,
+        "_fte_py": 64.2,
+        "_hires_py": 9.0,
+        "_leavers_py": 5.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.08915304606240713,
+        "Voluntary attrition": 0.07655502392344497,
+        "_overtime_py": 0.05183349098033917,
+        "_fav_Attrition": false,
+        "_fav_Utilization": false
+      },
+      {
+        "BU": "CA-ENV-VAN-01",
+        "_kind": "line",
+        "Avg headcount": 87.3,
+        "Headcount PY": 94.9,
+        "Avg FTE": 83.66,
+        "Hires": 7.0,
+        "Leavers": 20.0,
+        "of which restructuring": 15.0,
+        "Attrition": 0.27491408934707906,
+        "Attrition PY": 0.08851422550052687,
+        "Utilization": 0.6537325797642356,
+        "Utilization PY": 0.7049486192095967,
+        "Overtime ratio": 0.049116150562934904,
+        "_fte_py": 90.92,
+        "_hires_py": 9.0,
+        "_leavers_py": 7.0,
+        "_restructuring_py": 2.0,
+        "_voluntary_attrition_py": 0.06322444678609061,
+        "Voluntary attrition": 0.06872852233676977,
+        "_overtime_py": 0.06556244520475776,
+        "_fav_Attrition": false,
+        "_fav_Utilization": false
+      },
+      {
+        "BU": "BR-MMI-BHZ-01",
+        "_kind": "line",
+        "Avg headcount": 126.9,
+        "Headcount PY": 123.1,
+        "Avg FTE": 116.28,
+        "Hires": 28.0,
+        "Leavers": 25.0,
+        "of which restructuring": 1.0,
+        "Attrition": 0.23640661938534277,
+        "Attrition PY": 0.17546709991876525,
+        "Utilization": 0.7180890973679732,
+        "Utilization PY": 0.7292211978595836,
+        "Overtime ratio": 0.044757232761601304,
+        "_fte_py": 112.84,
+        "_hires_py": 19.0,
+        "_leavers_py": 18.0,
+        "_restructuring_py": 1.0,
+        "_voluntary_attrition_py": 0.16571892770105603,
+        "Voluntary attrition": 0.22695035460992907,
+        "_overtime_py": 0.04659918767326413,
+        "_fav_Attrition": false,
+        "_fav_Utilization": false
+      },
+      {
+        "BU": "MX-BNI-QRO-01",
+        "_kind": "line",
+        "Avg headcount": 62.4,
+        "Headcount PY": 62.4,
+        "Avg FTE": 60.25,
+        "Hires": 12.0,
+        "Leavers": 12.0,
+        "of which restructuring": 2.0,
+        "Attrition": 0.23076923076923078,
+        "Attrition PY": 0.13461538461538464,
+        "Utilization": 0.7841757467518873,
+        "Utilization PY": 0.7693895929887759,
+        "Overtime ratio": 0.05858225062912105,
+        "_fte_py": 59.64,
+        "_hires_py": 5.0,
+        "_leavers_py": 7.0,
+        "_restructuring_py": 2.0,
+        "_voluntary_attrition_py": 0.09615384615384616,
+        "Voluntary attrition": 0.19230769230769232,
+        "_overtime_py": 0.0548861115382081,
+        "_fav_Attrition": false,
+        "_fav_Utilization": true
+      },
+      {
+        "BU": "CA-MMI-TOR-03",
+        "_kind": "line",
+        "Avg headcount": 32.3,
+        "Headcount PY": 31.9,
+        "Avg FTE": 30.2,
+        "Hires": 7.0,
+        "Leavers": 6.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.22291021671826627,
+        "Attrition PY": 0.03761755485893417,
+        "Utilization": 0.7636866636596001,
+        "Utilization PY": 0.7516927091384652,
+        "Overtime ratio": 0.06740339798526537,
+        "_fte_py": 29.7,
+        "_hires_py": 2.0,
+        "_leavers_py": 1.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.03761755485893417,
+        "Voluntary attrition": 0.22291021671826627,
+        "_overtime_py": 0.06606357784607014,
+        "_fav_Attrition": false,
+        "_fav_Utilization": true
+      },
+      {
+        "BU": "MX-EPV-MEX-01",
+        "_kind": "line",
+        "Avg headcount": 186.5,
+        "Headcount PY": 185.9,
+        "Avg FTE": 173.99,
+        "Hires": 32.0,
+        "Leavers": 34.0,
+        "of which restructuring": 0.0,
+        "Attrition": 0.21876675603217158,
+        "Attrition PY": 0.09682625067240451,
+        "Utilization": 0.7738566395318142,
+        "Utilization PY": 0.7704040153156455,
+        "Overtime ratio": 0.04063993703493373,
+        "_fte_py": 172.32,
+        "_hires_py": 16.0,
+        "_leavers_py": 15.0,
+        "_restructuring_py": 1.0,
+        "_voluntary_attrition_py": 0.09037116729424421,
+        "Voluntary attrition": 0.21876675603217158,
+        "_overtime_py": 0.04047432268599238,
+        "_fav_Attrition": false,
+        "_fav_Utilization": true
+      },
+      {
+        "BU": "BR-CER-BHZ-01",
+        "_kind": "line",
+        "Avg headcount": 65.5,
+        "Headcount PY": 63.0,
+        "Avg FTE": 59.879999999999995,
+        "Hires": 13.0,
+        "Leavers": 10.0,
+        "of which restructuring": 1.0,
+        "Attrition": 0.183206106870229,
+        "Attrition PY": 0.13333333333333333,
+        "Utilization": 0.7053808580649743,
+        "Utilization PY": 0.6972731781532543,
+        "Overtime ratio": 0.053612884389277735,
+        "_fte_py": 57.379999999999995,
+        "_hires_py": 10.0,
+        "_leavers_py": 7.0,
+        "_restructuring_py": 0.0,
+        "_voluntary_attrition_py": 0.13333333333333333,
+        "Voluntary attrition": 0.1648854961832061,
+        "_overtime_py": 0.05180693417692674,
+        "_fav_Attrition": false,
+        "_fav_Utilization": true
+      }
+    ],
+    "col_fmt": {
+      "Avg headcount": "num",
+      "Headcount PY": "num",
+      "Avg FTE": "num",
+      "Hires": "int",
+      "Leavers": "int",
+      "of which restructuring": "int",
+      "Attrition": "pct",
+      "Attrition PY": "pct",
+      "Utilization": "pct",
+      "Utilization PY": "pct",
+      "Overtime ratio": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": true,
+          "Utilization": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Attrition": false,
+          "Utilization": true
+        }
+      }
+    ],
+    "caption": "Fictional employee records, closed months. Headcount and FTE are monthly averages; attrition = leavers x 12 / months / average headcount; utilization and overtime use direct staff hours. Green / red = better / worse than PY.",
+    "extra_tables": [],
+    "table_class": "wf"
+  },
+  "chart_spec": {
+    "type": "hbar",
+    "title": "Attrition (annualised) by BU - RL Group (YTD Oct 2026)",
+    "fmt": "pct",
+    "x": "value",
+    "y": [
+      "label"
+    ],
+    "data": [
+      {
+        "label": "CA-ENV-CAL-01",
+        "value": 0.425720620842572,
+        "fav": null
+      },
+      {
+        "label": "CA-ENV-CAL-02",
+        "value": 0.32818073721759816,
+        "fav": null
+      },
+      {
+        "label": "CA-ENV-MTL-01",
+        "value": 0.3106267029972752,
+        "fav": null
+      },
+      {
+        "label": "CA-ENV-TOR-01",
+        "value": 0.28708133971291866,
+        "fav": null
+      },
+      {
+        "label": "CA-ENV-VAN-01",
+        "value": 0.27491408934707906,
+        "fav": null
+      },
+      {
+        "label": "BR-MMI-BHZ-01",
+        "value": 0.23640661938534277,
+        "fav": null
+      },
+      {
+        "label": "MX-BNI-QRO-01",
+        "value": 0.23076923076923078,
+        "fav": null
+      },
+      {
+        "label": "CA-MMI-TOR-03",
+        "value": 0.22291021671826627,
+        "fav": null
+      },
+      {
+        "label": "MX-EPV-MEX-01",
+        "value": 0.21876675603217158,
+        "fav": null
+      },
+      {
+        "label": "BR-CER-BHZ-01",
+        "value": 0.183206106870229,
+        "fav": null
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "RL Group",
+    "org_filter": {},
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (YTD Oct 2026)",
+      "PY (Jan 2025 - Oct 2025)"
+    ],
+    "source": "fictional employee records (closed months)",
+    "applied": [
+      "Scope: RL Group (default)",
+      "Period: YTD Oct 2026 (from your question)",
+      "Versions: Actual, PY (default)"
+    ]
+  },
+  "sql_used": [
+    "SELECT dim_org.l6_bu, fact_employee_month.month_key, count(*) AS headcount, sum(fact_employee_month.fte) AS fte, sum(fact_employee_month.available_hours) AS available_hours, sum(fact_employee_month.billable_hours) AS billable_hours, sum(fact_employee_month.overtime_hours) AS overtime_hours, sum(CAST(fact_employee_month.is_hire AS INTEGER)) AS hires, sum(CAST(fact_employee_month.is_leaver AS INTEGER)) AS leavers, sum(CASE WHEN (dim_employee.leave_reason = N'Restructuring') THEN CAST(fact_employee_month.is_leaver AS INTEGER) ELSE 0 END) AS restructuring_leavers \nFROM fact_employee_month JOIN dim_employee ON fact_employee_month.employee_id = dim_employee.employee_id JOIN dim_org ON fact_employee_month.bu_id = dim_org.bu_id \nWHERE fact_employee_month.month_key BETWEEN 202601 AND 202610 GROUP BY dim_org.l6_bu, fact_employee_month.month_key",
+    "SELECT dim_org.l6_bu, fact_employee_month.month_key, count(*) AS headcount, sum(fact_employee_month.fte) AS fte, sum(fact_employee_month.available_hours) AS available_hours, sum(fact_employee_month.billable_hours) AS billable_hours, sum(fact_employee_month.overtime_hours) AS overtime_hours, sum(CAST(fact_employee_month.is_hire AS INTEGER)) AS hires, sum(CAST(fact_employee_month.is_leaver AS INTEGER)) AS leavers, sum(CASE WHEN (dim_employee.leave_reason = N'Restructuring') THEN CAST(fact_employee_month.is_leaver AS INTEGER) ELSE 0 END) AS restructuring_leavers \nFROM fact_employee_month JOIN dim_employee ON fact_employee_month.employee_id = dim_employee.employee_id JOIN dim_org ON fact_employee_month.bu_id = dim_org.bu_id \nWHERE fact_employee_month.month_key BETWEEN 202501 AND 202510 GROUP BY dim_org.l6_bu, fact_employee_month.month_key"
+  ],
+  "followups": [
+    "Show attrition by role for RL Group this year",
+    "Show utilization by grade for RL Group this year",
+    "Show headcount, hires and leavers by month for RL Group this year"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "get_workforce",
+        "arguments": {
+          "org": "",
+          "period": "YTD Oct 2026",
+          "group_by": "",
+          "metric": "",
+          "top_n": 0
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "get_workforce",
+      "arguments": {
+        "org": "",
+        "period": "YTD Oct 2026",
+        "group_by": "",
+        "metric": "",
+        "top_n": 0
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.008,
+      "plan": 0.0,
+      "act": 1.374,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "(user default scope)",
+      "metric_or_ratio": "(not specified)",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "rank",
+        "workforce"
+      ],
+      "rank_by_level": "l6_bu"
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Scope RL Group, YTD Oct 2026: workforce from fictional employee records (Actual), compared with the same months of the prior year (PY).",
+      "Attrition rate (annualised): 13.7%; 0.4 pp below PY (14.1%), favourable.",
+      "Average headcount: 16,698; 254 (1.5%) above PY (16,444).",
+      "Leavers: 1,911; 22 (1.1%) fewer than PY (1,933); of these 1,766 voluntary and 145 restructuring (PY 1,833 voluntary and 100 restructuring).",
+      "Hires: 2,109; 34 (1.6%) fewer than PY (2,143).",
+      "Utilization rate (direct staff, billable / available hours): 74.7%; 0.3 pp above PY (74.4%), favourable.",
+      "Overtime ratio (direct staff, overtime / available hours): 6.3%; 0.1 pp above PY (6.2%), unfavourable.",
+      "Voluntary attrition rate (annualised): 12.7%; 0.7 pp below PY (13.4%), favourable.",
+      "Average FTE: 15,679; 242 (1.6%) above PY (15,437).",
+      "Restructuring leavers: 145; 45 (45.0%) more than PY (100).",
+      "Voluntary leavers: 1,766; 67 (3.7%) fewer than PY (1,833).",
+      "By BU, highest attrition (annualised) first (10 of 106 BUs shown): CA-ENV-CAL-01 42.6% (PY 14.5%); CA-ENV-CAL-02 32.8% (PY 10.7%); CA-ENV-MTL-01 31.1% (PY 15.0%); CA-ENV-TOR-01 28.7% (PY 8.9%); CA-ENV-VAN-01 27.5% (PY 8.9%); BR-MMI-BHZ-01 23.6% (PY 17.5%); MX-BNI-QRO-01 23.1% (PY 13.5%); CA-MMI-TOR-03 22.3% (PY 3.8%); MX-EPV-MEX-01 21.9% (PY 9.7%); BR-CER-BHZ-01 18.3% (PY 13.3%).",
+      "Month with the most leavers: Apr 2026 (254, of which 70 restructuring)."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 1.39
+  }
+}

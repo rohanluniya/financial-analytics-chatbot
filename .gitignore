@@ -1,0 +1,13 @@
+.env
+.deploy.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/*
+!data/.gitkeep
+*.duckdb
+*.duckdb.wal
+.app-ready
+scratch/
+.DS_Store

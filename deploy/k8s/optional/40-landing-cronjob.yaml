@@ -1,0 +1,62 @@
+# Optional: refresh the current-month landing once a day (`make k8s-cronjob`).
+# Private by design: no Service, no Ingress, nothing exposed. The job runs next to the dev pod (same node,
+# because the workspace volume is ReadWriteOnce), reuses its workspace and venv, and writes the landing
+# snapshot for today's as-of date with the admin login from the existing Secret. Idempotent: a re-run
+# replaces the snapshot of that date.
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ${PREFIX}-landing
+  namespace: ${NAMESPACE}
+spec:
+  schedule: "30 6 * * *"            # daily at 06:30 UTC
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 1
+      activeDeadlineSeconds: 1800
+      template:
+        metadata:
+          labels:
+            app: ${PREFIX}-landing
+        spec:
+          restartPolicy: Never
+          nodeSelector:
+            cloud.google.com/gke-nodepool: ${NODE_POOL}
+          affinity:
+            podAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+                - labelSelector:
+                    matchLabels:
+                      app: ${PREFIX}-dev
+                  topologyKey: kubernetes.io/hostname
+          volumes:
+            - name: workspace
+              persistentVolumeClaim:
+                claimName: workspace-${PREFIX}-dev-0
+            - name: bootstrap
+              configMap:
+                name: ${PREFIX}-bootstrap
+                defaultMode: 0755
+          containers:
+            - name: landing
+              image: python:3.11-slim-bookworm
+              command: ["bash", "-c", "bash /bootstrap/bootstrap.sh && cd ${WS} && .venv/bin/python scripts/run_landing.py"]
+              env:
+                - name: MSSQL_SA_PASSWORD
+                  valueFrom:
+                    secretKeyRef: {name: "${PREFIX}-secrets", key: MSSQL_SA_PASSWORD}
+              resources:
+                requests:
+                  cpu: 500m
+                  memory: 1Gi
+                limits:
+                  cpu: "8"
+                  memory: 8Gi
+              volumeMounts:
+                - name: workspace
+                  mountPath: /workspace
+                - name: bootstrap
+                  mountPath: /bootstrap

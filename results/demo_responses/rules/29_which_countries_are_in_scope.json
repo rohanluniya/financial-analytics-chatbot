@@ -1,0 +1,147 @@
+{
+  "answer_markdown": "**1 country in your scope, with monthly P&L from Jan 2022 to Oct 2026 (the last closed month).**\n\nCountries (1): United States.",
+  "table": [
+    {
+      "Country": "United States",
+      "Region": "US & Canada",
+      "Product lines": 7,
+      "Businesses": 12,
+      "BUs": 16
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Country",
+      "Region",
+      "Product lines",
+      "Businesses",
+      "BUs"
+    ],
+    "rows": [
+      {
+        "Country": "United States",
+        "Region": "US & Canada",
+        "Product lines": 7,
+        "Businesses": 12,
+        "BUs": 16
+      }
+    ],
+    "col_fmt": {
+      "Product lines": "int",
+      "Businesses": "int",
+      "BUs": "int"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      }
+    ],
+    "caption": "Countries in your scope (live from the database, row-level security applied). See the Data Catalog page for details.",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "none",
+    "title": "",
+    "fmt": "eur",
+    "x": null,
+    "y": [],
+    "data": [],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "your scope",
+    "period": "catalog",
+    "org_filter": {},
+    "as_of_date": "2026-11-16",
+    "currency": "USD",
+    "source": "data catalog (database + metrics.yaml)",
+    "applied": [
+      "Scope: your scope (default)"
+    ]
+  },
+  "sql_used": [],
+  "followups": [
+    "How is United States doing YTD vs budget?",
+    "Rank countries by operating margin on revenue YTD",
+    "What's the Nov landing for United States?"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "describe_catalog",
+        "arguments": {
+          "kind": "countries",
+          "parent_filter": ""
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "describe_catalog",
+      "arguments": {
+        "kind": "countries",
+        "parent_filter": ""
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.009,
+      "plan": 0.0,
+      "act": 0.019,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "(user default scope)",
+      "metric_or_ratio": "(not specified)",
+      "period": "(default: YTD)",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "rank",
+        "catalog"
+      ],
+      "rank_by_level": "l3_country"
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "1 country in your scope, with monthly P&L from Jan 2022 to Oct 2026 (the last closed month).",
+      "Countries (1): United States.",
+      "The Data Catalog page has the full, live list with definitions."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.03
+  }
+}

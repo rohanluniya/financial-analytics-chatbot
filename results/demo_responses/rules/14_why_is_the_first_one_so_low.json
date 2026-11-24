@@ -1,0 +1,425 @@
+{
+  "answer_markdown": "**Operating margin on revenue for Paraguay, YTD Oct 2026: Actual 10.3%, 1.4 pp above PY (8.9%), favourable.**\n\nAccount drivers (largest first): Personnel costs as % of revenue: 50.8% vs 52.3%, impact on Operating margin on revenue +1.5 pp (favourable); External subcontracting as % of revenue: 19.3% vs 18.6%, impact on Operating margin on revenue -0.6 pp (unfavourable); Functional costs as % of revenue: 10.4% vs 10.8%, impact on Operating margin on revenue +0.4 pp (favourable); Other costs as % of revenue: 11.1% vs 11.3%, impact on Operating margin on revenue +0.2 pp (favourable); Functional cost recharges as % of revenue: 2.4% vs 2.5%, impact on Operating margin on revenue -0.1 pp (unfavourable).\n\n- Product line with the largest change: Buildings & Infrastructure 8.3% vs 6.8% (+1.5 pp, favourable)",
+  "table": [
+    {
+      "Driver": "Personnel costs as % of revenue",
+      "_code": "personnel",
+      "Actual": 0.5082755509603468,
+      "PY": 0.5229277088795404,
+      "Impact": 0.014652157919193609,
+      "_fav": true,
+      "Share of variance": 1.078579027919699
+    },
+    {
+      "Driver": "External subcontracting as % of revenue",
+      "_code": "subcontracting",
+      "Actual": 0.19268598004823073,
+      "PY": 0.18637826452366932,
+      "Impact": -0.006307715524561414,
+      "_fav": false,
+      "Share of variance": -0.4643254404160743
+    },
+    {
+      "Driver": "Functional costs as % of revenue",
+      "_code": "functional_cost",
+      "Actual": 0.10416160790059416,
+      "PY": 0.10772053618029713,
+      "Impact": 0.003558928279702972,
+      "_fav": true,
+      "Share of variance": 0.2619808922022059
+    },
+    {
+      "Driver": "Other costs as % of revenue",
+      "_code": "other_cost",
+      "Actual": 0.11061610538580272,
+      "PY": 0.11270428937137315,
+      "Impact": 0.002088183985570438,
+      "_fav": true,
+      "Share of variance": 0.15371602365298564
+    },
+    {
+      "Driver": "Functional cost recharges as % of revenue",
+      "_code": "functional_neutralization",
+      "Actual": 0.024494502352591725,
+      "PY": 0.025366456661306866,
+      "Impact": -0.0008719543087151414,
+      "_fav": false,
+      "Share of variance": -0.06418656117897818
+    },
+    {
+      "Driver": "Production as % of revenue",
+      "_code": "production",
+      "Actual": 0.993934126654257,
+      "PY": 0.993469040543062,
+      "Impact": 0.0004650861111950011,
+      "_fav": true,
+      "Share of variance": 0.03423605782016202
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Driver",
+      "PY",
+      "Actual",
+      "Impact",
+      "Share of variance"
+    ],
+    "rows": [
+      {
+        "Driver": "Personnel costs as % of revenue",
+        "_code": "personnel",
+        "Actual": 0.5082755509603468,
+        "PY": 0.5229277088795404,
+        "Impact": 0.014652157919193609,
+        "_fav": true,
+        "Share of variance": 1.078579027919699
+      },
+      {
+        "Driver": "External subcontracting as % of revenue",
+        "_code": "subcontracting",
+        "Actual": 0.19268598004823073,
+        "PY": 0.18637826452366932,
+        "Impact": -0.006307715524561414,
+        "_fav": false,
+        "Share of variance": -0.4643254404160743
+      },
+      {
+        "Driver": "Functional costs as % of revenue",
+        "_code": "functional_cost",
+        "Actual": 0.10416160790059416,
+        "PY": 0.10772053618029713,
+        "Impact": 0.003558928279702972,
+        "_fav": true,
+        "Share of variance": 0.2619808922022059
+      },
+      {
+        "Driver": "Other costs as % of revenue",
+        "_code": "other_cost",
+        "Actual": 0.11061610538580272,
+        "PY": 0.11270428937137315,
+        "Impact": 0.002088183985570438,
+        "_fav": true,
+        "Share of variance": 0.15371602365298564
+      },
+      {
+        "Driver": "Functional cost recharges as % of revenue",
+        "_code": "functional_neutralization",
+        "Actual": 0.024494502352591725,
+        "PY": 0.025366456661306866,
+        "Impact": -0.0008719543087151414,
+        "_fav": false,
+        "Share of variance": -0.06418656117897818
+      },
+      {
+        "Driver": "Production as % of revenue",
+        "_code": "production",
+        "Actual": 0.993934126654257,
+        "PY": 0.993469040543062,
+        "Impact": 0.0004650861111950011,
+        "_fav": true,
+        "Share of variance": 0.03423605782016202
+      }
+    ],
+    "col_fmt": {
+      "PY": "pct",
+      "Actual": "pct",
+      "Impact": "pp",
+      "Share of variance": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      }
+    ],
+    "caption": "Impact = contribution to the change in Operating margin on revenue (percentage points)",
+    "extra_tables": [
+      {
+        "columns": [
+          "Product line",
+          "PY",
+          "Actual",
+          "Impact"
+        ],
+        "rows": [
+          {
+            "Product line": "Buildings & Infrastructure",
+            "Actual": 0.08306010283867397,
+            "PY": 0.0681235706665151,
+            "Impact": 0.014936532172158873,
+            "_fav": true
+          },
+          {
+            "Product line": "Certification & Sustainability",
+            "Actual": 0.261321335464687,
+            "PY": 0.25779504947341425,
+            "Impact": 0.0035262859912727484,
+            "_fav": true
+          }
+        ],
+        "col_fmt": {
+          "PY": "pct",
+          "Actual": "pct",
+          "Impact": "pp"
+        },
+        "row_meta": [
+          {
+            "kind": "line",
+            "level": 0,
+            "fmt": null,
+            "fav": {
+              "Impact": true
+            }
+          },
+          {
+            "kind": "line",
+            "level": 0,
+            "fmt": null,
+            "fav": {
+              "Impact": true
+            }
+          }
+        ],
+        "caption": "By product line"
+      }
+    ]
+  },
+  "chart_spec": {
+    "type": "waterfall",
+    "title": "Operating margin on revenue: PY to Actual - Paraguay (YTD Oct 2026)",
+    "fmt": "pct",
+    "x": "label",
+    "y": [
+      "value"
+    ],
+    "data": [
+      {
+        "label": "Operating margin on revenue PY",
+        "value": 0.08910469824948884,
+        "measure": "absolute"
+      },
+      {
+        "label": "Personnel costs",
+        "value": 0.014652157919193609,
+        "measure": "relative"
+      },
+      {
+        "label": "External subcontracting",
+        "value": -0.006307715524561414,
+        "measure": "relative"
+      },
+      {
+        "label": "Functional costs",
+        "value": 0.003558928279702972,
+        "measure": "relative"
+      },
+      {
+        "label": "Other costs",
+        "value": 0.002088183985570438,
+        "measure": "relative"
+      },
+      {
+        "label": "Functional cost recharges",
+        "value": -0.0008719543087151414,
+        "measure": "relative"
+      },
+      {
+        "label": "Production",
+        "value": 0.0004650861111950011,
+        "measure": "relative"
+      },
+      {
+        "label": "Operating margin on revenue Actual",
+        "value": 0.10268938471187417,
+        "measure": "total"
+      }
+    ],
+    "meta": {
+      "favorable": "up"
+    }
+  },
+  "filters_used": {
+    "org": "Paraguay",
+    "org_filter": {
+      "l3_country": [
+        "Paraguay"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (Actual, YTD Oct 2026)",
+      "PY (Actual, YTD Oct 2025)"
+    ],
+    "applied": [
+      "Scope: Paraguay (from your question)",
+      "Period: YTD Oct 2026 (carried over from the conversation)",
+      "Versions: Actual, PY (default)"
+    ],
+    "carried_over": [
+      "Operating margin on revenue",
+      "Paraguay",
+      "YTD Oct 2026"
+    ]
+  },
+  "sql_used": [
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Paraguay') GROUP BY fact_pnl.account_id",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Paraguay') GROUP BY fact_pnl.account_id",
+    "SELECT dim_org.l4_product_line, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Paraguay') GROUP BY dim_org.l4_product_line, fact_pnl.account_id",
+    "SELECT dim_org.l4_product_line, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Paraguay') GROUP BY dim_org.l4_product_line, fact_pnl.account_id"
+  ],
+  "followups": [
+    "Show the monthly trend of Operating margin on revenue for Paraguay since 2025",
+    "Show the Personnel costs trend for Paraguay vs budget",
+    "Compare Budget vs FC3 vs Actual for Paraguay"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "variance_drivers",
+        "arguments": {
+          "metric": "maop_margin_revenue",
+          "org": "Paraguay",
+          "period": "YTD Oct 2026",
+          "comparison": "PY",
+          "depth": 1
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "variance_drivers",
+      "arguments": {
+        "metric": "maop_margin_revenue",
+        "org": "Paraguay",
+        "period": "YTD Oct 2026",
+        "comparison": "PY",
+        "depth": 1
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.007,
+      "plan": 0.0,
+      "act": 0.138,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "Paraguay",
+      "metric_or_ratio": "maop_margin_revenue",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "why"
+      ]
+    },
+    "followup": true,
+    "options": [],
+    "facts": [
+      "Operating margin on revenue for Paraguay, YTD Oct 2026: Actual 10.3%, 1.4 pp above PY (8.9%), favourable.",
+      "Account drivers (largest first): Personnel costs as % of revenue: 50.8% vs 52.3%, impact on Operating margin on revenue +1.5 pp (favourable); External subcontracting as % of revenue: 19.3% vs 18.6%, impact on Operating margin on revenue -0.6 pp (unfavourable); Functional costs as % of revenue: 10.4% vs 10.8%, impact on Operating margin on revenue +0.4 pp (favourable); Other costs as % of revenue: 11.1% vs 11.3%, impact on Operating margin on revenue +0.2 pp (favourable); Functional cost recharges as % of revenue: 2.4% vs 2.5%, impact on Operating margin on revenue -0.1 pp (unfavourable)",
+      "By product line (largest change first): Buildings & Infrastructure 8.3% vs 6.8% (+1.5 pp, favourable); Certification & Sustainability 26.1% vs 25.8% (+0.4 pp, favourable)"
+    ],
+    "evidence": {
+      "extra": {
+        "org": [
+          {
+            "Product line": "Buildings & Infrastructure",
+            "Actual": 0.08306010283867397,
+            "PY": 0.0681235706665151,
+            "Impact": 0.014936532172158873,
+            "_fav": true
+          },
+          {
+            "Product line": "Certification & Sustainability",
+            "Actual": 0.261321335464687,
+            "PY": 0.25779504947341425,
+            "Impact": 0.0035262859912727484,
+            "_fav": true
+          }
+        ]
+      },
+      "totals": {
+        "total_current": 0.10268938471187417,
+        "total_comparison": 0.08910469824948884
+      }
+    },
+    "latency_s": 0.15
+  }
+}

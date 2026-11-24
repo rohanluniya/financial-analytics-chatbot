@@ -1,0 +1,288 @@
+{
+  "answer_markdown": "**How the Nov 2026 billing landing for CA-ENV-VAN-01 is calculated (as of 2026-11-16): each BU's billing is forecast with four methods on monthly history (working-day adjusted) and combined with weights learned from each method's recent errors; costs follow the billing landing (intragroup, subcontracting and other costs as ratios to billing), personnel uses a seasonality-adjusted 3-month run-rate and functional lines come from the latest forecast.**\n\n- Same month last year x recent growth: USD 1.3M, weight 26%, recent WAPE 8.1%\n- Trailing 12 months x seasonal index: USD 1.4M, weight 22%, recent WAPE 11.1%\n- Latest forecast x the BU's forecast accuracy: USD 1.4M, weight 20%, recent WAPE 11.6%\n- Exponential smoothing (ETS): USD 1.4M, weight 32%, recent WAPE 6.6%\n- Latest forecast as published: USD 1.5M\n- Landing P50 (weighted): USD 1.4M\n\n_WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data. Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time._",
+  "table": [
+    {
+      "Method": "Same month last year x recent growth",
+      "Billing prediction": 1339633.08,
+      "Weight in the landing": 0.260417,
+      "Recent error of this method (WAPE)": 0.080597
+    },
+    {
+      "Method": "Trailing 12 months x seasonal index",
+      "Billing prediction": 1375858.33,
+      "Weight in the landing": 0.215995,
+      "Recent error of this method (WAPE)": 0.111357
+    },
+    {
+      "Method": "Latest forecast x the BU's forecast accuracy",
+      "Billing prediction": 1428883.08,
+      "Weight in the landing": 0.201458,
+      "Recent error of this method (WAPE)": 0.116425
+    },
+    {
+      "Method": "Exponential smoothing (ETS)",
+      "Billing prediction": 1418207.11,
+      "Weight in the landing": 0.32213,
+      "Recent error of this method (WAPE)": 0.066378
+    },
+    {
+      "Method": "Latest forecast as published",
+      "Billing prediction": 1467724.71,
+      "Weight in the landing": null,
+      "Recent error of this method (WAPE)": NaN
+    },
+    {
+      "Method": "IRIS landing (weighted ensemble)",
+      "Billing prediction": 1390748.77,
+      "Weight in the landing": 1.0,
+      "Recent error of this method (WAPE)": null
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Method",
+      "Billing prediction",
+      "Weight in the landing",
+      "Recent error of this method (WAPE)"
+    ],
+    "rows": [
+      {
+        "Method": "Same month last year x recent growth",
+        "Billing prediction": 1339633.08,
+        "Weight in the landing": 0.260417,
+        "Recent error of this method (WAPE)": 0.080597
+      },
+      {
+        "Method": "Trailing 12 months x seasonal index",
+        "Billing prediction": 1375858.33,
+        "Weight in the landing": 0.215995,
+        "Recent error of this method (WAPE)": 0.111357
+      },
+      {
+        "Method": "Latest forecast x the BU's forecast accuracy",
+        "Billing prediction": 1428883.08,
+        "Weight in the landing": 0.201458,
+        "Recent error of this method (WAPE)": 0.116425
+      },
+      {
+        "Method": "Exponential smoothing (ETS)",
+        "Billing prediction": 1418207.11,
+        "Weight in the landing": 0.32213,
+        "Recent error of this method (WAPE)": 0.066378
+      },
+      {
+        "Method": "Latest forecast as published",
+        "Billing prediction": 1467724.71,
+        "Weight in the landing": null,
+        "Recent error of this method (WAPE)": NaN
+      },
+      {
+        "Method": "IRIS landing (weighted ensemble)",
+        "Billing prediction": 1390748.77,
+        "Weight in the landing": 1.0,
+        "Recent error of this method (WAPE)": null,
+        "_kind": "subtotal"
+      }
+    ],
+    "col_fmt": {
+      "Billing prediction": "eur",
+      "Weight in the landing": "pct",
+      "Recent error of this method (WAPE)": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": null,
+        "fav": {}
+      }
+    ],
+    "caption": "Billing landing by method; weights are learned per BU from recent errors and shrunk toward the BU's pattern class.",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "bar",
+    "title": "Billing landing by method, Nov 2026 - CA-ENV-VAN-01",
+    "fmt": "eur",
+    "x": "label",
+    "y": [
+      "value"
+    ],
+    "data": [
+      {
+        "label": "Same month last year x recent growth",
+        "value": 1339633.08
+      },
+      {
+        "label": "Trailing 12 months x seasonal index",
+        "value": 1375858.33
+      },
+      {
+        "label": "Latest forecast x the BU's forecast accuracy",
+        "value": 1428883.08
+      },
+      {
+        "label": "Exponential smoothing (ETS)",
+        "value": 1418207.11
+      },
+      {
+        "label": "Latest forecast as published",
+        "value": 1467724.71
+      },
+      {
+        "label": "IRIS landing (weighted ensemble)",
+        "value": 1390748.77
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "CA-ENV-VAN-01",
+    "org_filter": {
+      "l6_bu": [
+        "CA-ENV-VAN-01"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "Nov 2026 (landing)",
+    "months": "Nov 2026",
+    "versions": [
+      "Landing (P50, P10-P90)"
+    ],
+    "landing_snapshot": "2026-11-16",
+    "landing_month": "Nov 2026",
+    "source": "landing engine (monthly history; WIP = 0)",
+    "sql": null,
+    "notes": [
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "applied": [
+      "Scope: CA-ENV-VAN-01 (from your question)",
+      "Period: Nov 2026 (landing) (default)",
+      "Versions: Landing (from your question)"
+    ]
+  },
+  "sql_used": [],
+  "followups": [
+    "What's the Nov landing for CA-ENV-VAN-01?",
+    "Which BUs in CA-ENV-VAN-01 are expected to miss budget this month?",
+    "What data do you use?"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "explain_landing",
+        "arguments": {
+          "org": "CA-ENV-VAN-01"
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "explain_landing",
+      "arguments": {
+        "org": "CA-ENV-VAN-01"
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.005,
+      "plan": 0.0,
+      "act": 0.083,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "CA-ENV-VAN-01",
+      "metric_or_ratio": "(not specified)",
+      "period": "(default: YTD)",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "why",
+        "landing"
+      ]
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "How the Nov 2026 billing landing for CA-ENV-VAN-01 is calculated (as of 2026-11-16): each BU's billing is forecast with four methods on monthly history (working-day adjusted) and combined with weights learned from each method's recent errors; costs follow the billing landing (intragroup, subcontracting and other costs as ratios to billing), personnel uses a seasonality-adjusted 3-month run-rate and functional lines come from the latest forecast.",
+      "Same month last year x recent growth: USD 1.3M, weight 26%, recent WAPE 8.1%.",
+      "Trailing 12 months x seasonal index: USD 1.4M, weight 22%, recent WAPE 11.1%.",
+      "Latest forecast x the BU's forecast accuracy: USD 1.4M, weight 20%, recent WAPE 11.6%.",
+      "Exponential smoothing (ETS): USD 1.4M, weight 32%, recent WAPE 6.6%.",
+      "Latest forecast as published: USD 1.5M.",
+      "Landing P50 (weighted): USD 1.4M.",
+      "Billing pattern: Steady (quarter-end months 34.1% of the year, December 9.5%, month-to-month noise 5.3%).",
+      "Over the last 24 months actual billing was 97.4% of the forecast available at the time; the forecast-based method scales FC3 by that (shrunk toward 100%).",
+      "P10-P90 USD 1.2M - USD 1.4M from this BU's (or its pattern class's) past landing errors.",
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.09
+  }
+}

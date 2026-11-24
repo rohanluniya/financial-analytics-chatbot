@@ -1,0 +1,264 @@
+# =============================================================================
+# Semantic layer for RL Certification & Inspection (Americas): a generic general-ledger (GL)
+# management P&L. Amounts in the database are SIGNED (revenue +, cost -), in USD at a
+# constant budget rate, and stored at LEAF level only; every line, subtotal and ratio below
+# is computed from leaves.
+#
+# Display convention:
+#   * P&L statement view keeps signed values (costs negative, in parentheses).
+#   * Single-metric answers and ratios use display values = signed x natural_sign
+#     (costs as positive magnitudes); favourability follows `favorable`.
+#   * "Production" is NOT "Revenue": Production = Revenue + intragroup items (lines 4 and 5).
+#   * Line numbers are internal keys only (never shown); keys 14-16 are unused.
+# =============================================================================
+
+lines:
+  - {line: 1, id: billing, name: Billing, natural_sign: 1, favorable: up,
+     synonyms: [billing, billings, invoicing, invoiced, invoices, billed, bills, external billing]}
+  - {line: 2, id: wip_ui, name: WIP & deferred income, natural_sign: 1, favorable: up,
+     synonyms: [wip, wip and ui, wip ui, wip and deferred income, work in progress, unbilled revenue, unbilled work,
+                wip change]}
+  - {line: 3, id: revenue, name: Revenue, subtotal: true, formula: [1, 2], natural_sign: 1, favorable: up,
+     synonyms: [revenue, revenues, sales, turnover, net sales, top line]}
+  - {line: 4, id: intragroup_revenue, name: Intragroup revenue, natural_sign: 1, favorable: up,
+     synonyms: [intragroup revenue, intra-group revenue, intercompany revenue, ic revenue]}
+  - {line: 5, id: intragroup_subcontracting, name: Intragroup subcontracting, natural_sign: -1, favorable: down,
+     synonyms: [intragroup subcontracting, intra-group subcontracting, intercompany subcontracting, ic subcontracting]}
+  - {line: 6, id: production, name: Production, subtotal: true, formula: [3, 4, 5], natural_sign: 1, favorable: up,
+     synonyms: [production, total production, production value, output]}
+  - {line: 7, id: personnel, name: Personnel costs, natural_sign: -1, favorable: down,
+     synonyms: [personnel charges, personnel cost, personnel costs, personnel, staff cost, staff costs, people cost,
+                people costs, payroll, salaries, wages, employee cost, employee costs, labour cost, labor cost,
+                personnel expenses, total personnel cost]}
+  - {line: 8, id: subcontracting, name: External subcontracting, natural_sign: -1, favorable: down,
+     synonyms: [external subcontracting, subcontracting, subcontracting cost, subcontracting costs, subcontractors,
+                subcontractor cost, external subcontractors cost]}
+  - {line: 9, id: other_cost, name: Other costs, natural_sign: -1, favorable: down,
+     synonyms: [other costs, other cost, other direct costs]}
+  - {line: 10, id: functional_neutralization, name: Functional cost recharges, natural_sign: 1, favorable: up,
+     synonyms: [functional cost recharges, functional recharges, recharges, functional neutralization,
+                functional neutralisation, neutralization, neutralisation]}
+  - {line: 11, id: gross_profit, name: Gross profit, subtotal: true, formula: [6, 7, 8, 9, 10], natural_sign: 1, favorable: up,
+     synonyms: [gross profit, gp, gross profit amount]}
+  - {line: 12, id: functional_cost, name: Functional costs, natural_sign: -1, favorable: down,
+     synonyms: [total functional costs, functional costs, functional cost, function costs, overheads, overhead,
+                central costs, central functions]}
+  - {line: 13, id: maop, name: Operating profit, subtotal: true, formula: [11, 12], natural_sign: 1, favorable: up,
+     synonyms: [operating profit, op, profit, profits, adjusted operating profit, maop, mop, management aop,
+                management adjusted operating profit, aop, management operational profit]}
+  - {line: 17, id: other_opex, name: Other operating expenses, natural_sign: -1, favorable: down,
+     synonyms: [other operating expenses, other operating expense, other opex, non-recurring items, non recurring items]}
+  - {line: 18, id: management_op, name: EBIT, subtotal: true, formula: [13, 17], natural_sign: 1, favorable: up,
+     synonyms: [ebit, operating income, reported operating profit, management op, management operating profit, mgmt op]}
+  - {line: 19, id: financial_result, name: Financial result, natural_sign: 1, favorable: up,
+     synonyms: [financial result, finance result, net financial result, financial costs, interest and fx]}
+  - {line: 20, id: taxes, name: Income taxes, natural_sign: -1, favorable: down,
+     synonyms: [corporate taxes, corporate tax, taxes, tax, income tax, income taxes]}
+  - {line: 21, id: net_income, name: Net income, subtotal: true, formula: [18, 19, 20], natural_sign: 1, favorable: up,
+     synonyms: [net income, net profit, net result, net earnings, bottom line]}
+
+# Account sub-groups (L2 codes) usable as metrics
+groups:
+  - code: 7A
+    id: personnel_7a
+    name: Direct staff costs
+    natural_sign: -1
+    favorable: down
+    synonyms: [7a, 7a personnel, 7a personnel cost, direct labor, direct labour, direct labor cost, direct labor costs,
+               direct labour cost, direct labour costs, dlc, direct personnel, production employees, production staff,
+               production staff cost, direct staff, direct staff cost]
+  - code: 7B
+    id: personnel_7b
+    name: Indirect staff costs
+    natural_sign: -1
+    favorable: down
+    synonyms: [7b, 7b personnel, 7b personnel cost, non-production employees, non production employees,
+               indirect personnel, indirect staff, indirect staff cost, indirect staff costs, indirect labor,
+               overhead staff]
+
+# Derived amounts (sum of wide-frame columns)
+computed:
+  - id: direct_margin_amount
+    name: Direct margin (amount)
+    column: DM
+    formula: [L6, 7A]
+    natural_sign: 1
+    favorable: up
+    synonyms: [direct margin amount, direct margin value, direct margin in usd]
+  - id: direct_margin_incl_subc_amount
+    name: Direct margin incl. subcontracting (amount)
+    column: DMS
+    formula: [L6, 7A, L8]
+    natural_sign: 1
+    favorable: up
+    synonyms: [direct margin incl subcontracting amount, direct margin after subcontracting amount]
+
+# Extra synonyms for leaf accounts (their l3_name and l3_code always work too)
+leaf_synonyms:
+  "1.1": [external billing]
+  "1.2": [credit notes, credit note]
+  "2.1": [wip change, change in wip]
+  "2.2": [unearned income, ui, deferred revenue, unearned income change]
+  "7A1": [guaranteed salary, guaranteed salaries, base salary, fixed salary]
+  "7A2": [bonus, bonuses, production bonus, 7a bonus, direct staff bonus]
+  "7A3": [overtime cost, overtime pay, variable pay, variable salary, variable / overtime]
+  "7A4": [social security, social charges]
+  "7A5": [pension, pensions]
+  "7A6": [other personnel]
+  "7B2": [7b bonus]
+  "8.1": [external subcontractors]
+  "8.2": [temporary staff, temp staff, temps, agency staff]
+  "9.1": [contract expenses]
+  "9.2": [rent, rent and utilities, utilities cost]
+  "9.3": [depreciation, amortisation of equipment]
+  "9.4": [travel, travel and living, travel expenses]
+  "9.5": [vehicles, vehicle cost, vehicle costs, fleet]
+  "9.6": [it cost, it costs, it and telecom, telecom]
+  "9.7": [lab consumables, consumables, laboratory consumables]
+  "9.8": [insurance]
+  "12.1": [country functions]
+  "12.2": [region functions, regional functions]
+  "12.3": [hq allocation, headquarters allocation, group allocation]
+  "17.1": [restructuring, severance, restructuring costs]
+  "17.2": [ppa amortisation, amortisation of acquired intangibles, amortization of intangibles]
+  "19.1": [net interest, interest expense, interest]
+  "19.2": [fx result, fx losses, fx gains, foreign exchange result, currency result]
+
+# Operational statistics (fact_stats). Stocks (FTE, headcount) are averaged over months and
+# summed over BUs; hours are flows (summed).
+stats:
+  fte: {name: Total FTE, agg: avg, synonyms: [fte, ftes, total fte, full time equivalents]}
+  headcount: {name: Total headcount, agg: avg, synonyms: [headcount, head count, total headcount, hc, number of employees, employees]}
+  direct_fte: {name: Direct FTE, agg: avg, synonyms: [direct fte, production fte, direct ftes]}
+  billable_hours: {name: Billable hours, agg: sum, synonyms: [billable hours, billed hours, chargeable hours]}
+  available_hours: {name: Available hours, agg: sum, synonyms: [available hours, capacity hours, available capacity]}
+  overtime_hours: {name: Overtime hours, agg: sum, synonyms: [overtime hours]}
+
+# Ratio library (display values = ABSOLUTE cost values). format: pct | eur (currency amount)
+ratios:
+  personnel_to_billing:
+    {name: Personnel costs / Billing, num: personnel, den: billing, format: pct, favorable: down,
+     synonyms: [personnel to billing, personnel cost to billing, personnel / billing, personnel/billing,
+                personnel cost as % of billing, personnel % of billing, staff cost to billing]}
+  personnel_to_revenue:
+    {name: Personnel costs / Revenue, num: personnel, den: revenue, format: pct, favorable: down,
+     synonyms: [personnel to revenue, personnel cost to revenue, personnel / revenue, personnel/revenue,
+                personnel cost as % of revenue, personnel % of revenue, staff cost to revenue,
+                staff cost as % of revenue, personnel revenue ratio]}
+  personnel_to_production:
+    {name: Personnel costs / Production, num: personnel, den: production, format: pct, favorable: down,
+     synonyms: [personnel to production, personnel cost to production, personnel / production, personnel/production,
+                personnel cost as % of production, personnel % of production, personnel ratio, personnel cost ratio,
+                staff cost ratio]}
+  direct_labor_to_production:
+    {name: Direct staff costs / Production, num: personnel_7a, den: production, format: pct, favorable: down,
+     synonyms: [direct labor cost over production, direct labour cost over production, direct labor cost ratio,
+                direct labor to production, dlc ratio, dlc %, dlc over production, 7a to production, 7a / production,
+                7a/production, 7a ratio, 7a as % of production, 7a % of production, direct staff cost ratio,
+                direct staff costs as % of production]}
+  subcontracting_pct:
+    {name: External subcontracting % of production, num: subcontracting, den: production, format: pct, favorable: down,
+     synonyms: [subcontracting %, subcontracting ratio, subcontracting as % of production, subcontracting % of production,
+                subcontracting share, subcontracting rate]}
+  other_cost_pct:
+    {name: Other costs % of production, num: other_cost, den: production, format: pct, favorable: down,
+     synonyms: [other cost %, other costs %, other cost ratio, other costs as % of production, other cost % of production]}
+  functional_cost_pct:
+    {name: Functional costs % of production, num: functional_cost, den: production, format: pct, favorable: down,
+     synonyms: [functional cost %, functional costs %, functional cost ratio, functional costs as % of production,
+                overhead ratio]}
+  direct_margin:
+    {name: Direct margin, num: direct_margin_amount, den: production, format: pct, favorable: up,
+     synonyms: [direct margin, direct margin %, direct margin rate, dm %]}
+  direct_margin_incl_subc:
+    {name: Direct margin incl. subcontracting, num: direct_margin_incl_subc_amount, den: production, format: pct,
+     favorable: up,
+     synonyms: [direct margin including subcontracting, direct margin incl subcontracting, direct margin after subcontracting,
+                direct margin incl. subcontracting]}
+  gross_margin:
+    {name: Gross margin, num: gross_profit, den: production, format: pct, favorable: up,
+     synonyms: [gross margin, gross margin %, gp margin, gross profit margin]}
+  maop_margin_revenue:
+    {name: Operating margin on revenue, num: maop, den: revenue, format: pct, favorable: up,
+     synonyms: [operating margin on revenue, operating profit margin on revenue, margin on revenue,
+                maop margin on revenue, mop margin on revenue, profit margin on revenue, op margin on revenue,
+                maop / revenue, maop/revenue, mop / revenue, mop/revenue, operating profit / revenue,
+                operating profit as % of revenue, profit % of revenue, revenue margin, return on sales]}
+  maop_margin_production:
+    {name: Operating margin on production, num: maop, den: production, format: pct, favorable: up,
+     synonyms: [operating margin on production, operating profit margin on production, margin on production,
+                maop margin on production, mop margin on production, profit margin on production,
+                op margin on production, maop / production, maop/production, mop / production, mop/production,
+                operating profit / production, operating profit as % of production, profit % of production,
+                production margin]}
+  management_op_margin:
+    {name: EBIT margin (on revenue), num: management_op, den: revenue, format: pct, favorable: up,
+     synonyms: [ebit margin, operating income margin, management op margin, management operating margin]}
+  net_income_margin:
+    {name: Net income margin (on revenue), num: net_income, den: revenue, format: pct, favorable: up,
+     synonyms: [net margin, net income margin, net profit margin]}
+  personnel_cost_per_fte:
+    {name: Personnel costs per FTE (annualised), num: personnel, den: fte, format: eur, annualize: true,
+     favorable: down,
+     synonyms: [personnel cost per fte, personnel charges per fte, cost per fte, cost per head, personnel cost per head,
+                average cost per fte, staff cost per fte]}
+  production_per_fte:
+    {name: Production per FTE (annualised), num: production, den: fte, format: eur, annualize: true, favorable: up,
+     synonyms: [production per fte, productivity, output per fte, production per head]}
+  wip_pct_revenue:
+    {name: WIP & deferred income as % of revenue, num: wip_ui, den: revenue, format: pct, favorable: neutral,
+     synonyms: [wip as % of revenue, wip % of revenue, wip ratio, wip to revenue, wip share of revenue]}
+  utilization_rate:
+    {name: Utilization rate (billable / available hours), num: billable_hours, den: available_hours, format: pct,
+     favorable: up,
+     synonyms: [utilization rate, utilisation rate, utilization, utilisation, actual utilization rate,
+                actual utilisation rate, billability, chargeability, billable ratio]}
+  production_per_hour:
+    {name: Production per billable hour, num: production, den: billable_hours, format: eur, favorable: up,
+     synonyms: [production per hour, production per billable hour, revenue per hour, average hourly rate, hourly rate]}
+  production_hourly_cost:
+    {name: Production hourly cost (direct staff cost per billable hour), num: personnel_7a, den: billable_hours,
+     format: eur, favorable: down,
+     synonyms: [production hourly cost, hourly cost, cost per hour, direct labor cost per hour, direct labour cost per hour]}
+  overtime_ratio:
+    {name: Overtime ratio (overtime / available hours), num: overtime_hours, den: available_hours, format: pct,
+     favorable: down,
+     synonyms: [overtime ratio, overtime %, overtime rate, overtime share, overtime]}
+
+# Generic wording without a base ("profit %", "margin", "MAOP %") means BOTH operating margins, shown
+# side by side; it is not a third definition. Base-specific wording maps to one ratio above.
+ratio_pairs:
+  operating_margins:
+    name: Operating margins (on revenue and on production)
+    members: [maop_margin_revenue, maop_margin_production]
+    synonyms: [operating margin, operating margins, operating profit margin, operating profit margins, op margin,
+               maop margin, maop margins, maop %, maop percent, maop percentage, mop %, mop margin, mop percentage,
+               aop margin, profit %, profit percent, profit percentage, profit margin, profit margins, margin,
+               margins, ebit-like margin, ebit like margin, operating profit %, operating profit percentage,
+               profitability, both margins]
+
+# KPI cockpit: operational profitability (direct margin drivers)
+cockpit:
+  - direct_margin
+  - production
+  - personnel_7a
+  - utilization_rate
+  - production_per_hour
+  - production_per_fte
+  - overtime_ratio
+  - production_hourly_cost
+  - direct_labor_to_production
+  - gross_margin
+  - maop_margin_revenue
+
+# Variance-driver decomposition: which children explain a metric
+drivers:
+  maop: [production, personnel, subcontracting, other_cost, functional_neutralization, functional_cost]
+  gross_profit: [production, personnel, subcontracting, other_cost, functional_neutralization]
+  management_op: [maop, other_opex]
+  net_income: [management_op, financial_result, taxes]
+  production: [billing, wip_ui, intragroup_revenue, intragroup_subcontracting]
+  revenue: [billing, wip_ui]
+  personnel: [personnel_7a, personnel_7b]
+  direct_margin_amount: [production, personnel_7a]
+  direct_margin_incl_subc_amount: [production, personnel_7a, subcontracting]

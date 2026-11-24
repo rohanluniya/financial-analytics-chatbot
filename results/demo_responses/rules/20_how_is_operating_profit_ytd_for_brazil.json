@@ -1,0 +1,70 @@
+{
+  "answer_markdown": "Sorry, you don't have access to **Brazil**. Your access covers **United States** only. I can answer the same question for United States.",
+  "table": [],
+  "table_spec": {},
+  "chart_spec": {
+    "type": "none",
+    "title": "",
+    "fmt": "eur",
+    "x": null,
+    "y": [],
+    "data": [],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "Brazil",
+    "applied": [
+      "Scope: Brazil (from your question)",
+      "Period: YTD Oct 2026 (from your question)"
+    ]
+  },
+  "sql_used": [],
+  "followups": [
+    "How is operating profit YTD vs last year and budget for United States?",
+    "Show the operational profitability cockpit for United States",
+    "Show the operating margin trend for United States since 2025"
+  ],
+  "status": "refusal",
+  "diagnostics": {
+    "tool_calls": [],
+    "tool_choice_source": "none",
+    "suggested": {
+      "name": "get_pnl",
+      "arguments": {
+        "org": "Brazil",
+        "period": "YTD Oct 2026",
+        "versions": [
+          "Actual",
+          "PY",
+          "Budget"
+        ],
+        "account_depth": 1
+      }
+    },
+    "guardrail": null,
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.007
+    },
+    "resolved": {
+      "org": "Brazil",
+      "metric_or_ratio": "maop",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": []
+    },
+    "followup": false,
+    "options": [],
+    "facts": [],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.01
+  }
+}

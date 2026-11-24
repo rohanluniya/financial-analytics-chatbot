@@ -1,0 +1,752 @@
+{
+  "answer_markdown": "The MAOP margin for Ecuador, YTD Oct 2026, is 9.4%, 1.7 pp below PY (11.1%), unfavourable. This decline is driven by higher direct labor costs (40.1% vs 39.4%, -0.7 pp), external subcontractors (13.1% vs 12.6%, -0.5 pp), and indirect personnel costs (10.9% vs 10.7%, -0.2 pp). The Buildings & Infrastructure product line also contributed to the margin decrease with a 2.5 pp decline.\n\n- MAOP margin (on revenue) for Ecuador, YTD Oct 2026: Actual 9.4%, 1.7 pp below PY (11.1%), unfavourable\n- Direct labor cost (7A) as % of revenue: 40.1% vs 39.4%, impact on MAOP margin (on revenue) -0.7 pp (unfavourable)\n- 8.1 External subcontractors as % of revenue: 13.1% vs 12.6%, impact on MAOP margin (on revenue) -0.5 pp (unfavourable)\n- Indirect personnel cost (7B) as % of revenue: 10.9% vs 10.7%, impact on MAOP margin (on revenue) -0.2 pp (unfavourable)\n- Product line with the largest change: Buildings & Infrastructure 9.5% vs 12.0% (-2.5 pp, unfavourable)",
+  "table": [
+    {
+      "Driver": "Direct labor cost (7A) as % of revenue",
+      "_code": "personnel_7a",
+      "Actual": 0.4008547529034491,
+      "PY": 0.3940593353772331,
+      "Impact": -0.0067954175262159855,
+      "_fav": false,
+      "Share of variance": 0.4035372392306646
+    },
+    {
+      "Driver": "8.1 External subcontractors as % of revenue",
+      "_code": "acct:8.1",
+      "Actual": 0.13058240400971385,
+      "PY": 0.1255523151607555,
+      "Impact": -0.005030088848958364,
+      "_fav": false,
+      "Share of variance": 0.29870543779874487
+    },
+    {
+      "Driver": "Indirect personnel cost (7B) as % of revenue",
+      "_code": "personnel_7b",
+      "Actual": 0.10928095592932763,
+      "PY": 0.10712535979565464,
+      "Impact": -0.002155596133672985,
+      "_fav": false,
+      "Share of variance": 0.12800733866945666
+    },
+    {
+      "Driver": "8.2 Temporary staff as % of revenue",
+      "_code": "acct:8.2",
+      "Actual": 0.056045512793283264,
+      "PY": 0.05500807925769744,
+      "Impact": -0.001037433535585823,
+      "_fav": false,
+      "Share of variance": 0.06160667291163947
+    },
+    {
+      "Driver": "12.1 Country functions as % of revenue",
+      "_code": "acct:12.1",
+      "Actual": 0.044914417975825634,
+      "PY": 0.043981456709779355,
+      "Impact": -0.0009329612660462783,
+      "_fav": false,
+      "Share of variance": 0.05540271987071049
+    },
+    {
+      "Driver": "12.3 HQ allocation as % of revenue",
+      "_code": "acct:12.3",
+      "Actual": 0.03467667551891589,
+      "PY": 0.03385754368473611,
+      "Impact": -0.0008191318341797815,
+      "_fav": false,
+      "Share of variance": 0.048643103629119576
+    },
+    {
+      "Driver": "Functional neutralization as % of revenue",
+      "_code": "functional_neutralization",
+      "Actual": 0.02494384772400097,
+      "PY": 0.024139381784875933,
+      "Impact": 0.0008044659391250354,
+      "_fav": true,
+      "Share of variance": -0.047772188077807684
+    },
+    {
+      "Driver": "Production as % of revenue",
+      "_code": "production",
+      "Actual": 0.992722940384221,
+      "PY": 0.9920705795997585,
+      "Impact": 0.0006523607844625134,
+      "_fav": true,
+      "Share of variance": -0.03873961665030237
+    },
+    {
+      "Driver": "12.2 Region functions as % of revenue",
+      "_code": "acct:12.2",
+      "Actual": 0.02511185852209603,
+      "PY": 0.02452745900133314,
+      "Impact": -0.0005843995207628905,
+      "_fav": false,
+      "Share of variance": 0.034703823320139694
+    },
+    {
+      "Driver": "9.4 Travel & living as % of revenue",
+      "_code": "acct:9.4",
+      "Actual": 0.02232949265846532,
+      "PY": 0.022825482239997124,
+      "Impact": 0.0004959895815318041,
+      "_fav": true,
+      "Share of variance": -0.029453711364512747
+    },
+    {
+      "Driver": "9.3 Depreciation as % of revenue",
+      "_code": "acct:9.3",
+      "Actual": 0.01644468674002943,
+      "PY": 0.016000398464847815,
+      "Impact": -0.0004442882751816146,
+      "_fav": false,
+      "Share of variance": 0.02638349495048292
+    },
+    {
+      "Driver": "9.2 Rent & utilities as % of revenue",
+      "_code": "acct:9.2",
+      "Actual": 0.013942476615352372,
+      "PY": 0.013620547314202381,
+      "Impact": -0.0003219293011499907,
+      "_fav": false,
+      "Share of variance": 0.01911736268041573
+    },
+    {
+      "Driver": "9.6 IT & telecom as % of revenue",
+      "_code": "acct:9.6",
+      "Actual": 0.009838155479619822,
+      "PY": 0.009567146809858472,
+      "Impact": -0.0002710086697613502,
+      "_fav": false,
+      "Share of variance": 0.01609350565747624
+    },
+    {
+      "Driver": "9.9 Other as % of revenue",
+      "_code": "acct:9.9",
+      "Actual": 0.00655579841908202,
+      "PY": 0.006390578467473642,
+      "Impact": -0.00016521995160837747,
+      "_fav": false,
+      "Share of variance": 0.009811376987602857
+    },
+    {
+      "Driver": "9.8 Insurance as % of revenue",
+      "_code": "acct:9.8",
+      "Actual": 0.004896977472248764,
+      "PY": 0.004777830286732506,
+      "Impact": -0.00011914718551625774,
+      "_fav": false,
+      "Share of variance": 0.007075404288234797
+    },
+    {
+      "Driver": "9.5 Vehicles as % of revenue",
+      "_code": "acct:9.5",
+      "Actual": 0.01644399443895206,
+      "PY": 0.01634405033904495,
+      "Impact": -9.994409990710801e-05,
+      "_fav": false,
+      "Share of variance": 0.005935053438337647
+    },
+    {
+      "Driver": "9.7 Lab consumables as % of revenue",
+      "_code": "acct:9.7",
+      "Actual": 0.0037101961887249166,
+      "PY": 0.003676864655007246,
+      "Impact": -3.333153371767048e-05,
+      "_fav": false,
+      "Share of variance": 0.001979350796895397
+    },
+    {
+      "Driver": "9.1 Contract expenses as % of revenue",
+      "_code": "acct:9.1",
+      "Actual": 0.028095074930967207,
+      "PY": 0.028112526986240307,
+      "Impact": 1.745205527309973e-05,
+      "_fav": true,
+      "Share of variance": -0.0010363681372981448
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Driver",
+      "PY",
+      "Actual",
+      "Impact",
+      "Share of variance"
+    ],
+    "rows": [
+      {
+        "Driver": "Direct labor cost (7A) as % of revenue",
+        "_code": "personnel_7a",
+        "Actual": 0.4008547529034491,
+        "PY": 0.3940593353772331,
+        "Impact": -0.0067954175262159855,
+        "_fav": false,
+        "Share of variance": 0.4035372392306646
+      },
+      {
+        "Driver": "8.1 External subcontractors as % of revenue",
+        "_code": "acct:8.1",
+        "Actual": 0.13058240400971385,
+        "PY": 0.1255523151607555,
+        "Impact": -0.005030088848958364,
+        "_fav": false,
+        "Share of variance": 0.29870543779874487
+      },
+      {
+        "Driver": "Indirect personnel cost (7B) as % of revenue",
+        "_code": "personnel_7b",
+        "Actual": 0.10928095592932763,
+        "PY": 0.10712535979565464,
+        "Impact": -0.002155596133672985,
+        "_fav": false,
+        "Share of variance": 0.12800733866945666
+      },
+      {
+        "Driver": "8.2 Temporary staff as % of revenue",
+        "_code": "acct:8.2",
+        "Actual": 0.056045512793283264,
+        "PY": 0.05500807925769744,
+        "Impact": -0.001037433535585823,
+        "_fav": false,
+        "Share of variance": 0.06160667291163947
+      },
+      {
+        "Driver": "12.1 Country functions as % of revenue",
+        "_code": "acct:12.1",
+        "Actual": 0.044914417975825634,
+        "PY": 0.043981456709779355,
+        "Impact": -0.0009329612660462783,
+        "_fav": false,
+        "Share of variance": 0.05540271987071049
+      },
+      {
+        "Driver": "12.3 HQ allocation as % of revenue",
+        "_code": "acct:12.3",
+        "Actual": 0.03467667551891589,
+        "PY": 0.03385754368473611,
+        "Impact": -0.0008191318341797815,
+        "_fav": false,
+        "Share of variance": 0.048643103629119576
+      },
+      {
+        "Driver": "Functional neutralization as % of revenue",
+        "_code": "functional_neutralization",
+        "Actual": 0.02494384772400097,
+        "PY": 0.024139381784875933,
+        "Impact": 0.0008044659391250354,
+        "_fav": true,
+        "Share of variance": -0.047772188077807684
+      },
+      {
+        "Driver": "Production as % of revenue",
+        "_code": "production",
+        "Actual": 0.992722940384221,
+        "PY": 0.9920705795997585,
+        "Impact": 0.0006523607844625134,
+        "_fav": true,
+        "Share of variance": -0.03873961665030237
+      },
+      {
+        "Driver": "12.2 Region functions as % of revenue",
+        "_code": "acct:12.2",
+        "Actual": 0.02511185852209603,
+        "PY": 0.02452745900133314,
+        "Impact": -0.0005843995207628905,
+        "_fav": false,
+        "Share of variance": 0.034703823320139694
+      },
+      {
+        "Driver": "9.4 Travel & living as % of revenue",
+        "_code": "acct:9.4",
+        "Actual": 0.02232949265846532,
+        "PY": 0.022825482239997124,
+        "Impact": 0.0004959895815318041,
+        "_fav": true,
+        "Share of variance": -0.029453711364512747
+      },
+      {
+        "Driver": "9.3 Depreciation as % of revenue",
+        "_code": "acct:9.3",
+        "Actual": 0.01644468674002943,
+        "PY": 0.016000398464847815,
+        "Impact": -0.0004442882751816146,
+        "_fav": false,
+        "Share of variance": 0.02638349495048292
+      },
+      {
+        "Driver": "9.2 Rent & utilities as % of revenue",
+        "_code": "acct:9.2",
+        "Actual": 0.013942476615352372,
+        "PY": 0.013620547314202381,
+        "Impact": -0.0003219293011499907,
+        "_fav": false,
+        "Share of variance": 0.01911736268041573
+      },
+      {
+        "Driver": "9.6 IT & telecom as % of revenue",
+        "_code": "acct:9.6",
+        "Actual": 0.009838155479619822,
+        "PY": 0.009567146809858472,
+        "Impact": -0.0002710086697613502,
+        "_fav": false,
+        "Share of variance": 0.01609350565747624
+      },
+      {
+        "Driver": "9.9 Other as % of revenue",
+        "_code": "acct:9.9",
+        "Actual": 0.00655579841908202,
+        "PY": 0.006390578467473642,
+        "Impact": -0.00016521995160837747,
+        "_fav": false,
+        "Share of variance": 0.009811376987602857
+      },
+      {
+        "Driver": "9.8 Insurance as % of revenue",
+        "_code": "acct:9.8",
+        "Actual": 0.004896977472248764,
+        "PY": 0.004777830286732506,
+        "Impact": -0.00011914718551625774,
+        "_fav": false,
+        "Share of variance": 0.007075404288234797
+      },
+      {
+        "Driver": "9.5 Vehicles as % of revenue",
+        "_code": "acct:9.5",
+        "Actual": 0.01644399443895206,
+        "PY": 0.01634405033904495,
+        "Impact": -9.994409990710801e-05,
+        "_fav": false,
+        "Share of variance": 0.005935053438337647
+      },
+      {
+        "Driver": "9.7 Lab consumables as % of revenue",
+        "_code": "acct:9.7",
+        "Actual": 0.0037101961887249166,
+        "PY": 0.003676864655007246,
+        "Impact": -3.333153371767048e-05,
+        "_fav": false,
+        "Share of variance": 0.001979350796895397
+      },
+      {
+        "Driver": "9.1 Contract expenses as % of revenue",
+        "_code": "acct:9.1",
+        "Actual": 0.028095074930967207,
+        "PY": 0.028112526986240307,
+        "Impact": 1.745205527309973e-05,
+        "_fav": true,
+        "Share of variance": -0.0010363681372981448
+      }
+    ],
+    "col_fmt": {
+      "PY": "pct",
+      "Actual": "pct",
+      "Impact": "pp",
+      "Share of variance": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Impact": true
+        }
+      }
+    ],
+    "caption": "Impact = contribution to the change in MAOP margin (on revenue) (percentage points)",
+    "extra_tables": [
+      {
+        "columns": [
+          "Product line",
+          "PY",
+          "Actual",
+          "Impact"
+        ],
+        "rows": [
+          {
+            "Product line": "Buildings & Infrastructure",
+            "Actual": 0.09498346213730656,
+            "PY": 0.1202682816832261,
+            "Impact": -0.025284819545919546,
+            "_fav": false
+          },
+          {
+            "Product line": "Industry & Energy",
+            "Actual": 0.0912122623945806,
+            "PY": 0.084985478827909,
+            "Impact": 0.006226783566671612,
+            "_fav": true
+          }
+        ],
+        "col_fmt": {
+          "PY": "pct",
+          "Actual": "pct",
+          "Impact": "pp"
+        },
+        "row_meta": [
+          {
+            "kind": "line",
+            "level": 0,
+            "fmt": null,
+            "fav": {
+              "Impact": false
+            }
+          },
+          {
+            "kind": "line",
+            "level": 0,
+            "fmt": null,
+            "fav": {
+              "Impact": true
+            }
+          }
+        ],
+        "caption": "By product line"
+      }
+    ]
+  },
+  "chart_spec": {
+    "type": "waterfall",
+    "title": "MAOP margin (on revenue): PY to Actual - Ecuador (YTD Oct 2026)",
+    "fmt": "pct",
+    "x": "label",
+    "y": [
+      "value"
+    ],
+    "data": [
+      {
+        "label": "MAOP margin (on revenue) PY",
+        "value": 0.11078298683404084,
+        "measure": "absolute"
+      },
+      {
+        "label": "Direct labor cost (7A)",
+        "value": -0.0067954175262159855,
+        "measure": "relative"
+      },
+      {
+        "label": "8.1 External subcontractors",
+        "value": -0.005030088848958364,
+        "measure": "relative"
+      },
+      {
+        "label": "Indirect personnel cost (7B)",
+        "value": -0.002155596133672985,
+        "measure": "relative"
+      },
+      {
+        "label": "8.2 Temporary staff",
+        "value": -0.001037433535585823,
+        "measure": "relative"
+      },
+      {
+        "label": "12.1 Country functions",
+        "value": -0.0009329612660462783,
+        "measure": "relative"
+      },
+      {
+        "label": "12.3 HQ allocation",
+        "value": -0.0008191318341797815,
+        "measure": "relative"
+      },
+      {
+        "label": "Other",
+        "value": -6.900017721280698e-05,
+        "measure": "relative"
+      },
+      {
+        "label": "MAOP margin (on revenue) Actual",
+        "value": 0.09394335751216872,
+        "measure": "total"
+      }
+    ],
+    "meta": {
+      "favorable": "up"
+    }
+  },
+  "filters_used": {
+    "org": "Ecuador",
+    "org_filter": {
+      "l3_country": [
+        "Ecuador"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "B26 (constant budget rate)",
+    "as_of_date": "2026-11-12",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (Actual, YTD Oct 2026)",
+      "PY (Actual, YTD Oct 2025)"
+    ]
+  },
+  "sql_used": [
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Ecuador') GROUP BY fact_pnl.account_id",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Ecuador') GROUP BY fact_pnl.account_id",
+    "SELECT dim_org.l4_product_line, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Ecuador') GROUP BY dim_org.l4_product_line, fact_pnl.account_id",
+    "SELECT dim_org.l4_product_line, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Ecuador') GROUP BY dim_org.l4_product_line, fact_pnl.account_id"
+  ],
+  "followups": [
+    "Show the monthly trend of MAOP margin (on revenue) for Ecuador since 2025",
+    "Show the Direct labor cost (7A) trend for Ecuador vs budget",
+    "Compare Budget vs FC3 vs Actual for Ecuador"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "variance_drivers",
+        "arguments": {
+          "metric": "maop_margin_revenue",
+          "org": "Ecuador",
+          "period": "YTD Oct 2026",
+          "comparison": "PY",
+          "depth": 2
+        }
+      }
+    ],
+    "tool_choice_source": "llm_text",
+    "suggested": {
+      "name": "variance_drivers",
+      "arguments": {
+        "metric": "maop_margin_revenue",
+        "org": "Ecuador",
+        "period": "YTD Oct 2026",
+        "comparison": "PY",
+        "depth": 1
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": false,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "unsupported": [],
+          "checked": 13
+        }
+      ],
+      "unsupported": []
+    },
+    "llm_calls": [
+      {
+        "step": "plan",
+        "latency": 8.49,
+        "usage": {
+          "prompt_tokens": 2743,
+          "completion_tokens": 67
+        },
+        "native_tool_call": false,
+        "raw_calls": [
+          {
+            "name": "variance_drivers",
+            "arguments": {
+              "metric": "maop_margin_revenue",
+              "org": "Ecuador",
+              "period": "YTD Oct 2026",
+              "comparison": "PY",
+              "depth": 2
+            }
+          }
+        ]
+      },
+      {
+        "step": "write#1",
+        "latency": 15.77,
+        "usage": {
+          "prompt_tokens": 718,
+          "completion_tokens": 134
+        }
+      }
+    ],
+    "errors": [],
+    "model": "ollama/qwen2.5-coder:14b",
+    "timings": {
+      "preprocess": 0.005,
+      "plan": 8.493,
+      "act": 0.11,
+      "write#1": 15.771
+    },
+    "resolved": {
+      "org": "Ecuador",
+      "metric_or_ratio": "maop_margin_revenue",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "why"
+      ]
+    },
+    "followup": true,
+    "options": [],
+    "facts": [
+      "MAOP margin (on revenue) for Ecuador, YTD Oct 2026: Actual 9.4%, 1.7 pp below PY (11.1%), unfavourable.",
+      "Account drivers (largest first): Direct labor cost (7A) as % of revenue: 40.1% vs 39.4%, impact on MAOP margin (on revenue) -0.7 pp (unfavourable); 8.1 External subcontractors as % of revenue: 13.1% vs 12.6%, impact on MAOP margin (on revenue) -0.5 pp (unfavourable); Indirect personnel cost (7B) as % of revenue: 10.9% vs 10.7%, impact on MAOP margin (on revenue) -0.2 pp (unfavourable); 8.2 Temporary staff as % of revenue: 5.6% vs 5.5%, impact on MAOP margin (on revenue) -0.1 pp (unfavourable); 12.1 Country functions as % of revenue: 4.5% vs 4.4%, impact on MAOP margin (on revenue) -0.1 pp (unfavourable)",
+      "By product line (largest change first): Buildings & Infrastructure 9.5% vs 12.0% (-2.5 pp, unfavourable); Industry & Energy 9.1% vs 8.5% (+0.6 pp, favourable)"
+    ],
+    "evidence": {
+      "extra": {
+        "org": [
+          {
+            "Product line": "Buildings & Infrastructure",
+            "Actual": 0.09498346213730656,
+            "PY": 0.1202682816832261,
+            "Impact": -0.025284819545919546,
+            "_fav": false
+          },
+          {
+            "Product line": "Industry & Energy",
+            "Actual": 0.0912122623945806,
+            "PY": 0.084985478827909,
+            "Impact": 0.006226783566671612,
+            "_fav": true
+          }
+        ]
+      },
+      "totals": {
+        "total_current": 0.09394335751216872,
+        "total_comparison": 0.11078298683404084
+      }
+    },
+    "latency_s": 24.39
+  }
+}

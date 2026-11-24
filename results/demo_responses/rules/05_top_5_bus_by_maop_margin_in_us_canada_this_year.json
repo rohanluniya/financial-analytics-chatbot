@@ -1,0 +1,298 @@
+{
+  "answer_markdown": "**Ranking of BUs by MAOP margin (on revenue) within US & Canada, YTD Oct 2026 (highest first); 32 BUs in scope, showing 5.**\n\n- Rank 1: US-CER-NYC-01 28.3% (PY 27.2%, +1.1 pp)\n- Rank 2: CA-CER-MTL-01 27.5% (PY 26.5%, +1.0 pp)\n- Rank 3: CA-CER-TOR-03 24.9% (PY 24.2%, +0.6 pp)",
+  "table": [
+    {
+      "Rank": 1,
+      "BU": "US-CER-NYC-01",
+      "Actual": 0.28297648582493756,
+      "PY": 0.2717056103717149,
+      "Var": 0.01127087545322264,
+      "_fav": true
+    },
+    {
+      "Rank": 2,
+      "BU": "CA-CER-MTL-01",
+      "Actual": 0.2752682664008923,
+      "PY": 0.2648626437218129,
+      "Var": 0.010405622679079407,
+      "_fav": true
+    },
+    {
+      "Rank": 3,
+      "BU": "CA-CER-TOR-03",
+      "Actual": 0.24873100161647846,
+      "PY": 0.2423676388783478,
+      "Var": 0.006363362738130651,
+      "_fav": true
+    },
+    {
+      "Rank": 4,
+      "BU": "CA-CER-TOR-01",
+      "Actual": 0.24452383716208348,
+      "PY": 0.24767614341885458,
+      "Var": -0.003152306256771098,
+      "_fav": false
+    },
+    {
+      "Rank": 5,
+      "BU": "CA-CER-CAL-01",
+      "Actual": 0.24255641980095136,
+      "PY": 0.23731542545841602,
+      "Var": 0.005240994342535332,
+      "_fav": true
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Rank",
+      "BU",
+      "Actual",
+      "PY",
+      "Var"
+    ],
+    "rows": [
+      {
+        "Rank": 1,
+        "BU": "US-CER-NYC-01",
+        "Actual": 0.28297648582493756,
+        "PY": 0.2717056103717149,
+        "Var": 0.01127087545322264,
+        "_fav": true
+      },
+      {
+        "Rank": 2,
+        "BU": "CA-CER-MTL-01",
+        "Actual": 0.2752682664008923,
+        "PY": 0.2648626437218129,
+        "Var": 0.010405622679079407,
+        "_fav": true
+      },
+      {
+        "Rank": 3,
+        "BU": "CA-CER-TOR-03",
+        "Actual": 0.24873100161647846,
+        "PY": 0.2423676388783478,
+        "Var": 0.006363362738130651,
+        "_fav": true
+      },
+      {
+        "Rank": 4,
+        "BU": "CA-CER-TOR-01",
+        "Actual": 0.24452383716208348,
+        "PY": 0.24767614341885458,
+        "Var": -0.003152306256771098,
+        "_fav": false
+      },
+      {
+        "Rank": 5,
+        "BU": "CA-CER-CAL-01",
+        "Actual": 0.24255641980095136,
+        "PY": 0.23731542545841602,
+        "Var": 0.005240994342535332,
+        "_fav": true
+      }
+    ],
+    "col_fmt": {
+      "Rank": "int",
+      "Actual": "pct",
+      "PY": "pct",
+      "Var": "pp",
+      "Var %": "pct"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": true,
+          "Var %": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": true,
+          "Var %": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": true,
+          "Var %": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": false,
+          "Var %": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Var": true,
+          "Var %": true
+        }
+      }
+    ],
+    "caption": "",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "hbar",
+    "title": "MAOP margin (on revenue) by BU - US & Canada (YTD Oct 2026)",
+    "fmt": "pct",
+    "x": "value",
+    "y": [
+      "label"
+    ],
+    "data": [
+      {
+        "label": "US-CER-NYC-01",
+        "value": 0.28297648582493756,
+        "fav": true
+      },
+      {
+        "label": "CA-CER-MTL-01",
+        "value": 0.2752682664008923,
+        "fav": true
+      },
+      {
+        "label": "CA-CER-TOR-03",
+        "value": 0.24873100161647846,
+        "fav": true
+      },
+      {
+        "label": "CA-CER-TOR-01",
+        "value": 0.24452383716208348,
+        "fav": false
+      },
+      {
+        "label": "CA-CER-CAL-01",
+        "value": 0.24255641980095136,
+        "fav": true
+      }
+    ],
+    "meta": {
+      "ascending": false
+    }
+  },
+  "filters_used": {
+    "org": "US & Canada",
+    "org_filter": {
+      "l2_region": [
+        "US & Canada"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "B26 (constant budget rate)",
+    "as_of_date": "2026-11-12",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (Actual, YTD Oct 2026)",
+      "PY (Actual, YTD Oct 2025)"
+    ],
+    "ranking_level": "BU"
+  },
+  "sql_used": [
+    "SELECT dim_org.l6_bu, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l2_region IN (N'US & Canada') GROUP BY dim_org.l6_bu, fact_pnl.account_id",
+    "SELECT dim_org.l6_bu, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l2_region IN (N'US & Canada') GROUP BY dim_org.l6_bu, fact_pnl.account_id"
+  ],
+  "followups": [
+    "Why is US-CER-NYC-01 where it is on MAOP margin (on revenue)?",
+    "Show the MAOP margin (on revenue) trend for US-CER-NYC-01 since 2025",
+    "Show the bottom 5 BUs by MAOP margin (on revenue) in US & Canada instead"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "rank_entities",
+        "arguments": {
+          "metric_or_ratio": "maop_margin_revenue",
+          "org_level": "l6_bu",
+          "parent_filter": "US & Canada",
+          "period": "YTD Oct 2026",
+          "top_n": 5,
+          "ascending": false
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "rank_entities",
+      "arguments": {
+        "metric_or_ratio": "maop_margin_revenue",
+        "org_level": "l6_bu",
+        "parent_filter": "US & Canada",
+        "period": "YTD Oct 2026",
+        "top_n": 5,
+        "ascending": false
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.008,
+      "plan": 0.0,
+      "act": 0.086,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "US & Canada",
+      "metric_or_ratio": "maop_margin_revenue",
+      "period": "YTD Oct 2026",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "rank"
+      ],
+      "rank_by_level": "l6_bu",
+      "top_n": 5
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Ranking of BUs by MAOP margin (on revenue) within US & Canada, YTD Oct 2026 (highest first); 32 BUs in scope, showing 5.",
+      "1. US-CER-NYC-01 28.3% (PY 27.2%, +1.1 pp); 2. CA-CER-MTL-01 27.5% (PY 26.5%, +1.0 pp); 3. CA-CER-TOR-03 24.9% (PY 24.2%, +0.6 pp); 4. CA-CER-TOR-01 24.5% (PY 24.8%, -0.3 pp); 5. CA-CER-CAL-01 24.3% (PY 23.7%, +0.5 pp)"
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.1
+  }
+}

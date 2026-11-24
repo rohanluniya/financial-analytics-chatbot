@@ -1,0 +1,71 @@
+# Central configuration for data generation and the semantic layer.
+# Values flagged ASSUMPTION are documented in docs/assumptions.md.
+
+company: "RL Group"
+company_long: "RL Certification & Inspection"
+# Reporting currency. ASSUMPTION: all amounts are translated at one constant budget exchange rate
+# (constant currency), as management reporting usually does.
+currency: "USD"
+fx_rate_label: "constant budget rate"
+
+# Point-in-time for the whole prototype. Months whose close date (5th of the following
+# month) is on/before this date are "closed" and have Actuals. The month after the last closed
+# month is the open month: the current-month landing is computed for it.
+as_of_date: "2026-11-16"
+close_day_of_next_month: 5
+
+# Data range
+first_year: 2022
+last_year: 2026
+
+# Reproducibility
+seed: 20261112
+
+# ASSUMPTION: number of actual months contained in each forecast version.
+# FCn = actuals for months 1..actual_months + reforecast for the remaining months.
+forecasts:
+  FC1: {actual_months: 4}
+  FC2: {actual_months: 8}
+  FC3: {actual_months: 9}
+
+# ASSUMPTION: how much of the business's expected path each forecast knows (0 = pure budget,
+# 1 = the expected path). Forecasts never know the monthly noise or project timing; later forecasts
+# know more. BU-specific planner bias (optimistic / conservative) is set in the generator.
+forecast_accuracy:
+  FC1: 0.45
+  FC2: 0.70
+  FC3: 0.85
+# ASSUMPTION: month-level forecast noise (standard deviation) per forecast version
+forecast_noise_sd:
+  FC1: 0.035
+  FC2: 0.030
+  FC3: 0.025
+
+# Current-month landing engine (app/landing/, `make landing`, `make backtest`)
+landing:
+  backtest_months: 24          # closed months evaluated by the backtest
+  weight_window: 12            # past origins used for each BU's ensemble weights
+  residual_window: 24          # past origins used for P10/P90
+  min_bu_residuals: 18         # per-BU intervals need at least this many past errors (else class level)
+  shrink_origins: 6            # shrinkage of BU weights / bias ratios toward class weights / 1
+  profile_min_months: 36       # months needed for a full BU profile (shorter: shrunk to the product line)
+  ets_min_months: 36           # history needed for the ETS method
+  simulation_draws: 1000       # seeded draws for aggregate P10/P90
+  mtd_snapshot_enabled: false  # optional month-to-date input (landing_mtd_snapshot); ignored when false
+
+# Approx. number of BUs (L6) to generate
+target_bu_count: 105
+
+# ASSUMPTION: available hours per direct (production) FTE per month before holidays.
+available_hours_per_direct_fte_month: 150
+
+# Defaults used by the semantic layer / agent
+defaults:
+  period_type: "YTD"
+  comparisons: ["PY", "Budget"]
+  units: "k"
+
+# Guardrails
+sql_guard:
+  row_limit: 1000
+  timeout_seconds: 15

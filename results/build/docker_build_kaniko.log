@@ -1,0 +1,39 @@
+ + tqdm==4.70.1
+ + truststore==0.10.5
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.5
+ + urllib3==2.8.0
+ + uuid-utils==0.19.0
+ + uvicorn==0.54.0
+ + watchdog==7.1.0
+ + websockets==17.4
+ + xxhash==4.1.0
+ + yarl==1.25.1
+ + zipp==4.1.2
+ + zstandard==0.25.0
+INFO[0024] Taking snapshot of full filesystem...        
+INFO[0061] COPY app ./app                               
+INFO[0061] Taking snapshot of files...                  
+INFO[0061] COPY config ./config                         
+INFO[0061] Taking snapshot of files...                  
+INFO[0061] COPY sql ./sql                               
+INFO[0061] Taking snapshot of files...                  
+INFO[0061] COPY scripts ./scripts                       
+INFO[0061] Taking snapshot of files...                  
+INFO[0061] COPY Makefile .env.example ./                
+INFO[0061] Taking snapshot of files...                  
+INFO[0061] COPY data ./data                             
+INFO[0061] Taking snapshot of files...                  
+INFO[0061] RUN useradd -m -u 1000 app && chown -R app:app /app 
+INFO[0061] Cmd: /bin/sh                                 
+INFO[0061] Args: [-c useradd -m -u 1000 app && chown -R app:app /app] 
+INFO[0061] Running: [/bin/sh -c useradd -m -u 1000 app && chown -R app:app /app] 
+INFO[0062] Taking snapshot of full filesystem...        
+INFO[0063] USER app                                     
+INFO[0063] Cmd: USER                                    
+INFO[0063] EXPOSE 8501                                  
+INFO[0063] Cmd: EXPOSE                                  
+INFO[0063] Adding exposed port: 8501/tcp                
+INFO[0063] HEALTHCHECK --interval=30s --timeout=5s CMD curl -fs "http://localhost:${PORT}/_stcore/health" || exit 1 
+INFO[0063] CMD ["sh", "-c", "streamlit run app/ui/streamlit_app.py --server.port ${PORT} --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false"] 
+INFO[0063] Skipping push to container registry due to --no-push flag 

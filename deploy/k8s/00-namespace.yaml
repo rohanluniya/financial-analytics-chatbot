@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ${NAMESPACE}
+  labels:
+    app.kubernetes.io/part-of: iris
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: ${PREFIX}-dev
+  namespace: ${NAMESPACE}

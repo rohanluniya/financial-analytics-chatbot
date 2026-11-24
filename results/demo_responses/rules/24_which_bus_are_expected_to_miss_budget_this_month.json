@@ -1,0 +1,585 @@
+{
+  "answer_markdown": "**Billing landing for Nov 2026 by BU in RL Group: 52 of 106 BUs land below budget at P50 (computed 2026-11-16).**\n\nExpected to miss budget (largest shortfall first): 1. CA-ENV-VAN-01 USD 1.4M (P10-P90 USD 1.2M - USD 1.5M), USD 355k (20.4%) below budget (USD 1.7M), unfavourable; 2. PE-BNI-AQP-01 USD 1.3M (P10-P90 USD 1.0M - USD 1.7M), USD 338k (20.4%) below budget (USD 1.7M), unfavourable; 3. CA-ENV-CAL-02 USD 1.4M (P10-P90 USD 1.2M - USD 1.4M), USD 286k (17.3%) below budget (USD 1.7M), unfavourable; 4. CA-BNI-VAN-01 USD 2.4M (P10-P90 USD 2.2M - USD 2.5M), USD 283k (10.7%) below budget (USD 2.6M), unfavourable; 5. CA-ENV-MTL-01 USD 1.1M (P10-P90 USD 976k - USD 1.2M), USD 271k (19.4%) below budget (USD 1.4M), unfavourable; 6. CA-ENV-TOR-01 USD 983k (P10-P90 USD 843k - USD 1.0M), USD 254k (20.5%) below budget (USD 1.2M), unfavourable; 7. CA-BNI-TOR-01 USD 947k (P10-P90 USD 693k - USD 1.8M), USD 235k (19.9%) below budget (USD 1.2M), unfavourable; 8. BR-MMI-CWB-02 USD 1.1M (P10-P90 USD 859k - USD 1.4M), USD 220k (16.6%) below budget (USD 1.3M), unfavourable; 9. CL-MMI-ANF-03 USD 1.5M (P10-P90 USD 1.0M - USD 2.4M), USD 160k (9.6%) below budget (USD 1.7M), unfavourable; 10. CA-ENV-CAL-01 USD 742k (P10-P90 USD 635k - USD 779k), USD 135k (15.4%) below budget (USD 877k), unfavourable.\n\n- Rank 1: CA-ENV-VAN-01 USD 1.4M (P10-P90 USD 1.2M - USD 1.5M), USD 355k (20.4%) below budget (USD 1.7M), unfavourable\n- Rank 2: PE-BNI-AQP-01 USD 1.3M (P10-P90 USD 1.0M - USD 1.7M), USD 338k (20.4%) below budget (USD 1.7M), unfavourable\n- Rank 3: CA-ENV-CAL-02 USD 1.4M (P10-P90 USD 1.2M - USD 1.4M), USD 286k (17.3%) below budget (USD 1.7M), unfavourable\n- Rank 4: CA-BNI-VAN-01 USD 2.4M (P10-P90 USD 2.2M - USD 2.5M), USD 283k (10.7%) below budget (USD 2.6M), unfavourable\n- Rank 5: CA-ENV-MTL-01 USD 1.1M (P10-P90 USD 976k - USD 1.2M), USD 271k (19.4%) below budget (USD 1.4M), unfavourable\n\n_WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data. Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time._",
+  "table": [
+    {
+      "BU": "CA-ENV-VAN-01",
+      "Landing (P50)": 1390748.77,
+      "P10": 1225759.2794334816,
+      "P90": 1461635.8998179345,
+      "Budget": 1746121.53,
+      "Gap vs budget": -355372.76,
+      "Gap % vs budget": -0.20352120622440295,
+      "FC3": 1467724.7100000002,
+      "Gap vs FC3": -76975.94000000018,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Steady"
+    },
+    {
+      "BU": "PE-BNI-AQP-01",
+      "Landing (P50)": 1317440.98,
+      "P10": 1021750.5786741038,
+      "P90": 1678969.149184463,
+      "Budget": 1655095.9,
+      "Gap vs budget": -337654.9199999999,
+      "Gap % vs budget": -0.20400927825390658,
+      "FC3": 1387474.9200000002,
+      "Gap vs FC3": -70033.94000000018,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Lumpy (project billing)"
+    },
+    {
+      "BU": "CA-ENV-CAL-02",
+      "Landing (P50)": 1364651.03,
+      "P10": 1234274.6128671004,
+      "P90": 1434376.2191873963,
+      "Budget": 1651045.55,
+      "Gap vs budget": -286394.52,
+      "Gap % vs budget": -0.17346251894746334,
+      "FC3": 1318105.3299999998,
+      "Gap vs FC3": 46545.700000000186,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": true,
+      "Billing pattern": "Seasonal (March peak, August dip)"
+    },
+    {
+      "BU": "CA-BNI-VAN-01",
+      "Landing (P50)": 2358000.11,
+      "P10": 2163477.8555821492,
+      "P90": 2522340.8784880694,
+      "Budget": 2640876.63,
+      "Gap vs budget": -282876.52,
+      "Gap % vs budget": -0.10711462882686801,
+      "FC3": 2453824.98,
+      "Gap vs FC3": -95824.87000000011,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Steady"
+    },
+    {
+      "BU": "CA-ENV-MTL-01",
+      "Landing (P50)": 1124192.09,
+      "P10": 975991.1795356276,
+      "P90": 1172212.6398362652,
+      "Budget": 1395341.1600000001,
+      "Gap vs budget": -271149.07000000007,
+      "Gap % vs budget": -0.1943245693404472,
+      "FC3": 1130046.3,
+      "Gap vs FC3": -5854.209999999963,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Seasonal (March peak, August dip)"
+    },
+    {
+      "BU": "CA-ENV-TOR-01",
+      "Landing (P50)": 982504.51,
+      "P10": 843216.4944686479,
+      "P90": 1043303.9568141158,
+      "Budget": 1236459.34,
+      "Gap vs budget": -253954.83000000007,
+      "Gap % vs budget": -0.205388743312821,
+      "FC3": 1031341.3400000001,
+      "Gap vs FC3": -48836.830000000075,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Steady"
+    },
+    {
+      "BU": "CA-BNI-TOR-01",
+      "Landing (P50)": 947409.14,
+      "P10": 692751.4199975426,
+      "P90": 1826459.5620390184,
+      "Budget": 1182858.93,
+      "Gap vs budget": -235449.78999999992,
+      "Gap % vs budget": -0.19905145409013392,
+      "FC3": 988109.27,
+      "Gap vs FC3": -40700.130000000005,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Lumpy (project billing)"
+    },
+    {
+      "BU": "BR-MMI-CWB-02",
+      "Landing (P50)": 1102878.97,
+      "P10": 858921.4359059645,
+      "P90": 1356049.5555165622,
+      "Budget": 1322840.8199999998,
+      "Gap vs budget": -219961.84999999986,
+      "Gap % vs budget": -0.16627990811471927,
+      "FC3": 1172636.25,
+      "Gap vs FC3": -69757.28000000003,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Lumpy (project billing)"
+    },
+    {
+      "BU": "CL-MMI-ANF-03",
+      "Landing (P50)": 1499584.6300000001,
+      "P10": 1033442.8835090413,
+      "P90": 2397731.268328364,
+      "Budget": 1659403.75,
+      "Gap vs budget": -159819.11999999988,
+      "Gap % vs budget": -0.09631117200982575,
+      "FC3": 1502285.34,
+      "Gap vs FC3": -2700.7099999999627,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Lumpy (project billing)"
+    },
+    {
+      "BU": "CA-ENV-CAL-01",
+      "Landing (P50)": 741832.1000000001,
+      "P10": 635139.3177071624,
+      "P90": 778679.9307694251,
+      "Budget": 876835.86,
+      "Gap vs budget": -135003.7599999999,
+      "Gap % vs budget": -0.15396696937098342,
+      "FC3": 743671.0,
+      "Gap vs FC3": -1838.8999999999069,
+      "_fav_Gap vs budget": false,
+      "_fav_Gap vs FC3": false,
+      "Billing pattern": "Seasonal (March peak, August dip)"
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "BU",
+      "Landing (P50)",
+      "P10",
+      "P90",
+      "Budget",
+      "Gap vs budget",
+      "Gap % vs budget",
+      "FC3",
+      "Gap vs FC3",
+      "Billing pattern"
+    ],
+    "rows": [
+      {
+        "BU": "CA-ENV-VAN-01",
+        "Landing (P50)": 1390748.77,
+        "P10": 1225759.2794334816,
+        "P90": 1461635.8998179345,
+        "Budget": 1746121.53,
+        "Gap vs budget": -355372.76,
+        "Gap % vs budget": -0.20352120622440295,
+        "FC3": 1467724.7100000002,
+        "Gap vs FC3": -76975.94000000018,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Steady"
+      },
+      {
+        "BU": "PE-BNI-AQP-01",
+        "Landing (P50)": 1317440.98,
+        "P10": 1021750.5786741038,
+        "P90": 1678969.149184463,
+        "Budget": 1655095.9,
+        "Gap vs budget": -337654.9199999999,
+        "Gap % vs budget": -0.20400927825390658,
+        "FC3": 1387474.9200000002,
+        "Gap vs FC3": -70033.94000000018,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Lumpy (project billing)"
+      },
+      {
+        "BU": "CA-ENV-CAL-02",
+        "Landing (P50)": 1364651.03,
+        "P10": 1234274.6128671004,
+        "P90": 1434376.2191873963,
+        "Budget": 1651045.55,
+        "Gap vs budget": -286394.52,
+        "Gap % vs budget": -0.17346251894746334,
+        "FC3": 1318105.3299999998,
+        "Gap vs FC3": 46545.700000000186,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": true,
+        "Billing pattern": "Seasonal (March peak, August dip)"
+      },
+      {
+        "BU": "CA-BNI-VAN-01",
+        "Landing (P50)": 2358000.11,
+        "P10": 2163477.8555821492,
+        "P90": 2522340.8784880694,
+        "Budget": 2640876.63,
+        "Gap vs budget": -282876.52,
+        "Gap % vs budget": -0.10711462882686801,
+        "FC3": 2453824.98,
+        "Gap vs FC3": -95824.87000000011,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Steady"
+      },
+      {
+        "BU": "CA-ENV-MTL-01",
+        "Landing (P50)": 1124192.09,
+        "P10": 975991.1795356276,
+        "P90": 1172212.6398362652,
+        "Budget": 1395341.1600000001,
+        "Gap vs budget": -271149.07000000007,
+        "Gap % vs budget": -0.1943245693404472,
+        "FC3": 1130046.3,
+        "Gap vs FC3": -5854.209999999963,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Seasonal (March peak, August dip)"
+      },
+      {
+        "BU": "CA-ENV-TOR-01",
+        "Landing (P50)": 982504.51,
+        "P10": 843216.4944686479,
+        "P90": 1043303.9568141158,
+        "Budget": 1236459.34,
+        "Gap vs budget": -253954.83000000007,
+        "Gap % vs budget": -0.205388743312821,
+        "FC3": 1031341.3400000001,
+        "Gap vs FC3": -48836.830000000075,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Steady"
+      },
+      {
+        "BU": "CA-BNI-TOR-01",
+        "Landing (P50)": 947409.14,
+        "P10": 692751.4199975426,
+        "P90": 1826459.5620390184,
+        "Budget": 1182858.93,
+        "Gap vs budget": -235449.78999999992,
+        "Gap % vs budget": -0.19905145409013392,
+        "FC3": 988109.27,
+        "Gap vs FC3": -40700.130000000005,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Lumpy (project billing)"
+      },
+      {
+        "BU": "BR-MMI-CWB-02",
+        "Landing (P50)": 1102878.97,
+        "P10": 858921.4359059645,
+        "P90": 1356049.5555165622,
+        "Budget": 1322840.8199999998,
+        "Gap vs budget": -219961.84999999986,
+        "Gap % vs budget": -0.16627990811471927,
+        "FC3": 1172636.25,
+        "Gap vs FC3": -69757.28000000003,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Lumpy (project billing)"
+      },
+      {
+        "BU": "CL-MMI-ANF-03",
+        "Landing (P50)": 1499584.6300000001,
+        "P10": 1033442.8835090413,
+        "P90": 2397731.268328364,
+        "Budget": 1659403.75,
+        "Gap vs budget": -159819.11999999988,
+        "Gap % vs budget": -0.09631117200982575,
+        "FC3": 1502285.34,
+        "Gap vs FC3": -2700.7099999999627,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Lumpy (project billing)"
+      },
+      {
+        "BU": "CA-ENV-CAL-01",
+        "Landing (P50)": 741832.1000000001,
+        "P10": 635139.3177071624,
+        "P90": 778679.9307694251,
+        "Budget": 876835.86,
+        "Gap vs budget": -135003.7599999999,
+        "Gap % vs budget": -0.15396696937098342,
+        "FC3": 743671.0,
+        "Gap vs FC3": -1838.8999999999069,
+        "_fav_Gap vs budget": false,
+        "_fav_Gap vs FC3": false,
+        "Billing pattern": "Seasonal (March peak, August dip)"
+      }
+    ],
+    "col_fmt": {
+      "Landing (P50)": "eur",
+      "P10": "eur",
+      "P90": "eur",
+      "Budget": "eur",
+      "Gap vs budget": "eur",
+      "Gap % vs budget": "pct",
+      "FC3": "eur",
+      "Gap vs FC3": "eur"
+    },
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "fav": {
+          "Gap vs budget": false,
+          "Gap vs FC3": false
+        }
+      }
+    ],
+    "caption": "Billing landing for Nov 2026 (P50 with P10-P90) vs budget and FC3. WIP is 0 in the landing month, so the revenue landing equals the billing landing.",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "hbar",
+    "title": "Billing landing vs budget, Nov 2026 - RL Group",
+    "fmt": "eur",
+    "x": "value",
+    "y": [
+      "label"
+    ],
+    "data": [
+      {
+        "label": "CA-ENV-VAN-01",
+        "value": -355372.76,
+        "fav": false
+      },
+      {
+        "label": "PE-BNI-AQP-01",
+        "value": -337654.9199999999,
+        "fav": false
+      },
+      {
+        "label": "CA-ENV-CAL-02",
+        "value": -286394.52,
+        "fav": false
+      },
+      {
+        "label": "CA-BNI-VAN-01",
+        "value": -282876.52,
+        "fav": false
+      },
+      {
+        "label": "CA-ENV-MTL-01",
+        "value": -271149.07000000007,
+        "fav": false
+      },
+      {
+        "label": "CA-ENV-TOR-01",
+        "value": -253954.83000000007,
+        "fav": false
+      },
+      {
+        "label": "CA-BNI-TOR-01",
+        "value": -235449.78999999992,
+        "fav": false
+      },
+      {
+        "label": "BR-MMI-CWB-02",
+        "value": -219961.84999999986,
+        "fav": false
+      },
+      {
+        "label": "CL-MMI-ANF-03",
+        "value": -159819.11999999988,
+        "fav": false
+      },
+      {
+        "label": "CA-ENV-CAL-01",
+        "value": -135003.7599999999,
+        "fav": false
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "RL Group",
+    "org_filter": {},
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "Nov 2026 (landing)",
+    "months": "Nov 2026",
+    "versions": [
+      "Landing (P50, P10-P90)"
+    ],
+    "landing_snapshot": "2026-11-16",
+    "landing_month": "Nov 2026",
+    "source": "landing engine (monthly history; WIP = 0)",
+    "sql": null,
+    "notes": [
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing. The landing uses monthly history only (closed-month actuals, Budget and forecasts); there is no intra-month data.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "applied": [
+      "Scope: RL Group (default)",
+      "Period: Nov 2026 (landing) (from your question)",
+      "Versions: Landing (from your question)"
+    ]
+  },
+  "sql_used": [],
+  "followups": [
+    "Explain the landing for CA-ENV-VAN-01",
+    "What's the Nov landing for CA-ENV-VAN-01?",
+    "Revenue YTD till Nov with landing vs budget for RL Group"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "rank_landing",
+        "arguments": {
+          "metric": "billing",
+          "org_level": "l6_bu",
+          "parent_filter": "",
+          "top_n": 10,
+          "sort_by": "gap_vs_budget"
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "rank_landing",
+      "arguments": {
+        "metric": "billing",
+        "org_level": "l6_bu",
+        "parent_filter": "",
+        "top_n": 10,
+        "sort_by": "gap_vs_budget"
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.011,
+      "plan": 0.0,
+      "act": 2.6,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "(user default scope)",
+      "metric_or_ratio": "(not specified)",
+      "period": "Nov 2026",
+      "versions": [
+        "Budget"
+      ],
+      "comparisons": [],
+      "intents": [
+        "rank",
+        "landing"
+      ],
+      "rank_by_level": "l6_bu"
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Billing landing for Nov 2026 by BU in RL Group: 52 of 106 BUs land below budget at P50 (computed 2026-11-16).",
+      "Expected to miss budget (largest shortfall first): 1. CA-ENV-VAN-01 USD 1.4M (P10-P90 USD 1.2M - USD 1.5M), USD 355k (20.4%) below budget (USD 1.7M), unfavourable; 2. PE-BNI-AQP-01 USD 1.3M (P10-P90 USD 1.0M - USD 1.7M), USD 338k (20.4%) below budget (USD 1.7M), unfavourable; 3. CA-ENV-CAL-02 USD 1.4M (P10-P90 USD 1.2M - USD 1.4M), USD 286k (17.3%) below budget (USD 1.7M), unfavourable; 4. CA-BNI-VAN-01 USD 2.4M (P10-P90 USD 2.2M - USD 2.5M), USD 283k (10.7%) below budget (USD 2.6M), unfavourable; 5. CA-ENV-MTL-01 USD 1.1M (P10-P90 USD 976k - USD 1.2M), USD 271k (19.4%) below budget (USD 1.4M), unfavourable; 6. CA-ENV-TOR-01 USD 983k (P10-P90 USD 843k - USD 1.0M), USD 254k (20.5%) below budget (USD 1.2M), unfavourable; 7. CA-BNI-TOR-01 USD 947k (P10-P90 USD 693k - USD 1.8M), USD 235k (19.9%) below budget (USD 1.2M), unfavourable; 8. BR-MMI-CWB-02 USD 1.1M (P10-P90 USD 859k - USD 1.4M), USD 220k (16.6%) below budget (USD 1.3M), unfavourable; 9. CL-MMI-ANF-03 USD 1.5M (P10-P90 USD 1.0M - USD 2.4M), USD 160k (9.6%) below budget (USD 1.7M), unfavourable; 10. CA-ENV-CAL-01 USD 742k (P10-P90 USD 635k - USD 779k), USD 135k (15.4%) below budget (USD 877k), unfavourable.",
+      "WIP is 0 in the landing month, so the revenue landing equals the billing landing.",
+      "Backtest (measured): group billing error (WAPE) 1.0% over the last 24 closed months, vs 2.3% for the latest forecast as published, BU actuals fell inside P10-P90 74% of the time."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 2.61
+  }
+}

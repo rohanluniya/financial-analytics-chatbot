@@ -1,0 +1,20 @@
+[theme]
+base = "light"
+primaryColor = "#0F766E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F1F5F9"
+textColor = "#0F172A"
+font = "sans serif"
+
+[client]
+# Hides the Deploy button and the developer menu
+toolbarMode = "minimal"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+# The app is reached only through localhost (`make run` or `make k8s-forward`). Setting this also stops
+# Streamlit from looking up the machine's public IP and printing it as an "External URL" at startup.
+serverAddress = "localhost"

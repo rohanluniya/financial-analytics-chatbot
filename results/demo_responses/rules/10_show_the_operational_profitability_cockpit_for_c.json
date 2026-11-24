@@ -1,0 +1,921 @@
+{
+  "answer_markdown": "**KPI cockpit for Canada: MTD = Oct 2026, YTD = Jan-Oct 2026; Actual vs LY (prior year) and vs Budget; USD at budget rate.**\n\n- Direct margin: MTD 61.4% (3.0 pp below LY, unfavourable; 2.9 pp below Budget, unfavourable); YTD 61.5% (1.3 pp below LY, unfavourable; 2.5 pp below Budget, unfavourable)\n- Utilization rate (billable / available hours): MTD 73.7% (4.5 pp below LY, unfavourable; 2.5 pp below Budget, unfavourable); YTD 73.3% (2.7 pp below LY, unfavourable; 2.9 pp below Budget, unfavourable)\n- Production per FTE (annualised): MTD USD 199k (5.2% below LY, unfavourable; 7.6% below Budget, unfavourable); YTD USD 198k (0.7% below LY, unfavourable; 7.0% below Budget, unfavourable)\n- Overtime ratio (overtime / available hours): MTD 7.0% (1.3 pp below LY, favourable; 0.9 pp below Budget, favourable); YTD 6.0% (0.6 pp below LY, favourable; 0.7 pp below Budget, favourable)",
+  "table": [
+    {
+      "KPI": "Direct margin",
+      "_code": "direct_margin",
+      "_fmt": "pct",
+      "_kind": "line",
+      "_favorable": "up",
+      "MTD": 0.6141131990046498,
+      "MTD vs LY": -0.030261443482576533,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": -0.029115660351703765,
+      "_fav_MTD vs Budget": false,
+      "YTD": 0.6154031107267633,
+      "YTD vs LY": -0.013329053682378134,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": -0.024566971378686242,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Production",
+      "_code": "production",
+      "_fmt": "eur",
+      "_kind": "line",
+      "_favorable": "up",
+      "MTD": 17569469.68,
+      "MTD vs LY": -0.08684305654739709,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": -0.13150142492910644,
+      "_fav_MTD vs Budget": false,
+      "YTD": 177849684.69000003,
+      "YTD vs LY": -0.0232064571794561,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": -0.11251857939285642,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Direct staff costs",
+      "_code": "personnel_7a",
+      "_fmt": "eur",
+      "_kind": "line",
+      "_favorable": "down",
+      "MTD": 6779826.45,
+      "MTD vs LY": -0.00913924085697433,
+      "_fav_MTD vs LY": true,
+      "MTD vs Budget": -0.060624308909904084,
+      "_fav_MTD vs Budget": true,
+      "YTD": 68400435.49,
+      "YTD vs LY": 0.011861847480264854,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": -0.05196047137040785,
+      "_fav_YTD vs Budget": true
+    },
+    {
+      "KPI": "Utilization rate (billable / available hours)",
+      "_code": "utilization_rate",
+      "_fmt": "pct",
+      "_kind": "line",
+      "_favorable": "up",
+      "MTD": 0.7374237679710525,
+      "MTD vs LY": -0.045099594344197524,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": -0.02471116405706819,
+      "_fav_MTD vs Budget": false,
+      "YTD": 0.7330914831933724,
+      "YTD vs LY": -0.0269724664472909,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": -0.029042886207539143,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Production per billable hour",
+      "_code": "production_per_hour",
+      "_fmt": "eur",
+      "_kind": "line",
+      "_favorable": "up",
+      "MTD": 190.85922572038766,
+      "MTD vs LY": 0.00260217316863845,
+      "_fav_MTD vs LY": true,
+      "MTD vs Budget": -0.04480969136278908,
+      "_fav_MTD vs Budget": false,
+      "YTD": 198.10494455669362,
+      "YTD vs LY": 0.028280373136644745,
+      "_fav_YTD vs LY": true,
+      "YTD vs Budget": -0.032514209480259515,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Production per FTE (annualised)",
+      "_code": "production_per_fte",
+      "_fmt": "eur",
+      "_kind": "line",
+      "_favorable": "up",
+      "MTD": 199049.883081571,
+      "MTD vs LY": -0.051841006033636026,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": -0.07572794203982938,
+      "_fav_MTD vs Budget": false,
+      "YTD": 198330.62748866258,
+      "YTD vs LY": -0.006885414227339778,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": -0.0703416038428515,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Overtime ratio (overtime / available hours)",
+      "_code": "overtime_ratio",
+      "_fmt": "pct",
+      "_kind": "line",
+      "_favorable": "down",
+      "MTD": 0.07033413520656046,
+      "MTD vs LY": -0.0130579103799556,
+      "_fav_MTD vs LY": true,
+      "MTD vs Budget": -0.009199625653169577,
+      "_fav_MTD vs Budget": true,
+      "YTD": 0.06014951146690907,
+      "YTD vs LY": -0.006173349612798848,
+      "_fav_YTD vs LY": true,
+      "YTD vs Budget": -0.0067079654888314855,
+      "_fav_YTD vs Budget": true
+    },
+    {
+      "KPI": "Production hourly cost (direct staff cost per billable hour)",
+      "_code": "production_hourly_cost",
+      "_fmt": "eur",
+      "_kind": "line",
+      "_favorable": "down",
+      "MTD": 73.65005605368987,
+      "MTD vs LY": 0.0879172058509221,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": 0.033142231955186244,
+      "_fav_MTD vs Budget": false,
+      "YTD": 76.19054542615139,
+      "YTD vs LY": 0.06519712966703926,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": 0.03350307003912081,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Direct staff costs / Production",
+      "_code": "direct_labor_to_production",
+      "_fmt": "pct",
+      "_kind": "line",
+      "_favorable": "down",
+      "MTD": 0.3858868009953503,
+      "MTD vs LY": 0.030261443482576533,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": 0.02911566035170382,
+      "_fav_MTD vs Budget": false,
+      "YTD": 0.38459688927323665,
+      "YTD vs LY": 0.013329053682378189,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": 0.024566971378686187,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Gross margin",
+      "_code": "gross_margin",
+      "_fmt": "pct",
+      "_kind": "line",
+      "_favorable": "up",
+      "MTD": 0.22833731484603356,
+      "MTD vs LY": -0.046539570159351534,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": -0.04968863964754719,
+      "_fav_MTD vs Budget": false,
+      "YTD": 0.23081702670180881,
+      "YTD vs LY": -0.022056198625004075,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": -0.04330464520647437,
+      "_fav_YTD vs Budget": false
+    },
+    {
+      "KPI": "Operating margin on revenue",
+      "_code": "maop_margin_revenue",
+      "_fmt": "pct",
+      "_kind": "line",
+      "_favorable": "up",
+      "MTD": 0.11585836709244224,
+      "MTD vs LY": -0.061571029839205704,
+      "_fav_MTD vs LY": false,
+      "MTD vs Budget": -0.06459898685377058,
+      "_fav_MTD vs Budget": false,
+      "YTD": 0.12107516342923556,
+      "YTD vs LY": -0.029982174554382943,
+      "_fav_YTD vs LY": false,
+      "YTD vs Budget": -0.054603463501203056,
+      "_fav_YTD vs Budget": false
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "KPI",
+      "MTD",
+      "MTD vs LY",
+      "MTD vs Budget",
+      "YTD",
+      "YTD vs LY",
+      "YTD vs Budget"
+    ],
+    "rows": [
+      {
+        "KPI": "Direct margin",
+        "_code": "direct_margin",
+        "_fmt": "pct",
+        "_kind": "line",
+        "_favorable": "up",
+        "MTD": 0.6141131990046498,
+        "MTD vs LY": -0.030261443482576533,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": -0.029115660351703765,
+        "_fav_MTD vs Budget": false,
+        "YTD": 0.6154031107267633,
+        "YTD vs LY": -0.013329053682378134,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": -0.024566971378686242,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Production",
+        "_code": "production",
+        "_fmt": "eur",
+        "_kind": "line",
+        "_favorable": "up",
+        "MTD": 17569469.68,
+        "MTD vs LY": -0.08684305654739709,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": -0.13150142492910644,
+        "_fav_MTD vs Budget": false,
+        "YTD": 177849684.69000003,
+        "YTD vs LY": -0.0232064571794561,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": -0.11251857939285642,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Direct staff costs",
+        "_code": "personnel_7a",
+        "_fmt": "eur",
+        "_kind": "line",
+        "_favorable": "down",
+        "MTD": 6779826.45,
+        "MTD vs LY": -0.00913924085697433,
+        "_fav_MTD vs LY": true,
+        "MTD vs Budget": -0.060624308909904084,
+        "_fav_MTD vs Budget": true,
+        "YTD": 68400435.49,
+        "YTD vs LY": 0.011861847480264854,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": -0.05196047137040785,
+        "_fav_YTD vs Budget": true
+      },
+      {
+        "KPI": "Utilization rate (billable / available hours)",
+        "_code": "utilization_rate",
+        "_fmt": "pct",
+        "_kind": "line",
+        "_favorable": "up",
+        "MTD": 0.7374237679710525,
+        "MTD vs LY": -0.045099594344197524,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": -0.02471116405706819,
+        "_fav_MTD vs Budget": false,
+        "YTD": 0.7330914831933724,
+        "YTD vs LY": -0.0269724664472909,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": -0.029042886207539143,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Production per billable hour",
+        "_code": "production_per_hour",
+        "_fmt": "eur",
+        "_kind": "line",
+        "_favorable": "up",
+        "MTD": 190.85922572038766,
+        "MTD vs LY": 0.00260217316863845,
+        "_fav_MTD vs LY": true,
+        "MTD vs Budget": -0.04480969136278908,
+        "_fav_MTD vs Budget": false,
+        "YTD": 198.10494455669362,
+        "YTD vs LY": 0.028280373136644745,
+        "_fav_YTD vs LY": true,
+        "YTD vs Budget": -0.032514209480259515,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Production per FTE (annualised)",
+        "_code": "production_per_fte",
+        "_fmt": "eur",
+        "_kind": "line",
+        "_favorable": "up",
+        "MTD": 199049.883081571,
+        "MTD vs LY": -0.051841006033636026,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": -0.07572794203982938,
+        "_fav_MTD vs Budget": false,
+        "YTD": 198330.62748866258,
+        "YTD vs LY": -0.006885414227339778,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": -0.0703416038428515,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Overtime ratio (overtime / available hours)",
+        "_code": "overtime_ratio",
+        "_fmt": "pct",
+        "_kind": "line",
+        "_favorable": "down",
+        "MTD": 0.07033413520656046,
+        "MTD vs LY": -0.0130579103799556,
+        "_fav_MTD vs LY": true,
+        "MTD vs Budget": -0.009199625653169577,
+        "_fav_MTD vs Budget": true,
+        "YTD": 0.06014951146690907,
+        "YTD vs LY": -0.006173349612798848,
+        "_fav_YTD vs LY": true,
+        "YTD vs Budget": -0.0067079654888314855,
+        "_fav_YTD vs Budget": true
+      },
+      {
+        "KPI": "Production hourly cost (direct staff cost per billable hour)",
+        "_code": "production_hourly_cost",
+        "_fmt": "eur",
+        "_kind": "line",
+        "_favorable": "down",
+        "MTD": 73.65005605368987,
+        "MTD vs LY": 0.0879172058509221,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": 0.033142231955186244,
+        "_fav_MTD vs Budget": false,
+        "YTD": 76.19054542615139,
+        "YTD vs LY": 0.06519712966703926,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": 0.03350307003912081,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Direct staff costs / Production",
+        "_code": "direct_labor_to_production",
+        "_fmt": "pct",
+        "_kind": "line",
+        "_favorable": "down",
+        "MTD": 0.3858868009953503,
+        "MTD vs LY": 0.030261443482576533,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": 0.02911566035170382,
+        "_fav_MTD vs Budget": false,
+        "YTD": 0.38459688927323665,
+        "YTD vs LY": 0.013329053682378189,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": 0.024566971378686187,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Gross margin",
+        "_code": "gross_margin",
+        "_fmt": "pct",
+        "_kind": "line",
+        "_favorable": "up",
+        "MTD": 0.22833731484603356,
+        "MTD vs LY": -0.046539570159351534,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": -0.04968863964754719,
+        "_fav_MTD vs Budget": false,
+        "YTD": 0.23081702670180881,
+        "YTD vs LY": -0.022056198625004075,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": -0.04330464520647437,
+        "_fav_YTD vs Budget": false
+      },
+      {
+        "KPI": "Operating margin on revenue",
+        "_code": "maop_margin_revenue",
+        "_fmt": "pct",
+        "_kind": "line",
+        "_favorable": "up",
+        "MTD": 0.11585836709244224,
+        "MTD vs LY": -0.061571029839205704,
+        "_fav_MTD vs LY": false,
+        "MTD vs Budget": -0.06459898685377058,
+        "_fav_MTD vs Budget": false,
+        "YTD": 0.12107516342923556,
+        "YTD vs LY": -0.029982174554382943,
+        "_fav_YTD vs LY": false,
+        "YTD vs Budget": -0.054603463501203056,
+        "_fav_YTD vs Budget": false
+      }
+    ],
+    "col_fmt": {},
+    "row_meta": [
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "pct",
+          "YTD": "pct",
+          "MTD vs LY": "pp",
+          "MTD vs Budget": "pp",
+          "YTD vs LY": "pp",
+          "YTD vs Budget": "pp"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "eur",
+          "YTD": "eur",
+          "MTD vs LY": "pct",
+          "MTD vs Budget": "pct",
+          "YTD vs LY": "pct",
+          "YTD vs Budget": "pct"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "eur",
+          "YTD": "eur",
+          "MTD vs LY": "pct",
+          "MTD vs Budget": "pct",
+          "YTD vs LY": "pct",
+          "YTD vs Budget": "pct"
+        },
+        "fav": {
+          "MTD vs LY": true,
+          "MTD vs Budget": true,
+          "YTD vs LY": false,
+          "YTD vs Budget": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "pct",
+          "YTD": "pct",
+          "MTD vs LY": "pp",
+          "MTD vs Budget": "pp",
+          "YTD vs LY": "pp",
+          "YTD vs Budget": "pp"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "rate",
+          "YTD": "rate",
+          "MTD vs LY": "pct",
+          "MTD vs Budget": "pct",
+          "YTD vs LY": "pct",
+          "YTD vs Budget": "pct"
+        },
+        "fav": {
+          "MTD vs LY": true,
+          "MTD vs Budget": false,
+          "YTD vs LY": true,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "rate",
+          "YTD": "rate",
+          "MTD vs LY": "pct",
+          "MTD vs Budget": "pct",
+          "YTD vs LY": "pct",
+          "YTD vs Budget": "pct"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "pct",
+          "YTD": "pct",
+          "MTD vs LY": "pp",
+          "MTD vs Budget": "pp",
+          "YTD vs LY": "pp",
+          "YTD vs Budget": "pp"
+        },
+        "fav": {
+          "MTD vs LY": true,
+          "MTD vs Budget": true,
+          "YTD vs LY": true,
+          "YTD vs Budget": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "rate",
+          "YTD": "rate",
+          "MTD vs LY": "pct",
+          "MTD vs Budget": "pct",
+          "YTD vs LY": "pct",
+          "YTD vs Budget": "pct"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "pct",
+          "YTD": "pct",
+          "MTD vs LY": "pp",
+          "MTD vs Budget": "pp",
+          "YTD vs LY": "pp",
+          "YTD vs Budget": "pp"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "pct",
+          "YTD": "pct",
+          "MTD vs LY": "pp",
+          "MTD vs Budget": "pp",
+          "YTD vs LY": "pp",
+          "YTD vs Budget": "pp"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": null,
+        "col_fmt": {
+          "MTD": "pct",
+          "YTD": "pct",
+          "MTD vs LY": "pp",
+          "MTD vs Budget": "pp",
+          "YTD vs LY": "pp",
+          "YTD vs Budget": "pp"
+        },
+        "fav": {
+          "MTD vs LY": false,
+          "MTD vs Budget": false,
+          "YTD vs LY": false,
+          "YTD vs Budget": false
+        }
+      }
+    ],
+    "caption": "MTD = month to date, YTD = year to date. Amount variances in %, ratio variances in percentage points; green = favourable.",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "combo",
+    "title": "Direct margin by month - Canada (Actual bars, LY and Budget lines)",
+    "fmt": "pct",
+    "x": "Month",
+    "y": [
+      "Actual",
+      "PY",
+      "Budget"
+    ],
+    "data": [
+      {
+        "month_key": 202601,
+        "Month": "Jan 2026",
+        "Actual": 0.61089624502384,
+        "Actual R12M": 0.6294478025830382,
+        "PY": 0.6281305859006944,
+        "Budget": 0.6206923016858943
+      },
+      {
+        "month_key": 202602,
+        "Month": "Feb 2026",
+        "Actual": 0.613268721520044,
+        "Actual R12M": 0.6291214140222287,
+        "PY": 0.6168626954878937,
+        "Budget": 0.6339762839577506
+      },
+      {
+        "month_key": 202603,
+        "Month": "Mar 2026",
+        "Actual": 0.6084817938192074,
+        "Actual R12M": 0.6260449562984765,
+        "PY": 0.6437170739294873,
+        "Budget": 0.687015804065428
+      },
+      {
+        "month_key": 202604,
+        "Month": "Apr 2026",
+        "Actual": 0.5950817068369254,
+        "Actual R12M": 0.6253648938524504,
+        "PY": 0.6030744448192912,
+        "Budget": 0.6369543914219638
+      },
+      {
+        "month_key": 202605,
+        "Month": "May 2026",
+        "Actual": 0.5902541997555576,
+        "Actual R12M": 0.6208002048778907,
+        "PY": 0.6477319308987496,
+        "Budget": 0.624598255196951
+      },
+      {
+        "month_key": 202606,
+        "Month": "Jun 2026",
+        "Actual": 0.6657527017419075,
+        "Actual R12M": 0.6204132783497104,
+        "PY": 0.6687157437541705,
+        "Budget": 0.6706991411016039
+      },
+      {
+        "month_key": 202607,
+        "Month": "Jul 2026",
+        "Actual": 0.588423364014879,
+        "Actual R12M": 0.6189624908344251,
+        "PY": 0.6086016942085867,
+        "Budget": 0.6280032572757798
+      },
+      {
+        "month_key": 202608,
+        "Month": "Aug 2026",
+        "Actual": 0.5492524406656422,
+        "Actual R12M": 0.6195769040772422,
+        "PY": 0.5390907932069244,
+        "Budget": 0.5515811052532074
+      },
+      {
+        "month_key": 202609,
+        "Month": "Sep 2026",
+        "Actual": 0.6815698445588889,
+        "Actual R12M": 0.622542409549625,
+        "PY": 0.654050202187991,
+        "Budget": 0.6691752281247463
+      },
+      {
+        "month_key": 202610,
+        "Month": "Oct 2026",
+        "Actual": 0.6141131990046498,
+        "Actual R12M": 0.619919007514482,
+        "PY": 0.6443746424872263,
+        "Budget": 0.6432288593563535
+      }
+    ],
+    "meta": {
+      "bars": [
+        "Actual"
+      ],
+      "lines": [
+        "PY",
+        "Budget"
+      ]
+    }
+  },
+  "filters_used": {
+    "org": "Canada",
+    "org_filter": {
+      "l3_country": [
+        "Canada"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "MTD Oct 2026 and YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual",
+      "PY (LY)",
+      "Budget"
+    ],
+    "applied": [
+      "Scope: Canada (from your question)",
+      "Period: MTD Oct 2026 and YTD Oct 2026 (default)",
+      "Versions: Actual, PY, Budget (default)"
+    ]
+  },
+  "sql_used": [
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202610 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_stats.month_key BETWEEN 202610 AND 202610 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202510 AND 202510 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_stats.month_key BETWEEN 202510 AND 202510 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_pnl.month_key BETWEEN 202610 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_stats.month_key BETWEEN 202610 AND 202610 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_stats.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_stats.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.account_id",
+    "SELECT sum(fact_stats.fte) AS fte_sum, sum(fact_stats.headcount) AS headcount_sum, sum(fact_stats.direct_fte) AS direct_fte_sum, sum(fact_stats.billable_hours) AS billable_hours_sum, sum(fact_stats.available_hours) AS available_hours_sum, sum(fact_stats.overtime_hours) AS overtime_hours_sum, count(DISTINCT fact_stats.month_key) AS n_months \nFROM fact_stats JOIN dim_org ON fact_stats.bu_id = dim_org.bu_id JOIN dim_version ON fact_stats.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_stats.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada')",
+    "SELECT fact_pnl.month_key, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202502 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.month_key, fact_pnl.account_id",
+    "SELECT fact_pnl.month_key, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202501 AND 202510 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.month_key, fact_pnl.account_id",
+    "SELECT fact_pnl.month_key, fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Canada') GROUP BY fact_pnl.month_key, fact_pnl.account_id"
+  ],
+  "followups": [
+    "Why did direct margin change vs last year for Canada?",
+    "Show the utilization rate trend for Canada since 2025",
+    "Rank product lines in Canada by direct margin this year"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "get_kpi_cockpit",
+        "arguments": {
+          "org": "Canada",
+          "month": ""
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "get_kpi_cockpit",
+      "arguments": {
+        "org": "Canada",
+        "month": ""
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.006,
+      "plan": 0.0,
+      "act": 0.471,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "Canada",
+      "metric_or_ratio": "maop_margin_revenue",
+      "period": "(default: YTD)",
+      "versions": [],
+      "comparisons": [],
+      "intents": [
+        "cockpit"
+      ]
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "KPI cockpit for Canada: MTD = Oct 2026, YTD = Jan-Oct 2026; Actual vs LY (prior year) and vs Budget; USD at budget rate.",
+      "Direct margin: MTD 61.4% (3.0 pp below LY, unfavourable; 2.9 pp below Budget, unfavourable); YTD 61.5% (1.3 pp below LY, unfavourable; 2.5 pp below Budget, unfavourable).",
+      "Production: MTD USD 17.6M (8.7% below LY, unfavourable; 13.2% below Budget, unfavourable); YTD USD 177.8M (2.3% below LY, unfavourable; 11.3% below Budget, unfavourable).",
+      "Direct staff costs: MTD USD 6.8M (0.9% lower than LY, favourable; 6.1% lower than Budget, favourable); YTD USD 68.4M (1.2% higher than LY, unfavourable; 5.2% lower than Budget, favourable).",
+      "Utilization rate (billable / available hours): MTD 73.7% (4.5 pp below LY, unfavourable; 2.5 pp below Budget, unfavourable); YTD 73.3% (2.7 pp below LY, unfavourable; 2.9 pp below Budget, unfavourable).",
+      "Production per billable hour: MTD USD 190.9 (0.3% above LY, favourable; 4.5% below Budget, unfavourable); YTD USD 198.1 (2.8% above LY, favourable; 3.3% below Budget, unfavourable).",
+      "Production per FTE (annualised): MTD USD 199k (5.2% below LY, unfavourable; 7.6% below Budget, unfavourable); YTD USD 198k (0.7% below LY, unfavourable; 7.0% below Budget, unfavourable).",
+      "Overtime ratio (overtime / available hours): MTD 7.0% (1.3 pp below LY, favourable; 0.9 pp below Budget, favourable); YTD 6.0% (0.6 pp below LY, favourable; 0.7 pp below Budget, favourable).",
+      "Production hourly cost (direct staff cost per billable hour): MTD USD 73.7 (8.8% higher than LY, unfavourable; 3.3% higher than Budget, unfavourable); YTD USD 76.2 (6.5% higher than LY, unfavourable; 3.4% higher than Budget, unfavourable).",
+      "Direct staff costs / Production: MTD 38.6% (3.0 pp above LY, unfavourable; 2.9 pp above Budget, unfavourable); YTD 38.5% (1.3 pp above LY, unfavourable; 2.5 pp above Budget, unfavourable).",
+      "Gross margin: MTD 22.8% (4.7 pp below LY, unfavourable; 5.0 pp below Budget, unfavourable); YTD 23.1% (2.2 pp below LY, unfavourable; 4.3 pp below Budget, unfavourable).",
+      "Operating margin on revenue: MTD 11.6% (6.2 pp below LY, unfavourable; 6.5 pp below Budget, unfavourable); YTD 12.1% (3.0 pp below LY, unfavourable; 5.5 pp below Budget, unfavourable)."
+    ],
+    "evidence": {
+      "extra": {
+        "trend": [
+          {
+            "month_key": 202601,
+            "Month": "Jan 2026",
+            "Actual": 0.61089624502384,
+            "Actual R12M": 0.6294478025830382,
+            "PY": 0.6281305859006944,
+            "Budget": 0.6206923016858943
+          },
+          {
+            "month_key": 202602,
+            "Month": "Feb 2026",
+            "Actual": 0.613268721520044,
+            "Actual R12M": 0.6291214140222287,
+            "PY": 0.6168626954878937,
+            "Budget": 0.6339762839577506
+          },
+          {
+            "month_key": 202603,
+            "Month": "Mar 2026",
+            "Actual": 0.6084817938192074,
+            "Actual R12M": 0.6260449562984765,
+            "PY": 0.6437170739294873,
+            "Budget": 0.687015804065428
+          },
+          {
+            "month_key": 202604,
+            "Month": "Apr 2026",
+            "Actual": 0.5950817068369254,
+            "Actual R12M": 0.6253648938524504,
+            "PY": 0.6030744448192912,
+            "Budget": 0.6369543914219638
+          },
+          {
+            "month_key": 202605,
+            "Month": "May 2026",
+            "Actual": 0.5902541997555576,
+            "Actual R12M": 0.6208002048778907,
+            "PY": 0.6477319308987496,
+            "Budget": 0.624598255196951
+          },
+          {
+            "month_key": 202606,
+            "Month": "Jun 2026",
+            "Actual": 0.6657527017419075,
+            "Actual R12M": 0.6204132783497104,
+            "PY": 0.6687157437541705,
+            "Budget": 0.6706991411016039
+          },
+          {
+            "month_key": 202607,
+            "Month": "Jul 2026",
+            "Actual": 0.588423364014879,
+            "Actual R12M": 0.6189624908344251,
+            "PY": 0.6086016942085867,
+            "Budget": 0.6280032572757798
+          },
+          {
+            "month_key": 202608,
+            "Month": "Aug 2026",
+            "Actual": 0.5492524406656422,
+            "Actual R12M": 0.6195769040772422,
+            "PY": 0.5390907932069244,
+            "Budget": 0.5515811052532074
+          },
+          {
+            "month_key": 202609,
+            "Month": "Sep 2026",
+            "Actual": 0.6815698445588889,
+            "Actual R12M": 0.622542409549625,
+            "PY": 0.654050202187991,
+            "Budget": 0.6691752281247463
+          },
+          {
+            "month_key": 202610,
+            "Month": "Oct 2026",
+            "Actual": 0.6141131990046498,
+            "Actual R12M": 0.619919007514482,
+            "PY": 0.6443746424872263,
+            "Budget": 0.6432288593563535
+          }
+        ]
+      },
+      "totals": {}
+    },
+    "latency_s": 0.48
+  }
+}

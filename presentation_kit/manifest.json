@@ -1,0 +1,38 @@
+[
+  {
+    "segment": "00_full_executive_walkthrough",
+    "mp4": "00_full_executive_walkthrough.mp4",
+    "duration_s": 176.7,
+    "size_mb": 31.9
+  },
+  {
+    "segment": "01_left_panel_settings_and_scope",
+    "mp4": "01_left_panel_settings_and_scope.mp4",
+    "duration_s": 46.1,
+    "size_mb": 4.01
+  },
+  {
+    "segment": "02_data_catalog_and_user_guide",
+    "mp4": "02_data_catalog_and_user_guide.mp4",
+    "duration_s": 29.0,
+    "size_mb": 5.66
+  },
+  {
+    "segment": "03_global_pnl_and_context",
+    "mp4": "03_global_pnl_and_context.mp4",
+    "duration_s": 45.0,
+    "size_mb": 9.27
+  },
+  {
+    "segment": "04_us_margin_and_personnel_cost",
+    "mp4": "04_us_margin_and_personnel_cost.mp4",
+    "duration_s": 30.7,
+    "size_mb": 5.46
+  },
+  {
+    "segment": "05_current_month_landing",
+    "mp4": "05_current_month_landing.mp4",
+    "duration_s": 25.9,
+    "size_mb": 7.5
+  }
+]

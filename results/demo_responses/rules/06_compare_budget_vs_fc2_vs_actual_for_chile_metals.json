@@ -1,0 +1,772 @@
+{
+  "answer_markdown": "**Version comparison for Chile \u00b7 Metals & Minerals, YTD Oct 2026: Actual, FC2, Budget (USD).**\n\n- Operating profit: Actual USD 8.1M, FC2 USD 8.5M, Budget USD 8.3M; Actual is USD 175k (2.1%) below Budget, unfavourable; FC2 is USD 218k (2.6%) above Budget, favourable\n- Production: Actual USD 54.9M, FC2 USD 55.4M, Budget USD 54.5M; Actual is USD 363k (0.7%) above Budget, favourable; FC2 is USD 866k (1.6%) above Budget, favourable\n- Operating margin on revenue: Actual 14.8%, FC2 15.4%, Budget 15.3%; Actual is 0.4 pp below Budget, unfavourable; FC2 is 0.2 pp above Budget, favourable",
+  "table": [
+    {
+      "Line": "PRODUCTION",
+      "_code": "production",
+      "_kind": "subtotal",
+      "_fmt": "eur",
+      "Actual": 54910451.5,
+      "FC2": 55413128.5,
+      "Budget": 54547186.65,
+      "Actual vs Budget": 363264.8500000015,
+      "_fav_Actual": true,
+      "FC2 vs Budget": 865941.8500000015,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "REVENUE",
+      "_code": "revenue",
+      "_kind": "subtotal",
+      "_fmt": "eur",
+      "Actual": 54512821.86,
+      "FC2": 55019192.370000005,
+      "Budget": 54158341.68,
+      "Actual vs Budget": 354480.1799999997,
+      "_fav_Actual": true,
+      "FC2 vs Budget": 860850.6900000051,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "Personnel costs",
+      "_code": "personnel",
+      "_kind": "line",
+      "_fmt": "eur",
+      "Actual": -23775156.13,
+      "FC2": -23767867.179999996,
+      "Budget": -24011970.430000003,
+      "Actual vs Budget": 236814.30000000447,
+      "_fav_Actual": true,
+      "FC2 vs Budget": 244103.25000000745,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "External subcontracting",
+      "_code": "subcontracting",
+      "_kind": "line",
+      "_fmt": "eur",
+      "Actual": -2908256.06,
+      "FC2": -2956350.84,
+      "Budget": -2166078.74,
+      "Actual vs Budget": -742177.3199999998,
+      "_fav_Actual": false,
+      "FC2 vs Budget": -790272.0999999996,
+      "_fav_FC2": false
+    },
+    {
+      "Line": "Other costs",
+      "_code": "other_cost",
+      "_kind": "line",
+      "_fmt": "eur",
+      "Actual": -16020259.669999998,
+      "FC2": -16094633.13,
+      "Budget": -15948549.27,
+      "Actual vs Budget": -71710.39999999851,
+      "_fav_Actual": false,
+      "FC2 vs Budget": -146083.86000000127,
+      "_fav_FC2": false
+    },
+    {
+      "Line": "Functional costs",
+      "_code": "functional_cost",
+      "_kind": "line",
+      "_fmt": "eur",
+      "Actual": -5414225.08,
+      "FC2": -5408373.34,
+      "Budget": -5458924.9,
+      "Actual vs Budget": 44699.8200000003,
+      "_fav_Actual": true,
+      "FC2 vs Budget": 50551.56000000052,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "GROSS PROFIT",
+      "_code": "gross_profit",
+      "_kind": "subtotal",
+      "_fmt": "eur",
+      "Actual": 13501514.990000004,
+      "FC2": 13888194.240000004,
+      "Budget": 13720834.309999997,
+      "Actual vs Budget": -219319.31999999285,
+      "_fav_Actual": false,
+      "FC2 vs Budget": 167359.93000000715,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "OPERATING PROFIT",
+      "_code": "maop",
+      "_kind": "subtotal",
+      "_fmt": "eur",
+      "Actual": 8087289.910000004,
+      "FC2": 8479820.900000004,
+      "Budget": 8261909.409999996,
+      "Actual vs Budget": -174619.49999999255,
+      "_fav_Actual": false,
+      "FC2 vs Budget": 217911.49000000767,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "EBIT",
+      "_code": "management_op",
+      "_kind": "subtotal",
+      "_fmt": "eur",
+      "Actual": 7944748.210000004,
+      "FC2": 8330575.760000004,
+      "Budget": 8045743.709999996,
+      "Actual vs Budget": -100995.49999999255,
+      "_fav_Actual": false,
+      "FC2 vs Budget": 284832.0500000082,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "NET INCOME",
+      "_code": "net_income",
+      "_kind": "subtotal",
+      "_fmt": "eur",
+      "Actual": 5578285.780000004,
+      "FC2": 5866950.290000005,
+      "Budget": 5648503.059999997,
+      "Actual vs Budget": -70217.27999999281,
+      "_fav_Actual": false,
+      "FC2 vs Budget": 218447.2300000079,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "Operating margin on revenue",
+      "_code": "maop_margin_revenue",
+      "_kind": "ratio",
+      "_fmt": "pct",
+      "Actual": 0.1483557378623658,
+      "FC2": 0.15412477964005425,
+      "Budget": 0.15255100421678933,
+      "Actual vs Budget": -0.004195266354423521,
+      "_fav_Actual": false,
+      "FC2 vs Budget": 0.0015737754232649226,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "Operating margin on production",
+      "_code": "maop_margin_production",
+      "_kind": "ratio",
+      "_fmt": "pct",
+      "Actual": 0.14728143165969057,
+      "FC2": 0.1530290949012201,
+      "Budget": 0.15146352942109062,
+      "Actual vs Budget": -0.00418209776140005,
+      "_fav_Actual": false,
+      "FC2 vs Budget": 0.0015655654801294827,
+      "_fav_FC2": true
+    },
+    {
+      "Line": "Gross margin",
+      "_code": "gross_margin",
+      "_kind": "ratio",
+      "_fmt": "pct",
+      "Actual": 0.24588242531569793,
+      "FC2": 0.2506300332781248,
+      "Budget": 0.25154064128071757,
+      "Actual vs Budget": -0.005658215965019642,
+      "_fav_Actual": false,
+      "FC2 vs Budget": -0.0009106080025927943,
+      "_fav_FC2": false
+    },
+    {
+      "Line": "Direct margin",
+      "_code": "direct_margin",
+      "_kind": "ratio",
+      "_fmt": "pct",
+      "Actual": 0.6746607395861607,
+      "FC2": 0.6778578125218104,
+      "Budget": 0.6694710884782177,
+      "Actual vs Budget": 0.005189651107943005,
+      "_fav_Actual": true,
+      "FC2 vs Budget": 0.008386724043592753,
+      "_fav_FC2": true
+    }
+  ],
+  "table_spec": {
+    "columns": [
+      "Line",
+      "Actual",
+      "FC2",
+      "Budget",
+      "Actual vs Budget",
+      "FC2 vs Budget"
+    ],
+    "rows": [
+      {
+        "Line": "PRODUCTION",
+        "_code": "production",
+        "_kind": "subtotal",
+        "_fmt": "eur",
+        "Actual": 54910451.5,
+        "FC2": 55413128.5,
+        "Budget": 54547186.65,
+        "Actual vs Budget": 363264.8500000015,
+        "_fav_Actual": true,
+        "FC2 vs Budget": 865941.8500000015,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "REVENUE",
+        "_code": "revenue",
+        "_kind": "subtotal",
+        "_fmt": "eur",
+        "Actual": 54512821.86,
+        "FC2": 55019192.370000005,
+        "Budget": 54158341.68,
+        "Actual vs Budget": 354480.1799999997,
+        "_fav_Actual": true,
+        "FC2 vs Budget": 860850.6900000051,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "Personnel costs",
+        "_code": "personnel",
+        "_kind": "line",
+        "_fmt": "eur",
+        "Actual": -23775156.13,
+        "FC2": -23767867.179999996,
+        "Budget": -24011970.430000003,
+        "Actual vs Budget": 236814.30000000447,
+        "_fav_Actual": true,
+        "FC2 vs Budget": 244103.25000000745,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "External subcontracting",
+        "_code": "subcontracting",
+        "_kind": "line",
+        "_fmt": "eur",
+        "Actual": -2908256.06,
+        "FC2": -2956350.84,
+        "Budget": -2166078.74,
+        "Actual vs Budget": -742177.3199999998,
+        "_fav_Actual": false,
+        "FC2 vs Budget": -790272.0999999996,
+        "_fav_FC2": false
+      },
+      {
+        "Line": "Other costs",
+        "_code": "other_cost",
+        "_kind": "line",
+        "_fmt": "eur",
+        "Actual": -16020259.669999998,
+        "FC2": -16094633.13,
+        "Budget": -15948549.27,
+        "Actual vs Budget": -71710.39999999851,
+        "_fav_Actual": false,
+        "FC2 vs Budget": -146083.86000000127,
+        "_fav_FC2": false
+      },
+      {
+        "Line": "Functional costs",
+        "_code": "functional_cost",
+        "_kind": "line",
+        "_fmt": "eur",
+        "Actual": -5414225.08,
+        "FC2": -5408373.34,
+        "Budget": -5458924.9,
+        "Actual vs Budget": 44699.8200000003,
+        "_fav_Actual": true,
+        "FC2 vs Budget": 50551.56000000052,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "GROSS PROFIT",
+        "_code": "gross_profit",
+        "_kind": "subtotal",
+        "_fmt": "eur",
+        "Actual": 13501514.990000004,
+        "FC2": 13888194.240000004,
+        "Budget": 13720834.309999997,
+        "Actual vs Budget": -219319.31999999285,
+        "_fav_Actual": false,
+        "FC2 vs Budget": 167359.93000000715,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "OPERATING PROFIT",
+        "_code": "maop",
+        "_kind": "subtotal",
+        "_fmt": "eur",
+        "Actual": 8087289.910000004,
+        "FC2": 8479820.900000004,
+        "Budget": 8261909.409999996,
+        "Actual vs Budget": -174619.49999999255,
+        "_fav_Actual": false,
+        "FC2 vs Budget": 217911.49000000767,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "EBIT",
+        "_code": "management_op",
+        "_kind": "subtotal",
+        "_fmt": "eur",
+        "Actual": 7944748.210000004,
+        "FC2": 8330575.760000004,
+        "Budget": 8045743.709999996,
+        "Actual vs Budget": -100995.49999999255,
+        "_fav_Actual": false,
+        "FC2 vs Budget": 284832.0500000082,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "NET INCOME",
+        "_code": "net_income",
+        "_kind": "subtotal",
+        "_fmt": "eur",
+        "Actual": 5578285.780000004,
+        "FC2": 5866950.290000005,
+        "Budget": 5648503.059999997,
+        "Actual vs Budget": -70217.27999999281,
+        "_fav_Actual": false,
+        "FC2 vs Budget": 218447.2300000079,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "Operating margin on revenue",
+        "_code": "maop_margin_revenue",
+        "_kind": "ratio",
+        "_fmt": "pct",
+        "Actual": 0.1483557378623658,
+        "FC2": 0.15412477964005425,
+        "Budget": 0.15255100421678933,
+        "Actual vs Budget": -0.004195266354423521,
+        "_fav_Actual": false,
+        "FC2 vs Budget": 0.0015737754232649226,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "Operating margin on production",
+        "_code": "maop_margin_production",
+        "_kind": "ratio",
+        "_fmt": "pct",
+        "Actual": 0.14728143165969057,
+        "FC2": 0.1530290949012201,
+        "Budget": 0.15146352942109062,
+        "Actual vs Budget": -0.00418209776140005,
+        "_fav_Actual": false,
+        "FC2 vs Budget": 0.0015655654801294827,
+        "_fav_FC2": true
+      },
+      {
+        "Line": "Gross margin",
+        "_code": "gross_margin",
+        "_kind": "ratio",
+        "_fmt": "pct",
+        "Actual": 0.24588242531569793,
+        "FC2": 0.2506300332781248,
+        "Budget": 0.25154064128071757,
+        "Actual vs Budget": -0.005658215965019642,
+        "_fav_Actual": false,
+        "FC2 vs Budget": -0.0009106080025927943,
+        "_fav_FC2": false
+      },
+      {
+        "Line": "Direct margin",
+        "_code": "direct_margin",
+        "_kind": "ratio",
+        "_fmt": "pct",
+        "Actual": 0.6746607395861607,
+        "FC2": 0.6778578125218104,
+        "Budget": 0.6694710884782177,
+        "Actual vs Budget": 0.005189651107943005,
+        "_fav_Actual": true,
+        "FC2 vs Budget": 0.008386724043592753,
+        "_fav_FC2": true
+      }
+    ],
+    "col_fmt": {
+      "Actual": "eur",
+      "FC2": "eur",
+      "Budget": "eur",
+      "Actual vs Budget": "eur",
+      "FC2 vs Budget": "eur"
+    },
+    "row_meta": [
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": true,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": true,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": true,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": false
+        }
+      },
+      {
+        "kind": "line",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": true,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "subtotal",
+        "level": 0,
+        "fmt": "eur",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": true
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Actual vs Budget": false,
+          "FC2 vs Budget": false
+        }
+      },
+      {
+        "kind": "ratio",
+        "level": 0,
+        "fmt": "pct",
+        "fav": {
+          "Actual vs Budget": true,
+          "FC2 vs Budget": true
+        }
+      }
+    ],
+    "caption": "Signed values: costs negative. Variances are profit impact (positive = favourable).",
+    "extra_tables": []
+  },
+  "chart_spec": {
+    "type": "grouped_bar",
+    "title": "Versions - Chile \u00b7 Metals & Minerals (YTD Oct 2026), costs shown as positive amounts",
+    "fmt": "eur",
+    "x": "category",
+    "y": [
+      "Actual",
+      "FC2",
+      "Budget"
+    ],
+    "data": [
+      {
+        "category": "Production",
+        "series": "Actual",
+        "value": 54910451.5
+      },
+      {
+        "category": "Production",
+        "series": "FC2",
+        "value": 55413128.5
+      },
+      {
+        "category": "Production",
+        "series": "Budget",
+        "value": 54547186.65
+      },
+      {
+        "category": "Personnel costs",
+        "series": "Actual",
+        "value": 23775156.13
+      },
+      {
+        "category": "Personnel costs",
+        "series": "FC2",
+        "value": 23767867.179999996
+      },
+      {
+        "category": "Personnel costs",
+        "series": "Budget",
+        "value": 24011970.430000003
+      },
+      {
+        "category": "External subcontracting",
+        "series": "Actual",
+        "value": 2908256.06
+      },
+      {
+        "category": "External subcontracting",
+        "series": "FC2",
+        "value": 2956350.84
+      },
+      {
+        "category": "External subcontracting",
+        "series": "Budget",
+        "value": 2166078.74
+      },
+      {
+        "category": "Other costs",
+        "series": "Actual",
+        "value": 16020259.669999998
+      },
+      {
+        "category": "Other costs",
+        "series": "FC2",
+        "value": 16094633.13
+      },
+      {
+        "category": "Other costs",
+        "series": "Budget",
+        "value": 15948549.27
+      },
+      {
+        "category": "Functional costs",
+        "series": "Actual",
+        "value": 5414225.08
+      },
+      {
+        "category": "Functional costs",
+        "series": "FC2",
+        "value": 5408373.34
+      },
+      {
+        "category": "Functional costs",
+        "series": "Budget",
+        "value": 5458924.9
+      },
+      {
+        "category": "Gross Profit",
+        "series": "Actual",
+        "value": 13501514.990000004
+      },
+      {
+        "category": "Gross Profit",
+        "series": "FC2",
+        "value": 13888194.240000004
+      },
+      {
+        "category": "Gross Profit",
+        "series": "Budget",
+        "value": 13720834.309999997
+      },
+      {
+        "category": "Operating Profit",
+        "series": "Actual",
+        "value": 8087289.910000004
+      },
+      {
+        "category": "Operating Profit",
+        "series": "FC2",
+        "value": 8479820.900000004
+      },
+      {
+        "category": "Operating Profit",
+        "series": "Budget",
+        "value": 8261909.409999996
+      }
+    ],
+    "meta": {}
+  },
+  "filters_used": {
+    "org": "Chile \u00b7 Metals & Minerals",
+    "org_filter": {
+      "l3_country": [
+        "Chile"
+      ],
+      "l4_product_line": [
+        "Metals & Minerals"
+      ]
+    },
+    "currency": "USD",
+    "fx_rate": "constant budget rate",
+    "as_of_date": "2026-11-16",
+    "user": "group_cfo",
+    "rls": "SQL Server SECURITY POLICY (SESSION_CONTEXT)",
+    "period": "YTD Oct 2026",
+    "months": "Jan 2026 - Oct 2026",
+    "versions": [
+      "Actual (Actual, YTD Oct 2026)",
+      "FC2 (FC2, YTD Oct 2026)",
+      "Budget (Budget, YTD Oct 2026)"
+    ],
+    "applied": [
+      "Scope: Chile \u00b7 Metals & Minerals (from your question)",
+      "Period: YTD Oct 2026 (default)",
+      "Versions: Actual, FC2, Budget (from your question)"
+    ]
+  },
+  "sql_used": [
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Actual' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Chile') AND dim_org.l4_product_line IN (N'Metals & Minerals') GROUP BY fact_pnl.account_id",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'FC2' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Chile') AND dim_org.l4_product_line IN (N'Metals & Minerals') GROUP BY fact_pnl.account_id",
+    "SELECT fact_pnl.account_id, sum(fact_pnl.amount_usd) AS amount \nFROM fact_pnl JOIN dim_org ON fact_pnl.bu_id = dim_org.bu_id JOIN dim_version ON fact_pnl.version_id = dim_version.version_id \nWHERE dim_version.name = N'Budget' AND fact_pnl.month_key BETWEEN 202601 AND 202610 AND dim_org.l3_country IN (N'Chile') AND dim_org.l4_product_line IN (N'Metals & Minerals') GROUP BY fact_pnl.account_id"
+  ],
+  "followups": [
+    "Why is Actual different from Budget for Chile \u00b7 Metals & Minerals this year?",
+    "Show the operating profit trend vs Budget for Chile \u00b7 Metals & Minerals this year",
+    "What does the latest forecast say for the full year 2026 for Chile \u00b7 Metals & Minerals?"
+  ],
+  "status": "ok",
+  "diagnostics": {
+    "tool_calls": [
+      {
+        "name": "compare_versions",
+        "arguments": {
+          "org": "Chile \u00b7 Metals & Minerals",
+          "period": "",
+          "versions": [
+            "Actual",
+            "FC2",
+            "Budget"
+          ]
+        }
+      }
+    ],
+    "tool_choice_source": "router_fallback",
+    "suggested": {
+      "name": "compare_versions",
+      "arguments": {
+        "org": "Chile \u00b7 Metals & Minerals",
+        "period": "",
+        "versions": [
+          "Actual",
+          "FC2",
+          "Budget"
+        ]
+      }
+    },
+    "guardrail": {
+      "ok": true,
+      "template": true,
+      "history": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "unsupported": [
+            "<empty>"
+          ],
+          "checked": 0,
+          "problems": [
+            "the answer was empty"
+          ],
+          "draft": ""
+        }
+      ],
+      "unsupported": [
+        "<empty>"
+      ]
+    },
+    "llm_calls": [],
+    "errors": [],
+    "options_mode": null,
+    "negated": [],
+    "model": "rules",
+    "timings": {
+      "preprocess": 0.008,
+      "plan": 0.0,
+      "act": 0.11,
+      "write#1": 0.0
+    },
+    "resolved": {
+      "org": "Chile \u00b7 Metals & Minerals",
+      "metric_or_ratio": "(not specified)",
+      "period": "(default: YTD)",
+      "versions": [
+        "FC2",
+        "Budget",
+        "Actual"
+      ],
+      "comparisons": [],
+      "intents": [
+        "versions"
+      ]
+    },
+    "followup": false,
+    "options": [],
+    "facts": [
+      "Version comparison for Chile \u00b7 Metals & Minerals, YTD Oct 2026: Actual, FC2, Budget (USD).",
+      "Operating profit: Actual USD 8.1M, FC2 USD 8.5M, Budget USD 8.3M; Actual is USD 175k (2.1%) below Budget, unfavourable; FC2 is USD 218k (2.6%) above Budget, favourable.",
+      "Production: Actual USD 54.9M, FC2 USD 55.4M, Budget USD 54.5M; Actual is USD 363k (0.7%) above Budget, favourable; FC2 is USD 866k (1.6%) above Budget, favourable.",
+      "Personnel costs: Actual USD 23.8M, FC2 USD 23.8M, Budget USD 24.0M; Actual is USD 237k (1.0%) lower than Budget, favourable; FC2 is USD 244k (1.0%) lower than Budget, favourable.",
+      "External subcontracting: Actual USD 2.9M, FC2 USD 3.0M, Budget USD 2.2M; Actual is USD 742k (34.3%) higher than Budget, unfavourable; FC2 is USD 790k (36.5%) higher than Budget, unfavourable.",
+      "Other costs: Actual USD 16.0M, FC2 USD 16.1M, Budget USD 15.9M; Actual is USD 72k (0.4%) higher than Budget, unfavourable; FC2 is USD 146k (0.9%) higher than Budget, unfavourable.",
+      "Functional costs: Actual USD 5.4M, FC2 USD 5.4M, Budget USD 5.5M; Actual is USD 45k (0.8%) lower than Budget, favourable; FC2 is USD 51k (0.9%) lower than Budget, favourable.",
+      "Gross profit: Actual USD 13.5M, FC2 USD 13.9M, Budget USD 13.7M; Actual is USD 219k (1.6%) below Budget, unfavourable; FC2 is USD 167k (1.2%) above Budget, favourable.",
+      "Net income: Actual USD 5.6M, FC2 USD 5.9M, Budget USD 5.6M; Actual is USD 70k (1.2%) below Budget, unfavourable; FC2 is USD 218k (3.9%) above Budget, favourable.",
+      "Operating margin on revenue: Actual 14.8%, FC2 15.4%, Budget 15.3%; Actual is 0.4 pp below Budget, unfavourable; FC2 is 0.2 pp above Budget, favourable.",
+      "Gross margin: Actual 24.6%, FC2 25.1%, Budget 25.2%; Actual is 0.6 pp below Budget, unfavourable; FC2 is 0.1 pp below Budget, unfavourable.",
+      "Direct margin: Actual 67.5%, FC2 67.8%, Budget 66.9%; Actual is 0.5 pp above Budget, favourable; FC2 is 0.8 pp above Budget, favourable."
+    ],
+    "evidence": {
+      "extra": {},
+      "totals": {}
+    },
+    "latency_s": 0.12
+  }
+}
